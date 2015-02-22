@@ -1,0 +1,158 @@
+---
+layout: default
+---
+
+<div class="bg-container">
+
+                <!-- <div class="type-img-container">
+                    <img calss="type-img" src="/static/img/grant_staublin.svg">
+                </div> -->
+
+                <div class="grant-img-container">
+                    <a href="/">
+                        <img class="grant-img" src="/static/img/grant_splash_bw.jpg">
+                    </a>
+                </div> <!-- /grant-img-container -->
+
+                <div class="content-inner">
+
+                    <div class="page-mod">
+                        <h4 class="page-intro">Grant Staublin is a front-end designer and modern day human being living in Boston, Massachusetts. He designs things and writes code at Upstatement. He's generally friendly and enjoys coffee, music and running, among other things.</h4>
+                        <!-- <h5 class="page-intro-sm">Get in touch. Or check out a few recent projects</h5> -->
+                    </div> <!-- /page-mod -->
+
+                    <div class="teases-mod">
+                        <h5 class="section-h">Recent Stories</h5>
+                        <ul class="tease-items">
+                            {% for post in site.posts %}
+
+                              <li class="tease-item">
+                                  <a class="tease-link" href="{{ post.url }}">{{ post.tease }}<span class="tease-date">{{ post.date | date: "%m.%d.%y" }}</span></a>
+                              </li> <!-- /tease-item -->
+
+                            {% endfor %}
+
+                        </ul> <!-- /tease-items -->
+                        <h5 class="all-link">All Stories</h5>
+                    </div> <!-- /teases-mod -->
+
+
+
+                    <!-- Portfolio Grid -->
+                    <!-- ===================================== -->
+                    <div class="grid-mod">
+                        <div>
+                            <h5 class="section-h">Recent Projects</h5>
+                        </div>
+
+                        <div class="grid-items">
+
+                            <div class="grid-item">
+                                <div class="grid-item-img">
+                                    <a target="_black" href="http://hechingerreport.org/">
+                                        <img src="/static/img/hechinger_trans.png">
+                                    </a>
+                                </div> <!-- /grid-item-img -->
+
+                                <div class="grid-item-content">
+                                    <h5 class="grid-item-h">
+                                        <a class="grid-item-link" target="_blank" href="http://hechingerreport.org/">The Hechinger Report</a>
+                                    </h5>
+                                    <p class="grid-item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam quisquam nulla impedit ad accusantium, molestias nostrum. Non commodi doloremque quidem, aspernatur animi explicabo officiis reprehenderit.</p>
+                                    <p class="grid-item-meta">Design, Front-end development, Responsive strategy</p>
+
+                                </div> <!-- /grid-item-content -->
+                            </div> <!-- /grid-item -->
+
+
+                            <div class="grid-item">
+                                <div class="grid-item-img">
+                                    <img src="/static/img/lca_trans.png">
+                                </div> <!-- /grid-item-img -->
+
+                                <div class="grid-item-content">
+                                    <h5 class="grid-item-h">
+                                        <a class="grid-item-link" target="_blank" href="http://arts.princeton.edu/">Lewis Center for the Arts</a>
+                                    </h5>
+                                    <p class="grid-item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam quisquam nulla impedit ad accusantium, molestias nostrum. Non commodi doloremque quidem, aspernatur animi explicabo officiis reprehenderit.</p>
+                                    <p class="grid-item-meta">xxxx</p>
+                                </div> <!-- /grid-item-content -->
+                            </div> <!-- /grid-item -->
+
+
+
+
+                             <div class="grid-item">
+                                <div class="grid-item-img">
+                                    <img src="/static/img/iapp_trans.png">
+                                </div> <!-- /grid-item-img -->
+
+                                <div class="grid-item-content">
+                                    <h5 class="grid-item-h">
+                                        <a class="grid-item-link" target="_blank" href="https://www.privacyassociation.org/">The International Association </br>of Privacy Professionals</a>
+                                    </h5>
+                                    <p class="grid-item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam quisquam nulla impedit ad accusantium, molestias nostrum. Non commodi doloremque quidem, aspernatur animi explicabo officiis reprehenderit.</p>
+                                    <p class="grid-item-meta">xxxx</p>
+                                </div> <!-- /grid-item-content -->
+                            </div> <!-- /grid-item -->
+
+
+
+                             <div class="grid-item">
+                                <div class="grid-item-img">
+                                    <img src="/static/img/nieman_trans.png">
+                                </div> <!-- /grid-item-img -->
+
+                                <div class="grid-item-content">
+                                    <h5 class="grid-item-h">
+                                        <a class="grid-item-link" target="_blank" href="http://niemanreports.org/">The Nieman Foundation</a>
+                                    </h5>
+                                    <p class="grid-item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam quisquam nulla impedit ad accusantium, molestias nostrum. Non commodi doloremque quidem, aspernatur animi explicabo officiis reprehenderit.</p>
+                                    <p class="grid-item-meta">xxxx</p>
+                                </div> <!-- /grid-item-content -->
+                            </div> <!-- /grid-item -->
+
+                        </div> <!-- /grid-items -->
+
+                    </div> <!-- /page-mod -->
+
+
+
+                    <!-- SVG -->
+                    <!-- ===================================== -->
+                     {% include svg-defs.svg %}
+
+                    <svg class="decoration decoration-x-1">
+                        <use xlink:href="#shape-elements_large_x" />
+                    </svg>
+
+                    <svg class="decoration decoration-x-2">
+                        <use xlink:href="#shape-elements_large_x" />
+                    </svg>
+
+                    <svg class="decoration decoration-x-3">
+                        <use xlink:href="#shape-elements_small_x" />
+                    </svg>
+
+                    <svg class="decoration decoration-x-4">
+                        <use xlink:href="#shape-elements_large_x" />
+                    </svg>
+
+                    <svg class="decoration decoration-line-1">
+                        <use xlink:href="#shape-elements_long_line" />
+                    </svg>
+
+                    <svg class="decoration decoration-line-2">
+                        <use xlink:href="#shape-elements_long_line" />
+                    </svg>
+
+                    <svg class="decoration decoration-line-3">
+                        <use xlink:href="#shape-elements_long_line" />
+                    </svg>
+
+                    <svg class="decoration decoration-line-4">
+                        <use xlink:href="#shape-elements_long_line" />
+                    </svg>
+
+                </div> <!-- /content-inner -->
+            </div> <!-- bg-container -->

@@ -1,0 +1,39 @@
+// --------------------------------------------
+// --------------------------------------------
+//
+// Variables
+//
+// --------------------------------------------
+// --------------------------------------------
+
+// $type-main: 'proxima-nova', Helvetica, sans-serif;
+$type-main: 'omnes-pro', Helvetica, sans-serif;
+// $type-accent: 'ltc-squareface-sc', Georgia, Times, serif;
+$type-accent: 'jubilat', Georgia, serif;
+$type-display: 'jubilat', Georgia, serif;
+
+$top-margin: 25px;
+
+$primary-color-drk:   #455A64;
+$primary-color:       #607D8B;
+$primary-color-lt:  #CFD8DC;
+$primary-color-text:   #FFFFFF;
+$accent-color:        #FF5252;
+$primary-text-color:   #212121;
+$secondary-text-color: #727272;
+$divider-color:       #B6B6B6;
+
+
+$bg-color:    lighten($primary-color-lt, 10%);
+
+
+$width-xsm: 200px;
+$width-sm: 480px;
+$width-med: 720px;
+$width-lg: 900px;
+
+$bp-sm: 600px;
+$bp-med: 900px;
+
+$bp-social: 800px;
+$bp-social-lg: $bp-med;
