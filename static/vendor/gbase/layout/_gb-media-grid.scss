@@ -1,0 +1,108 @@
+// --------------------------------------------
+// --------------------------------------------
+//
+// Media Grid
+//
+// --------------------------------------------
+// --------------------------------------------
+
+// The Media Grid mixin is useful when you have a grid of items,
+// whether they be stories, or images, or curse words, this mixin
+// give you a sweet grid.
+
+// DEFAULT
+// By default the mixin creates a grid.
+// @include media-grid(4, 30px);
+
+// RULES BETWEEN ITEMS
+// However, let's say you want a rule between each item in that
+// grid you just created? We can do that.
+// @include media-grid(4, 30px, true);
+
+// RULES BETWEEN ROWS
+// Now that we have rules between items, let put a rule between rows
+// @include media-grid(4, 30px, true, true);
+
+// NOTE ABOUT PADDING
+// If you're using rules between items, please use a value for $pad that is
+// divisible by 2. For instance, using 25px as a $pad value might cause some
+// weird sub-pixel rendering issues for rules in your grid.
+// But if you change that $pad value to 24px or 26px you should be golden.
+
+// OPTIONS
+// $num:      The number of items in your grid
+// $pad:      The space between each grid item
+// $h-rules:  Set this to true, if you want items between grid items
+// $v-rules:  Set this to true if you want rules between rows of grid items
+// $target:   Set to '.grid-item' by defalt. This is the class each grid item should have.
+
+
+// This is based on Upstatement's Media Grid mixin. This version is next level shit.
+// Or, rather, it gives you a couple options the original doesn't provide.
+// https://github.com/Upstatement/upbase/blob/master/components/_layout.scss
+
+
+// Default variables
+$mg-pad: 26px !default;
+$mg-targ: '.grid-item' !default;
+$mg-bdr-color: #dedede !default;
+$mg-bdr-width: 1px !default;
+
+
+@mixin media-grid($num: 2, $pad: $mg-pad, $h-rules: false, $v-rules: false, $target: $mg-targ) {
+  @include clearfix;
+  overflow: hidden;
+  margin-left: -$pad;
+
+  $item-width: ( 100 / $num ) * 1%;
+  $nth: #{$num}n;
+  $nth-plus: $num + 1;
+
+  $h-rule-pos: ($pad / 2);
+  $v-rule-pos: ($pad / 2);
+
+  @if $v-rules == true {
+    > #{$target} {
+      position: relative;
+      &:nth-of-type(#{$nth} + #{$nth-plus}) {
+        &:before {
+          position: absolute;
+          content: '';
+          top: -$v-rule-pos;
+          height: $mg-bdr-width;
+          background-color: $mg-bdr-color;
+          width: 9999px;
+        }
+      }
+    }
+  }
+
+  @if $h-rules == true {
+    > #{$target} {
+      position: relative;
+      &:after {
+        position: absolute;
+        content: '';
+        top: 0;
+        bottom: 0;
+        right: -$h-rule-pos;
+        width: $mg-bdr-width;
+        background-color: $mg-bdr-color;
+      }
+      // take away rule on last item in each row
+      &:nth-of-type(#{$nth} + #{$num}) { &:after { position: static; } }
+      &:last-of-type { &:after { position: static; } }
+    }
+  }
+
+  > #{$target} {
+    float: left;
+    width: #{$item-width};
+    padding-left: $pad;
+    // clears float for first item in a row
+    &:nth-of-type(#{$nth} + #{$nth-plus}) { clear: left; }
+    // set a top margin for items after the first row
+    &:nth-of-type(1n + #{$nth-plus}) { margin-top: $pad; }
+  }
+
+} //media-grid
