@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "The casual charms of writing CSS"
-tease: "How I made a headline turn red"
-share: "How in the hell did this headline become red? With CSS, of course"
-subhead: "This lesson will serve you well throughout the rest of your life"
+title:  "Do you make Internets? Well, you'll want to read this."
+subhead: "This article will serve you well throughout the rest of your life"
+tease: "How I magically turned a headline red"
+share: "How in the hell did this man make a red headline on his website? Read on to learn all the gory details"
 date:   2015-02-22
 ---
 
