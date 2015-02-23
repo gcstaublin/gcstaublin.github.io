@@ -23,10 +23,10 @@ It's not a special moment. I'm definitely not a better self client. It's just ti
 
 This year I simply resolved to build more things.
 
-To ensure I didn't build yet another soon-to-be-trashed website, I gave myself about an hour, maybe two, in Indesign to sketch our a rough, semi-coherent direction that I could build. After those couple hours, I jumped right into code. I set up the git repository, I installed Jekyll, I got my Grunt tasks running, and I begin writing code.
+To ensure I didn't build another soon-to-be-trashed website, I gave myself about a couple hours to sketch out a rough, semi-coherent direction in Indesign. Then jumped right into code. I set up the git repository, I installed Jekyll, I got my Grunt tasks running, and I begin writing code. Over the course of the past few nights, I made a thing.
 
-The result isn't pretty. The type is unrefined. The overall design looks like it was done in two hours. Two hours I might have spent more time watching TV than actually designing. The code is a jumble of ill conceived SCSS. No browser testing. No breakpoint checks. None of the normal client project checks or assurances. Just a dude banging away at his keyboard, building a thing.
+The result isn't pretty. The type is unrefined. The overall design looks like it was done in two hours. The code is a jumble of ill conceived SCSS and has none of the thoughfulness of a normal client project. There's no browser testing; no breakpoint tweaks or refinements. None of the normal assurances. Just a dude banging away at his keyboard, building a thing.
 
-Now that it'slaunched, there is always tomorrow to figure out how I want this site to look, or how solid I want the code base to be.
+Now that it's launched, and you're seeing it, I can figure out how I want this site to look, or how solid I want the code base to be.
 
 Yes, it is flawed. It might look terrible in many contexts, but I'm cool with that, for now.
