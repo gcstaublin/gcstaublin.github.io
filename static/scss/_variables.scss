@@ -6,13 +6,62 @@
 // --------------------------------------------
 // --------------------------------------------
 
-// $type-main: 'proxima-nova', Helvetica, sans-serif;
-$type-main: 'omnes-pro', Helvetica, sans-serif;
-// $type-accent: 'ltc-squareface-sc', Georgia, Times, serif;
-$type-accent: 'jubilat', Georgia, serif;
+
+
+// Fonts
+// --------------------------------------------
+
+$sans-fallback: Helvetica, sans-serif;
+$serif-fallback: Georgia, serif;
+
+$type-main: 'omnes-pro', $sans-fallback;
+$type-accent: 'jubilat', $serif-fallback;
 $type-display: 'jubilat', Georgia, serif;
 
+$text-weight: 300;
+
+// $accent-lt:   200;
+$accent-med:  500;
+$accent-bold: 400;
+
+$text-color: #222222;
+
+$display-wt: 200;
+
+$tease-text: #444444;
+$tease-text-lt: #666666;
+
+$display-color-lt: #888888;
+
+@mixin text($color: $text-color, $font: $type-main, $font-weight: $text-weight ) {
+  font-family: $font;
+  font-weight: $font-weight;
+  color: $color;
+}
+
+@mixin accent($color: black, $font: $type-accent, $font-weight: $accent-bold ) {
+  font-family: $font;
+  font-weight: $font-weight;
+  color: $color;
+}
+
+@mixin display($color: black, $font: $type-display, $font-weight: $display-wt ) {
+  font-family: $font;
+  font-weight: $font-weight;
+  color: $color;
+}
+
+
+
+// Spacing
+// --------------------------------------------
+
 $top-margin: 25px;
+
+
+
+// Color
+// --------------------------------------------
 
 $primary-color-drk:   #455A64;
 $primary-color:       #607D8B;
@@ -26,6 +75,10 @@ $divider-color:       #B6B6B6;
 
 $bg-color:    lighten($primary-color-lt, 10%);
 
+
+
+// Breakpoints
+// --------------------------------------------
 
 $width-xsm: 200px;
 $width-sm: 480px;

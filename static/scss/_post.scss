@@ -1,0 +1,80 @@
+// --------------------------------------------
+// --------------------------------------------
+//
+// Post
+//
+// --------------------------------------------
+// --------------------------------------------
+
+.post-wrapper {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+
+.post-container {
+  width: 100%;
+  max-width: $width-med;
+  margin: -25px auto 0;
+  // background-color: $bg-color;
+  background-color: #fff;
+  padding: 45px;
+  position: relative;
+}
+
+.comments {
+  width: 100%;
+  max-width: $width-med;
+  margin: 0 auto 0;
+  padding: 45px;
+  background-color: #fff;
+}
+
+
+.post-meta {
+  border-bottom: 1px solid #ededef;
+}
+
+
+.post-h {
+  @include display;
+  font-size: 45px;
+  line-height: 1.15em;
+  margin: 0;
+}
+
+.post-sub-h {
+  @include display($display-color-lt);
+  margin-top: 1em;
+  font-size: 24px;
+  line-height: 1.25;
+  font-style: italic;
+}
+
+.article-text {
+  margin-top: 45px;
+  position: relative;
+  @include text;
+  font-size: 1.25em;
+  line-height: 1.45;
+}
+
+
+
+
+
+// --------------------------------------------
+// --------------------------------------------
+//
+// Disqus Overrides
+//
+// --------------------------------------------
+// --------------------------------------------
+
+
+#disqus_thread a {
+  &:link { color: $accent-color; }
+  &:hover { color: $accent-color; }
+  &:active { color: $accent-color; }
+  &:visited { color: $accent-color; }
+}

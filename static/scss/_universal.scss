@@ -1,0 +1,41 @@
+// --------------------------------------------
+// --------------------------------------------
+//
+// Universal
+//
+// --------------------------------------------
+// --------------------------------------------
+
+body {
+  @include text;
+  background-color: $bg-color;
+}
+
+
+.content-wrapper {
+  position: relative;
+
+  @include bp($bp-sm) {
+    padding: 10px;
+    padding-bottom: 0;
+  }
+
+  @include bp($bp-med) {
+    padding: 25px;
+    padding-bottom: 0;
+  }
+}
+
+
+.content-inner {
+  padding: 0 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.bg-container {
+  background-image: linear-gradient(-90deg, #C4174E, #AD84F1);
+  padding-bottom: 100px;
+  @include clearfix;
+}

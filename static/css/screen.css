@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @-webkit-viewport {
   width: device-width;
 }
@@ -256,12 +257,17 @@ th {
   padding: 0;
 }
 
+img {
+  max-width: 100%;
+}
+
 /**
  * Syntax highlighting styles
  */
 .highlight {
   background: #f2f5f6;
   padding: 10px 15px;
+  margin: 1.5em 0;
 }
 .highlight .lineno {
   color: #ccc;
@@ -461,9 +467,82 @@ th {
   color: #099;
 }
 
+.bg-backsplash {
+  background-image: linear-gradient(-90deg, #C4174E, #AD84F1);
+  padding-bottom: 25px;
+}
+.bg-backsplash:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.page-h {
+  font-family: "jubilat", Georgia, serif;
+  font-weight: 400;
+  color: black;
+  margin: 1em 0 2em;
+  color: #fff;
+  font-size: 1.55em;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.archive-items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.archive-item {
+  margin-bottom: 3em;
+}
+
+.archive-meta {
+  font-family: "omnes-pro", Helvetica, sans-serif;
+  font-weight: 300;
+  color: #666666;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.archive-h {
+  margin: 0 0 0.25em;
+  font-size: 1.85em;
+  line-height: 1.25;
+}
+
+.archive-h-link {
+  font-family: "jubilat", Georgia, serif;
+  font-weight: 200;
+  color: black;
+  text-decoration: none;
+}
+.archive-h-link:hover {
+  color: #C0235B;
+}
+
+.archive-text {
+  font-family: "omnes-pro", Helvetica, sans-serif;
+  font-weight: 300;
+  color: #222222;
+  margin: 0;
+  font-size: 1.15em;
+  line-height: 1.25;
+  color: #444444;
+}
+.archive-text > p {
+  margin: 0;
+}
+.archive-text img {
+  display: none;
+}
+
 body {
   font-family: "omnes-pro", Helvetica, sans-serif;
   font-weight: 300;
+  color: #222222;
   background-color: #ecf0f2;
 }
 
@@ -652,6 +731,23 @@ body {
   letter-spacing: 4px;
 }
 
+.archive-link {
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 1px;
+}
+.archive-link:after {
+  position: absolute;
+  display: inline-block;
+  content: '→';
+  color: rgba(255, 255, 255, 0.6);
+  margin-left: 5px;
+}
+.archive-link:hover {
+  text-decoration: underline;
+}
+
 .grid-mod {
   max-width: 720px;
   margin: 60px auto;
@@ -739,13 +835,96 @@ body {
 }
 
 footer {
-  padding: 200px;
   background-color: #212121;
-  color: #989898;
+  padding: 25px 0;
   font-family: "omnes-pro", Helvetica, sans-serif;
+  font-weight: 300;
+  color: #989898;
   font-size: 16px;
-  font-weight: 100;
   line-height: 1.425;
+}
+@media screen and (min-width: 600px) {
+  footer {
+    padding: 100px 0;
+  }
+}
+@media screen and (min-width: 900px) {
+  footer {
+    padding: 200px 0;
+  }
+}
+
+.footer-mod {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+.footer-mod:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.footer-h {
+  font-size: 30px;
+  font-weight: 200;
+  margin-bottom: 2em;
+}
+
+.footer-copyright-msg {
+  margin-top: 35px;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.footer-items {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+.footer-items:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.footer-item {
+  display: inline-block;
+  position: relative;
+  margin-left: 25px;
+  float: left;
+}
+.footer-item:first-child {
+  margin-left: 0;
+}
+
+.footer-item-link {
+  display: block;
+  background-color: #2e2e2e;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  transition: background-color 0.25s linear;
+}
+.footer-item-link:hover {
+  background-color: rgba(179, 104, 199, 0.4);
+}
+.footer-item-link:hover .footer-icon {
+  opacity: 0.6;
+}
+
+.footer-icon {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  top: 50%;
+  margin-top: -11px;
+  left: 50%;
+  margin-left: -11px;
+  opacity: 0.3;
 }
 
 @keyframes rotate-decoration {
@@ -866,6 +1045,10 @@ footer {
   animation: page-fade 0.45s ease;
 }
 
+.fade-in {
+  animation: page-fade 0.45s ease;
+}
+
 .post-wrapper {
   padding-left: 0;
   padding-right: 0;
@@ -888,26 +1071,37 @@ footer {
   background-color: #fff;
 }
 
+.post-meta {
+  border-bottom: 1px solid #ededef;
+}
+
 .post-h {
   font-family: "jubilat", Georgia, serif;
+  font-weight: 200;
+  color: black;
   font-size: 45px;
-  font-weight: 500;
   line-height: 1.15em;
   margin: 0;
 }
 
 .post-sub-h {
   font-family: "jubilat", Georgia, serif;
-  font-size: 20px;
+  font-weight: 200;
+  color: #888888;
+  margin-top: 1em;
+  font-size: 24px;
   line-height: 1.25;
-  font-weight: 500;
   font-style: italic;
-  color: #ccc;
 }
 
 .article-text {
   margin-top: 45px;
   position: relative;
+  font-family: "omnes-pro", Helvetica, sans-serif;
+  font-weight: 300;
+  color: #222222;
+  font-size: 1.25em;
+  line-height: 1.45;
 }
 
 #disqus_thread a:link {
@@ -948,11 +1142,11 @@ footer {
 }
 
 .social-item {
+  position: relative;
   background-color: #b2c0c6;
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  position: relative;
   margin-bottom: 10px;
 }
 .social-item:first-child {

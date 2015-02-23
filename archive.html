@@ -1,0 +1,43 @@
+---
+layout: page
+title: Grant Staubin | Writing
+pagehead: The oeuvre
+pageclass: page-archive
+permalink: /archive/
+---
+
+
+
+<ul class="archive-items">
+    {% for post in site.posts %}
+      <li class="archive-item">
+        <article>
+          <h5 class="archive-meta">{{ post.date | date: "%m.%d.%y" }}</h5>
+          <h3 class="archive-h">
+            <a class="archive-h-link" href="{{ post.url }}">{{ post.title }}</a>
+          </h3> <!-- /archive-h -->
+          <div class="archive-text">{{ post.content | truncatewords: 25 }}</div>
+        </article>
+      </li> <!-- /tease-item -->
+    {% endfor %}
+</ul> <!-- /tease-items -->
+
+
+<!-- {% if pagination.previous_page %}
+  <a href="/archive{{paginator.previous_page}}">Previous</a>
+  {% else %}
+    <span>Previous</span>
+  {% endif %}
+  <span>Page: {{pagniator.page}} of {{paginator.total_pages}}</span>
+  {% if pagination.next_page %}
+    <a href="/archive{{paginator.next_page}}">Next</a>
+  {% else %}
+  <span>Next</span>
+{% endif %}
+
+ -->
+
+
+
+
+

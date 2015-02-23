@@ -23,13 +23,16 @@
       <article>
 
         <section id="content" role="main" class="post-container">
-          <h1 class="post-h">{{ page.title }}</h1>
-          {% if page.subhead %}
-            <h3 class="post-sub-h"> {{ page.subhead }}</h3>
-          {% endif %}
 
-          <div class="article-text">
+          <div class="post-meta">
+            <h1 class="post-h fade-in">{{ page.title }}</h1>
+            {% if page.subhead %}
+              <h3 class="post-sub-h fade-in"> {{ page.subhead }}</h3>
+            {% endif %}
+          </div> <!-- /post-meta -->
 
+
+          <div class="article-text fade-in">
             {{ content }}
 
             <!-- Social Tools -->
@@ -37,7 +40,6 @@
             {% include social.html %}
 
           </div> <!-- /article-text -->
-
 
 
         </section> <!-- /content content-wrapper -->

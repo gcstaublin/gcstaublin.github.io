@@ -24,7 +24,7 @@ layout: default
                     <div class="teases-mod">
                         <h5 class="section-h">Recent Stories</h5>
                         <ul class="tease-items">
-                            {% for post in site.posts %}
+                            {% for post in site.posts limit: 3 %}
 
                               <li class="tease-item">
                                   <a class="tease-link" href="{{ post.url }}">{{ post.tease }}<span class="tease-date">{{ post.date | date: "%m.%d.%y" }}</span></a>
@@ -33,7 +33,9 @@ layout: default
                             {% endfor %}
 
                         </ul> <!-- /tease-items -->
-                        <h5 class="all-link">All Stories</h5>
+                        <h5 class="all-link">
+                            <a class="archive-link" href="/archive/">All Stories</a>
+                        </h5>
                     </div> <!-- /teases-mod -->
 
 

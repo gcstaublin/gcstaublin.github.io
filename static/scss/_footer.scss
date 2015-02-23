@@ -1,0 +1,97 @@
+// --------------------------------------------
+// --------------------------------------------
+//
+// Footer
+//
+// --------------------------------------------
+// --------------------------------------------
+
+footer {
+  background-color: $primary-text-color;
+  padding: 25px 0;
+  @include text(lighten($secondary-text-color, 15%));
+  font-size: 16px;
+  line-height: 1.425;
+  @include bp($bp-sm) {
+    padding: 100px 0;
+  }
+
+  @include bp($bp-med) {
+    padding: 200px 0;
+  }
+}
+
+.footer-mod {
+  // display: inline-block;
+  max-width: $width-med;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+  @include clearfix;
+}
+
+
+.footer-h {
+  // @include text(lighten($secondary-text-color, 15%));
+  font-size: 30px;
+  font-weight: 200;
+  margin-bottom: 2em;
+}
+
+
+.footer-text {
+
+}
+
+.footer-copyright-msg {
+  margin-top: 35px;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+
+.footer-items {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  @include clearfix;
+}
+
+.footer-item {
+  display: inline-block;
+  position: relative;
+  margin-left: 25px;
+  float: left;
+  &:first-child { margin-left: 0; }
+}
+
+
+.footer-item-link {
+  display: block;
+  background-color: lighten($primary-text-color, 5%);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  transition: background-color 0.25s linear;
+
+  &:hover {
+    background-color: rgba(#B368C7, 0.4);
+    .footer-icon { opacity: 0.6; }
+  }
+
+}
+
+
+.footer-icon {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  top: 50%;
+  margin-top: -11px;
+  left: 50%;
+  margin-left: -11px;
+  opacity: 0.3;
+}
+
