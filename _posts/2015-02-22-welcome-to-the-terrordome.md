@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "Welcome to the terrordome"
-subhead: "This my new website and I can't endorse it at all"
+subhead: "This is my new website, and I can't endorse it at all"
 tease: "It's new and shiny. Can I rip it apart and start over?"
-share: "A man rebuilds his website, using Jekyll. You won't belive what happened next"
+share: "A man rebuilds his website, using Jekyll. Stick around to see what happens next. It might surprise you."
 date:   2015-02-22
 ---
 
