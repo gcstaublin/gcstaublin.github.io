@@ -20,7 +20,7 @@ exclude: [
   .git,
   .gitignore,
   .DS_Store,
-  # CNAME,
+  CNAME,
   static/svg,
   static/scss,
   .sass-cache,
