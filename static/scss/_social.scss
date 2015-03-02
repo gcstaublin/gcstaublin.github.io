@@ -7,9 +7,7 @@
 // --------------------------------------------
 
 .social-mod {
-  // position: absolute;
-  // top: 5px;
-  // left: -100px;
+
   @include bp($bp-social) {
     position: absolute;
     top: 5px;
@@ -23,19 +21,21 @@
 
 
 .social-items {
-  list-style: none;
   margin: 0;
   padding: 0;
+  list-style: none;
   @include clearfix;
 }
 
+
 .social-item {
   position: relative;
-  background-color: darken($bg-color, 20%);
+  margin-bottom: 10px;
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  margin-bottom: 10px;
+  background-color: darken($bg-color, 20%);
+
   &:first-child { margin-left: 0; }
 
   @include bp($bp-social, max) {
@@ -48,9 +48,9 @@
 
 
 .social-icon {
+  position: absolute;
   width: 16px;
   height: 16px;
-  position: absolute;
   top: 50%;
   margin-top: -8px;
   left: 50%;

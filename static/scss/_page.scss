@@ -33,20 +33,22 @@
 
 .archive-item {
   margin-bottom: 3em;
-  // &:last-child { margin-bottom: 0; }
 }
 
+
 .archive-meta {
-  @include text($tease-text-lt);
   margin: 0;
+  @include text($tease-text-lt);
   letter-spacing: 1px;
 }
+
 
 .archive-h {
   margin: 0 0 0.25em;
   font-size: 1.85em;
   line-height: 1.25;
 }
+
 
 .archive-h-link {
   @include display;
@@ -55,6 +57,7 @@
     color: #C0235B;
   }
 }
+
 
 .archive-text {
   @include text;

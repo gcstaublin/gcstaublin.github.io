@@ -28,14 +28,14 @@ body {
 
 
 .content-inner {
-  padding: 0 10px;
   position: relative;
+  padding: 0 10px;
   overflow: hidden;
 }
 
 
 .bg-container {
-  background-image: linear-gradient(-90deg, #C4174E, #AD84F1);
   padding-bottom: 100px;
+  background-image: linear-gradient(-90deg, #C4174E, #AD84F1);
   @include clearfix;
 }

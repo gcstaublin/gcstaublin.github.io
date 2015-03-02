@@ -13,20 +13,20 @@
 
 
 .post-container {
+  position: relative;
+  margin: -25px auto 0;
+  padding: 45px;
   width: 100%;
   max-width: $width-med;
-  margin: -25px auto 0;
-  // background-color: $bg-color;
   background-color: #fff;
-  padding: 45px;
-  position: relative;
 }
 
+
 .comments {
-  width: 100%;
-  max-width: $width-med;
   margin: 0 auto 0;
   padding: 45px;
+  width: 100%;
+  max-width: $width-med;
   background-color: #fff;
 }
 
@@ -43,6 +43,7 @@
   margin: 0;
 }
 
+
 .post-sub-h {
   @include display($display-color-lt);
   margin-top: 1em;
@@ -51,9 +52,10 @@
   font-style: italic;
 }
 
+
 .article-text {
-  margin-top: 45px;
   position: relative;
+  margin-top: 45px;
   @include text;
   font-size: 1.25em;
   line-height: 1.45;

@@ -27,7 +27,6 @@
 }
 
 
-
 .decoration {
   position: absolute;
   display: none;
@@ -44,7 +43,6 @@
   opacity: 0.1;
   // transform: rotate(15deg);
   animation: rotate-decoration 8s linear infinite;
-
 }
 
 .decoration-x-2 {
@@ -54,7 +52,6 @@
   right: 80px;
   opacity: 0.2;
   animation: rotate-decoration 8s linear infinite reverse;
-
 }
 
 .decoration-x-3 {
@@ -64,6 +61,7 @@
   top: 20%;
   right: 2%;
   transform: rotate(-15deg);
+  animation: rotate-decoration 8s linear infinite reverse;
 }
 
 .decoration-x-4 {
@@ -84,7 +82,6 @@
   transform: rotate(-40deg);
   opacity: 0.2;
 }
-
 
 .decoration-line-2 {
   width: 1px;
