@@ -36,6 +36,7 @@ body {
 
 .bg-container {
   padding-bottom: 100px;
+  background-color: $bg-fallback;
   background-image: linear-gradient(-90deg, #C4174E, #AD84F1);
   @include clearfix;
 }
