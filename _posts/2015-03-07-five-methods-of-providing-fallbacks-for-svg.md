@@ -7,15 +7,15 @@ date:   2015-03-07
 ---
 
 
-In case you haven't heard the news, which I'm assuming you have, SVG is pretty sweet. It's scalable, looks crisp on high resolution screens and file sizes are tiny in comparison to raster counterparts. Great things often have a catch, and for SVG, that gotcha is oldie-time IE as well as some older Android browsers.
+In case you haven't heard, which I'm assuming you have, SVG is pretty sweet. It's scalable, looks crisp on high resolution screens and file sizes are tiny in comparison to their raster counterparts. Great things often have a catch, however, and for SVG, that gotcha is oldie-time IE, as well as some older Android browsers.
 
-In some cases such as personal sites or side projects, you can ignore older browsers, forging ahead with impunity. In fact, the site your on right now forsakes browsers that lack svg support. SVGs most likely don't appear in IE8. I say most likely, as I couldn't be bothered to check.
+Depending on what it is your building, you might be in a position to ignore older browsers, forging ahead with impunity. Personal sites and other side projects are a perfect example of this. In fact, the site you're right right this very moment forsakes browsers that lack svg support. SVGs most likely don't appear for you IE8 visitors. I say most likely, because I don't honestly know. I never checked.
 
-Obviously, this type of laissez-faire browser support is untenable for client projects. I've found most clients tend to expect their company logo to appear in all browsers, even the ones we've outlined as receiving baseline support.
+Obviously, this type of laissez-faire browser support is untenable for client projects. I've found most clients tend to expect that their company logo appears in all browsers, even if that browser is receiving legacy or baseline support.
 
-To that point, here are a few methods I've used during the past few years to serve nice, crisp svg logos to modern browsers while providing fallbacks to the less capable.
+To that point, here are a few methods I've used during the past few years to serve svg logos to modern browsers while providing graceful fallbacks for the less capable.
 
-## Swapping background images with Modernizr classes
+## 1. Swapping background images with Modernizr classes
 
 As a matter of preference I typically don't use background images for site logos. I don't have a great philosophical or practical stance to explain that preference. There's the potential few extra lines of CSS, defining widths and heights, a background image logo requires. Other than that, I've generally prefered serving my svgs with an `<img>` tag.
 
@@ -51,7 +51,7 @@ In our SCSS, we give the `.logo` class a width and a height, set it to `display:
 
 **Takeaway:** I typically don't use this technique for site logos. I use a similar technique for UI Icons (menu buttons, social icons, etc), which I'll explain in a future article. But this technique works and is reliable. It does, however, have the dependency of Modernizr. Depending on the performance requirements of your project, loading Modernizr might be out of scope. Let's take a look at a similar technique that doesn't have the Modernizr dependency.
 
-## A Modernizr-free method of swapping out background images
+## 2. A Modernizr-free method of swapping out background images
 
 Before I describe this technique, let me reveal that I've never actually used this technique in a project. I've tested it out but not utilized it in the wild. I would suggest experimenting before throwing it into your next project.
 
@@ -66,7 +66,7 @@ The markup for this technique is exactly the same as the example above. The CSS 
 {% endhighlight %}
 </div>
 
-## Swapping inline images with modernizr and javascript
+## 3. Swapping inline images with modernizr and javascript
 
 During the past few years, this is the technique I've most often used for clients and personal projects.
 
@@ -112,7 +112,7 @@ Our CSS is slightly different, as well. Obviously we no longer need to call a ba
 
 **Takeway:** I've used this technique most often during the past few years. It's been successful. IE8 users will see a flash of no logo (FONL). I just made that up. And, with all things Javascript, there's the potential of failure. If Modernizr doesn't load, or our Javascript test fails to load or run, there's a chance of no .png displaying. Because most client projects I've worked on the past couple years have dwindling support for less capable browsers wuch as IE8, this technique has worked well for me. And to be honest, the whole reason I'm writing this article is to give me a known spot to copy the javascript, rather than rewriting it for each project or hunting through other repositories to find it.
 
-**Bonus:** Because this technique is really for IE8, we can conditionally serve our Javascript to oldie time IE browsers. If our browser is less than IE 9, the external ie.js file will download. Other browsers will ignore the test and not worry with our js.
+**Bonus advice:** Because this technique is really for IE8, we can conditionally serve our Javascript to oldie time IE browsers. If our browser is less than IE 9, the external ie.js file will download. Other browsers will ignore the test and not worry with our js.
 
 <div class="code-block" data-code="HTML">
 {% highlight HTML %}
@@ -122,7 +122,7 @@ Our CSS is slightly different, as well. Obviously we no longer need to call a ba
 {% endhighlight %}
 </div>
 
-## Swapping inline images without css or javascript
+## 4. Swapping inline images without css or javascript
 
 This method is short and sweet. Doesn't require javascript, modernizr or any css. It's all in the markup. One potential problem with this method is the dependency of having access to our markup. Depending on the situation, you might not have that access. Plan accordingly, I guess.
 
@@ -132,7 +132,7 @@ This method is short and sweet. Doesn't require javascript, modernizr or any css
 {% endhighlight %}
 </div>
 
-## Two imgs, hiding and showing with Modernizr classes
+## 5. Two inline images, hiding and showing with Modernizr classes
 
 I recently used this technique on a project, and it definitely works. It's easy. However, I'm not sure I would recommend it. Why? Because this technique not only has the dependency of Modernizr, it also downloads both files, the .svg and the .png. You might be asking, 'what's the big deal?' The additional .png download is small. On it's own, it's not a bandwidth killer, like, say, the 440K of fonts you've included in your project. However, if we're designing and developing with performance in mind, this technique is a less than ideal approach.
 
