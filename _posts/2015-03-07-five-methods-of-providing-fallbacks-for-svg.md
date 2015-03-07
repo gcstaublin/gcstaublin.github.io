@@ -34,7 +34,7 @@ The HTML markup for our background image example is simple and discrete. We have
 In our SCSS, we give the `.logo` class a width and a height, set it to `display: block` and serve an `.svg` by default. Then, assuming you're using Modernizr in your project, we target the `.no-svg` class Modernizr would add to the `<body>` of our document as the page loads and Modernizr tests for feature. Because the `.no-svg & ` declaration block is nested inside our `.logo` block, that line is saying when the class of 'no-svg' exists, the 'logo' class should load the `.png` file, rather than the `.svg`. You might be thinking, 'I know how CSS specificity works, dummy,' but in the case you're new to SCSS or to using Modernizr, that's what is happening here.
 
 <div class="code-block" data-code="SCSS">
-{% highlight SCSS linenos%}
+{% highlight SCSS %}
 .logo {
   width: 120px;
   height: 60px;
@@ -52,21 +52,19 @@ In our SCSS, we give the `.logo` class a width and a height, set it to `display:
 **Takeaway:** I typically don't use this technique for site logos. I use a similar technique for UI Icons (menu buttons, social icons, etc), which I'll explain in a future article. But this technique works and is reliable. It does, however, have the dependency of Modernizr. Depending on the performance requirements of your project, loading Modernizr might be out of scope. Let's take a look at a similar technique that doesn't have the Modernizr dependency.
 
 ## A Modernizr-free method of swapping out background images
-Before I describe this technique, let me reveal that I've never actually used this technique. I would suggest experimenting before throwing it into your next project. Just because I'm writing about and printing this technique on the Internet doesn't mean it's a great idea. It's an idea.
+
+Before I describe this technique, let me reveal that I've never actually used this technique in a project. I've tested it out but not utilized it in the wild. I would suggest experimenting before throwing it into your next project.
 
 The markup for this technique is exactly the same as the example above. The CSS is where the differences occur. The parlor trick is that multiple background support and svg support is roughly the same. Because it doesn't support multiple backgrounds, IE8 will ignore the background-image, falling back to the first line. Thus, serving a png, rather than an svg.
 
 <div class="code-block" data-code="SCSS">
-{% highlight SCSS linenos %}
+{% highlight SCSS %}
 .logo {
-    background: url('my-logo.png');
-    background: url('my-logo.svg'), none;
+    background: url('logo.png');
+    background: url('logo.svg'), none;
 }
 {% endhighlight %}
 </div>
-
-**Takeaway:** As I write this, I've not experimented with this technique. So this theoretical. This technique might work well for you if you need to swap image types, but can't load Modernizr in your project. I have a concern this might trigger some multiple resource downloads, but I could be totally wrong.
-
 
 ## Swapping inline images with modernizr and javascript
 
@@ -87,7 +85,7 @@ The HTML for this technique is very similar to the foundational code from our pr
 The Javascript is the magic happens with this technique. What's happening here, right? On the first line, the Javascript is testing if Modernizr has determined this browser does not support svg. If our browser doesn't support svg, Jquery finds each .svg file, replacing the src with a .png file.
 
 <div class="code-block" data-code="Javascript">
-{% highlight JavaScript linenos %}
+{% highlight JavaScript %}
 if (!Modernizr.svg) {
   $('img[src$=".svg"]').each(function() {
     // E.g replaces 'logo.svg' with 'logo.png'.
@@ -100,7 +98,7 @@ if (!Modernizr.svg) {
 Our CSS is slightly different, as well. Obviously we no longer need to call a background image, as we previously did. We also don't need to specify a height for our `.logo`. Using a `max-width: 100%` for the `.logo-img`, our image with resize to the width of it's container (the `.logo`) or it's true size, which ever happens first.
 
 <div class="code-block" data-code="SCSS">
-{% highlight SCSS linenos%}
+{% highlight SCSS %}
 .logo {
   width: 120px;
   display: block;
@@ -141,7 +139,7 @@ I recently used this technique on a project, and it definitely works. It's easy.
 The markup for this example adds a second `<img>` tag to our markup.
 
 <div class="code-block" data-code="HTML">
-{% highlight HTML linenos %}
+{% highlight HTML %}
 <h1 class="logo-mod">
   <a class="logo" href="/">
     <img class="nav-logo-img" src="logo.svg" alt="">
