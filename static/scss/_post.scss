@@ -19,6 +19,10 @@
   width: 100%;
   max-width: $width-med;
   background-color: #fff;
+
+  @include bp($bp-post-has-pad, max) {
+    padding: 45px 25px;
+  }
 }
 
 
