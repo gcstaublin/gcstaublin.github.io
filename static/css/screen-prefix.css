@@ -255,13 +255,38 @@ img {
   max-width: 100%;
 }
 
+.code-block {
+  font-family: "droid-sans-mono", monospace, sans-serif;
+  font-weight: 400;
+  color: #222222;
+  border-top: 24px solid #607D8B;
+  margin: 1.5em 0;
+  position: relative;
+}
+.code-block:before {
+  position: absolute;
+  top: -23px;
+  left: 10px;
+  content: attr(data-code);
+  color: #fff;
+  font-size: 0.75em;
+  letter-spacing: 1px;
+}
+
+pre, code {
+  font-family: "droid-sans-mono", monospace, sans-serif;
+  font-weight: 400;
+  color: #222222;
+}
+
 /**
  * Syntax highlighting styles
  */
 .highlight {
+  font-size: 0.7em;
   background: #f2f5f6;
-  padding: 10px 15px;
-  margin: 1.5em 0;
+  border-bottom: 2px solid #E4E4E4;
+  padding: 3px 20px 3px 15px;
 }
 .highlight .lineno {
   color: #ccc;
@@ -462,6 +487,7 @@ img {
 }
 
 .bg-backsplash {
+  background-color: #B9448B;
   background-image: linear-gradient(-90deg, #C4174E, #AD84F1);
   padding-bottom: 25px;
 }
@@ -494,10 +520,10 @@ img {
 }
 
 .archive-meta {
+  margin: 0;
   font-family: "omnes-pro", Helvetica, sans-serif;
   font-weight: 300;
   color: #666666;
-  margin: 0;
   letter-spacing: 1px;
 }
 
@@ -557,14 +583,15 @@ body {
 }
 
 .content-inner {
-  padding: 0 10px;
   position: relative;
+  padding: 0 10px;
   overflow: hidden;
 }
 
 .bg-container {
-  background-image: linear-gradient(-90deg, #C4174E, #AD84F1);
   padding-bottom: 100px;
+  background-color: #B9448B;
+  background-image: linear-gradient(-90deg, #C4174E, #AD84F1);
 }
 .bg-container:after {
   content: "";
@@ -573,17 +600,17 @@ body {
 }
 
 .grant-img-container {
+  position: relative;
+  margin: 0 auto;
   width: 100%;
   max-width: 480px;
-  margin: 0 auto;
-  position: relative;
   top: -25px;
 }
 
 .grant-img-container--post {
+  margin: 0 auto;
   width: 100%;
   max-width: 200px;
-  margin: 0 auto;
   position: relative;
   top: -25px;
 }
@@ -596,8 +623,8 @@ body {
 }
 
 .type-img-container {
-  width: 100%;
   position: absolute;
+  width: 100%;
   top: 100px;
   opacity: 0.1;
 }
@@ -647,8 +674,8 @@ body {
 
 .section-h {
   position: relative;
-  margin: 0 auto 45px;
   display: inline-block;
+  margin: 0 auto 45px;
   width: 100%;
   max-width: 210px;
   padding: 10px 15px 8px;
@@ -656,10 +683,10 @@ body {
   color: rgba(255, 255, 255, 0.8);
   background-color: rgba(0, 0, 0, 0.4);
   font-family: "jubilat", Georgia, serif;
+  font-size: 11px;
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 3px;
-  font-size: 11px;
 }
 .section-h:after, .section-h:before {
   position: absolute;
@@ -678,23 +705,23 @@ body {
 
 .teases-mod {
   width: 100%;
+  margin: 30px auto 100px;
   max-width: 720px;
   padding: 0 20px;
-  margin: 30px auto 100px;
 }
 
 .tease-items {
-  list-style: none;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 .tease-item {
-  font-family: "omnes-pro", Helvetica, sans-serif;
-  font-size: 26px;
-  border-bottom: 1px dashed rgba(0, 0, 0, 0.17);
   margin-bottom: 15px;
   padding-bottom: 15px;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.17);
+  font-family: "omnes-pro", Helvetica, sans-serif;
+  font-size: 26px;
   font-weight: 300;
 }
 .tease-item:after {
@@ -708,8 +735,8 @@ body {
 }
 
 .tease-link {
-  color: rgba(255, 255, 255, 0.6);
   display: block;
+  color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
 }
 .tease-link:hover {
@@ -744,8 +771,8 @@ body {
 }
 
 .grid-mod {
-  max-width: 720px;
   margin: 60px auto;
+  max-width: 720px;
 }
 .grid-mod:after {
   content: "";
@@ -794,9 +821,9 @@ body {
 
 .grid-item-text {
   margin: 0 0 10px;
-  font-weight: 100;
   font-size: 16px;
   line-height: 1.425;
+  font-weight: 100;
 }
 
 .grid-item-meta {
@@ -816,11 +843,11 @@ body {
 
 .grid-meta-item {
   display: inline-block;
+  margin-bottom: 10px;
+  margin-left: 3px;
+  padding: 3px 7px;
   float: left;
   background-color: rgba(0, 0, 0, 0.6);
-  padding: 3px 7px;
-  margin-left: 3px;
-  margin-bottom: 10px;
 }
 .grid-meta-item:first-child {
   margin-left: 0;
@@ -862,9 +889,9 @@ footer {
 }
 
 .footer-h {
+  margin-bottom: 2em;
   font-size: 30px;
   font-weight: 200;
-  margin-bottom: 2em;
 }
 
 .footer-copyright-msg {
@@ -898,9 +925,9 @@ footer {
 
 .footer-item-link {
   display: block;
-  background-color: #2e2e2e;
   width: 46px;
   height: 46px;
+  background-color: #2e2e2e;
   border-radius: 50%;
   transition: background-color 0.25s linear;
 }
@@ -1006,6 +1033,8 @@ footer {
   -webkit-transform: rotate(-15deg);
       -ms-transform: rotate(-15deg);
           transform: rotate(-15deg);
+  -webkit-animation: rotate-decoration 8s linear infinite reverse;
+          animation: rotate-decoration 8s linear infinite reverse;
 }
 
 .decoration-x-4 {
@@ -1107,19 +1136,19 @@ footer {
 }
 
 .post-container {
+  position: relative;
+  margin: -25px auto 0;
+  padding: 45px;
   width: 100%;
   max-width: 720px;
-  margin: -25px auto 0;
   background-color: #fff;
-  padding: 45px;
-  position: relative;
 }
 
 .comments {
-  width: 100%;
-  max-width: 720px;
   margin: 0 auto 0;
   padding: 45px;
+  width: 100%;
+  max-width: 720px;
   background-color: #fff;
 }
 
@@ -1132,7 +1161,7 @@ footer {
   font-weight: 200;
   color: black;
   font-size: 45px;
-  line-height: 1.15em;
+  line-height: 1.1em;
   margin: 0;
 }
 
@@ -1147,13 +1176,28 @@ footer {
 }
 
 .article-text {
-  margin-top: 45px;
   position: relative;
+  margin-top: 45px;
   font-family: "omnes-pro", Helvetica, sans-serif;
   font-weight: 300;
   color: #222222;
-  font-size: 1.25em;
+  font-size: 1.15em;
   line-height: 1.45;
+}
+.article-text > p code {
+  color: #008080;
+  font-size: 0.75em;
+}
+.article-text > h2 {
+  margin-top: 2em;
+  margin-bottom: 0.25em;
+  font-family: "jubilat", Georgia, serif;
+  font-weight: 200;
+  color: black;
+  font-size: 1.2em;
+}
+.article-text > h2 + p {
+  margin-top: 0;
 }
 
 #disqus_thread a:link {
@@ -1183,9 +1227,9 @@ footer {
 }
 
 .social-items {
-  list-style: none;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 .social-items:after {
   content: "";
@@ -1195,11 +1239,11 @@ footer {
 
 .social-item {
   position: relative;
-  background-color: #b2c0c6;
+  margin-bottom: 10px;
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  margin-bottom: 10px;
+  background-color: #b2c0c6;
 }
 .social-item:first-child {
   margin-left: 0;
@@ -1214,9 +1258,9 @@ footer {
 }
 
 .social-icon {
+  position: absolute;
   width: 16px;
   height: 16px;
-  position: absolute;
   top: 50%;
   margin-top: -8px;
   left: 50%;

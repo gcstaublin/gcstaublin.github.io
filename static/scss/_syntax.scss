@@ -1,11 +1,37 @@
 
+.code-block {
+    // border-top: 28px solid lighten(#B659AA, 10%);
+    @include code;
+    border-top: 24px solid $primary-color;
+    margin: 1.5em 0;
+    position: relative;
+    &:before {
+        position: absolute;
+        top: -23px;
+        left: 10px;
+        content: attr(data-code);
+        color: #fff;
+        font-size: 0.75em;
+        letter-spacing: 1px;
+    }
+}
+
+
+// including code font
+pre, code { @include code; }
+
+
 /**
  * Syntax highlighting styles
  */
 .highlight {
+    font-size: 0.7em;
     background: lighten($bg-color, 2%);
-    padding: 10px 15px;
-    margin: 1.5em 0;
+    border-bottom: 2px solid #E4E4E4;
+    // background-color: #272822;
+    padding: 3px 20px 3px 15px;
+    // margin: 1.5em 0;
+    // color: #F8F8F2;
     // @extend %vertical-rhythm;
 
      //

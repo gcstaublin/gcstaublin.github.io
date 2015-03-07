@@ -39,7 +39,7 @@
 .post-h {
   @include display;
   font-size: 45px;
-  line-height: 1.15em;
+  line-height: 1.1em;
   margin: 0;
 }
 
@@ -57,8 +57,23 @@
   position: relative;
   margin-top: 45px;
   @include text;
-  font-size: 1.25em;
+  font-size: 1.15em;
   line-height: 1.45;
+
+  // styling code snips that apppear inside article paragraphs
+  > p code {
+    color: #008080;
+    font-size: 0.75em;
+  }
+
+
+  > h2 {
+    margin-top: 2em;
+    margin-bottom: 0.25em;
+    @include display;
+    font-size: 1.2em;
+  }
+  > h2 + p { margin-top: 0; }
 }
 
 

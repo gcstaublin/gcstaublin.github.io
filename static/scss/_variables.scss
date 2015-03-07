@@ -17,9 +17,12 @@ $serif-fallback: Georgia, serif;
 $type-main: 'omnes-pro', $sans-fallback;
 $type-accent: 'jubilat', $serif-fallback;
 $type-display: 'jubilat', Georgia, serif;
+$type-code: 'droid-sans-mono', monospace, sans-serif;
 
 $text-weight: 300;
+$text-bold: 600;
 
+$code-wt:   400;
 // $accent-lt:   200;
 $accent-med:  500;
 $accent-bold: 400;
@@ -51,6 +54,12 @@ $display-color-lt: #888888;
   color: $color;
 }
 
+
+@mixin code($color: $text-color, $font: $type-code, $font-weight: $code-wt ) {
+  font-family: $font;
+  font-weight: $font-weight;
+  color: $color;
+}
 
 
 // Spacing
