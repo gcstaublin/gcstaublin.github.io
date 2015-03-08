@@ -2,8 +2,8 @@
 layout: post
 title:  "Five methods of provding fallbacks for SVGs"
 tease: "Got svgs? Here's how to serve fallbacks to older browsers"
-share: "Svg is wonderful, but if we support less capable browsers like IE8, we need fallbacks. Here's five possible methods."
-date:   2015-03-07
+share: "Five options for providing SVG fallbacks to less capable browsers like IE8."
+date: 2015-03-07
 ---
 
 

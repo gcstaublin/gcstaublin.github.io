@@ -8,7 +8,8 @@
 
 .bg-backsplash {
   background-color: $bg-fallback;
-  background-image: linear-gradient(-90deg, #C4174E, #AD84F1);
+  // background-image: linear-gradient(-90deg, #C4174E, #AD84F1);
+  background-image: $bg;
   padding-bottom: 25px;
   @include clearfix;
 }
@@ -64,10 +65,29 @@
   @include text;
   margin: 0;
   font-size: 1.15em;
-  line-height: 1.25;
+  line-height: 1.45;
   color: $tease-text;
   > p { margin: 0; }
 
   // find a method of removing this within jekyll
   img { display: none; }
+}
+
+.archive-text-link {
+  position: relative;
+  text-decoration: none;
+  color: #C0235B;
+  font-size: 0.85em;
+
+  &:hover { text-decoration: underline; }
+
+  // &:after {
+  //   position: absolute;
+  //   display: inline-block;
+  //   content: '→';
+  //   color: inherit;
+  //   margin-left: 10px;
+  //   top: 50%;
+  //   transform: translateY(-50%);
+  // }
 }

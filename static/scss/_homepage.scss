@@ -91,32 +91,35 @@
 
 
 .section-h {
+  @include display;
   position: relative;
-  display: inline-block;
   margin: 0 auto 45px;
   width: 100%;
-  max-width: 210px;
-  padding: 10px 15px 8px;
-  text-align: center;
   color: rgba(255, 255, 255, 0.8);
-  background-color: rgba(0, 0, 0, 0.4);
-  font-family: $type-accent;
-  font-size: 11px;
-  font-weight: 900;
+  font-size: 15px;
   text-transform: uppercase;
-  letter-spacing: 3px;
-
-  &:after,
-  &:before {
+  letter-spacing: 1px;
+  &:after {
     position: absolute;
     content: '\0020';
-    background-color: rgba(0, 0, 0, 0.1);
-    width: 20px;
-    height: 30px;
-    top: 10px;
+    width: 75px;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.3);
+    left: 0;
+    bottom: -15px;
   }
-  &:after { right: -20px; }
-  &:before { left: -20px; }
+
+  // &:after,
+  // &:before {
+  //   position: absolute;
+  //   content: '\0020';
+  //   background-color: rgba(0, 0, 0, 0.1);
+  //   width: 20px;
+  //   height: 30px;
+  //   top: 10px;
+  // }
+  // &:after { right: -20px; }
+  // &:before { left: -20px; }
 }
 
 
@@ -134,8 +137,18 @@
 .teases-mod {
   width: 100%;
   margin: 30px auto 100px;
+  // max-width: $width-med;
+  // padding: 0 20px;
+  // padding-bottom: 20px;
+  // background-color: rgba(0, 0, 0, 0.5);
+  background-color: $primary-color-drk;
+  // background-color: rgba($primary-text-color, 0.8);
+}
+
+.teases-mod--inner {
+  margin: 0 auto;
   max-width: $width-med;
-  padding: 0 20px;
+  padding: 100px 20px;
 }
 
 
@@ -145,14 +158,17 @@
   list-style: none;
 }
 
+.tease-h {
+  margin: 0;
+  font-weight: 300;
+  font-size: 30px;
+  font-family: $type-main;
+}
 
 .tease-item {
   margin-bottom: 15px;
   padding-bottom: 15px;
   border-bottom: 1px dashed rgba(0, 0, 0, 0.17);
-  font-family: $type-main;
-  font-size: 26px;
-  font-weight: 300;
   @include clearfix;
 
   &:last-child {
@@ -175,12 +191,16 @@
 
 
 .tease-date {
-  float: right;
+  margin: 0;
   font-size: 11px;
-  line-height: 32px;
   letter-spacing: 4px;
 }
 
+
+.all-link {
+  margin-top: 40px;
+  margin-bottom: 0;
+}
 
 .archive-link {
   position: relative;
@@ -213,6 +233,7 @@
 
 .grid-mod {
   margin: 60px auto;
+  padding: 0 20px;
   max-width: $width-med;
   @include clearfix;
 }

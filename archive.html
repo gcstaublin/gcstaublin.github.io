@@ -16,7 +16,7 @@ permalink: /archive/
           <h3 class="archive-h">
             <a class="archive-h-link" href="{{ post.url }}">{{ post.title }}</a>
           </h3> <!-- /archive-h -->
-          <div class="archive-text">{{ post.content | truncatewords: 25 }}</div>
+          <div class="archive-text">{{ post.content | truncatewords: 50 | remove: '<p>' | remove: '</p>' }} <a class="archive-text-link" href="{{ post.url}}">Read More</a></div>
         </article>
       </li> <!-- /tease-item -->
     {% endfor %}

@@ -29,7 +29,7 @@ body {
 
 .content-inner {
   position: relative;
-  padding: 0 10px;
+  // padding: 0 10px;
   overflow: hidden;
 }
 
@@ -37,6 +37,7 @@ body {
 .bg-container {
   padding-bottom: 100px;
   background-color: $bg-fallback;
-  background-image: linear-gradient(-90deg, #C4174E, #AD84F1);
+  // background-image: linear-gradient(-90deg, #C4174E, #AD84F1);
+  background-image: $bg;
   @include clearfix;
 }

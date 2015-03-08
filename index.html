@@ -4,165 +4,153 @@ layout: default
 
 <div class="bg-container">
 
-                <!-- <div class="type-img-container">
-                    <img calss="type-img" src="/static/img/grant_staublin.svg">
-                </div> -->
+  <div class="grant-img-container">
+      <a href="/">
+        <img class="grant-img" src="/static/img/grant_splash_bw.jpg">
+      </a>
+  </div> <!-- /grant-img-container -->
 
-                <div class="grant-img-container">
-                    <a href="/">
-                        <img class="grant-img" src="/static/img/grant_splash_bw.jpg">
-                    </a>
-                </div> <!-- /grant-img-container -->
+  <div class="content-inner">
+    <div class="page-mod">
+      <h4 class="page-intro">Grant Staublin is a front-end designer and modern day human being living in Boston, Massachusetts. He designs things and writes code at Upstatement. He's generally friendly and enjoys coffee, music and running, among other things.</h4>
+    </div> <!-- /page-mod -->
 
-                <div class="content-inner">
+  <div class="teases-mod">
+    <div class="teases-mod--inner">
+      <h5 class="section-h">Recent Stories</h5>
+      <ul class="tease-items">
+        {% for post in site.posts limit: 3 %}
+          <li class="tease-item">
+            <article>
+               <p class="tease-date">{{ post.date | date: "%m.%d.%y" }}</p>
+              <h4 class="tease-h">
+                <a class="tease-link" href="{{ post.url }}">{{ post.tease }}</a>
+              </h4>
+            </article>
+          </li> <!-- /tease-item -->
+        {% endfor %}
+      </ul> <!-- /tease-items -->
+      <h5 class="all-link">
+        <a class="archive-link" href="/archive/">All Stories</a>
+      </h5>
+    </div> <!-- /teases-mod--inner -->
 
-                    <div class="page-mod">
-                        <h4 class="page-intro">Grant Staublin is a front-end designer and modern day human being living in Boston, Massachusetts. He designs things and writes code at Upstatement. He's generally friendly and enjoys coffee, music and running, among other things.</h4>
-                        <!-- <h5 class="page-intro-sm">Get in touch. Or check out a few recent projects</h5> -->
-                    </div> <!-- /page-mod -->
-
-                    <div class="teases-mod">
-                        <h5 class="section-h">Recent Stories</h5>
-                        <ul class="tease-items">
-                            {% for post in site.posts limit: 3 %}
-
-                              <li class="tease-item">
-                                  <a class="tease-link" href="{{ post.url }}">{{ post.tease }}<span class="tease-date">{{ post.date | date: "%m.%d.%y" }}</span></a>
-                              </li> <!-- /tease-item -->
-
-                            {% endfor %}
-
-                        </ul> <!-- /tease-items -->
-                        <h5 class="all-link">
-                            <a class="archive-link" href="/archive/">All Stories</a>
-                        </h5>
-                    </div> <!-- /teases-mod -->
-
-
-
-                    <!-- Portfolio Grid -->
-                    <!-- ===================================== -->
-                    <div class="grid-mod">
-                        <div>
-                            <h5 class="section-h">Recent Projects</h5>
-                        </div>
-
-                        <div class="grid-items">
-
-                            <div class="grid-item">
-                                <div class="grid-item-img">
-                                    <a target="_black" href="http://hechingerreport.org/">
-                                        <img src="/static/img/hechinger_trans.png">
-                                    </a>
-                                </div> <!-- /grid-item-img -->
-
-                                <div class="grid-item-content">
-                                    <h5 class="grid-item-h">
-                                        <a class="grid-item-link" target="_blank" href="http://hechingerreport.org/">The Hechinger Report</a>
-                                    </h5>
-                                    <p class="grid-item-text">Upstatement built this lovely new home for our friends at Hechinger. I worked as a part of three person design team to find the visual voice then served as a lead front-end developer to build the site in a quick succession of sprints. In addition, I handled much of the project management, handling daily communication with the client. </p>
-                                   <!--  <p class="grid-item-meta">Design, Front-end development, Responsive strategy</p> -->
-
-                                </div> <!-- /grid-item-content -->
-                            </div> <!-- /grid-item -->
-
-
-                            <div class="grid-item">
-                                <div class="grid-item-img">
-                                    <a target="_black" href="http://arts.princeton.edu/">
-                                        <img src="/static/img/lca_trans.png">
-                                    </a>
-                                </div> <!-- /grid-item-img -->
-
-                                <div class="grid-item-content">
-                                    <h5 class="grid-item-h">
-                                        <a class="grid-item-link" target="_blank" href="http://arts.princeton.edu/">Lewis Center for the Arts</a>
-                                    </h5>
-                                    <p class="grid-item-text">Serving as the lead front-end developer for this Upstatement project, I collaborated with the design team to help realize how the static designs could become a living breathing, responsive website. I also worked closely with a newer member of our team, offering advice, code reviews and positive vibes.</p>
-                                    <!-- <p class="grid-item-meta">xxxx</p> -->
-                                </div> <!-- /grid-item-content -->
-                            </div> <!-- /grid-item -->
+  </div> <!-- /teases-mod -->
 
 
 
+    <!-- Portfolio Grid -->
+    <!-- ===================================== -->
+    <div class="grid-mod">
+      <div>
+          <h5 class="section-h">Recent Projects</h5>
+      </div>
 
-                             <div class="grid-item">
-                                <div class="grid-item-img">
-                                    <a target="_black" href="https://www.privacyassociation.org/">
-                                        <img src="/static/img/iapp_trans.png">
-                                    </a>
-                                </div> <!-- /grid-item-img -->
+        <div class="grid-items">
 
-                                <div class="grid-item-content">
-                                    <h5 class="grid-item-h">
-                                        <a class="grid-item-link" target="_blank" href="https://www.privacyassociation.org/">The International Association </br>of Privacy Professionals</a>
-                                    </h5>
-                                    <p class="grid-item-text">The Privacy Professionals website was a unique project for us at Upstatement. The site had many more transactional interactions than your typical editorially based project. I served as the lead front-end devleoper, working with the design team to realize their vision and make it responsive</p>
-                                    <!-- <p class="grid-item-meta">xxxx</p> -->
-                                </div> <!-- /grid-item-content -->
-                            </div> <!-- /grid-item -->
+          <div class="grid-item">
+            <div class="grid-item-img">
+                <a target="_black" href="http://hechingerreport.org/">
+                    <img src="/static/img/hechinger_trans.png">
+                </a>
+            </div> <!-- /grid-item-img -->
 
-
-
-                             <div class="grid-item">
-                                <div class="grid-item-img">
-                                    <a target="_black" href="http://niemanreports.org/">
-                                        <img src="/static/img/nieman_trans.png">
-                                    </a>
-                                </div> <!-- /grid-item-img -->
-
-                                <div class="grid-item-content">
-                                    <h5 class="grid-item-h">
-                                        <a class="grid-item-link" target="_blank" href="http://niemanreports.org/">The Nieman Foundation</a>
-                                    </h5>
-                                    <p class="grid-item-text">The Nieman Foundation's new site is actually a set of three inter-related sites: Nieman Reports, Nieman Storyboard and the Foundation itself. I handled design and front end developemnt on this huge Upstatement endeavor.</p>
-                                    <!-- <p class="grid-item-meta">xxxx</p> -->
-                                </div> <!-- /grid-item-content -->
-                            </div> <!-- /grid-item -->
-
-                        </div> <!-- /grid-items -->
-
-                    </div> <!-- /page-mod -->
+            <div class="grid-item-content">
+              <h5 class="grid-item-h">
+                  <a class="grid-item-link" target="_blank" href="http://hechingerreport.org/">The Hechinger Report</a>
+              </h5>
+              <p class="grid-item-text">Upstatement built this lovely new home for our friends at Hechinger. I worked as a part of three person design team to find the visual voice then served as a lead front-end developer to build the site in a quick succession of sprints. In addition, I handled much of the project management, handling daily communication with the client. </p>
+            </div> <!-- /grid-item-content -->
+          </div> <!-- /grid-item -->
 
 
+          <div class="grid-item">
+            <div class="grid-item-img">
+              <a target="_black" href="http://arts.princeton.edu/">
+                <img src="/static/img/lca_trans.png">
+              </a>
+            </div> <!-- /grid-item-img -->
+
+            <div class="grid-item-content">
+              <h5 class="grid-item-h">
+                  <a class="grid-item-link" target="_blank" href="http://arts.princeton.edu/">Lewis Center for the Arts</a>
+              </h5>
+              <p class="grid-item-text">Serving as the lead front-end developer for this Upstatement project, I collaborated with the design team to help realize how the static designs could become a living breathing, responsive website. I also worked closely with a newer member of our team, offering advice, code reviews and positive vibes.</p>
+            </div> <!-- /grid-item-content -->
+          </div> <!-- /grid-item -->
 
 
+          <div class="grid-item">
+            <div class="grid-item-img">
+              <a target="_black" href="https://www.privacyassociation.org/">
+                <img src="/static/img/iapp_trans.png">
+              </a>
+            </div> <!-- /grid-item-img -->
 
-                    <!-- SVG -->
-                    <!-- ===================================== -->
-                     {% include svg-defs.svg %}
+            <div class="grid-item-content">
+              <h5 class="grid-item-h">
+                <a class="grid-item-link" target="_blank" href="https://www.privacyassociation.org/">The International Association </br>of Privacy Professionals</a>
+              </h5>
+              <p class="grid-item-text">The Privacy Professionals website was a unique project for us at Upstatement. The site had many more transactional interactions than your typical editorially based project. I served as the lead front-end devleoper, working with the design team to realize their vision and make it responsive</p>
+            </div> <!-- /grid-item-content -->
+          </div> <!-- /grid-item -->
 
-                    <svg class="decoration decoration-x-1">
-                        <use xlink:href="#shape-elements_large_x" />
-                    </svg>
 
-                    <svg class="decoration decoration-x-2">
-                        <use xlink:href="#shape-elements_large_x" />
-                    </svg>
+          <div class="grid-item">
+            <div class="grid-item-img">
+              <a target="_black" href="http://niemanreports.org/">
+                <img src="/static/img/nieman_trans.png">
+              </a>
+            </div> <!-- /grid-item-img -->
 
-                    <svg class="decoration decoration-x-3">
-                        <use xlink:href="#shape-elements_small_x" />
-                    </svg>
+            <div class="grid-item-content">
+              <h5 class="grid-item-h">
+                <a class="grid-item-link" target="_blank" href="http://niemanreports.org/">The Nieman Foundation</a>
+              </h5>
+              <p class="grid-item-text">The Nieman Foundation's new site is actually a set of three inter-related sites: Nieman Reports, Nieman Storyboard and the Foundation itself. I handled design and front end developemnt on this huge Upstatement endeavor.</p>
+            </div> <!-- /grid-item-content -->
+          </div> <!-- /grid-item -->
 
-                    <svg class="decoration decoration-x-4">
-                        <use xlink:href="#shape-elements_large_x" />
-                    </svg>
+        </div> <!-- /grid-items -->
 
-                    <svg class="decoration decoration-line-1">
-                        <use xlink:href="#shape-elements_long_line" />
-                    </svg>
+    </div> <!-- /page-mod -->
 
-                    <svg class="decoration decoration-line-2">
-                        <use xlink:href="#shape-elements_long_line" />
-                    </svg>
 
-                    <svg class="decoration decoration-line-3">
-                        <use xlink:href="#shape-elements_long_line" />
-                    </svg>
+    <!-- SVG -->
+    <!-- ===================================== -->
+     {% include svg-defs.svg %}
 
-                    <svg class="decoration decoration-line-4">
-                        <use xlink:href="#shape-elements_long_line" />
-                    </svg>
+    <svg class="decoration decoration-x-1">
+        <use xlink:href="#shape-elements_large_x" />
+    </svg>
 
-                </div> <!-- /content-inner -->
-            </div> <!-- bg-container -->
+    <svg class="decoration decoration-x-2">
+        <use xlink:href="#shape-elements_large_x" />
+    </svg>
+
+    <svg class="decoration decoration-x-3">
+        <use xlink:href="#shape-elements_small_x" />
+    </svg>
+
+    <svg class="decoration decoration-x-4">
+        <use xlink:href="#shape-elements_large_x" />
+    </svg>
+
+    <svg class="decoration decoration-line-1">
+        <use xlink:href="#shape-elements_long_line" />
+    </svg>
+
+    <svg class="decoration decoration-line-2">
+        <use xlink:href="#shape-elements_long_line" />
+    </svg>
+
+    <svg class="decoration decoration-line-3">
+        <use xlink:href="#shape-elements_long_line" />
+    </svg>
+
+    <svg class="decoration decoration-line-4">
+        <use xlink:href="#shape-elements_long_line" />
+    </svg>
+
+</div> <!-- /content-inner -->
+</div> <!-- bg-container -->
