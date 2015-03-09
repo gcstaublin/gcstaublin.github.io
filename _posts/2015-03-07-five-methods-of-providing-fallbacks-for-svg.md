@@ -7,11 +7,11 @@ date: 2015-03-07
 ---
 
 
-In case you haven't heard, which I'm assuming you have, SVG is pretty sweet. It's scalable, looks crisp on high resolution screens and file sizes are tiny in comparison to their raster counterparts. Great things often have a catch, however, and for SVG, that gotcha is oldie-time IE, as well as some older Android browsers.
+SVG is pretty sweet. I'm assuming you know that, but if you were unaware, that's the news. It's scalable, looks crisp on high resolution screens and file sizes are tiny in comparison to their raster counterparts. Great things often have a catch, however, and for SVG, that gotcha is oldie-time IE, as well as some older Android browsers.
 
-Depending on what it is your building, you might be in a position to ignore older browsers, forging ahead with impunity. Personal sites and other side projects are a perfect example of this. In fact, the site you're right right this very moment forsakes browsers that lack svg support. SVGs most likely don't appear for you IE8 visitors. I say most likely, because I don't honestly know. I never checked.
+Depending on what it is your building, you might be in a position to ignore older browsers, forging ahead with impunity. Personal sites and other side projects, for example. In fact, the site you're reading right this very moment forsakes browsers that lack svg support. SVGs most likely don't appear for you IE8 visitors. I say most likely, because I don't honestly know. I never checked.
 
-Obviously, this type of laissez-faire browser support is untenable for client projects. I've found most clients tend to expect that their company logo appears in all browsers, even if that browser is receiving legacy or baseline support.
+Obviously, this type of laissez-faire browser support is untenable for client projects. I've found most clients expect their company logo to appear in all browsers, even if that browser is receiving legacy or baseline support.
 
 To that point, here are a few methods I've used during the past few years to serve svg logos to modern browsers while providing graceful fallbacks for the less capable.
 
@@ -122,9 +122,9 @@ Our CSS is slightly different, as well. Obviously we no longer need to call a ba
 {% endhighlight %}
 </div>
 
-## 4. Swapping inline images without css or javascript
+## 4. Swapping inline images without css or Modernizr
 
-This method is short and sweet. Doesn't require javascript, modernizr or any css. It's all in the markup. One potential problem with this method is the dependency of having access to our markup. Depending on the situation, you might not have that access. Plan accordingly, I guess.
+This method is short and sweet and doesn't require Modernizr or css. It's all in the markup. One potential problem with this method is the dependency of having access to our markup. Depending on the situation, you might not have that access. Plan accordingly.
 
 <div class="code-block" data-code="HTML">
 {% highlight HTML %}
