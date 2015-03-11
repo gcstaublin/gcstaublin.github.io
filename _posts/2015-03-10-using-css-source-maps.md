@@ -60,7 +60,7 @@ scss —watch static/scss/screen.scss:static/css/screen.css
 </div>
 
 **Step 8** &nbsp;
-Inspect an element with your chrome dev tools. You should see the source `.scss` file for the corresponding element. If you click on that link, the scss file will open in your dev tools windows. Edit the rule you want to change, then save `Command S`. When you save you're actually saving to your actuall SCSS file. As you save, keep an eye on your terminal window, and you should notice that saving from the browser is triggering you SCSS to recompile. **Additionally, if you `Command` click on a value, you can edit the source value, whether that's a variable, mixin or placeholder.**
+Inspect an element with your chrome dev tools. You should see the source `.scss` file for the corresponding element. If you click on that link, the scss file will open in your dev tools windows. Edit the rule you want to change, then save `Command S`. When you save you're actually saving to your actuall SCSS file. As you save, keep an eye on your terminal window, and you should notice that saving from the browser is triggering you SCSS to recompile. **Additionally, if you `Command click` on a value, you can edit the source value, whether that's a variable, mixin or placeholder.**
 
 ![](/static/img/posts/2015_03/edit_original.gif)
 
