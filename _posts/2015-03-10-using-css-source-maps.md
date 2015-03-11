@@ -60,7 +60,7 @@ scss —watch static/scss/screen.scss:static/css/screen.css
 </div>
 
 **Step 8** &nbsp;
-Inspect an element with your chrome dev tools. You should see the source `.scss` file for the corresponding element. If you click on that link, the scss file will open in your dev tools windows. Edit the rule you want to change, then save `Command S`. When you save you're actually saving to your actuall SCSS file. As you save, keep an eye on your terminal window, and you should notice that saving from the browser is triggering you SCSS to recompile. Additionally, if you If you Command click on a value You can edit the source value, whether that's a variable, mixin or placeholder.
+Inspect an element with your chrome dev tools. You should see the source `.scss` file for the corresponding element. If you click on that link, the scss file will open in your dev tools windows. Edit the rule you want to change, then save `Command S`. When you save you're actually saving to your actuall SCSS file. As you save, keep an eye on your terminal window, and you should notice that saving from the browser is triggering you SCSS to recompile. **Additionally, if you `Command` click on a value, you can edit the source value, whether that's a variable, mixin or placeholder.**
 
 ![](/static/img/posts/2015_03/edit_original.gif)
 
@@ -68,4 +68,4 @@ Inspect an element with your chrome dev tools. You should see the source `.scss`
 
 ## Wrap up
 
-I think source maps are really cool, and I'm glad I finally played around with them to see them in action. However, as much as I hate transposing dev tools tweaking back into the code base, or lossing work all together, I do like the separation between dev tools and code base. I'm not sure I'll adopt this for my workflow, but ask me again the next time I mistakenly refresh the browser after making lots of tweaks.
+Source maps are really cool, and I'm glad I finally played around with them to see them in action. However, as much as I hate transposing dev tools tweaking into the code base, or losing work all together, I do like the separation between dev tools and code base. I'm not sure I'll adopt this for my workflow, but ask me again the next time I mistakenly refresh the browser after making lots of tweaks.
