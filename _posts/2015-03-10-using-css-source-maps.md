@@ -32,7 +32,7 @@ Next while still in the dev tools seeings navigate to workspaces. We need to tel
 If you click on the `Sources` tab at the top of your dev tools, you should see the folder you added in Step 2 in the left hand pannel. If you don't see this left panel, click on the small expand arrow toward the top left of your dev tools window.
 
 **Step 4** &nbsp;
-Now you need to map the source file for your outputted CSS. For instance, my compiled CSS is called `screen.css`, so I need to map to the `screen.scss`. I control clicked on the `screen.scss` file and select `Map to Network Reource` from the contexual menu.
+Now you want to map the source file for your outputted CSS. For instance, my compiled CSS is called `screen.css`, so I'm to mapping that to the `screen.scss`. Control click on the `screen.scss` file and select `Map to Network Reource` from the contexual menu.
 
 ![](/static/img/posts/2015_03/map_to_resource.gif)
 
@@ -42,7 +42,7 @@ In the workspaces pop up that apears after you select your map to network resour
 ![](/static/img/posts/2015_03/after_resource.gif)
 
 **Step 6** &nbsp;
-After you hit return, you should get a notification to restart your Chrome dev tools. Click ok
+Hit return, and you should get a notification to restart your Chrome dev tools. Click ok
 
 ![](/static/img/posts/2015_03/restart_tools.gif)
 
