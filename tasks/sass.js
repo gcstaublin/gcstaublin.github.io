@@ -7,7 +7,7 @@ module.exports = function(grunt) {
 		dist: {
 			options: {
 			  style: 'compressed',
-			  sourcemap: 'none'
+			  sourcemap: 'auto'
 			},
 			files: {
 			  'static/css/screen.css': 'static/scss/screen.scss'
@@ -17,7 +17,7 @@ module.exports = function(grunt) {
 		dev: {
 			options: {
 			  style: 'expanded',
-			  sourcemap: 'none'
+			  sourcemap: 'auto'
 			},
 			files: {
 			  'static/css/screen.css' : 'static/scss/screen.scss'
