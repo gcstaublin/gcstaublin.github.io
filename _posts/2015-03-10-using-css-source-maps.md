@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Edit SCSS directly from your browser? Yes, you can that!"
+title:  "Edit SCSS directly from your browser? Yes, you can do that!"
 subhead: "With CSS source maps saving your dev tool tweaking back to your code base is as easy as saving a file"
 tease: "Edit SCSS directly from your browser? Yes, you can!"
 share: "CSS source maps will enable you to edit and save your SCSS right from your browser"
