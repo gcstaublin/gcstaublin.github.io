@@ -9,7 +9,7 @@ date: 2015-03-10
 
 Has this ever happened to you? You're tweaking CSS with the Chrome dev tools. You're making refinements, everything is getting dialed in just so. But then you make a fatal mistake, you refresh the browser, or maybe even close the window. Either way, it's gone. It's all gone. All that beautiful work is gone, leaving you to start over, hoping you can remember every rule and value you previously tweaked.
 
-Wouldn't it be great if you could edit CSS in your browser and have the changes appear in your code base? Here's a little secret. You can! I'm totally not even kiding.
+Wouldn't it be great if you could edit CSS in your browser and have the changes appear in your code base? Here's a little secret. You can! I'm totally not even kidding.
 
 With Source Maps you can edit in the browser, then save those edits back to your source SCSS files, saving the extra steps of transposing all that work.
 
@@ -29,15 +29,15 @@ Next while still in the dev tools seeings navigate to workspaces. We need to tel
 ![](/static/img/posts/2015_03/workspace.gif)
 
 **Step 3** &nbsp;
-If you click on the `Sources` tab at the top of your dev tools, you should see the folder you added in Step 2 in the left hand pannel. If you don't see this left panel, click on the small expand arrow toward the top left of your dev tools window.
+If you click on the `Sources` tab at the top of your dev tools, you should see the folder you added in Step 2 in the left hand panel. If you don't see this left panel, click on the small expand arrow toward the top left of your dev tools window.
 
 **Step 4** &nbsp;
-Now you want to map the source file for your outputted CSS. For instance, my compiled CSS is called `screen.css`, so I'm to mapping that to the `screen.scss`. Control click on the `screen.scss` file and select `Map to Network Reource` from the contexual menu.
+Now you want to map the source file for your outputted CSS. For instance, my compiled CSS is called `screen.css`, so I'm to mapping that to the `screen.scss`. Control click on the `screen.scss` file and select `Map to Network Resource` from the contextual menu.
 
 ![](/static/img/posts/2015_03/map_to_resource.gif)
 
 **Step 5** &nbsp;
-In the workspaces pop up that apears after you select your map to network resources file, select the same file and hit return.
+In the workspaces pop up that appears after you select your map to network resources file, select the same file and hit return.
 
 ![](/static/img/posts/2015_03/after_resource.gif)
 
@@ -60,7 +60,7 @@ scss —watch static/scss/screen.scss:static/css/screen.css
 </div>
 
 **Step 8** &nbsp;
-Inspect an element with your chrome dev tools. You should see the source `.scss` file for the corresponding element. If you click on that link, the scss file will open in your dev tools windows. Edit the rule you want to change, then save `Command S`. When you save you're actually saving to your actuall SCSS file. As you save, keep an eye on your terminal window, and you should notice that saving from the browser is triggering you SCSS to recompile. **Additionally, if you `Command click` on a value, you can edit the source value, whether that's a variable, mixin or placeholder.**
+Inspect an element with your chrome dev tools. You should see the source `.scss` file for the corresponding element. If you click on that link, the scss file will open in your dev tools windows. Edit the rule you want to change, then save `Command S`. When you save you're actually saving to your actual SCSS file. As you save, keep an eye on your terminal window, and you should notice that saving from the browser is triggering you SCSS to recompile. **Additionally, if you `Command click` on a value, you can edit the source value, whether that's a variable, mixin or placeholder.**
 
 ![](/static/img/posts/2015_03/edit_original.gif)
 
