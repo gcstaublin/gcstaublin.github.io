@@ -137,12 +137,7 @@
 .teases-mod {
   width: 100%;
   margin: 30px auto 100px;
-  // max-width: $width-med;
-  // padding: 0 20px;
-  // padding-bottom: 20px;
-  // background-color: rgba(0, 0, 0, 0.5);
   background-color: $primary-color-drk;
-  // background-color: rgba($primary-text-color, 0.8);
 }
 
 .teases-mod--inner {
@@ -240,23 +235,49 @@
 
 
 .grid-item {
-  margin-bottom: 60px;
-    position: relative;
+  margin-bottom: 100px;
+  position: relative;
+  @include clearfix;
+
+  &:last-child { margin-bottom: 0; }
 
   @include bp($bp-sm) {
-    width: 42%;
-    float: left;
-    &:nth-child(2n+2) {
-      float: right;
-      margin-top: 100px;
-      margin-bottom: 0;
-    }
+    // width: 42%;
+    // float: left;
+    // &:nth-child(2n+2) {
+    //   float: right;
+    //   margin-top: 100px;
+    //   margin-bottom: 0;
+    // }
   }
 }
 
 
+.grid-item-content {
+  // width: 65%;
+  // float: left;
+  // .grid-item:nth-child(2n+2) & {
+  //   float: left;
+  // }
+}
+
 .grid-item-img {
-  width: 65%;
+  width: 40%;
+  float: right;
+  margin-left: 15px;
+
+  // .grid-item:nth-child(2n+2) & {
+  //   float: right;
+  //   margin-right: 0;
+  // }
+  // transition-property: transform;
+  // transition-delay: 0.3, 0.3s;
+  // transition-duration: 0.3s;
+
+  // &:hover {
+  //   transform: scale(1.1) rotate(-0.5deg);
+  //   transition-delay: 0s, 0.3s;
+  // }
 
   img { max-width: 100%; }
 }
@@ -269,23 +290,41 @@
 
 
 .grid-item-h {
-  margin: 10px 0 5px;
-  font-weight: 400;
-  font-size: 18px;
+  margin: 0 0 7px;
+  font-weight: $text-weight;
+  font-size: 24px;
+  line-height: 1.15;
 }
 
 
-.grid-item-link {
+.grid-item-link,
+.grid-link {
   text-decoration: none;
   color: #fff;
 }
 
+.grid-link {
+  display: inline-block;
+  margin-top: 0.5em;
+  padding: 0.5em 0.8em;
+  // padding: 0 0 0.2em;
+  border: 1px solid rgba(#fff, 0.5);
+  // border-bottom: 1px solid rgba(#fff, 0.5);
+  font-size: 0.85em;
+  color: rgba(#fff, 0.8);
+  transition: all 0.3s ease-in-out;
+  letter-spacing: 1px;
+  &:hover {
+    border-color: rgba(#fff, 0.8);
+    color: #fff;
+  }
+}
 
 .grid-item-text {
   margin: 0 0 10px;
-  font-size: 16px;
-  line-height: 1.425;
-  font-weight: 100;
+  font-size: 17px;
+  line-height: 1.475;
+  font-weight: 400;
 }
 
 
