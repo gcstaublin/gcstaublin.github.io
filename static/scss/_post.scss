@@ -70,6 +70,13 @@
     font-size: 0.75em;
   }
 
+  > p a {
+    // color: lighten($text-color, 15%);
+    color: $accent-color;
+    text-decoration: none;
+    &:hover { text-decoration: underline; }
+  }
+
 
   > h2 {
     margin-top: 2em;

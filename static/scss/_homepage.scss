@@ -90,10 +90,10 @@
 }
 
 
-.section-h {
+.section--h {
   @include display;
   position: relative;
-  margin: 0 auto 45px;
+  margin: 0 auto 60px;
   width: 100%;
   color: rgba(255, 255, 255, 0.8);
   font-size: 15px;
@@ -189,15 +189,16 @@
   margin: 0;
   font-size: 11px;
   letter-spacing: 4px;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 
-.all-link {
+.archive-tease__h {
   margin-top: 40px;
   margin-bottom: 0;
 }
 
-.archive-link {
+.archive-tease__link {
   position: relative;
   text-decoration: none;
   color: #fff;
@@ -253,43 +254,24 @@
 }
 
 
-.grid-item-content {
-  // width: 65%;
-  // float: left;
-  // .grid-item:nth-child(2n+2) & {
-  //   float: left;
-  // }
-}
+.grid-item-content { }
 
-.grid-item-img {
+.grid-item__img {
   width: 40%;
   float: right;
   margin-left: 15px;
-
-  // .grid-item:nth-child(2n+2) & {
-  //   float: right;
-  //   margin-right: 0;
-  // }
-  // transition-property: transform;
-  // transition-delay: 0.3, 0.3s;
-  // transition-duration: 0.3s;
-
-  // &:hover {
-  //   transform: scale(1.1) rotate(-0.5deg);
-  //   transition-delay: 0s, 0.3s;
-  // }
 
   img { max-width: 100%; }
 }
 
 
-.grid-item-content {
+.grid-item__content {
   color: rgba(255, 255, 255, 0.8);
   font-family: $type-main;
 }
 
 
-.grid-item-h {
+.grid-item__h {
   margin: 0 0 7px;
   font-weight: $text-weight;
   font-size: 24px;
@@ -297,13 +279,13 @@
 }
 
 
-.grid-item-link,
-.grid-link {
+.grid-item__link,
+.grid-item__link--highlight {
   text-decoration: none;
   color: #fff;
 }
 
-.grid-link {
+.grid-item__link--highlight {
   display: inline-block;
   margin-top: 0.5em;
   padding: 0.5em 0.8em;
@@ -320,42 +302,9 @@
   }
 }
 
-.grid-item-text {
+.grid-item__text {
   margin: 0 0 10px;
   font-size: 17px;
   line-height: 1.475;
   font-weight: 400;
 }
-
-
-.grid-item-meta {
-  text-transform: uppercase;
-  font-size: 11px;
-  letter-spacing: 1px;
-}
-
-
-.grid-meta-items {
-  @include clearfix;
-  text-align: center;
-}
-
-
-.grid-meta-item {
-  display: inline-block;
-  margin-bottom: 10px;
-  margin-left: 3px;
-  padding: 3px 7px;
-  float: left;
-  background-color: rgba(0, 0, 0, 0.6);
-
-  &:first-child { margin-left: 0; }
-  &:last-child { margin-bottom: 0; }
-}
-
-
-// <ul class="grid-meta-items">
-//     <li class="grid-meta-item">Design</li>
-//     <li class="grid-meta-item">Front-end development</li>
-//     <li class="grid-meta-item">Responsive Strategy</li>
-// </ul>
