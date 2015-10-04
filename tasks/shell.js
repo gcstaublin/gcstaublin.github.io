@@ -5,7 +5,7 @@ module.exports = function(grunt) {
     },
 
     jekyllServe: {
-        command: "jekyll serve"
+        command: "jekyll serve --baseurl"
       },
       jekyllBuild: {
         command: "jekyll build"
