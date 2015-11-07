@@ -5,7 +5,7 @@ description: "Write an awesome description for your new site here. You can edit 
 # baseurl: "http://gcstaublin.github.io"
 # baseurl: ''
 baseurl: "http://grantstaublin.com"
-url: "http://localhost:4000"
+url: "http://localhost:3000"
 
 # Build settings
 markdown: kramdown
@@ -28,6 +28,7 @@ exclude: [
   .sass-cache,
   package.json,
   Gruntfile.js,
+  gulpfile.js,
   node_modules,
   bower.json,
   tasks,

@@ -1,6 +1,15 @@
 {% include head.html %}
 
   <body class="{% if page.pageclass %}{{page.pageclass}}{% endif %}">
+
+    <!-- SVG -->
+    <!-- ===================================== -->
+    <div style="height: 0; width: 0; position: absolute; visibility: hidden">
+       {% include svg.svg %}
+     </div>
+
+
+
     <div class="content-wrapper post-wrapper">
 
 
@@ -11,7 +20,7 @@
         <div class="bg-backsplash">
             <div class="grant-img-container--post">
                 <a href="/">
-                    <img class="grant-img" src="/static/img/grant_splash_bw.jpg">
+                    <img class="grant-img" src="/static/img/grant_avatar.png">
                 </a>
             </div> <!-- /grant-img-container -->
             <h1 class="page-h">{{ page.pagehead }}</h1>
@@ -37,9 +46,7 @@
       </article>
 
 
-      <!-- SVG -->
-      <!-- ===================================== -->
-       {% include svg-defs.svg %}
+
 
 
 
