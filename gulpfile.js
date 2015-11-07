@@ -83,6 +83,7 @@ gulp.task('sass', function(){
  .pipe(postcss(processors))
  .pipe(sourcemaps.write('./'))
  .pipe(gulp.dest('static/css'))
+ .pipe(gulp.dest('_site/static/css'))
  .pipe(browserSync.stream());
 });
 
