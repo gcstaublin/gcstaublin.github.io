@@ -3,5 +3,6 @@
 _site
 .sass-cache
 *.draft.md
+*-draft.md
 /static/css/*
 
