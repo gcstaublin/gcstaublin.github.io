@@ -9,25 +9,26 @@
 
 .grant-img-container {
   position: relative;
-  margin: 0 auto -25px;
-  // width: 100%;
-  // max-width: $width-sm;
-  top: -$top-margin;
-  width: 125px;
-  height: 125px;
+  // margin: 0 auto -25px;
+  margin: 0;
+  // top: -$top-margin;
+  width: 65px;
+  height: auto;
+  // height: 125px;
   text-align: center;
 }
 
 
 .grant-img-container--post {
-  margin: 0 auto;
-  width: 100%;
+  // margin: 0 auto;
+  // width: 100%;
   // max-width: $width-xsm;
   position: relative;
-  top: -$top-margin;
-  text-align: center;
-  width: 75px;
-  height: 75px;
+  // top: -$top-margin;
+  // text-align: center;
+  width: 35px;
+  height: auto;
+  // height: 75px;
 }
 
 
@@ -56,7 +57,13 @@
 }
 
 
-
+.logo__link {
+  color: rgba(0, 0, 0, 0.4);
+  transition: color 0.2s ease;
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+}
 
 
 // --------------------------------------------
@@ -76,8 +83,8 @@
 
 
 .page-intro {
-  margin: 25px 0 125px;
-  font-size: 20px;
+  margin: 25px 0;
+  font-size: 22px;
   font-weight: 100;
   line-height: 1.425;
   color: rgba(255, 255, 255, 0.8);
@@ -87,6 +94,16 @@
     margin-top: 75px;
   }
 }
+
+
+.page-text {
+  margin-top: 18px;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1.425;
+  color: rgba(255, 255, 255, 0.8);
+}
+
 
 
 .page-intro-sm {
