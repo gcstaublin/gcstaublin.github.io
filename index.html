@@ -4,20 +4,23 @@ layout: default
 
 <div class="bg-container">
 
-  <div class="grant-img-container">
-      <a class="logo__link" href="/">
-        <!-- <img class="grant-img" src="/static/img/grant_avatar.png"> -->
-        {% include gLogo.svg %}
-      </a>
-  </div> <!-- /grant-img-container -->
+
+  <div class="logo__container--hp">
+    <a class="logo__link--hp" href="/">
+      {% include gLogo.svg className="svg--logo--hp" %}
+    </a>
+  </div> <!-- /logo__container -->
+
 
   <div class="content-inner">
-    <div class="page-mod">
-      <h4 class="page-intro">Grant Staublin is a product designer, front-end developer and modern day human being living in the mountains of Western Massachusetts. He's generally friendly and enjoys coffee, music and running, among other things.</h4>
+    <div class="page-mod page-mod--hp-intro">
+      {% for item in site.data.hp-intro %}
+        <h4 class="page-intro">{{item.intro}}<h4>
 
-      <p class="page-text">Grant Staublin is a product designer, front-end developer and modern day human being living in the mountains of Western Massachusetts. He's generally friendly and enjoys coffee, music and running, among other things.</p>
-
-      <p class="page-text">Grant Staublin is a product designer, front-end developer and modern day human being living in the mountains of Western Massachusetts. He's generally friendly and enjoys coffee, music and running, among other things.</p>
+        {% for paragraph in item.words %}
+          <p class="page-text">{{paragraph}}<p>
+        {% endfor %}
+      {% endfor %}
     </div> <!-- /page-mod -->
 
 

@@ -1,0 +1,52 @@
+---
+layout: page
+title: Grant Staubin | Resume
+pagehead: Resume
+pageclass: page-archive
+permalink: /resume/
+---
+
+<div>
+
+
+    {% for item in site.data.resume %}
+
+      <!-- big header -->
+      <h4>{{item.name}}</h4>
+      <h3>{{item.title}}</h3>
+
+
+      <!-- address -->
+      <div>
+        <p>{{item.siteURL}}</p>
+        {% for addressItem in item.address %}
+          <p>{{addressItem}}</p>
+        {% endfor %}
+      <div>
+
+      <!-- telephone -->
+      <div>
+        <p>{{item.telephone}}</p>
+      </div>
+
+      <!-- email -->
+      <div>
+        <p>{{item.email}}</p>
+      </div>
+
+
+      <!-- Experience -->
+      {% if item.experiences %}
+        <h4>Experience</h4>
+        {% for jobExperience in item.experiences %}
+          <p>{{jobExperience.position}}</p>
+        {% endfor %}
+
+      {% endif %}
+
+
+
+
+    {% endfor %}
+
+</div>

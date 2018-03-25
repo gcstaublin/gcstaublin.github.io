@@ -9,7 +9,7 @@ url: "http://localhost:3000"
 
 # Build settings
 markdown: kramdown
-permalink: /articles/:title
+permalink: /articles/:title/
 paginate: 2
 paginate_path: "archive/page/:num"
 

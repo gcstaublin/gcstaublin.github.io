@@ -85,7 +85,11 @@ $divider-color:       #B6B6B6;
 
 $bg-color:    lighten($primary-color-lt, 10%);
 
-$bg-fallback: #B9448B;
+// $bg-fallback: #B9448B;
+$bg-fallback: rgb(29,63,253);
+
+
+$bg-fallback-small: rgb(253,29,133);
 
 
 
@@ -106,13 +110,14 @@ $bp-social-lg: $bp-med;
 $bp-post-has-pad: 700px;
 
 
+
+
+
 // Background
 // --------------------------------------------
 
 // $bg: linear-gradient(45deg, darken(#0288D1, 20%), #03A9F4);
 
-
-
-
-// background: rgb(58,153,180);
 $bg: linear-gradient(153deg, rgba(29,63,253,0.9164040616246498) 5%, rgba(29,112,253,0.9051995798319328) 50%);
+
+$bg-small: linear-gradient(153deg, rgba(253,29,133,0.9164040616246498) 5%, rgba(253,29,242,0.9051995798319328) 50%);

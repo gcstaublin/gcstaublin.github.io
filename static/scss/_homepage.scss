@@ -7,17 +7,6 @@
 // --------------------------------------------
 
 
-.grant-img-container {
-  position: relative;
-  // margin: 0 auto -25px;
-  margin: 0;
-  // top: -$top-margin;
-  width: 65px;
-  height: auto;
-  // height: 125px;
-  text-align: center;
-}
-
 
 .grant-img-container--post {
   // margin: 0 auto;
@@ -58,11 +47,77 @@
 
 
 .logo__link {
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(255, 255, 255, 0.4);
   transition: color 0.2s ease;
+
   &:hover {
     color: rgba(0, 0, 0, 0.6);
   }
+}
+
+
+// --------------------------------------------
+// --------------------------------------------
+//
+// NEW STUFF
+//
+// --------------------------------------------
+// --------------------------------------------
+.logo__container--hp {
+  position: relative;
+  top: 2rem;
+  left: 20px;
+  z-index: 1;
+  margin: 0;
+
+  @include bp($bp-med) {
+    position: absolute;
+    left: 2rem;
+  }
+}
+
+
+.logo__link--hp {
+  display: block;
+  color: rgba(255, 255, 255, 0.8);
+  transition: transform 0.2s ease, color 0.5s 0.1s ease;
+  transform: scale(1);
+
+  &:hover {
+    color: rgba(255, 255, 255, 0.65);
+    transform: scale(0.9);
+    transition: transform 0.4s ease, color 0.1s 0.1s ease;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.9);
+    transition: transform 0.2s ease-in-out;
+    transform: scale(1.05);
+  }
+}
+
+
+
+.logo__svg {
+  width: 40px;
+  height: auto;
+}
+
+
+.svg--logo--hp {
+  width: 24px;
+  height: auto;
+  transition: all 0.2s ease;
+
+  @include bp($bp-med) {
+    width: 32px;
+  }
+}
+
+// Standard logo
+.svg--logo {
+  width: 32px;
+  height: auto;
 }
 
 
@@ -75,33 +130,48 @@
 // --------------------------------------------
 
 .page-mod {
-  max-width: $width-med;
+  @include clearfix;
+  width: 100%;
+  // max-width: $width-med;
   margin: 0 auto;
   padding: 0 20px;
-  @include clearfix;
+
+  @include bp($bp-med) {
+    max-width: $width-med;
+  }
+}
+
+.page-mod--hp-intro {
+  margin-top: 40px;
+  transition: margin-top 0.2s ease;
+
+  @include bp($bp-med) {
+    margin-top: 6rem;
+  }
 }
 
 
 .page-intro {
-  margin: 25px 0;
+  // margin: 25px 0;
+  margin: 0;
   font-size: 22px;
   font-weight: 100;
-  line-height: 1.425;
-  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.325;
+  color: rgba(255, 255, 255, 0.88);
 
   @include bp($bp-sm) {
     font-size: 30px;
-    margin-top: 75px;
+    // margin-top: 75px;
   }
 }
 
 
 .page-text {
   margin-top: 18px;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 300;
-  line-height: 1.425;
-  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.525;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 

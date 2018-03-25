@@ -35,9 +35,15 @@ body {
 
 
 .bg-container {
-  padding-bottom: 100px;
-  background-color: $bg-fallback;
-  // background-image: linear-gradient(-90deg, #C4174E, #AD84F1);
-  background-image: $bg;
   @include clearfix;
+  background-color: $bg-fallback-small;
+  background-image: $bg-small;
+  padding-bottom: 100px;
+
+  @include bp($bp-med) {
+    background-color: $bg-fallback;
+    background-image: $bg;
+
+  }
+  // clip-path: polygon(0 0, 100% 1%, 100% 100%, 0 94%);
 }

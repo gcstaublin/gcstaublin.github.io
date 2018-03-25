@@ -1,0 +1,27 @@
+- name: Grant Staublin
+  title: Pooper
+  siteUrl: pooper.com
+  address:
+    - 777 Pooper St.
+    - Big Town, Ma 00000
+  telephone: xxx-xx-xxxx
+  email: poopbutt@pooper.com
+  experiences:
+    - position: The pooper
+      company: Poop LLC
+      startDate: Jan. 1943
+      endDate: null
+      description: I pooped a lot and other stuff
+      duties:
+        - pooped
+        - and then poop again
+        - sometimes poop three times
+    - position: Crapper
+      company: Crap Corp.
+      startDate: Feb. 1987
+      endDate: null
+      description: Crap a lot all over the place
+      duties:
+        - Crap
+        - crap again
+        - crap thrice
