@@ -1,5 +1,8 @@
-- intro: Grant Staublin is a product designer, front-end developer and modern day human being living in the mountains of Western Massachusetts. He's generally friendly and enjoys coffee, music and running, among other things.
+- headline: Hi, I'm Grant Staublin
+  intro: I'm a designer and front-end developer living in the mountains of Western Massachusetts. I'm mostly friendly and enjoy coffee, music and running, as well as my dog and my wife. None of that is in the order of preference, of course.
   words:
-    - These are words <a href="http://www.google.com"> Hello</a>
-    - So are These
-    - And so are these
+    - Most recently, I was a member of the small team that created and launched <a class="gcs-link--hp" href="http://uniform.hudl.com" target="_blank">Uniform</a>, a design system for <a  class="gcs-link--hp" href="http://www.hudl.com target="_blank">Hudl</a>. On the project, I lead css development, and ensured the underlying markup for our React components was semantic and adhered to accesibility standards. I wrangled some jsx code here and there, as well.
+    - Prior to Hudl, I worked at <a class="gcs-link--hp" href="http://www.upstatement.com" target="_blank">Upstatment</a> where I designed, wrote front end code and ran projects working with great clients like <a class="gcs-link--hp" href="http://www.hechingerreport.org" target="_blank">The Hechinger Report</a>, <a class="gcs-link--hp" href="http://www.storey.com target="_blank">Storey Publishing</a>, and <a class="gcs-link--hp" href="http://nieman.harvard.edu" target="_blank">The Nieman Foundation</a>.
+    - Prior to jumping into client services, I worked at the Boston Globe, where I was a designer and front end developer on editorial projects for BostonGlobe.com and Boston.com.
+    - And since we're talking history, I was also an editorial designer and art director for newspapers and magazines.
+    - I love challenges of all shapes and sizes. If you have a challenge, I might be able to help. Let's chat.

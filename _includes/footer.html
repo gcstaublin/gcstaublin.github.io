@@ -1,49 +1,33 @@
 <!-- Footer -->
 <!-- ===================================== -->
-  <footer>
-    <div class="footer-mod">
+  <footer class="{% if include.className %}{{include.className}}{% endif %}">
+<!--     <div class="footer-mod">
         <h3 class="footer-h">Whether you want to discuss design and development, or you want to work together on a project, get in touch. Let's chat!</h3>
-    </div> <!-- /footer-mod -->
+    </div>  -->
 
     <div class="footer-mod">
       <ul class="footer-items">
          <li class="footer-item">
             <a target="_blank" class="footer-item-link" href="mailto:grant.staublin@gmail.com">
-              <i class="icon">
-                <svg class="footer-icon">
-                    <use xlink:href="#icon_mail" />
-                </svg>
-              </i>
+              {% include /icons/icon-mail.svg %}
             </a>
           </li>
 
           <li class="footer-item">
             <a target="_blank" class="footer-item-link" href="https://twitter.com/gcstaublin">
-              <i class="icon">
-                <svg class="footer-icon">
-                    <use xlink:href="#icon_twitter" />
-                </svg>
-              </i>
+              {% include /icons/icon-twitter.svg %}
             </a>
           </li>
 
           <li class="footer-item">
             <a target="_blank" class="footer-item-link" href="https://instagram.com/gcstaublin/">
-              <i class="icon">
-                <svg class="footer-icon">
-                    <use xlink:href="#icon_instagram" />
-                </svg>
-              </i>
+              {% include /icons/icon-instagram.svg %}
             </a>
           </li>
 
           <li class="footer-item">
             <a target="_blank" class="footer-item-link" href="https://github.com/gcstaublin">
-              <i class="icon">
-                <svg class="footer-icon">
-                    <use xlink:href="#icon_github" />
-                </svg>
-              </i>
+              {% include /icons/icon-github.svg %}
             </a>
           </li>
 
@@ -52,7 +36,7 @@
     </div> <!-- /footer-mod -->
 
       <div class="footer-mod">
-        <p class="footer-copyright-msg">Copyright © 2009-2018. All rights reserved.</p>
+        <p class="footer-copyright-msg">Copyright ©2018. All rights reserved.</p>
       </div> <!-- /footer-mod -->
 
   </footer>
@@ -60,8 +44,8 @@
   <!-- Javascript -->
   <!-- ===================================== -->
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery/dist/jquery.min.js"><\/script>')</script>
+<!--   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery/dist/jquery.min.js"><\/script>')</script> -->
   <!-- <script src="js/plugins.js"></script> -->
   <!-- <script src="js/main.js"></script> -->
 

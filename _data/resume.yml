@@ -1,27 +1,70 @@
 - name: Grant Staublin
-  title: Pooper
-  siteUrl: pooper.com
+  title:
+    - Designer
+    - Front End Developer
+  siteUrl: null
   address:
-    - 777 Pooper St.
-    - Big Town, Ma 00000
-  telephone: xxx-xx-xxxx
-  email: poopbutt@pooper.com
+    - null
+    - null
+  telephone: null
+  email: null
+
   experiences:
-    - position: The pooper
-      company: Poop LLC
-      startDate: Jan. 1943
+    - position: Front-End Designer
+      company: Hudl
+      startDate: Jul. 2015
       endDate: null
-      description: I pooped a lot and other stuff
+      description: I did stuff
       duties:
-        - pooped
-        - and then poop again
-        - sometimes poop three times
-    - position: Crapper
-      company: Crap Corp.
-      startDate: Feb. 1987
-      endDate: null
-      description: Crap a lot all over the place
+        - thing
+        - thing
+        - thing
+    - position: Designer
+      company: Upstatement
+      startDate: Apr. 2013
+      endDate: Jul 2015
+      description:
       duties:
-        - Crap
-        - crap again
-        - crap thrice
+        - Designing and developing responsive redesigns for client projects, working through the entire lifespan of a project from kickoff to interviews to design and development to site launch.
+        - Designing and developing responsive redesigns for client projects, working through the entire lifespan of a project from kickoff to interviews to design and development to site launch.
+        - Perform quality assurance and bug fixing on projects, serving as point person between client and Upstatement team.
+
+    - position: Senior Designer
+      company: BostonGlobe
+      startDate: Jan. 2011
+      endDate: March 2013
+      duties:
+        - Art direct, design and develop front end solutions for editorial projects for Bostonglobe.com and Boston.com.
+
+    - position: Assistant Art Director
+      company: The Boston Globe Magazine
+      startDate: Jan. 2009
+      endDate: Jan. 2011
+      description:
+      duties:
+        - Collaborate with writers and editors, finding effective visual solutions that enhance editorial content.
+        - Art direct and design special theme issues of the magazine as well as other feature stories and weekly department pages.
+
+    - position: Editorial Designer
+      company: The Boston Globe
+      startDate: Jan. 2004
+      endDate: Jan. 2011
+
+    - position: Art Director
+      company: OT, Boston Globe Media
+      startDate: Jul. 2008
+      endDate: Jan. 2009
+      description:
+      duties:
+        - Create initial prototypes for proposed weekly sports tabloid newspaper.
+        - Collaborate with editorial and advertising teams to refine publication’s concept and content, readying it for launch.
+        - Art direct and design each week’s issue.
+
+    - position: Editorial Designer
+      company: The Times-Picayune, New Orleans, La.
+      startDate: Sept. 1997
+      endDate: Jan. 2004
+
+  education:
+    - degree: Bachelor of Science, Journalism Graphics, Magaine Journalism
+      college: Ball State University, Muncie, IN

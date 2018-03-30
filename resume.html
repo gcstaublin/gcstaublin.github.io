@@ -1,8 +1,7 @@
 ---
-layout: page
+layout: new-page
 title: Grant Staubin | Resume
-pagehead: Resume
-pageclass: page-archive
+pageclass: gcs-page--archive
 permalink: /resume/
 ---
 
@@ -11,37 +10,92 @@ permalink: /resume/
 
     {% for item in site.data.resume %}
 
-      <!-- big header -->
-      <h4>{{item.name}}</h4>
-      <h3>{{item.title}}</h3>
+      <!-- Big Header -->
+      <section class="gcs-resume__headline__container">
+        <h2 class="gcs-resume__headline">{{ item.name }}</h2>
+        <h3 class="gcs-resume__headline--sub">
+          {% for title in item.title %}
+            <span>{{title}}</span>
+          {% endfor %}
+        </h3>
+      </section>
 
 
-      <!-- address -->
+      {% if item.siteUrl %}
+        <p class="gcs-text--small">{{item.siteUrl}}</p>
+      {% endif %}
+
+
       <div>
-        <p>{{item.siteURL}}</p>
         {% for addressItem in item.address %}
           <p>{{addressItem}}</p>
         {% endfor %}
-      <div>
-
-      <!-- telephone -->
-      <div>
-        <p>{{item.telephone}}</p>
       </div>
 
-      <!-- email -->
-      <div>
-        <p>{{item.email}}</p>
-      </div>
+
+      {% if item.telephone %}
+        <div>
+          <p>{{item.telephone}}</p>
+        </div>
+      {% endif %}
+
+
+      {% if item.email %}
+        <div>
+          <p>{{item.email}}</p>
+        </div>
+      {% endif %}
+
 
 
       <!-- Experience -->
       {% if item.experiences %}
-        <h4>Experience</h4>
-        {% for jobExperience in item.experiences %}
-          <p>{{jobExperience.position}}</p>
-        {% endfor %}
+        <section class="gcs-resume__section">
+          <h4 class="gcs-resume__headline--section">Experience</h4>
 
+          {% for jobExperience in item.experiences %}
+            <div class="gcs-resume__section--sub">
+              <h4 class="gcs-text">
+                <span class="gcs-text--bold">{{jobExperience.position}}</span>
+                <span class="gcs-slash">/</span>
+                <span class="gcs-resume__company">{{jobExperience.company}}</span>
+              </h4>
+              <p class="gcs-text--small gcs-resume__date">
+                <span>{{jobExperience.startDate}}</span>
+                <span class="gcs-resume__to">to</span>
+                {% if jobExperience.endDate %}
+                  <span>{{jobExperience.endDate}}</span>
+                  {% else %}
+                  <span>present</span>
+                {% endif %}
+              </p>
+
+
+              {% if jobExperience.description %}
+                <p class="gcs-text">{{ jobExperience.description }}</p>
+              {% endif %}
+
+              {% if jobExperience.duties %}
+                <ul class="gcs-resume__duties">
+                  {% for duty in jobExperience.duties %}
+                    <li class="gcs-resume__duty">{{ duty }} </li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            </div>
+
+          {% endfor %}
+        </section>
+      {% endif %}
+
+
+
+      <!-- Education -->
+      {% if item.education %}
+        <section class="gcs-resume__section">
+          <h4 class="gcs-resume__headline--section">Education</h4>
+          smarts
+        </section>
       {% endif %}
 
 

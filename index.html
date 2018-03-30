@@ -1,67 +1,40 @@
 ---
 layout: default
+pageClass: gcs-homepage
 ---
 
 <div class="bg-container">
 
-
+  <!-- Logo -->
   <div class="logo__container--hp">
     <a class="logo__link--hp" href="/">
-      {% include gLogo.svg className="svg--logo--hp" %}
+      {% include /icons/grant-logo.svg className="svg--logo--hp" %}
     </a>
   </div> <!-- /logo__container -->
 
 
-  <div class="content-inner">
-    <div class="page-mod page-mod--hp-intro">
+  <div class="content-inner fade-in">
+    <section class="page-mod page-mod--hp-intro">
+
+      <!-- Homepage intro -->
       {% for item in site.data.hp-intro %}
-        <h4 class="page-intro">{{item.intro}}<h4>
+        {% if item.headline %}
+          <h3 class="gcs-headline--homepage">{{ item.headline }}</h3>
+        {% endif %}
+
+        {% if item.intro %}
+          <h4 class="gcs-intro--homepage">{{item.intro}}</h4>
+        {% endif %}
 
         {% for paragraph in item.words %}
-          <p class="page-text">{{paragraph}}<p>
+          <p class="gcs-text--homepage page-text">{{paragraph}}<p>
         {% endfor %}
       {% endfor %}
-    </div> <!-- /page-mod -->
+
+      <!-- end homepage intro -->
+
+    </section> <!-- /page-mod -->
+  </div> <!-- /content-inner -->
 
 
-
-
-
-
-
-
-<!--
-    <svg class="decoration decoration-x-1">
-        <use xlink:href="#elements_large_x" />
-    </svg>
-
-    <svg class="decoration decoration-x-2">
-        <use xlink:href="#elements_large_x" />
-    </svg>
-
-    <svg class="decoration decoration-x-3">
-        <use xlink:href="#elements_small_x" />
-    </svg>
-
-    <svg class="decoration decoration-x-4">
-        <use xlink:href="#elements_large_x" />
-    </svg>
-
-    <svg class="decoration decoration-line-1">
-        <use xlink:href="#elements_long_line" />
-    </svg>
-
-    <svg class="decoration decoration-line-2">
-        <use xlink:href="#elements_long_line" />
-    </svg>
-
-    <svg class="decoration decoration-line-3">
-        <use xlink:href="#elements_long_line" />
-    </svg>
-
-    <svg class="decoration decoration-line-4">
-        <use xlink:href="#elements_long_line" />
-    </svg> -->
-
-</div> <!-- /content-inner -->
 </div> <!-- bg-container -->

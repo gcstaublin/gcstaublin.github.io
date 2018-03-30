@@ -1,0 +1,353 @@
+// --------------------------------------------
+// --------------------------------------------
+//
+// GCS
+//
+// --------------------------------------------
+// --------------------------------------------
+
+
+
+
+// --------------------------------------------
+// --------------------------------------------
+//
+// Icons
+//
+// --------------------------------------------
+// --------------------------------------------
+
+// Variables
+$icon-small:      0.75rem;
+$icon-medium:     1rem;
+$icon-large:      1.25rem;
+$icon-xlarge:     1.5rem;
+
+
+
+.#{$prefix}icon {
+  width: $icon-large;
+  height: auto;
+}
+
+
+// Sizes
+.#{$prefix}icon--small { width: $icon-small; height: $icon-small; }
+.#{$prefix}icon--medium { width: $icon-medium; height: $icon-medium; }
+.#{$prefix}icon--large { width: $icon-large; height: $icon-large; }
+.#{$prefix}icon--xlarge { width: $icon-xlarge; height: $icon-xlarge; }
+
+
+
+
+// --------------------------------------------
+// --------------------------------------------
+//
+// Decoration
+//
+// --------------------------------------------
+// --------------------------------------------
+$decoration-size: 600px;
+
+.#{$prefix}decoration {
+  position: absolute;
+  top: 50%;
+  margin-top: calc(-#{$decoration-size} / 2);
+  width: $decoration-size;
+  height: $decoration-size;
+  opacity: 0.05;
+}
+
+
+
+
+
+
+// --------------------------------------------
+// --------------------------------------------
+//
+// Pages
+//
+// --------------------------------------------
+// --------------------------------------------
+
+.#{$prefix}page--archive {
+  background-color: $bg-color;
+}
+
+
+
+
+.#{$prefix}homepage {
+  background-color: $bg-fallback;
+  background-image: $bg;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+
+// --------------------------------------------
+// --------------------------------------------
+//
+// Content wrapper
+//
+// --------------------------------------------
+// --------------------------------------------
+.#{$prefix}content__wrapper {
+  position: relative;
+}
+
+
+
+
+
+// --------------------------------------------
+// --------------------------------------------
+//
+// Post Container
+//
+// --------------------------------------------
+// --------------------------------------------
+.#{$prefix}post__container {
+  position: relative;
+  margin: 0 auto;
+  padding: 45px;
+  width: 100%;
+  max-width: $width-med;
+  // border: 1px solid red;
+
+  @include bp($bp-post-has-pad, max) {
+    padding: 45px 25px;
+  }
+}
+
+
+
+
+
+
+// --------------------------------------------
+// --------------------------------------------
+//
+// Backsplash
+//
+// --------------------------------------------
+// --------------------------------------------
+.#{$prefix}backsplash--page {
+  @include clearfix;
+  padding: 20px;
+  padding-bottom: 6px;
+  background-color: $bg-fallback;
+  background-image: $bg;
+}
+
+
+
+// --------------------------------------------
+// --------------------------------------------
+//
+// Resume
+//
+// --------------------------------------------
+// --------------------------------------------
+
+$trans-font-size: font-size 0.2s ease;
+
+
+.#{$prefix}resume__section {
+  & + & { margin-top: 5rem; }
+}
+
+.#{$prefix}resume__section--sub {
+  & + & { margin-top: 1.5rem; }
+
+  > * + * { margin-top: 0.5rem; }
+}
+
+
+
+.#{$prefix}resume__headline__container {
+  transition: margin 0.3s ease;
+  margin-bottom: 16px;
+  @include bp($bp-med) {
+    margin-top: 32px;
+    margin-left: -100px;
+    margin-bottom: 32px;
+  }
+}
+
+
+.#{$prefix}resume__headline {
+  @include accent;
+  margin: 0;
+  font-weight: 200;
+  font-size: 48px;
+  line-height: 0.85;
+  transition: $trans-font-size;
+
+  @include bp($bp-sm) {
+    font-size: 64px;
+  }
+}
+
+
+.#{$prefix}resume__headline--sub {
+  margin: 0;
+  margin-top: 6px;
+  font-size: 20px;
+  line-height: 1;
+  transition: $trans-font-size;
+
+  @include bp($bp-sm) {
+    font-size: 24px;
+  }
+}
+
+
+.#{$prefix}resume__headline--section {
+  @include accent;
+  margin: 0;
+  margin-bottom: 8px;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: rgba($primary-text-color, 0.5);
+}
+
+
+.#{$prefix}resume__duties {
+  margin: 0;
+  margin-top: 0.5rem;
+}
+
+
+.#{$prefix}resume__duty {
+  list-style: none;
+  line-height: 1.45;
+
+  &:before {
+    position: relative;
+    color: $bg-fallback;
+    content: "■";
+    font-size: 1em;
+    padding-right: 8px;
+    margin-left: -17px;
+  }
+
+  & + & { margin-top: 0.25rem; }
+}
+
+
+
+// --------------------------------------------
+// --------------------------------------------
+//
+// Text
+//
+// --------------------------------------------
+// --------------------------------------------
+
+.#{$prefix}text {
+  @include text;
+  font-size: 1.125rem;
+  margin: 0;
+  color: $primary-text-color;
+  color: rgba($primary-text-color, 0.9);
+}
+
+.#{$prefix}text--small {
+  @include text;
+  font-size: 0.875rem;
+  margin: 0;
+  color: rgba($primary-text-color, 0.9);
+}
+
+
+.#{$prefix}text--bold {
+  font-weight: bold;
+}
+
+
+.#{$prefix}slash {
+  display: inline-block;
+  position: relative;
+  top: -2px;
+  font-weight: 100;
+  font-size: 0.65em;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.#{$prefix}resume__company {
+  font-size: 0.75em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgba($primary-text-color, 0.7);
+}
+
+.#{$prefix}resume__to {
+  font-size: 0.75rem;
+  display: inline-block;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+
+.#{$prefix}resume__date {
+  margin-top: 4px;
+}
+
+
+// --------------------------------------------
+// --------------------------------------------
+//
+// Homepage
+//
+// --------------------------------------------
+// --------------------------------------------
+
+.#{$prefix}headline--homepage {
+  @include accent;
+  font-size: 28px;
+  color: rgba(255, 255, 255, 0.88);
+  letter-spacing: 1px;
+}
+
+.#{$prefix}intro--homepage {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 100;
+  line-height: 1.325;
+  color: rgba(255, 255, 255, 0.88);
+
+  @include bp($bp-sm) {
+    font-size: 30px;
+  }
+}
+
+
+.#{$prefix}text--homepage {
+  margin-top: 18px;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1.525;
+  color: rgba(255, 255, 255, 0.7);
+
+  @include bp($bp-sm) {
+    font-size: 24px;
+  }
+}
+
+
+
+// --------------------------------------------
+// --------------------------------------------
+//
+// Link
+//
+// --------------------------------------------
+// --------------------------------------------
+.#{$prefix}link--hp {
+  @include link(#fff);
+}
