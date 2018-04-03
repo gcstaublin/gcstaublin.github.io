@@ -9,12 +9,13 @@
 .post-wrapper {
   padding-left: 0;
   padding-right: 0;
+  padding-top: 0;
 }
 
 
 .post-container {
   position: relative;
-  margin: -25px auto 0;
+  margin: 0 auto;
   padding: 45px;
   width: 100%;
   max-width: $width-med;
@@ -36,7 +37,18 @@
 
 
 .post-meta {
-  border-bottom: 1px solid #ededef;
+  // border-bottom: 1px solid #ededef;
+  // background-color: #fff;
+  // transition: margin 0.3s ease;
+  // margin-bottom: 16px;
+
+  // @include bp($bp-med) {
+  //   padding: 2rem;
+  //   padding-left: 0.5rem;
+  //   // margin-top: 32px;
+  //   margin-left: -100px;
+  //   margin-bottom: 32px;
+  // }
 }
 
 

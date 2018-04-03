@@ -69,6 +69,7 @@
 // --------------------------------------------
 // --------------------------------------------
 @mixin link($color: currentColor) {
+  display: inline-block;
   color: $color;
   text-decoration: none;
   position: relative;

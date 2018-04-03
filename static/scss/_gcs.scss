@@ -40,6 +40,12 @@ $icon-xlarge:     1.5rem;
 
 
 
+
+
+
+
+
+
 // --------------------------------------------
 // --------------------------------------------
 //
@@ -47,16 +53,16 @@ $icon-xlarge:     1.5rem;
 //
 // --------------------------------------------
 // --------------------------------------------
-$decoration-size: 600px;
+// $decoration-size: 600px;
 
-.#{$prefix}decoration {
-  position: absolute;
-  top: 50%;
-  margin-top: calc(-#{$decoration-size} / 2);
-  width: $decoration-size;
-  height: $decoration-size;
-  opacity: 0.05;
-}
+// .#{$prefix}decoration {
+//   position: absolute;
+//   top: 50%;
+//   margin-top: calc(-#{$decoration-size} / 2);
+//   width: $decoration-size;
+//   height: $decoration-size;
+//   opacity: 0.05;
+// }
 
 
 
@@ -139,7 +145,7 @@ $decoration-size: 600px;
   padding: 20px;
   padding-bottom: 6px;
   background-color: $bg-fallback;
-  background-image: $bg;
+  // background-image: $bg;
 }
 
 
@@ -156,7 +162,7 @@ $trans-font-size: font-size 0.2s ease;
 
 
 .#{$prefix}resume__section {
-  & + & { margin-top: 5rem; }
+  & + & { margin-top: 3rem; }
 }
 
 .#{$prefix}resume__section--sub {
@@ -194,10 +200,11 @@ $trans-font-size: font-size 0.2s ease;
 
 .#{$prefix}resume__headline--sub {
   margin: 0;
-  margin-top: 6px;
+  margin-top: 8px;
   font-size: 20px;
   line-height: 1;
   transition: $trans-font-size;
+  font-weight: 200;
 
   @include bp($bp-sm) {
     font-size: 24px;
@@ -240,6 +247,26 @@ $trans-font-size: font-size 0.2s ease;
 
 
 
+.#{$prefix}resume__company {
+  font-size: 0.75em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgba($primary-text-color, 0.7);
+}
+
+.#{$prefix}resume__to {
+  font-size: 0.75rem;
+  display: inline-block;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+
+.#{$prefix}resume__date {
+  margin-top: 4px;
+}
+
+
 // --------------------------------------------
 // --------------------------------------------
 //
@@ -255,6 +282,16 @@ $trans-font-size: font-size 0.2s ease;
   color: $primary-text-color;
   color: rgba($primary-text-color, 0.9);
 }
+
+
+.#{$prefix}text--large {
+  @include text;
+  font-size: 1.325rem;
+  margin: 0;
+  color: $primary-text-color;
+  color: rgba($primary-text-color, 0.9);
+}
+
 
 .#{$prefix}text--small {
   @include text;
@@ -279,24 +316,21 @@ $trans-font-size: font-size 0.2s ease;
   margin-right: 8px;
 }
 
-.#{$prefix}resume__company {
-  font-size: 0.75em;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: rgba($primary-text-color, 0.7);
-}
-
-.#{$prefix}resume__to {
-  font-size: 0.75rem;
-  display: inline-block;
-  margin-left: 2px;
-  margin-right: 2px;
-}
 
 
-.#{$prefix}resume__date {
-  margin-top: 4px;
+.#{$prefix}headline--page {
+  @include accent;
+  margin: 0;
+  padding: 40px 20px;
+  background-color: #f1f1f1;
+  color: rgba($primary-text-color, 0.6);
+  font-size: 1.75em;
+  font-weight: bold;
+  text-transform: capitalize;
+  letter-spacing: 1px;
 }
+
+
 
 
 // --------------------------------------------
@@ -351,3 +385,198 @@ $trans-font-size: font-size 0.2s ease;
 .#{$prefix}link--hp {
   @include link(#fff);
 }
+
+
+
+// --------------------------------------------
+// --------------------------------------------
+//
+// Header
+//
+// --------------------------------------------
+// --------------------------------------------
+.#{$prefix}header--page {
+  background-color: $bg-fallback;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+.#{$prefix}header--hp {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+.#{$prefix}header--page__inner {
+  display: flex;
+  align-items: center;
+  // height: 59px;
+}
+
+
+
+
+// --------------------------------------------
+// --------------------------------------------
+//
+// Nav
+//
+// --------------------------------------------
+// --------------------------------------------
+.#{$prefix}nav {
+  display: flex;
+  margin-left: auto;
+  margin-right: -20px;
+}
+
+
+.#{$prefix}nav__link {
+  display: block;
+  padding: 1rem;
+  font-size: 1rem;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+
+  // & + & { margin-left: 0.5rem; }
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+
+
+
+// --------------------------------------------
+// --------------------------------------------
+//
+// Work
+//
+// --------------------------------------------
+// --------------------------------------------
+
+.#{$prefix}work__item {
+  @include clearfix;
+  // display: flex;
+  // flex-flow: row-reverse;
+  // border: 1px solid blue;
+  // margin-bottom: 100px;
+  // position: relative;
+  // @include clearfix;
+
+  // &:last-child { margin-bottom: 0; }
+
+  & + & { margin-top: 4rem; }
+
+  @include bp($bp-sm) {  }
+}
+
+
+.#{$prefix}work__h {
+  margin: 0 0 7px;
+  font-weight: $text-weight;
+  font-size: 1.75rem;
+  line-height: 1.15;
+}
+
+
+.#{$prefix}work__content {
+  font-family: $type-main;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+
+
+.#{$prefix}work__link {
+  text-decoration: none;
+  color: black;
+}
+
+
+.#{$prefix}work__link--highlight {
+  display: inline-block;
+  margin-top: 0.25em;
+  padding: 0.5em 0.8em;
+  padding-bottom: 0.65em;
+  border: 1px solid rgba($bg-fallback, 0.5);
+  font-size: 0.85em;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.85);
+  border-radius: 3px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    border-color: $bg-fallback;
+    color: black;
+  }
+}
+
+
+.#{$prefix}work__text {
+  margin: 0 0 10px;
+  font-size: 17px;
+  line-height: 1.475;
+  font-weight: 400;
+}
+
+
+.#{$prefix}work__link--img {
+  margin-left: 2rem;
+
+  @include bp($bp-sm) {
+    float: right;
+  }
+}
+
+
+.#{$prefix}work__img-container {
+  width: 250px;
+}
+
+
+
+
+// --------------------------------------------
+// --------------------------------------------
+//
+// Image
+//
+// --------------------------------------------
+// --------------------------------------------
+.#{$prefix}img__container {
+  padding: 2rem;
+  background-color: #f1f1f1;
+  border-radius: 4px;
+}
+
+.#{$prefix}img {
+  border-radius: 4px;
+}
+
+
+// --------------------------------------------
+// --------------------------------------------
+//
+// About
+//
+// --------------------------------------------
+// --------------------------------------------
+.#{$prefix}page--about {
+  font-size: 1.25rem;
+  line-height: 1.4;
+
+
+  // contextual styling
+  .#{$prefix}content__wrapper {
+    a { @include link(currentColor); }
+
+  }
+}
+
+
+
+
+

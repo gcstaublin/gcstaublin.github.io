@@ -15,7 +15,11 @@ permalink: /resume/
         <h2 class="gcs-resume__headline">{{ item.name }}</h2>
         <h3 class="gcs-resume__headline--sub">
           {% for title in item.title %}
-            <span>{{title}}</span>
+            {% if forloop.index > 1 %}
+              <span class="gcs-slash">/</span>
+              <span>{{title}}</span>
+              {% else %}<span>{{title}}</span>
+            {% endif %}
           {% endfor %}
         </h3>
       </section>
@@ -94,7 +98,10 @@ permalink: /resume/
       {% if item.education %}
         <section class="gcs-resume__section">
           <h4 class="gcs-resume__headline--section">Education</h4>
-          smarts
+          {% for degree in item.education %}
+            <p class="gcs-text">{{degree.degree}}</p>
+            <p class="gcs-text">{{degree.college}}</p>
+          {% endfor %}
         </section>
       {% endif %}
 

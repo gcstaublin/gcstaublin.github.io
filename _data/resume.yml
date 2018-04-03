@@ -1,7 +1,7 @@
 - name: Grant Staublin
   title:
     - Designer
-    - Front End Developer
+    - Front-End Developer
   siteUrl: null
   address:
     - null
@@ -13,13 +13,13 @@
     - position: Front-End Designer
       company: Hudl
       startDate: Jul. 2015
-      endDate: null
-      description: I did stuff
+      endDate: Apr. 2018
+      description: During my time at Hudl, I had the pleasure to work on a small, collaborative team entrusted to build Uniform, a design system for the company.
       duties:
-        - thing
-        - thing
-        - thing
-    - position: Designer
+        - Architect and lead development for the CSS library that powers Uniform.
+        - Ensure markup for React components adhere to accesibility standards and best practices.
+        - Work with rest of the team to weigh pros and cons for decisions big and small, and how they might affect other designers and developers at Hudl.
+    - position: Designer, Front-End Developer
       company: Upstatement
       startDate: Apr. 2013
       endDate: Jul 2015

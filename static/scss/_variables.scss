@@ -76,10 +76,10 @@ $bg-color: rgba(250, 250, 250, 1);
 
 // $bg-fallback: #B9448B;
 // $bg-fallback: rgb(29,63,253);
-$bg-fallback: rgb(15, 1, 94);
+// $bg-fallback: rgb(15, 1, 94);
 
 
-$bg-fallback-small: rgb(253,29,133);
+// $bg-fallback-small: rgb(253,29,133);
 
 
 
@@ -113,4 +113,8 @@ $bp-post-has-pad: 700px;
 $bg-small: linear-gradient(153deg, rgba(253,29,133,0.9164040616246498) 5%, rgba(253,29,242,0.9051995798319328) 50%);
 
 
-$bg: radial-gradient(at 50% 100%, rgba(123, 22, 255, 0.75), rgb(15, 1, 94));
+// $bg: radial-gradient(at 50% 100%, rgba(123, 22, 255, 0.75), rgb(15, 1, 94));
+
+$bg: linear-gradient(45deg, #01466c, #03a9f4);
+
+$bg-fallback: #01466c;

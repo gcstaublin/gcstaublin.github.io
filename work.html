@@ -1,0 +1,29 @@
+---
+layout: new-page
+title: Grant Staubin | Work
+pageclass: gcs-page--archive
+permalink: /work/
+pageTitle: Work
+---
+
+
+{% for item in site.data.work.projects %}
+  <div class="gcs-work__item">
+
+    <a class="gcs-work__link--img" target="_blank" href="http://{{item.url}}">
+      <div class="gcs-work__img-container">
+        <img src="/static/img/{{item.img}}">
+      </div>
+    </a>
+
+    <div class="gcs-work__content">
+      <h5 class="gcs-work__h">
+          <a class="gcs-work__link" target="_blank" href="http://{{item.url}}">{{item.head}}</a>
+      </h5>
+      <p class="gcs-work__text grid-item__text">{{item.text}}</p>
+      <a class="gcs-work__link--highlight grid-item__link--highlight" target="_blank" href="http://{{item.url}}">See project</a>
+    </div> <!-- /grid-item__content -->
+  </div> <!-- /grid-item -->
+{% endfor %}
+
+

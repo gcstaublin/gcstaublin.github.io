@@ -1,0 +1,30 @@
+projects:
+  - head: Uniform
+    url: uniform.hudl.com
+    img: uniform_trans.png
+    text: Uniform is the design system for Hudl, a sports video company, whose mission is to help coaches, athletes and teams win. During it's first decade, Hudl rapidly grew from an upstart focused on american football to a global company, helping users of all sports. Without a cohesive, codified design language, design debt grew as Hudl expanded into new sports and new geographies. Uniform provides a shared, unified system for designers and developers to build cohesive products. During my tenure at Hudl, I was a member of the small, collborative team, trusted to create this system for our growing and expanding suite of products. I served as the lead css developer, occasional React component wrestler and primary accesibility czar.
+
+  - head: Storey Publishing
+    url: storey.com
+    img: storey_trans.png
+    text: Storey Publishing, a book publisher for makers, doers and growers, wanted a new home for their content and products. Storey wanted to elevate their informative, daily editorial content. They also hoped to create an extensible foundation for their book product pages, highlighting author tours and book reviews, showcasing book previews and related editorial content as well as providing easy to update color themes, giving individual title their own unique indentity. I served as a designer and front-end developer on this project, handling daily communication with the folks at Storey.
+
+  - head: The Hechinger Report
+    url: hechingerreport.org
+    img: hechinger_trans.png
+    text: Upstatement built this lovely, new home for our friends at Hechinger. I worked as a part of three person design team to find the visual voice then served as a lead front-end developer to build the site in a quick succession of sprints. In addition, I handled much of the project management, handling daily communication with the client.
+
+  - head: Nieman Foundation
+    url: niemanreports.org
+    img: nieman_trans.png
+    text: "The Nieman Foundation's new site is actually a set of three inter-related sites: Nieman Reports, Nieman Storyboard and the Foundation itself. I handled design and front end developemnt on this huge Upstatement endeavor."
+
+  - head: Lewis Center For The Arts
+    url: arts.princeton.edu
+    img: lca_trans.png
+    text: Serving as the lead front-end developer for this Upstatement project, I collaborated with the design team to help realize how the static designs could become a living breathing, responsive website. I also worked closely with a newer member of our team, offering advice, code reviews and positive vibes.
+
+  - head: IAPP
+    url: iapp.org
+    img: iapp_trans.png
+    text: The Privacy Professionals website was a unique project for us at Upstatement. The site had many more transactional interactions than your typical editorially based project. I served as the lead front-end devleoper, working with the design team to realize their vision and make it responsive
