@@ -8,6 +8,15 @@
 
 
 
+// Prefix
+// --------------------------------------------
+$prefix: 'gcs-';
+
+
+
+
+
+
 // Fonts
 // --------------------------------------------
 
@@ -36,30 +45,8 @@ $tease-text-lt: #666666;
 
 $display-color-lt: #888888;
 
-@mixin text($color: $text-color, $font: $type-main, $font-weight: $text-weight ) {
-  font-family: $font;
-  font-weight: $font-weight;
-  color: $color;
-}
-
-@mixin accent($color: black, $font: $type-accent, $font-weight: $accent-bold ) {
-  font-family: $font;
-  font-weight: $font-weight;
-  color: $color;
-}
-
-@mixin display($color: black, $font: $type-display, $font-weight: $display-wt ) {
-  font-family: $font;
-  font-weight: $font-weight;
-  color: $color;
-}
 
 
-@mixin code($color: $text-color, $font: $type-code, $font-weight: $code-wt ) {
-  font-family: $font;
-  font-weight: $font-weight;
-  color: $color;
-}
 
 
 // Spacing
@@ -83,9 +70,16 @@ $secondary-text-color: #727272;
 $divider-color:       #B6B6B6;
 
 
-$bg-color:    lighten($primary-color-lt, 10%);
+// $bg-color:    lighten($primary-color-lt, 10%);
 
-$bg-fallback: #B9448B;
+$bg-color: rgba(250, 250, 250, 1);
+
+// $bg-fallback: #B9448B;
+// $bg-fallback: rgb(29,63,253);
+// $bg-fallback: rgb(15, 1, 94);
+
+
+// $bg-fallback-small: rgb(253,29,133);
 
 
 
@@ -106,7 +100,21 @@ $bp-social-lg: $bp-med;
 $bp-post-has-pad: 700px;
 
 
+
+
+
 // Background
 // --------------------------------------------
 
-$bg: linear-gradient(45deg, darken(#0288D1, 20%), #03A9F4);
+// $bg: linear-gradient(45deg, darken(#0288D1, 20%), #03A9F4);
+
+// $bg: linear-gradient(153deg, rgba(29,63,253,0.9164040616246498) 5%, rgba(29,112,253,0.9051995798319328) 50%);
+
+$bg-small: linear-gradient(153deg, rgba(253,29,133,0.9164040616246498) 5%, rgba(253,29,242,0.9051995798319328) 50%);
+
+
+// $bg: radial-gradient(at 50% 100%, rgba(123, 22, 255, 0.75), rgb(15, 1, 94));
+
+$bg: linear-gradient(45deg, #01466c, #03a9f4);
+
+$bg-fallback: #01466c;

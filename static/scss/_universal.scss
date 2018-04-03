@@ -6,9 +6,16 @@
 // --------------------------------------------
 // --------------------------------------------
 
+
+
+
 body {
   @include text;
-  background-color: $bg-color;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  // background-color: $bg-color;
+  background-color: rgba(250, 250, 250, 1);
 }
 
 
@@ -21,7 +28,7 @@ body {
   }
 
   @include bp($bp-med) {
-    padding: 25px;
+    // padding: 25px;
     padding-bottom: 0;
   }
 }
@@ -35,9 +42,39 @@ body {
 
 
 .bg-container {
-  padding-bottom: 100px;
-  background-color: $bg-fallback;
-  // background-image: linear-gradient(-90deg, #C4174E, #AD84F1);
-  background-image: $bg;
   @include clearfix;
+  // background-color: $bg-fallback-small;
+  // background-image: $bg-small;
+  padding-bottom: 100px;
+
+  @include bp($bp-med) {
+    // background-color: $bg-fallback;
+    // background-image: $bg;
+
+  }
+  // clip-path: polygon(0 0, 100% 1%, 100% 100%, 0 94%);
+}
+
+
+
+.content-wrapper {
+  .#{$prefix}homepage & {
+    padding-top: 0;
+  }
+}
+
+
+
+
+
+// --------------------------------------------
+// --------------------------------------------
+//
+// Link
+//
+// --------------------------------------------
+// --------------------------------------------
+
+a {
+  // @include link(currentColor);
 }

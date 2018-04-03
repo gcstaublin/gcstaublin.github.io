@@ -6,18 +6,50 @@
 // --------------------------------------------
 // --------------------------------------------
 
+// @keyframes page-fade {
+//   0%   { opacity: 0.01; }
+//   80% { opacity: 0.015; }
+//   90%  { opacity: 0.6; }
+//   100% { opacity: 1; }
+// }
+
+
+
+
+
+
 @keyframes page-fade {
-  0%   { opacity: 0.01; }
-  80% { opacity: 0.015; }
-  90%  { opacity: 0.6; }
-  100% { opacity: 1; }
+  0%   { opacity: 0; transform: translateY(3em) }
+  100% { opacity: 1; transform: translateY(none); }
 }
 
 
-.content-inner {
-  animation: page-fade 0.45s ease;
+@keyframes page-fade-up {
+  0% { opacity: 0; }
+
+  25% {
+    opacity: 0;
+    -webkit-transform: translatey(30px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translatey(0);
+  }
 }
+
+
 
 .fade-in {
-  animation: page-fade 0.45s ease;
+  animation: page-fade-up 0.8s cubic-bezier(.05, .98, .17, .97) forwards;
 }
+
+
+
+// .content-inner {
+//   animation: page-fade 0.45s ease;
+// }
+
+// .fade-in {
+//   animation: page-fade 0.45s ease;
+// }

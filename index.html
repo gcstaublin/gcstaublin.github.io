@@ -1,186 +1,44 @@
 ---
 layout: default
+pageClass: gcs-homepage
 ---
 
 <div class="bg-container">
 
-  <div class="grant-img-container">
-      <a href="/">
-        <img class="grant-img" src="/static/img/grant_avatar.png">
-      </a>
-  </div> <!-- /grant-img-container -->
+  <!-- Logo -->
+<!--   <div class="logo__container--hp">
+    <a class="logo__link--hp" href="/">
+      {% include /icons/grant-logo.svg className="svg--logo--hp" %}
+    </a>
+  </div>  -->
 
-  <div class="content-inner">
-    <div class="page-mod">
-      <h4 class="page-intro">Grant Staublin is a product designer and modern day human being living in the mountains of Western Massachusetts. He designs things and writes code at Hudl. He's generally friendly and enjoys coffee, music and running, among other things.</h4>
-    </div> <!-- /page-mod -->
+  <!-- Header -->
+  <!-- ===================================== -->
+  {% include new-page-header.html headerClass="gcs-header--hp" %}
 
-  <div class="teases-mod">
-    <div class="teases-mod--inner">
-      <h5 class="section--h">Recent Stories</h5>
-      <ul class="tease-items">
-        {% for post in site.posts limit: 5 %}
-          <li class="tease-item">
-            <article>
-               <p class="tease-date">{{ post.date | date: "%m.%d.%y" }}</p>
-              <h4 class="tease-h">
-                <a class="tease-link" href="{{ post.url }}">{{ post.tease }}</a>
-              </h4>
-            </article>
-          </li> <!-- /tease-item -->
+
+  <div class="content-inner fade-in">
+    <section class="page-mod page-mod--hp-intro">
+
+      <!-- Homepage intro -->
+      {% for item in site.data.hp-intro %}
+        {% if item.headline %}
+          <h3 class="gcs-headline--homepage">{{ item.headline }}</h3>
+        {% endif %}
+
+        {% if item.intro %}
+          <h4 class="gcs-intro--homepage">{{item.intro}}</h4>
+        {% endif %}
+
+        {% for paragraph in item.words %}
+          <p class="gcs-text--homepage page-text">{{paragraph}}<p>
         {% endfor %}
-      </ul> <!-- /tease-items -->
-      <h5 class="archive-tease__h">
-        <a class="archive-tease__link" href="/archive/">All Stories</a>
-      </h5>
-    </div> <!-- /teases-mod--inner -->
+      {% endfor %}
 
-  </div> <!-- /teases-mod -->
+      <!-- end homepage intro -->
 
+    </section> <!-- /page-mod -->
+  </div> <!-- /content-inner -->
 
 
-    <!-- Portfolio Grid -->
-    <!-- ===================================== -->
-    <div class="grid-mod">
-
-      <div>
-          <h5 class="section--h">Recent Projects</h5>
-      </div>
-
-        <div class="grid-items">
-
-        <!-- Storey -->
-        <div class="grid-item">
-            <div class="grid-item__img">
-                <a target="_blank" href="http://storey.com">
-                    <img src="/static/img/storey_trans.png">
-                </a>
-            </div> <!-- /grid-item__img -->
-
-            <div class="grid-item__content">
-              <h5 class="grid-item__h">
-                  <a class="grid-item__link" target="_blank" href="http://hechingerreport.org/">Storey Publishing</a>
-              </h5>
-              <p class="grid-item__text">Storey Publishing, a book publisher for makers, doers and growers, wanted a new home for their content and products. Storey wanted to elevate their informative, daily editorial content. They also hoped to create an extensible foundation for their book product pages, highlighting author tours and book reviews, showcasing book previews and related editorial content as well as providing easy to update color themes, giving individual title their own unique indentity. I served as a designer and front-end developer on this project, handling daily communication with the folks at Storey.</p>
-              <a class="grid-item__link--highlight" target="_blank" href="http://storey.com">See project</a>
-            </div> <!-- /grid-item__content -->
-          </div> <!-- /grid-item -->
-
-
-
-          <!-- Hechinger -->
-          <div class="grid-item">
-            <div class="grid-item__img">
-                <a target="_blank" href="http://hechingerreport.org/">
-                    <img src="/static/img/hechinger_trans.png">
-                </a>
-            </div> <!-- /grid-item__img -->
-
-            <div class="grid-item__content">
-              <h5 class="grid-item__h">
-                  <a class="grid-item__link" target="_blank" href="http://hechingerreport.org/">The Hechinger Report</a>
-              </h5>
-              <p class="grid-item__text">Upstatement built this lovely, new home for our friends at Hechinger. I worked as a part of three person design team to find the visual voice then served as a lead front-end developer to build the site in a quick succession of sprints. In addition, I handled much of the project management, handling daily communication with the client. </p>
-              <a class="grid-item__link--highlight" target="_blank" href="http://hechingerreport.org/">See project</a>
-            </div> <!-- /grid-item__content -->
-          </div> <!-- /grid-item -->
-
-
-
-          <!-- LCA -->
-          <div class="grid-item">
-            <div class="grid-item__img">
-              <a target="_blank" href="http://arts.princeton.edu/">
-                <img src="/static/img/lca_trans.png">
-              </a>
-            </div> <!-- /grid-item__img -->
-
-            <div class="grid-item__content">
-              <h5 class="grid-item__h">
-                  <a class="grid-item__link" target="_blank" href="http://arts.princeton.edu/">Lewis Center for the Arts</a>
-              </h5>
-              <p class="grid-item-text">Serving as the lead front-end developer for this Upstatement project, I collaborated with the design team to help realize how the static designs could become a living breathing, responsive website. I also worked closely with a newer member of our team, offering advice, code reviews and positive vibes.</p>
-              <a class="grid-item__link--highlight" target="_blank" href="http://arts.princeton.edu">See project</a>
-            </div> <!-- /grid-item__content -->
-          </div> <!-- /grid-item -->
-
-
-
-          <!-- IAPP -->
-          <div class="grid-item">
-            <div class="grid-item__img">
-              <a target="_blank" href="https://www.privacyassociation.org/">
-                <img src="/static/img/iapp_trans.png">
-              </a>
-            </div> <!-- /grid-item__img -->
-
-            <div class="grid-item__content">
-              <h5 class="grid-item__h">
-                <a class="grid-item__link" target="_blank" href="https://www.privacyassociation.org/">The International Association </br>of Privacy Professionals</a>
-              </h5>
-              <p class="grid-item-text">The Privacy Professionals website was a unique project for us at Upstatement. The site had many more transactional interactions than your typical editorially based project. I served as the lead front-end devleoper, working with the design team to realize their vision and make it responsive</p>
-              <a class="grid-item__link--highlight" target="_blank" href="https://www.privacyassociation.org/">See project</a>
-            </div> <!-- /grid-item__content -->
-          </div> <!-- /grid-item -->
-
-
-
-
-          <!-- Nieman -->
-          <div class="grid-item">
-            <div class="grid-item__img">
-              <a target="_blank" href="http://niemanreports.org/">
-                <img src="/static/img/nieman_trans.png">
-              </a>
-            </div> <!-- /grid-item__img -->
-
-            <div class="grid-item__content">
-              <h5 class="grid-item__h">
-                <a class="grid-item__link" target="_blank" href="http://niemanreports.org/">The Nieman Foundation</a>
-              </h5>
-              <p class="grid-item-text">The Nieman Foundation's new site is actually a set of three inter-related sites: Nieman Reports, Nieman Storyboard and the Foundation itself. I handled design and front end developemnt on this huge Upstatement endeavor.</p>
-              <a class="grid-item__link--highlight" target="_blank" href="http://niemanreports.org/">See project</a>
-            </div> <!-- /grid-item__content -->
-          </div> <!-- /grid-item -->
-
-        </div> <!-- /grid-items -->
-
-    </div> <!-- /page-mod -->
-
-
-
-
-    <svg class="decoration decoration-x-1">
-        <use xlink:href="#elements_large_x" />
-    </svg>
-
-    <svg class="decoration decoration-x-2">
-        <use xlink:href="#elements_large_x" />
-    </svg>
-
-    <svg class="decoration decoration-x-3">
-        <use xlink:href="#elements_small_x" />
-    </svg>
-
-    <svg class="decoration decoration-x-4">
-        <use xlink:href="#elements_large_x" />
-    </svg>
-
-    <svg class="decoration decoration-line-1">
-        <use xlink:href="#elements_long_line" />
-    </svg>
-
-    <svg class="decoration decoration-line-2">
-        <use xlink:href="#elements_long_line" />
-    </svg>
-
-    <svg class="decoration decoration-line-3">
-        <use xlink:href="#elements_long_line" />
-    </svg>
-
-    <svg class="decoration decoration-line-4">
-        <use xlink:href="#elements_long_line" />
-    </svg>
-
-</div> <!-- /content-inner -->
 </div> <!-- bg-container -->

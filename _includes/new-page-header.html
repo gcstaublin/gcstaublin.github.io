@@ -1,0 +1,22 @@
+<header class="{% if include.headerClass %}{{include.headerClass}}{% else %}gcs-header--page{% endif %}">
+  <div class="gcs-header--page__inner">
+    <div class="logo__container">
+      <a class="logo__link" href="/">
+        {% include /icons/grant-logo.svg className="svg--logo--hp" %}
+      </a>
+    </div>
+
+    <nav class="gcs-nav">
+      <a class="gcs-nav__link" href="/work">Work</a>
+      <a class="gcs-nav__link" href="/archive">Writing</a>
+      <a class="gcs-nav__link" href="/about">About</a>
+    </nav>
+  </div>
+</header>
+
+
+
+{% if page.pageTitle %}
+  <h1 class="gcs-headline--page">{{ page.pageTitle }}</h1>
+{% endif %}
+
