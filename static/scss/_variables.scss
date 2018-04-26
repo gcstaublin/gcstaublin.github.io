@@ -48,11 +48,44 @@ $display-color-lt: #888888;
 
 
 
+// Type Scale
+// --------------------------------------------
+$size-eighth:           0.125rem;    // 2px
+$size-quarter:          0.25rem;     // 4px
+$size-half:             0.5rem;      // 8px
+$size-three-fourths:    0.75rem;     // 12px
+$size-one:              1rem;        // 16px
+$size-one-half:         1.5rem;      // 24px
+$size-two:              2rem;        // 32px
+$size-two-half:         2.5rem;      // 40px
+
+
+
+
+// Icon-size-scale
+// --------------------------------------------
+// Variables
+$icon-size-small:      $size-three-fourths;
+$icon-size-medium:     $size-one;
+$icon-size-large:      1.25rem;
+$icon-size-xlarge:     $size-one-half;
+
+
+
 
 // Spacing
 // --------------------------------------------
 
-$top-margin: 25px;
+// $top-margin: 25px;
+
+$space-eighth:           0.125rem;    // 2px
+$space-quarter:          0.25rem;     // 4px
+$space-half:             0.5rem;      // 8px
+$space-three-fourths:    0.75rem;     // 12px
+$space-one:              1rem;        // 16px
+$space-one-half:         1.5rem;      // 24px
+$space-two:              2rem;        // 32px
+$space-two-half:         2.5rem;      // 40px
 
 
 
@@ -80,6 +113,9 @@ $bg-color: rgba(250, 250, 250, 1);
 
 
 // $bg-fallback-small: rgb(253,29,133);
+
+
+
 
 
 
@@ -118,3 +154,22 @@ $bg-small: linear-gradient(153deg, rgba(253,29,133,0.9164040616246498) 5%, rgba(
 $bg: linear-gradient(45deg, #01466c, #03a9f4);
 
 $bg-fallback: #01466c;
+
+
+// Footer Color
+// --------------------------------------------
+:root {
+  --footer-link-bg:       rgba(0, 0, 0, 0.3);
+  --footer-link-bg-hover: $bg-fallback;
+  --footer-link-color:    rgba(255, 255, 255, 0.8);
+  --footer-text-color:    rgba(255, 255, 255, 0.5);
+}
+
+.page-archive,
+.gcs-page--archive,
+.gcs-page--about {
+  --footer-link-bg:       rgba($bg-fallback, 0.3);
+  --footer-link-bg-hover: $bg-fallback;
+  --footer-link-color:    rgba(255, 255, 255, 1);
+  --footer-text-color:    rgba(0, 0, 0, 0.5);
+}

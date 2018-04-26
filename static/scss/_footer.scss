@@ -9,37 +9,32 @@
 footer {
   @include text(lighten($secondary-text-color, 15%));
   margin-top: auto;
-  padding: 25px 0;
-  font-size: 16px;
+  padding: $space-one-half 0;
+  font-size: $size-one;
   line-height: 1.425;
 }
 
 
-.footer-mod {
+.footer__mod {
   @include clearfix;
   max-width: $width-med;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 $space-one-half;
 }
 
 
-.footer-h {
-  margin-bottom: 2em;
-  font-size: 30px;
-  font-weight: 200;
-}
+.footer__text { }
 
 
-.footer-text { }
-
-
-.footer-copyright-msg {
-  margin-top: 35px;
-  font-size: 11px;
+.footer__text--copyright {
+  color: var(--footer-text-color);
+  margin-top: $space-two;
+  font-size: $size-three-fourths;
   letter-spacing: 1px;
 }
 
-.footer-items {
+
+.footer__items {
   @include clearfix;
   display: inline-block;
   margin: 0;
@@ -49,27 +44,26 @@ footer {
 }
 
 
-.footer-item {
+.footer__item {
   display: inline-block;
   position: relative;
-  margin-left: 0.85rem;
+  margin-left: $space-three-fourths;
   float: left;
 
   &:first-child { margin-left: 0; }
 }
 
 
-.footer-item-link {
+.footer__link {
   display: block;
-  padding: 0.35rem;
-  background-color: rgba(0, 0, 0, 0.3);
-  color: rgba(255, 255, 255, 0.8);
+  padding: $space-quarter;
+  background-color: var(--footer-link-bg);
+  color: var(--footer-link-color);
   border-radius: 5px;
   line-height: 0;
   transition: background-color 0.25s linear;
 
   &:hover {
-    background-color: darken($bg-fallback, 5%);
-    .footer-icon { opacity: 0.6; }
+    background-color: var(--footer-link-bg-hover);
   }
 }
