@@ -1,0 +1,29 @@
+- name: Mail
+  url: mailto:grant.staublin@gmail.com
+  svg: mail
+  svg-class: null
+
+- name: Twitter
+  url: https://twitter.com/gcstaublin
+  svg: twitter
+  svg-class: null
+
+- name: Instagram
+  url: https://instagram.com/gcstaublin/
+  svg: instagram
+  svg-class: null
+
+- name: GitHub
+  url: https://github.com/gcstaublin
+  svg: github
+  svg-class: null
+
+- name: CodePen
+  url: https://codepen.io/gcstaublin/
+  svg: codepen
+  svg-class: null
+
+- name: LinkedIn
+  url: http://www.linkedin.com/in/grant-staublin-b326b41
+  svg: linkedin
+  svg-class: null
