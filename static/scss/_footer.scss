@@ -15,7 +15,7 @@ footer {
 }
 
 
-.footer__mod {
+.#{$prefix}footer__mod {
   @include clearfix;
   max-width: $width-med;
   margin: 0 auto;
@@ -23,10 +23,10 @@ footer {
 }
 
 
-.footer__text { }
+.#{$prefix}footer__text { }
 
 
-.footer__text--copyright {
+.#{$prefix}footer__text--copyright {
   color: var(--footer-text-color);
   margin-top: $space-two;
   font-size: $size-three-fourths;
@@ -34,7 +34,7 @@ footer {
 }
 
 
-.footer__items {
+.#{$prefix}footer__items {
   @include clearfix;
   display: inline-block;
   margin: 0;
@@ -44,7 +44,7 @@ footer {
 }
 
 
-.footer__item {
+.#{$prefix}footer__item {
   display: inline-block;
   position: relative;
   margin-left: $space-three-fourths;
@@ -54,7 +54,7 @@ footer {
 }
 
 
-.footer__link {
+.#{$prefix}footer__link {
   display: block;
   padding: $space-quarter;
   background-color: var(--footer-link-bg);

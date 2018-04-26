@@ -9,25 +9,19 @@
 
 
 .grant-img-container--post {
-  // margin: 0 auto;
-  // width: 100%;
-  // max-width: $width-xsm;
   position: relative;
-  // top: -$top-margin;
-  // text-align: center;
   width: 35px;
   height: auto;
-  // height: 75px;
 }
 
 
 .grant-img {
   max-width: 100%;
-  // opacity: 0.8;
-  // filter: blur(1px) opacity(90%) contrast(250%);
   filter: grayscale(90%) opacity(90%) contrast(120%);
   border-radius: 50%;
 }
+
+
 
 .type-img-container {
   position: absolute;
@@ -46,14 +40,6 @@
 }
 
 
-// .logo__link {
-//   color: rgba(255, 255, 255, 0.4);
-//   transition: color 0.2s ease;
-
-//   &:hover {
-//     color: rgba(0, 0, 0, 0.6);
-//   }
-// }
 
 
 // --------------------------------------------
