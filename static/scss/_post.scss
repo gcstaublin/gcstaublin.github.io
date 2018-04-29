@@ -5,11 +5,10 @@
 //
 // --------------------------------------------
 // --------------------------------------------
-
 .#{$prefix}post-wrapper {
-  padding-left: 0;
-  padding-right: 0;
   padding-top: 0;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 
@@ -27,29 +26,20 @@
 }
 
 
-
-
-.#{$prefix}post__meta {
-  // border-bottom: 1px solid #ededef;
-  // background-color: #fff;
-  // transition: margin 0.3s ease;
-  // margin-bottom: 16px;
-
-  // @include bp($bp-med) {
-  //   padding: 2rem;
-  //   padding-left: 0.5rem;
-  //   // margin-top: 32px;
-  //   margin-left: -100px;
-  //   margin-bottom: 32px;
-  // }
-}
+.#{$prefix}post__meta { }
 
 
 .#{$prefix}post__headline {
   @include display;
-  font-size: 40px;
-  line-height: 1.1em;
   margin: 0;
+  font-size: $size-one-three-fourths;
+  line-height: 1.15;
+  font-weight: bold;
+
+  @include bp($bp-headline-sm) {
+    font-size: $size-two-half;
+    font-weight: normal;
+  }
 }
 
 
@@ -62,18 +52,31 @@
 }
 
 
+
+
+// Article text styles
+// --------------------------------------------
 .article-text,
 .#{$prefix}article__text {
-  position: relative;
-  margin-top: 45px;
   @include text;
+  position: relative;
+  // margin-top: 45px;
+  margin-top: $space-one-half;
   font-size: 1.15em;
-  line-height: 1.45;
+  // line-height: 1.45;
+  line-height: 1.475;
+
+  @include bp($bp-sm) {
+    // font-size: $size-two-half;
+    margin-top: $space-two-half;
+  }
+
 
   > p {
     margin-top: $space-one;
     margin-bottom: $space-one;
   }
+
 
   // styling code snips that apppear inside article paragraphs
   > p code {
@@ -81,20 +84,24 @@
     font-size: 0.75em;
   }
 
+
   > p a {
     // color: lighten($text-color, 15%);
-    color: $accent-color;
-    text-decoration: none;
-    &:hover { text-decoration: underline; }
+    // color: $accent-color;
+    // text-decoration: none;
+    @include link;
+    // &:hover { text-decoration: underline; }
   }
 
 
   > h2 {
+    @include display;
     margin-top: 2em;
     margin-bottom: 0.25em;
-    @include display;
     font-size: 1.2em;
   }
+
+
   > h2 + p { margin-top: 0; }
 }
 
@@ -109,8 +116,6 @@
 //
 // --------------------------------------------
 // --------------------------------------------
-
-
 #disqus_thread a {
   &:link { color: $accent-color; }
   &:hover { color: $accent-color; }
