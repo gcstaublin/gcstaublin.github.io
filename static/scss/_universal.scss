@@ -10,20 +10,30 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background-color: rgba(250, 250, 250, 1);
+  // background-color: rgba(250, 250, 250, 1);
+  background-color: #fff;
 }
 
 
-.content-wrapper {
+
+// Content
+// --------------------------------------------
+.content-wrapper,
+.#{$prefix}content__wrapper {
   position: relative;
 
   @include bp($bp-sm) {
-    padding: 10px;
+    padding: $space-three-fourths;
     padding-bottom: 0;
   }
 
   @include bp($bp-med) {
     padding-bottom: 0;
+  }
+
+  // Homepage
+  .#{$prefix}homepage & {
+    padding-top: 0;
   }
 }
 
@@ -34,31 +44,16 @@ body {
 }
 
 
-.bg-container {
+
+
+
+
+// Bg
+// --------------------------------------------
+.bg-container,
+.#{$prefix}bg__container {
   @include clearfix;
   padding-bottom: 100px;
 }
 
 
-
-.content-wrapper {
-  .#{$prefix}homepage & {
-    padding-top: 0;
-  }
-}
-
-
-
-
-
-// --------------------------------------------
-// --------------------------------------------
-//
-// Link
-//
-// --------------------------------------------
-// --------------------------------------------
-
-a {
-  // @include link(currentColor);
-}

@@ -1,0 +1,27 @@
+// --------------------------------------------
+// --------------------------------------------
+//
+// Header
+//
+// --------------------------------------------
+// --------------------------------------------
+.#{$prefix}header {
+  background-color: $bg-fallback;
+  padding-left: $space-one;
+  // padding-right: $space-one;
+}
+
+
+.#{$prefix}header--hp {
+  background-color: transparent;
+
+  @include bp($bp-sm) {
+    padding-left: 0;
+  }
+}
+
+
+.#{$prefix}header__inner {
+  display: flex;
+  align-items: center;
+}

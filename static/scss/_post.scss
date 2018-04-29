@@ -6,14 +6,14 @@
 // --------------------------------------------
 // --------------------------------------------
 
-.post-wrapper {
+.#{$prefix}post-wrapper {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
 }
 
 
-.post-container {
+.#{$prefix}post__container {
   position: relative;
   margin: 0 auto;
   padding: 45px;
@@ -27,16 +27,9 @@
 }
 
 
-.comments {
-  margin: 0 auto 0;
-  padding: 45px;
-  width: 100%;
-  max-width: $width-med;
-  background-color: #fff;
-}
 
 
-.post-meta {
+.#{$prefix}post__meta {
   // border-bottom: 1px solid #ededef;
   // background-color: #fff;
   // transition: margin 0.3s ease;
@@ -52,7 +45,7 @@
 }
 
 
-.post-h {
+.#{$prefix}post__headline {
   @include display;
   font-size: 40px;
   line-height: 1.1em;
@@ -60,7 +53,7 @@
 }
 
 
-.post-sub-h {
+.#{$prefix}post__headline--sub {
   @include display($display-color-lt);
   margin-top: 1em;
   font-size: 24px;
@@ -69,12 +62,18 @@
 }
 
 
-.article-text {
+.article-text,
+.#{$prefix}article__text {
   position: relative;
   margin-top: 45px;
   @include text;
   font-size: 1.15em;
   line-height: 1.45;
+
+  > p {
+    margin-top: $space-one;
+    margin-bottom: $space-one;
+  }
 
   // styling code snips that apppear inside article paragraphs
   > p code {
@@ -117,4 +116,15 @@
   &:hover { color: $accent-color; }
   &:active { color: $accent-color; }
   &:visited { color: $accent-color; }
+}
+
+
+
+
+.comments {
+  margin: 0 auto 0;
+  padding: 45px;
+  width: 100%;
+  max-width: $width-med;
+  background-color: #fff;
 }

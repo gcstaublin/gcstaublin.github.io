@@ -7,7 +7,6 @@
 // --------------------------------------------
 
 footer {
-  @include text(lighten($secondary-text-color, 15%));
   margin-top: auto;
   padding: $space-one-half 0;
   font-size: $size-one;
@@ -58,6 +57,9 @@ footer {
   display: block;
   padding: $space-quarter;
   background-color: var(--footer-link-bg);
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--footer-link-border);
   color: var(--footer-link-color);
   border-radius: 5px;
   line-height: 0;

@@ -1,0 +1,59 @@
+// --------------------------------------------
+// --------------------------------------------
+//
+// Logo
+//
+// --------------------------------------------
+// --------------------------------------------
+.logo__container {
+  position: relative;
+}
+
+
+.logo__link--hp,
+.logo__link {
+  display: block;
+  color: rgba(255, 255, 255, 0.8);
+  transition: transform 0.2s ease, color 0.5s 0.1s ease;
+  transform: scale(1);
+
+  &:hover {
+    transform: scale(1.1);
+    transition: transform 0.4s ease, color 0.1s 0.1s ease;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.9);
+    transition: transform 0.2s ease-in-out;
+    transform: scale(1);
+  }
+}
+
+
+.logo__link {
+  display: inline-block;
+}
+
+
+.logo__svg {
+  width: 40px;
+  height: 40px;
+}
+
+
+.svg--logo--hp {
+  width: 24px;
+  height: 24px;
+  transition: all 0.2s ease;
+
+  @include bp($bp-med) {
+    width: 32px;
+  }
+}
+
+// Standard logo
+.svg--logo {
+  width: 32px;
+  height: 32px;
+  height: auto;
+}

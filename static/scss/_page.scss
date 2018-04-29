@@ -6,11 +6,11 @@
 // --------------------------------------------
 // --------------------------------------------
 
-.header--page {
-  position: sticky;
-  top: 0;
-  margin-top: -10px;
-}
+// .header--page {
+//   position: sticky;
+//   top: 0;
+//   margin-top: -10px;
+// }
 
 .bg-backsplash {
   background-color: $bg-fallback;
@@ -99,4 +99,32 @@
   //   top: 50%;
   //   transform: translateY(-50%);
   // }
+}
+
+
+
+
+
+
+
+
+.#{$prefix}page__mod {
+  @include clearfix;
+  width: 100%;
+  // max-width: $width-med;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @include bp($bp-med) {
+    max-width: $width-med;
+  }
+}
+
+.#{$prefix}page__mod--hp-intro {
+  margin-top: 40px;
+  transition: margin-top 0.2s ease;
+
+  @include bp($bp-med) {
+    margin-top: 6rem;
+  }
 }

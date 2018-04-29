@@ -1,5 +1,5 @@
-<header class="{% if include.headerClass %}{{include.headerClass}}{% else %}gcs-header--page{% endif %}">
-  <div class="gcs-header--page__inner">
+<header class="gcs-header {% if include.headerClass %}{{include.headerClass}}{% endif %}">
+  <div class="gcs-header__inner">
     <div class="logo__container">
       <a class="logo__link" href="/">
         {% include /icons/grant-logo.svg className="svg--logo--hp" %}

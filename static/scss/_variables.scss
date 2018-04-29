@@ -8,6 +8,7 @@
 
 
 
+
 // Prefix
 // --------------------------------------------
 $prefix: 'gcs-';
@@ -15,11 +16,8 @@ $prefix: 'gcs-';
 
 
 
-
-
-// Fonts
+// Type
 // --------------------------------------------
-
 $sans-fallback: Helvetica, sans-serif;
 $serif-fallback: Georgia, serif;
 
@@ -28,36 +26,30 @@ $type-accent: 'jubilat', $serif-fallback;
 $type-display: 'jubilat', Georgia, serif;
 $type-code: 'droid-sans-mono', monospace, sans-serif;
 
+// Font weights
 $text-weight: 300;
 $text-bold: 600;
-
 $code-wt:   400;
 // $accent-lt:   200;
 $accent-med:  500;
 $accent-bold: 400;
-
-$text-color: #222222;
-
 $display-wt: 200;
 
-$tease-text: #444444;
-$tease-text-lt: #666666;
-
-$display-color-lt: #888888;
 
 
 
-
-// Type Scale
+// Type Sizes
 // --------------------------------------------
-$size-eighth:           0.125rem;    // 2px
-$size-quarter:          0.25rem;     // 4px
-$size-half:             0.5rem;      // 8px
-$size-three-fourths:    0.75rem;     // 12px
-$size-one:              1rem;        // 16px
-$size-one-half:         1.5rem;      // 24px
-$size-two:              2rem;        // 32px
-$size-two-half:         2.5rem;      // 40px
+$size-eighth:             0.125rem;    // 2px
+$size-quarter:            0.25rem;     // 4px
+$size-half:               0.5rem;      // 8px
+$size-three-fourths:      0.75rem;     // 12px
+$size-one:                1rem;        // 16px
+$size-one-quarter:        1.25rem;     // 20px
+$size-one-half:           1.5rem;      // 24px
+$size-one-three-fourths:  1.75rem;     // 30px
+$size-two:                2rem;        // 36px
+$size-two-half:           2.5rem;      // 40px
 
 
 
@@ -77,7 +69,6 @@ $icon-size-xlarge:     $size-one-half;
 // --------------------------------------------
 
 // $top-margin: 25px;
-
 $space-eighth:           0.125rem;    // 2px
 $space-quarter:          0.25rem;     // 4px
 $space-half:             0.5rem;      // 8px
@@ -86,55 +77,35 @@ $space-one:              1rem;        // 16px
 $space-one-half:         1.5rem;      // 24px
 $space-two:              2rem;        // 32px
 $space-two-half:         2.5rem;      // 40px
+$space-three:            3rem;      // 48px
+$space-four:             4rem;
+
 
 
 
 // Color
 // --------------------------------------------
 
-$primary-color-drk:   #455A64;
-$primary-color:       #607D8B;
-$primary-color-lt:  #CFD8DC;
-$primary-color-text:   #FFFFFF;
+// Text
+$text-color:            #222222;
+$tease-text:            #444444;
+$tease-text-lt:         #666666;
+
+$display-color-lt:      #888888;
+
+$primary-color-drk:     #455A64;
+$primary-color:         #607D8B;
+// $primary-color: red;
+$primary-color-lt:      #CFD8DC;
+$primary-color-text:    #FFFFFF;
 // $accent-color:        #FF5252;
-$accent-color:        #0288D1;
-$primary-text-color:   #212121;
-$secondary-text-color: #727272;
-$divider-color:       #B6B6B6;
+$accent-color:          #0288D1;
+$primary-text-color:    #212121;
+$secondary-text-color:  #727272;
+$divider-color:         #B6B6B6;
 
-
-// $bg-color:    lighten($primary-color-lt, 10%);
-
-$bg-color: rgba(250, 250, 250, 1);
-
-// $bg-fallback: #B9448B;
-// $bg-fallback: rgb(29,63,253);
-// $bg-fallback: rgb(15, 1, 94);
-
-
+$bg-color:              rgba(250, 250, 250, 1);
 // $bg-fallback-small: rgb(253,29,133);
-
-
-
-
-
-
-// Breakpoints
-// --------------------------------------------
-
-$width-xsm: 200px;
-$width-sm: 480px;
-$width-med: 720px;
-$width-lg: 900px;
-
-$bp-sm: 600px;
-$bp-med: 900px;
-
-$bp-social: 800px;
-$bp-social-lg: $bp-med;
-
-$bp-post-has-pad: 700px;
-
 
 
 
@@ -142,24 +113,42 @@ $bp-post-has-pad: 700px;
 // Background
 // --------------------------------------------
 
-// $bg: linear-gradient(45deg, darken(#0288D1, 20%), #03A9F4);
-
-// $bg: linear-gradient(153deg, rgba(29,63,253,0.9164040616246498) 5%, rgba(29,112,253,0.9051995798319328) 50%);
-
 $bg-small: linear-gradient(153deg, rgba(253,29,133,0.9164040616246498) 5%, rgba(253,29,242,0.9051995798319328) 50%);
-
-
-// $bg: radial-gradient(at 50% 100%, rgba(123, 22, 255, 0.75), rgb(15, 1, 94));
 
 $bg: linear-gradient(45deg, #01466c, #03a9f4);
 
 $bg-fallback: #01466c;
 
 
+
+// Breakpoints
+// --------------------------------------------
+
+// Widths
+$width-xsm:           200px;
+$width-sm:            480px;
+$width-med:           720px;
+$width-lg:            900px;
+
+// General Breakpoints
+$bp-sm:               600px;
+$bp-med:              900px;
+
+// Social Breakpoints
+$bp-social:           800px;
+$bp-social-lg:        $bp-med;
+
+// Post Breakpoints
+$bp-post-has-pad:     700px;
+
+
+
+
 // Footer Color
 // --------------------------------------------
 :root {
-  --footer-link-bg:       rgba(0, 0, 0, 0.3);
+  --footer-link-bg:       rgba(0, 0, 0, 0.1);
+  --footer-link-border:   rgba(0, 0, 0, 0.125);
   --footer-link-bg-hover: $bg-fallback;
   --footer-link-color:    rgba(255, 255, 255, 0.8);
   --footer-text-color:    rgba(255, 255, 255, 0.5);
@@ -167,8 +156,10 @@ $bg-fallback: #01466c;
 
 .page-archive,
 .gcs-page--archive,
-.gcs-page--about {
+.gcs-page--about,
+.gcs-page--post {
   --footer-link-bg:       rgba($bg-fallback, 0.3);
+  --footer-link-border:   rgba($bg-fallback, 0.15);
   --footer-link-bg-hover: $bg-fallback;
   --footer-link-color:    rgba(255, 255, 255, 1);
   --footer-text-color:    rgba(0, 0, 0, 0.5);

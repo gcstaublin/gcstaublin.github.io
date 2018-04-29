@@ -12,38 +12,13 @@
 // --------------------------------------------
 // --------------------------------------------
 //
-// Icons
-//
-// --------------------------------------------
-// --------------------------------------------
-
-.#{$prefix}icon {
-  width: $icon-size-xlarge;
-  height: $icon-size-xlarge;
-}
-
-
-// Sizes
-.#{$prefix}icon--small { width: $icon-size-small; height: $icon-size-small; }
-.#{$prefix}icon--medium { width: $icon-size-medium; height: $icon-size-medium; }
-.#{$prefix}icon--large { width: $icon-size-large; height: $icon-size-large; }
-.#{$prefix}icon--xlarge { width: $icon-size-xlarge; height: $icon-size-xlarge; }
-
-
-
-
-
-
-// --------------------------------------------
-// --------------------------------------------
-//
 // Pages
 //
 // --------------------------------------------
 // --------------------------------------------
-
 .#{$prefix}page--archive {
-  background-color: $bg-color;
+  // background-color: $bg-color;
+  background-color: #fff;
 }
 
 
@@ -53,6 +28,7 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+
 
 
 
@@ -66,7 +42,6 @@
 .#{$prefix}content__wrapper {
   position: relative;
 }
-
 
 
 
@@ -94,8 +69,6 @@
 
 
 
-
-
 // --------------------------------------------
 // --------------------------------------------
 //
@@ -114,8 +87,6 @@
 
 
 
-
-
 // --------------------------------------------
 // --------------------------------------------
 //
@@ -123,28 +94,29 @@
 //
 // --------------------------------------------
 // --------------------------------------------
-
 .#{$prefix}text {
   @include text;
-  font-size: 1.125rem;
+  font-size: $size-one-quarter;
   margin: 0;
-  color: $primary-text-color;
+  // color: $primary-text-color;
   color: rgba($primary-text-color, 0.9);
 }
 
 
 .#{$prefix}text--large {
   @include text;
-  font-size: 1.325rem;
+  // font-size: 1.325rem;
+  font-size: $size-one-half;
   margin: 0;
-  color: $primary-text-color;
+  // color: $primary-text-color;
   color: rgba($primary-text-color, 0.9);
 }
 
 
 .#{$prefix}text--small {
   @include text;
-  font-size: 0.875rem;
+  // font-size: 0.875rem;
+  font-size: $size-three-fourths;
   margin: 0;
   color: rgba($primary-text-color, 0.9);
 }
@@ -164,7 +136,6 @@
   margin-left: 8px;
   margin-right: 8px;
 }
-
 
 
 .#{$prefix}headline--page {
@@ -189,38 +160,41 @@
 //
 // --------------------------------------------
 // --------------------------------------------
-
 .#{$prefix}headline--homepage {
   @include accent;
-  font-size: 28px;
+  font-size: $size-one-three-fourths;
   color: rgba(255, 255, 255, 0.88);
   letter-spacing: 1px;
 }
 
+
 .#{$prefix}intro--homepage {
   margin: 0;
-  font-size: 22px;
-  font-weight: 100;
-  line-height: 1.325;
+  font-size: $size-one-quarter;
+  font-weight: 300;
+  line-height: 1.525;
   color: rgba(255, 255, 255, 0.88);
 
   @include bp($bp-sm) {
-    font-size: 30px;
+    font-size: $size-one-three-fourths;
+    font-weight: 100;
+    line-height: 1.325;
   }
 }
 
 
 .#{$prefix}text--homepage {
   margin-top: 18px;
-  font-size: 22px;
+  font-size: $size-one-quarter;
   font-weight: 300;
   line-height: 1.525;
   color: rgba(255, 255, 255, 0.7);
 
   @include bp($bp-sm) {
-    font-size: 24px;
+    font-size: $size-one-half;
   }
 }
+
 
 
 
@@ -232,157 +206,8 @@
 // --------------------------------------------
 // --------------------------------------------
 .#{$prefix}link--hp {
-  @include link(#fff);
-}
-
-
-
-// --------------------------------------------
-// --------------------------------------------
-//
-// Header
-//
-// --------------------------------------------
-// --------------------------------------------
-.#{$prefix}header--page {
-  background-color: $bg-fallback;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-
-.#{$prefix}header--hp {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-
-.#{$prefix}header--page__inner {
-  display: flex;
-  align-items: center;
-  // height: 59px;
-}
-
-
-
-
-// --------------------------------------------
-// --------------------------------------------
-//
-// Nav
-//
-// --------------------------------------------
-// --------------------------------------------
-.#{$prefix}nav {
-  display: flex;
-  margin-left: auto;
-  margin-right: -20px;
-}
-
-
-.#{$prefix}nav__link {
-  display: block;
-  padding: 1rem;
-  font-size: 1rem;
-  color: #fff;
-  text-decoration: none;
-  transition: background-color 0.2s ease;
-
-  // & + & { margin-left: 0.5rem; }
-
-  &:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-}
-
-
-
-
-// --------------------------------------------
-// --------------------------------------------
-//
-// Work
-//
-// --------------------------------------------
-// --------------------------------------------
-
-.#{$prefix}work__item {
-  @include clearfix;
-  // display: flex;
-  // flex-flow: row-reverse;
-  // border: 1px solid blue;
-  // margin-bottom: 100px;
-  // position: relative;
-  // @include clearfix;
-
-  // &:last-child { margin-bottom: 0; }
-
-  & + & { margin-top: 4rem; }
-
-  @include bp($bp-sm) {  }
-}
-
-
-.#{$prefix}work__h {
-  margin: 0 0 7px;
-  font-weight: $text-weight;
-  font-size: 1.75rem;
-  line-height: 1.15;
-}
-
-
-.#{$prefix}work__content {
-  font-family: $type-main;
-  color: rgba(0, 0, 0, 0.85);
-}
-
-
-
-.#{$prefix}work__link {
-  text-decoration: none;
-  color: black;
-}
-
-
-.#{$prefix}work__link--highlight {
-  display: inline-block;
-  margin-top: 0.25em;
-  padding: 0.5em 0.8em;
-  padding-bottom: 0.65em;
-  border: 1px solid rgba($bg-fallback, 0.5);
-  font-size: 0.85em;
-  line-height: 1;
-  color: rgba(0, 0, 0, 0.85);
-  border-radius: 3px;
-  text-decoration: none;
-  transition: all 0.3s ease-in-out;
-
-  &:hover {
-    border-color: $bg-fallback;
-    color: black;
-  }
-}
-
-
-.#{$prefix}work__text {
-  margin: 0 0 10px;
-  font-size: 17px;
-  line-height: 1.475;
-  font-weight: 400;
-}
-
-
-.#{$prefix}work__link--img {
-  margin-left: 2rem;
-
-  @include bp($bp-sm) {
-    float: right;
-  }
-}
-
-
-.#{$prefix}work__img-container {
-  width: 250px;
+  // @include link(#fff);
+  @include link;
 }
 
 
@@ -406,6 +231,8 @@
 }
 
 
+
+
 // --------------------------------------------
 // --------------------------------------------
 //
@@ -417,15 +244,9 @@
   font-size: 1.25rem;
   line-height: 1.4;
 
-
   // contextual styling
   .#{$prefix}content__wrapper {
     a { @include link(currentColor); }
 
   }
 }
-
-
-
-
-
