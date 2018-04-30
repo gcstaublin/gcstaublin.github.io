@@ -6,11 +6,7 @@
 // --------------------------------------------
 // --------------------------------------------
 
-// .header--page {
-//   position: sticky;
-//   top: 0;
-//   margin-top: -10px;
-// }
+
 
 .bg-backsplash {
   background-color: $bg-fallback;
@@ -22,84 +18,9 @@
 }
 
 
-.page-h {
-  @include accent;
-  margin: 1em 0 2em;
-  color: #fff;
-  font-size: 1.55em;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
 
 
-.archive-items {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
 
-
-.archive-item {
-  margin-bottom: 3em;
-}
-
-
-.archive-meta {
-  margin: 0 0 10px;
-  @include text($tease-text-lt);
-  letter-spacing: 1px;
-}
-
-
-.archive-h {
-  margin: 0 0 0.15em;
-  font-size: 1.85em;
-  line-height: 1.05;
-}
-
-
-.archive-h-link {
-  @include display;
-  text-decoration: none;
-  &:hover {
-    color: #C0235B;
-  }
-}
-
-
-.archive-text {
-  @include text;
-  margin: 0;
-  font-size: 1.15em;
-  line-height: 1.55;
-  color: $tease-text;
-  > p { margin: 0; }
-
-  > a { color: $accent-color; text-decoration: none; }
-
-  // find a method of removing this within jekyll
-  img { display: none; }
-}
-
-.archive-text-link {
-  position: relative;
-  text-decoration: none;
-  color: #C0235B;
-  font-size: 0.85em;
-
-  &:hover { text-decoration: underline; }
-
-  // &:after {
-  //   position: absolute;
-  //   display: inline-block;
-  //   content: '→';
-  //   color: inherit;
-  //   margin-left: 10px;
-  //   top: 50%;
-  //   transform: translateY(-50%);
-  // }
-}
 
 
 

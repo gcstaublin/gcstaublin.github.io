@@ -150,6 +150,15 @@ $bp-headline-sm:      600px;
 // Footer Color
 // --------------------------------------------
 :root {
+  --footer-link-bg:       rgba($bg-fallback, 0.3);
+  --footer-link-border:   rgba($bg-fallback, 0.15);
+  --footer-link-bg-hover: $bg-fallback;
+  --footer-link-color:    rgba(255, 255, 255, 1);
+  --footer-text-color:    rgba(0, 0, 0, 0.5);
+}
+
+
+.gcs-homepage {
   --footer-link-bg:       rgba(0, 0, 0, 0.1);
   --footer-link-border:   rgba(0, 0, 0, 0.125);
   --footer-link-bg-hover: $bg-fallback;
@@ -157,13 +166,29 @@ $bp-headline-sm:      600px;
   --footer-text-color:    rgba(255, 255, 255, 0.5);
 }
 
-.page-archive,
-.gcs-page--archive,
-.gcs-page--about,
-.gcs-page--post {
-  --footer-link-bg:       rgba($bg-fallback, 0.3);
-  --footer-link-border:   rgba($bg-fallback, 0.15);
-  --footer-link-bg-hover: $bg-fallback;
-  --footer-link-color:    rgba(255, 255, 255, 1);
-  --footer-text-color:    rgba(0, 0, 0, 0.5);
-}
+
+
+// Post Color
+// --------------------------------------------
+// post headline
+// post subhead
+// text
+// p code
+
+
+// Archive Color
+// --------------------------------------------
+// archive meta
+// archive headline
+// Archive link
+// archive text
+// archive text link
+
+
+// Homepage Color
+// --------------------------------------------
+
+
+
+// Resume Color
+// --------------------------------------------

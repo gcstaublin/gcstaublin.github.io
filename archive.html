@@ -8,19 +8,23 @@ permalink: /archive/
 
 
 
-<ul class="archive-items">
+<ul class="gcs-archive__items">
     {% for post in site.posts %}
-      <li class="archive-item">
+      <li class="gcs-archive__item">
         <article>
-          <h5 class="archive-meta">{{ post.date | date: "%m.%d.%y" }}</h5>
-          <h3 class="archive-h">
-            <a class="archive-h-link" href="{{ post.url }}">{{ post.title }}</a>
-          </h3> <!-- /archive-h -->
-          <div class="archive-text">{{ post.content | truncatewords: 50 | remove: '<p>' | remove: '</p>' }} <a class="archive-text-link" href="{{ post.url}}">Read More</a></div>
+          <h5 class="gcs-archive__meta">{{ post.date | date: "%m.%d.%y" }}</h5>
+          <h3 class="gcs-archive__headline">
+            <a class="gcs-archive__link--headline" href="{{ post.url }}">{{ post.title }}</a>
+          </h3> <!-- /archive__headline -->
+          <div class="gcs-archive__text">{{ post.content | truncatewords: 50 | strip_html }}
+            <a class="gcs-archive__link--text" href="{{ post.url}}">Continue reading
+              <span>&raquo;</span>
+            </a>
+          </div>
         </article>
-      </li> <!-- /tease-item -->
+      </li> <!-- /archive__item -->
     {% endfor %}
-</ul> <!-- /tease-items -->
+</ul> <!-- /archive__items -->
 
 
 <!-- {% if pagination.previous_page %}

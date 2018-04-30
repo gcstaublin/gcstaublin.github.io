@@ -1,0 +1,76 @@
+// --------------------------------------------
+// --------------------------------------------
+//
+// Archive
+//
+// --------------------------------------------
+// --------------------------------------------
+.#{$prefix}archive__items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+.#{$prefix}archive__item {
+  margin-bottom: $space-two;
+}
+
+
+.#{$prefix}archive__meta {
+  @include text($tease-text-lt);
+  margin: 0;
+  margin-bottom: $space-quarter;
+  letter-spacing: 1px;
+}
+
+
+.#{$prefix}archive__headline {
+  margin: 0;
+  margin-bottom: $space-quarter;
+  font-size: $size-one-three-fourths;
+  line-height: 1.05;
+}
+
+
+.#{$prefix}archive__link--headline {
+  @include display;
+  text-decoration: none;
+  &:hover {
+    color: #C0235B;
+  }
+}
+
+
+.gcs-archive__text {
+  @include text;
+  margin: 0;
+  font-size: $size-one-quarter;
+  line-height: 1.45;
+  color: $tease-text;
+
+  > p { margin: 0; }
+
+  > a { color: $accent-color; text-decoration: none; }
+
+  // find a method of removing this within jekyll
+  img { display: none; }
+}
+
+.#{$prefix}archive__link--text {
+  position: relative;
+  text-decoration: none;
+  color: #C0235B;
+  font-size: $size-one;
+
+  &:hover {
+    // text-decoration: underline;
+  }
+
+  span {
+    position: relative;
+    top: -1px;
+    left: 2px;
+    font-size: 0.95em;
+  }
+}
