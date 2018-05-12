@@ -1,66 +1,47 @@
 {% include head.html %}
 
-  <body>
+  <body class="gcs-page--post">
     <!-- SVG -->
     <!-- ===================================== -->
     <div style="height: 0; width: 0; position: absolute; visibility: hidden">
        {% include svg.svg %}
      </div>
 
-    <div class="content-wrapper post-wrapper">
+    <!-- Header -->
+    <!-- ===================================== -->
+    {% include new-page-header.html %}
 
 
-      <!-- Header -->
-      <!-- ===================================== -->
-      {% include new-page-header.html %}
 
+    <div class="gcs-content__wrapper gcs-post__wrapper">
 
       <!-- Content -->
       <!-- ===================================== -->
       <article>
+        <section id="content" role="main" class="gcs-post__container">
 
-        <section id="content" role="main" class="post-container">
-
-          <div class="post-meta">
-            <h1 class="post-h fade-in">{{ page.title }}</h1>
+          <div class="gcs-post__meta">
+            <h1 class="gcs-post__headline fade-in">{{ page.title }}</h1>
             {% if page.subhead %}
-              <h3 class="post-sub-h fade-in"> {{ page.subhead }}</h3>
+              <h3 class="gcs-post__headline--sub fade-in"> {{ page.subhead }}</h3>
             {% endif %}
           </div> <!-- /post-meta -->
 
-
-          <div class="article-text fade-in">
+          <div class="gcs-article__text fade-in">
             {{ content }}
-
             <!-- Social Tools -->
             <!-- ===================================== -->
             {% include social.html %}
-
           </div> <!-- /article-text -->
 
-
         </section> <!-- /content content-wrapper -->
-
       </article>
-
-
-
-
-
-
-
 
     </div> <!-- /content-wrapper -->
 
 
-
-
-
-
-
     <!-- Footer -->
     <!-- ===================================== -->
-
     {% include footer.html %}
 
 

@@ -5,76 +5,80 @@
 //
 // --------------------------------------------
 // --------------------------------------------
-
-.post-wrapper {
-  padding-left: 0;
-  padding-right: 0;
+.#{$prefix}post-wrapper {
   padding-top: 0;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 
-.post-container {
+.#{$prefix}post__container {
   position: relative;
   margin: 0 auto;
-  padding: 45px;
+  padding: $space-two-half;
   width: 100%;
   max-width: $width-med;
   background-color: #fff;
 
   @include bp($bp-post-has-pad, max) {
-    padding: 45px 25px;
+    padding: $space-two-half $space-two;
   }
 }
 
 
-.comments {
-  margin: 0 auto 0;
-  padding: 45px;
-  width: 100%;
-  max-width: $width-med;
-  background-color: #fff;
-}
+
+.#{$prefix}post__meta { }
 
 
-.post-meta {
-  // border-bottom: 1px solid #ededef;
-  // background-color: #fff;
-  // transition: margin 0.3s ease;
-  // margin-bottom: 16px;
-
-  // @include bp($bp-med) {
-  //   padding: 2rem;
-  //   padding-left: 0.5rem;
-  //   // margin-top: 32px;
-  //   margin-left: -100px;
-  //   margin-bottom: 32px;
-  // }
-}
-
-
-.post-h {
+.#{$prefix}post__headline {
   @include display;
-  font-size: 40px;
-  line-height: 1.1em;
   margin: 0;
+  font-size: $size-one-three-fourths;
+  line-height: 1.15;
+  font-weight: bold;
+
+  @include bp($bp-headline-sm) {
+    font-size: $size-two-half;
+    font-weight: normal;
+  }
 }
 
 
-.post-sub-h {
+
+.#{$prefix}post__headline--sub {
   @include display($display-color-lt);
-  margin-top: 1em;
-  font-size: 24px;
+  margin-top: $space-half;
+  font-size: $size-one-half;
   line-height: 1.25;
-  font-style: italic;
+  // font-style: italic;
 }
 
 
-.article-text {
-  position: relative;
-  margin-top: 45px;
+
+
+// Article text styles
+// --------------------------------------------
+.article-text,
+.#{$prefix}article__text {
   @include text;
+  position: relative;
+  // margin-top: 45px;
+  margin-top: $space-one-half;
   font-size: 1.15em;
-  line-height: 1.45;
+  // line-height: 1.45;
+  line-height: 1.475;
+
+  @include bp($bp-sm) {
+    // font-size: $size-two-half;
+    margin-top: $space-two-half;
+  }
+
+
+  > p {
+    margin-top: $space-one;
+    margin-bottom: $space-one;
+  }
+
 
   // styling code snips that apppear inside article paragraphs
   > p code {
@@ -82,20 +86,20 @@
     font-size: 0.75em;
   }
 
+
   > p a {
-    // color: lighten($text-color, 15%);
-    color: $accent-color;
-    text-decoration: none;
-    &:hover { text-decoration: underline; }
+    @include link;
   }
 
 
   > h2 {
+    @include display;
     margin-top: 2em;
     margin-bottom: 0.25em;
-    @include display;
     font-size: 1.2em;
   }
+
+
   > h2 + p { margin-top: 0; }
 }
 
@@ -110,11 +114,20 @@
 //
 // --------------------------------------------
 // --------------------------------------------
-
-
 #disqus_thread a {
   &:link { color: $accent-color; }
   &:hover { color: $accent-color; }
   &:active { color: $accent-color; }
   &:visited { color: $accent-color; }
+}
+
+
+
+
+.comments {
+  margin: 0 auto 0;
+  padding: 45px;
+  width: 100%;
+  max-width: $width-med;
+  background-color: #fff;
 }
