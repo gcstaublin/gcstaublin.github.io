@@ -31,7 +31,7 @@ All these posts are worth reading and thinking through.
 
 #### My concerns about CSS-in-JS
 
-Overall, I have issues with CSS-in-JS.
+Overall, I have issues with CSS-in-JS. My concerns aren't necessarily around the idea of writing CSS within a Javascript file. More so, I worry whether we're relying on technology as a replacement for fundamental knowledge.
 
 In his <a href="https://micahgodbolt.com/blog/what-s-right-with-css-in-js/">What's right with CSS-in-JS</a> post, Micah Goldbolt has a couple observations that speak to my concerns:
 
@@ -47,13 +47,13 @@ Overall, I'd place this deficit upon organizations and realize that an engineer 
 
 Micah suggests to keep "front-end minded developers involved in your markup and styles". My concern is that we're too eager to consider the fundamentals less important as the front end continues to change.
 
-All this might seem like a hyperbolic jump in logic, but if we're being honest and acknowledging that developers struggle with CSS, using technology to solve that deficiency might not be our best path forward.
+All this might seem like a hyperbolic jump in logic. Afterall, we're supposed to be talking about writing CSS, right? If we're being honest and acknowledging that developers struggle with CSS, is technology the best solution? Are we causing more issues for ourselves six months to a year from now?
 
 Another point Goldbolt makes in his article is the challenges of using reusable mixins and functions:
 
 > …  I agree that writing our styles in JavaScript makes them less accessible to other components wanting to reuse variables, mixins and functions. The variable problem can certainly be remedied by moving those important values into Tokens (or some JSON'esque file that JS and Sass can read). Mixins and Functions, on the other hand, are more difficult to produce cross platform and will either need to be duplicated, or accepted as a 'lost in translation' casualty.
 
-For me, this is huge. Teaching a developer unfamiliar with CSS to use a system of mixins is better and more predictable than teaching a developer the specifics of flexbox or even styling a button element.
+For me, this is huge. Teaching a developer to use a system of mixins is easier and more predictable than teaching a developer the specifics of flexbox, grid or the simple act of styling a button.
 
 I'd rather provide that developer with the opportunity to do something like this.
 
@@ -80,7 +80,7 @@ And then there's the fact that CSS isn't a programming language.
 
 Proponents of CSS-in-JS, like to throw out the "at-scale" argument. When do we reach a point where we can say we're at scale. A developer at Facebook might have one idea of at scale, while a developer at Bob's Awesome Single Page App, LLC, might have another. It's subjective, rather than absolute. I architected and wrote the CSS library that powers the <a href="http://uniform.hudl.com" target="_blank">Uniform Design System</a>. I'd assume that's "at-scale," and we didn't utilize CSS-in-JS for our React components. 🤷‍♂️
 
-Many CSS-in-JS approaches inject `<style>` tags into the `<head>` of the document. This practice makes me wonder where are are in terms of performance considerations. By making all our styles critical path css, we risk making none of it critical path. Are we less concerned about performance than we were just a couple years ago.
+Many CSS-in-JS approaches inject `<style>` tags into the `<head>` of the document. This practice makes me wonder where are are in terms of performance considerations. By making all our styles critical path css, we risk making none of it critical path. Are we less concerned about performance than we were just a couple years ago. In most cases, these styles can be extracted into an actual CSS file, but I've rarely seen this happen.
 
 
 #### Final thoughts
@@ -91,4 +91,8 @@ If the decision were left up to me, I'd keep CSS out of JS. I'd rely on a naming
 
 Whether an organization adopts an approach like CSS-in-JS or not, it should be a group decision. It should be a decision that satisfies the needs of the entire organization, not satisfying the desires of a few individual developers eager to experiment with a different technology.
 
-I clearly have my reservations with this approach, but I love that paradigms are constantly challenged in our industry ... as overwhelming has that seems at times.
+One consideration I always ask others and myself when adopting a new technology is what happens when we step away from this technology? I don't expect an immediate answer, but stopping to think about this, is worthwhile.
+
+Historically, we've relied on Javascript to give us what the HTML or CSS specs don't. Smart JS developers gave a options for responsive images long before the standard was settled and implemented. JS is giving us options for element queries, taking responsive design to new, exciting places. Javascript has been, and will continue to be, the proving ground for these crazy ideas our community creates.
+
+I clearly have my reservations with this CSS-in-JS, but I love that paradigms are constantly challenged in our industry … as overwhelming has that seems at times.
