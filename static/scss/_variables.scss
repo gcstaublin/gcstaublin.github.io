@@ -21,8 +21,15 @@ $prefix: 'gcs-';
 $sans-fallback: Helvetica, sans-serif;
 $serif-fallback: Georgia, serif;
 
-$type-main: 'omnes-pro', $sans-fallback;
-$type-accent: 'jubilat', $serif-fallback;
+// $type-main: 'omnes-pro', $sans-fallback;
+// $type-accent: 'jubilat', $serif-fallback;
+// $type-display: 'jubilat', Georgia, serif;
+// $type-code: 'droid-sans-mono', monospace, sans-serif;
+
+
+
+$type-main: 'nudista-web', $sans-fallback;
+$type-accent: 'minion-pro', $serif-fallback;
 $type-display: 'jubilat', Georgia, serif;
 $type-code: 'droid-sans-mono', monospace, sans-serif;
 
@@ -87,7 +94,8 @@ $space-four:             4rem;
 // --------------------------------------------
 
 // Text
-$text-color:            #222222;
+// $text-color:            #222222;
+$text-color:            #2c3b4b;
 $tease-text:            #444444;
 $tease-text-lt:         #666666;
 
@@ -118,6 +126,8 @@ $bg-small: linear-gradient(153deg, rgba(253,29,133,0.9164040616246498) 5%, rgba(
 $bg: linear-gradient(45deg, #01466c, #03a9f4);
 
 $bg-fallback: #01466c;
+
+// $bg-fallback: #101A24;
 
 
 
