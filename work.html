@@ -6,6 +6,9 @@ permalink: /work/
 ---
 
 
+
+<!-- Smaller Teases -->
+<!-- ========================== -->
 <div class="archive__pinned">
   <div class="archive__pinned-main">
     {% for item in site.data.work.projects limit:1 %}
@@ -17,9 +20,11 @@ permalink: /work/
           <h3 class="archive__headline--work">
             {{item.head}}
           </h3>
-          <p class="archive__text--work">{{item.text}}</p>
+          <p class="archive__text--work">
+          {{item.text}}
+          <a class="archive__link--text" target="_blank" href="http://{{item.url}}">See project</a>
+        </p>
         </div>
-        <a class="gcs-work__link--highlight grid-item__link--highlight" target="_blank" href="http://{{item.url}}">See project</a>
       </article>
     {% endfor %}
   </div>
@@ -34,15 +39,20 @@ permalink: /work/
           <h3 class="archive__headline--work">
             {{item.head}}
           </h3>
-          <p class="gcs-work__text grid-item__text">{{item.text}}</p>
+          <p class="archive__text--work">
+          {{item.text}}
+          <a class="archive__link--text" target="_blank" href="http://{{item.url}}">See project</a>
+        </p>
         </div>
-        <a class="gcs-work__link--highlight grid-item__link--highlight" target="_blank" href="http://{{item.url}}">See project</a>
       </article>
     {% endfor %}
   </div>
 </div>
 
 
+
+<!-- Smaller Teases -->
+<!-- ========================== -->
 <ul class="archive__items">
   {% for item in site.data.work.projects offset:2 %}
     <li class="archive__item">

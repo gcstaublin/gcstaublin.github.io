@@ -19,12 +19,18 @@
 
   // Headline
   --color-headline: #2c3b4b;
+
+  // Text
+  --color-text: #2c3b4b;
 }
 
 
 .theme--silver-fox {
   // Headline
-  --color-headline: #2c3b4b;
+  --color-headline: rgba(255, 255, 255, 0.8);
+
+  // Text
+  --color-text: #fff;
 }
 
 
@@ -46,6 +52,15 @@
 }
 
 
+
+
+// Text
+// --------------------------------------------
+.text, %text {
+  font-family: $font-face-text;
+  color: var(--color-text);
+  font-weight: 300;
+}
 
 
 // Headline
