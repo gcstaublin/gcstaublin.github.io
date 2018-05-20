@@ -12,9 +12,19 @@
 // Overline
 // --------------------------------------------
 :root {
-  --overline-color: #2c3b4b;
-  --overline-size: 0.75rem;
-  --overline-border-color: #198ece;
+  // Overline
+  --color-overline: #2c3b4b;
+  --size-overline: 0.75rem;
+  --border-color-overline: #198ece;
+
+  // Headline
+  --color-headline: #2c3b4b;
+}
+
+
+.theme--silver-fox {
+  // Headline
+  --color-headline: #2c3b4b;
 }
 
 
@@ -26,13 +36,13 @@
   text-transform: uppercase;
   font-weight: 300;
   letter-spacing: 1px;
-  color: var(--overline-color);
-  font-size: var(--overline-size);
+  color: var(--color-overline);
+  font-size: var(--size-overline);
   line-height: 1;
 }
 
 .overline--has-border, %overline--has-border {
-  border-bottom: 1px solid var(--overline-border-color);
+  border-bottom: 1px solid var(--border-color-overline);
 }
 
 
@@ -45,7 +55,7 @@
   font-family: $font-face-headline;
   font-weight: bold;
   text-transform: uppercase;
-  color: #2c3b4b;
+  color: var(--color-headline);
 }
 
 .headline--large, %headline--large {

@@ -102,6 +102,8 @@ $space-four:             4rem;
 // Text
 // $text-color:            #222222;
 $text-color:            #2c3b4b;
+
+
 $tease-text:            #444444;
 $tease-text-lt:         #666666;
 
@@ -167,6 +169,31 @@ $one-px:              1px;
 
 
 
+
+
+// Universal Theme Color
+// --------------------------------------------
+:root {
+  --color-background: #fff;
+}
+
+.theme--dark-night {
+  --color-background: #12222d;
+}
+
+.theme--silver-fox {
+  --color-background: #8496a5;
+}
+
+.theme--sky-blue {
+  --color-background: #5baeec;
+}
+
+
+
+
+
+
 // Footer Color
 // --------------------------------------------
 :root {
@@ -207,7 +234,18 @@ $one-px:              1px;
 
 // Homepage Color
 // --------------------------------------------
+:root {
+  --color-headline-homepage: $text-color;
+  --color-intro-homepage: $text-color;
+  --color-text-homepage: $text-color;
+}
 
+
+.theme--dark-night {
+  --color-headline-homepage: rgba(255, 255, 255, 0.95);
+  --color-intro-homepage: rgba(255, 255, 255, 0.95);
+  --color-text-homepage: rgba(255, 255, 255, 0.95);
+}
 
 
 // Resume Color

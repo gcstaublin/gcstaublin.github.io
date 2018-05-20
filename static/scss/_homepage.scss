@@ -8,33 +8,6 @@
 
 
 
-// Homepage Variables
-// --------------------------------------------
-:root {
-  --color-headline-homepage: $text-color;
-  --color-intro-homepage: $text-color;
-  --color-text-homepage: $text-color;
-  --color-background-homepage: #fff;
-}
-
-
-.theme--dark-night {
-  --color-headline-homepage: rgba(255, 255, 255, 0.95);
-  --color-intro-homepage: rgba(255, 255, 255, 0.95);
-  --color-text-homepage: rgba(255, 255, 255, 0.95);
-  --color-background-homepage: #12222d;
-}
-
-
-// .theme--dark-night {
-//   background-color: green;
-// }
-
-.page--homepage {
-  background-color: var(--color-background-homepage);
-}
-
-
 
 // Type
 // --------------------------------------------
