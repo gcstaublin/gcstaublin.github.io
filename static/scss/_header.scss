@@ -6,12 +6,11 @@
 // --------------------------------------------
 // --------------------------------------------
 .#{$prefix}header {
-  // background-color: $bg-fallback;
   padding-left: $space-one;
-  // padding-right: $space-one;
 
   .page-about &,
-  .gcs-page--post & { background-color: #12222d; }
+  .gcs-page--post &,
+  .gcs-page--archive & { background-color: #12222d; }
 }
 
 
