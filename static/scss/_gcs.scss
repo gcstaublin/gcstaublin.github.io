@@ -23,7 +23,7 @@
 
 
 .#{$prefix}homepage {
-  background-color: $bg-fallback;
+  // background-color: $bg-fallback;
   // background-image: $bg;
   // background-repeat: no-repeat;
   // background-attachment: fixed;
@@ -140,41 +140,41 @@
 //
 // --------------------------------------------
 // --------------------------------------------
-.#{$prefix}headline--homepage {
-  @extend %headline;
-  @extend %headline--small;
-  color: rgba(255, 255, 255, 0.7);
-  letter-spacing: 2px;
-  margin-bottom: $space-one-half;
-}
+// .#{$prefix}headline--homepage {
+//   @extend %headline;
+//   @extend %headline--small;
+//   color: rgba(255, 255, 255, 0.7);
+//   letter-spacing: 2px;
+//   margin-bottom: $space-one-half;
+// }
 
 
-.#{$prefix}intro--homepage {
-  margin: 0;
-  font-size: $size-one-quarter;
-  font-weight: 200;
-  line-height: 1.525;
-  color: rgba(255, 255, 255, 0.9);
+// .#{$prefix}intro--homepage {
+//   margin: 0;
+//   font-size: $size-one-quarter;
+//   font-weight: 200;
+//   line-height: 1.525;
+//   color: rgba(255, 255, 255, 0.9);
 
-  @include bp($bp-sm) {
-    font-size: $size-one-three-fourths;
-    font-weight: 200;
-    line-height: 1.325;
-  }
-}
+//   @include bp($bp-sm) {
+//     font-size: $size-one-three-fourths;
+//     font-weight: 200;
+//     line-height: 1.325;
+//   }
+// }
 
 
-.#{$prefix}text--homepage {
-  margin-top: 18px;
-  font-size: $size-one-quarter;
-  font-weight: 200;
-  line-height: 1.525;
-  color: rgba(255, 255, 255, 0.85);
+// .#{$prefix}text--homepage {
+//   margin-top: 18px;
+//   font-size: $size-one-quarter;
+//   font-weight: 200;
+//   line-height: 1.525;
+//   color: rgba(255, 255, 255, 0.85);
 
-  @include bp($bp-sm) {
-    font-size: $size-one-quarter;
-  }
-}
+//   @include bp($bp-sm) {
+//     font-size: $size-one-quarter;
+//   }
+// }
 
 
 
@@ -186,10 +186,10 @@
 //
 // --------------------------------------------
 // --------------------------------------------
-.#{$prefix}link--hp {
-  // @include link(#fff);
-  @include link;
-}
+// .#{$prefix}link--hp {
+//   // @include link(#fff);
+//   @include link;
+// }
 
 
 

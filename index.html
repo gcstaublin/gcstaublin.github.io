@@ -1,6 +1,6 @@
 ---
 layout: default
-pageClass: gcs-homepage
+pageClass: page--homepage theme--dark-night
 ---
 
 <div class="gcs-bg__container">
@@ -17,15 +17,15 @@ pageClass: gcs-homepage
       <!-- Homepage intro -->
       {% for item in site.data.hp-intro %}
         {% if item.headline %}
-          <h3 class="gcs-headline--homepage">{{ item.headline }}</h3>
+          <h3 class="headline--homepage">{{ item.headline }}</h3>
         {% endif %}
 
         {% if item.intro %}
-          <h4 class="gcs-intro--homepage">{{item.intro}}</h4>
+          <h4 class="intro--homepage">{{item.intro}}</h4>
         {% endif %}
 
         {% for paragraph in item.words %}
-          <p class="gcs-text--homepage page-text">{{paragraph}}<p>
+          <p class="text--homepage">{{paragraph}}<p>
         {% endfor %}
       {% endfor %}
 

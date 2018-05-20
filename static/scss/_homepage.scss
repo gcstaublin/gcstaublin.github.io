@@ -7,3 +7,76 @@
 // --------------------------------------------
 
 
+
+// Homepage Variables
+// --------------------------------------------
+:root {
+  --color-headline-homepage: $text-color;
+  --color-intro-homepage: $text-color;
+  --color-text-homepage: $text-color;
+  --color-background-homepage: #fff;
+}
+
+
+.theme--dark-night {
+  --color-headline-homepage: rgba(255, 255, 255, 0.95);
+  --color-intro-homepage: rgba(255, 255, 255, 0.95);
+  --color-text-homepage: rgba(255, 255, 255, 0.95);
+  --color-background-homepage: #12222d;
+}
+
+
+// .theme--dark-night {
+//   background-color: green;
+// }
+
+.page--homepage {
+  background-color: var(--color-background-homepage);
+}
+
+
+
+// Type
+// --------------------------------------------
+.headline--homepage {
+  @extend %headline;
+  @extend %headline--small;
+  margin-bottom: $space-one-half;
+  color: var(--color-headline-homepage);
+  letter-spacing: 2px;
+}
+
+
+.intro--homepage {
+  margin: 0;
+  font-size: $size-one-quarter;
+  font-weight: 300;
+  line-height: 1.525;
+  color: var(--color-intro-homepage);
+
+  @include bp($bp-sm) {
+    font-size: $size-one-three-fourths;
+    line-height: 1.325;
+  }
+}
+
+
+.text--homepage {
+  margin-top: 18px;
+  font-size: $size-one-quarter;
+  font-weight: 300;
+  line-height: 1.525;
+  color: var(--color-text-homepage);
+
+  @include bp($bp-sm) {
+    font-size: $size-one-quarter;
+  }
+}
+
+
+
+// Link
+// --------------------------------------------
+.link--hp {
+  @include link;
+}
