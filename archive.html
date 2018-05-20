@@ -6,201 +6,24 @@ permalink: /archive/
 ---
 
 
-<style>
-
-  .page-archive {
-    /*background-color: #fffef7;*/
-    /*background-color: #03a9f4;*/
-    background-color: #5BAEEC;
-  }
 
 
-  .gcs-archive__pinned {
-    display: flex;
-    border-bottom: 4px solid #2c3b4b;
-    /*margin-bottom: 60px;*/
-    margin-bottom: 0;
-    padding-top: 80px;
-  }
-
-  .gcs-archive__container {
-    /*border: 1px solid pink;*/
-    max-width: 1100px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .gcs-headline--archive {
-    font-size: 80px;
-    line-height: 1;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: -1px;
-    border-bottom: 4px solid #2c3b4b;
-    padding-bottom: 60px;
-  }
 
 
-  .gcs-archive__pinned-main {
-    /*border: 1px solid red;*/
-    /*padding-right: 60px;*/
-    flex: 1;
-  }
-
-  .gcs-archive__pinned-main article {
-    padding-right: 60px;
-  }
-
-
-  .gcs-archive__pinned-secondary {
-    /*border-left: 1px solid #2c3b4b;*/
-    border-left: 1px solid #198ece;;
-
-    flex: 1;
-  }
-
-
-  .gcs-archive-pinned-post--secondary {
-    padding-left: 60px;
-  }
-
-  .gcs-archive-pinned-post--secondary:last-of-type {
-    padding-bottom: 60px;
-  }
-
-
-  .gcs-archive-pinned-post--secondary +  .gcs-archive-pinned-post--secondary {
-    margin-top: 60px;
-    padding-top: 60px;
-    /*border-top: 1px solid black;*/
-    border-top: 1px solid #198ece;
-  }
-
-  .gcs-archive__pinned-main .gcs-archive__link--headline {
-    font-size: 60px;
-    line-height: 0.85;
-    font-family: 'tablet-gothic-condensed';
-    font-weight: bold;
-    text-transform: uppercase;
-    /*color: #2c3b4b;*/
-    color: #fff;
-  }
-
-
-  .gcs-archive__pinned-secondary .gcs-archive__link--headline {
-    font-size: 42px;
-    line-height: 0.85;
-    font-family: 'tablet-gothic-condensed';
-    font-weight: bold;
-    text-transform: uppercase;
-    /*color: #2c3b4b;*/
-    color: #fff;
-  }
-
-
-  .gcs-archive__pinned .gcs-archive__meta {
-    /*font-family: 'tablet-gothic';*/
-    font-family: 'source-code-pro';
-    /*border-bottom: 1px solid #2c3b4b;*/
-    /*border-bottom: 1px solid #198ece;*/
-    border-bottom: 1px solid #198ece;
-    display: inline-block;
-    margin-bottom: 30px;
-    padding-bottom: 2px;
-    text-transform: uppercase;
-    color: yellow;
-  }
-
-  .gcs-archive__item {
-    /*background: #ccc;*/
-    margin: 0;
-    overflow: hidden;
-    /*background: #ecece6;*/
-    /*background-color: #fbfbf1;*/
-    /*background-color: rgba(0, 0, 0, 0.1);*/
-    /*border-top: 1px solid #ecece6;*/
-    /*border-bottom: 1px solid #ecece6;*/
-    border-top: 1px solid #198ece;
-    border-bottom: 1px solid #198ece;
-  }
-
-  .gcs-archive__item + .gcs-archive__item {
-    margin-top: 4px;
-  }
-
-  .gcs-archive__item article {
-    display: flex;
-    align-items: center;
-  }
-
-   .gcs-archive__item .gcs-archive__meta {
-     /*border-right: 1px solid #ecece6;*/
-     border-right: 1px solid #198ece;
-     padding-right: 20px;
-     padding-left: 20px;
-     margin-right: 20px;
-     margin-bottom: 0;
-     width: 75px;
-     padding-top: 20px;
-     padding-bottom: 20px;
-   }
-
-   .gcs-archive__meta span {
-      display: block;
-      text-align: center;
-   }
-
-   .gcs-archive__meta span:first-child {
-      font-family: 'source-code-pro';
-      font-weight: normal;
-      text-transform: uppercase;
-      color: #2c3b4b;
-      line-height: 1;
-   }
-
-   .gcs-archive__meta span:last-child {
-      font-size: 40px;
-      font-family: 'tablet-gothic-condensed';
-      font-weight: bold;
-      text-transform: uppercase;
-      color: #2c3b4b;
-      line-height: 1;
-   }
-
-
-  .gcs-archive__link--headline {
-    font-family: 'tablet-gothic-condensed';
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #2c3b4b;
-    font-size: 24px;
-  }
-
-  .gcs-archive__items {
-    /*background: red;*/
-  }
-
-</style>
-
-
-<!-- <div>
-{% if page.pageTitle %}
-  <h1 class="gcs-headline--archive">The Writing Archive</h1>
-{% endif %}
-</div> -->
-
-
-<div class="gcs-archive__pinned">
-  <div class="gcs-archive__pinned-main">
+<div class="archive__pinned">
+  <div class="archive__pinned-main">
     {% for post in site.posts %}
       {% if post.status == 'pinned' %}
         {% if post.pinnedPosition == 'main' %}
-
-            <article>
-              <h5 class="gcs-archive__meta">{{ post.date | date: "%Y • %b %d" }}</h5>
-              <h3 class="gcs-archive__headline">
-                <a class="gcs-archive__link--headline" href="{{ post.url }}">{{ post.title }}</a>
-              </h3> <!-- /archive__headline -->
+            <article class="archive__article--pinned-main">
+              <h5 class="overline archive__meta--pinned">
+                {{ post.date | date: "%b %d, %Y" }}
+              </h5>
+              <h3 class="archive__headline--pinned-main">
+                <a class="archive__link--headline" href="{{ post.url }}">
+                  {{ post.title }}
+                </a>
+              </h3>
             </article>
 
         {% endif %}
@@ -208,15 +31,15 @@ permalink: /archive/
     {% endfor %}
   </div>
 
-  <div class="gcs-archive__pinned-secondary">
+  <div class="archive__pinned-secondary">
     {% for post in site.posts %}
       {% if post.status == 'pinned' %}
         {% if post.pinnedPosition != 'main' %}
-          <article class="gcs-archive-pinned-post--secondary">
-            <h5 class="gcs-archive__meta">{{ post.date | date: "%Y • %b %d" }}</h5>
-            <h3 class="gcs-archive__headline">
-              <a class="gcs-archive__link--headline" href="{{ post.url }}">{{ post.title }}</a>
-            </h3> <!-- /archive__headline -->
+          <article class="archive__article--pinned-secondary">
+            <h5 class="overline archive__meta--pinned">{{ post.date | date: "%Y • %b %d" }}</h5>
+            <h3 class="archive__headline--pinned-secondary">
+              <a class="archive__link--headline" href="{{ post.url }}">{{ post.title }}</a>
+            </h3>
           </article>
         {% endif %}
       {% endif %}
@@ -227,25 +50,26 @@ permalink: /archive/
 
 
 
-<ul class="gcs-archive__items">
+<ul class="archive__items">
     {% for post in site.posts %}
       {% if post.status != 'pinned' %}
-        <li class="gcs-archive__item">
-          <article>
-            <div>
-              <h5 class="gcs-archive__meta">
-                <span>{{ post.date | date: "%Y • %b" }}</span>
-                <!-- <span>{{ post.date | date: "%Y" }}</span> -->
-                <span>{{ post.date | date: "%d" }}</span>
-
-              </h5>
-            </div>
-            <h3 class="gcs-archive__headline">
-              <a class="gcs-archive__link--headline" href="{{ post.url }}">{{ post.title }}</a>
-            </h3> <!-- /archive__headline -->
-
-          </article>
-        </li> <!-- /archive__item -->
+        <li class="archive__item">
+          <a class="archive__link--item" href="{{ post.url }}">
+            <article class="archive__article">
+              <div>
+                <h5 class="archive__meta">
+                  <span class="overline">{{ post.date | date: "%b" }}</span>
+                  <span class="headline headline--medium">{{ post.date | date: "%d" }}</span>
+                  <span class="overline">{{ post.date | date: "%Y" }}</span>
+                </h5>
+              </div>
+              <h3 class="headline headline--small archive__headline--item">
+                {{ post.title }}
+                <!-- <a class="archive__link--headline" href="{{ post.url }}">{{ post.title }}</a> -->
+              </h3>
+            </article>
+          </a>
+        </li>
       {% endif %}
     {% endfor %}
 </ul> <!-- /archive__items -->

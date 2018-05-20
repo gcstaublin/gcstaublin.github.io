@@ -1,0 +1,82 @@
+// --------------------------------------------
+// --------------------------------------------
+//
+// Type
+//
+// --------------------------------------------
+// --------------------------------------------
+
+
+
+
+// Overline
+// --------------------------------------------
+:root {
+  --overline-color: #2c3b4b;
+  --overline-size: 0.75rem;
+  --overline-border-color: #198ece;
+}
+
+
+
+.overline, %overline {
+  font-family: $font-face-overline;
+  margin-bottom: 30px;
+  padding-bottom: 2px;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: var(--overline-color);
+  font-size: var(--overline-size);
+  line-height: 1;
+}
+
+.overline--has-border, %overline--has-border {
+  border-bottom: 1px solid var(--overline-border-color);
+}
+
+
+
+
+// Headline
+// --------------------------------------------
+.headline, %headline {
+  margin: 0;
+  font-family: $font-face-headline;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #2c3b4b;
+}
+
+.headline--large, %headline--large {
+  font-size: 3.75rem;
+  line-height: 0.95;
+}
+
+.headline--medium, %headline--medium {
+  font-size: 2.5rem;
+  line-height: 0.95;
+}
+
+.headline--small, %headline--small {
+  font-size: 1.5rem;
+  line-height: 1.05;
+}
+
+.headline--article, %headline--article {
+  font-size: 5rem;
+  line-height: 1.05;
+}
+
+
+
+
+// Helpers
+// --------------------------------------------
+.u-inline-block {
+  display: inline-block;
+}
+
+.u-text-align--center {
+  text-align: center;
+}

@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "What's wrong with CSS-in-JS? ... something? ... nothing? ... everything?"
-tease: "What's wrong with CSS-in-JS? ... something? ... nothing? ... everything?"
-share: "What's wrong with CSS-in-JS? ... something? ... nothing? ... everything?"
+title:  "What's wrong with CSS-in-JS? Nothing? Everything? Something?"
+tease: "What's wrong with CSS-in-JS? Nothing? Everything? Something?"
+share: "What's wrong with CSS-in-JS? Nothing? Everything? Something?"
 date: 2018-05-13
 status: pinned
 pinnedPosition: main

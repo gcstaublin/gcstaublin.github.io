@@ -12,14 +12,18 @@
 
 
 .#{$prefix}nav__link {
-  display: block;
+  font-family: $font-face-overline;
+  display: inline-block;
   padding: 1rem;
-  font-size: 1rem;
+  font-size: 0.85rem;
   color: #fff;
   text-decoration: none;
   transition: background-color 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 
   &:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    // background-color: rgba(255, 255, 255, 0.2);
+    text-decoration: underline;
   }
 }

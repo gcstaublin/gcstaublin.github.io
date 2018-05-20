@@ -116,15 +116,18 @@
 
 
 .#{$prefix}headline--page {
-  @include accent;
-  margin: 0;
-  padding: 40px 20px;
-  background-color: #f1f1f1;
-  color: rgba($primary-text-color, 0.6);
-  font-size: 1.75em;
-  font-weight: bold;
-  text-transform: capitalize;
-  letter-spacing: 1px;
+  // @include accent;
+  // margin: 0;
+  // padding: 40px 20px;
+  // background-color: #f1f1f1;
+  // color: rgba($primary-text-color, 0.6);
+  // font-size: 1.75em;
+  // font-weight: bold;
+  // text-transform: capitalize;
+  // letter-spacing: 1px;
+  @extend %headline;
+  @extend %headline--small;
+  color: #fff;
 }
 
 
@@ -138,23 +141,24 @@
 // --------------------------------------------
 // --------------------------------------------
 .#{$prefix}headline--homepage {
-  @include accent;
-  font-size: $size-one-three-fourths;
-  color: rgba(255, 255, 255, 0.88);
-  letter-spacing: 1px;
+  @extend %headline;
+  @extend %headline--small;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 2px;
+  margin-bottom: $space-one-half;
 }
 
 
 .#{$prefix}intro--homepage {
   margin: 0;
   font-size: $size-one-quarter;
-  font-weight: 300;
+  font-weight: 200;
   line-height: 1.525;
-  color: rgba(255, 255, 255, 0.88);
+  color: rgba(255, 255, 255, 0.9);
 
   @include bp($bp-sm) {
     font-size: $size-one-three-fourths;
-    font-weight: 100;
+    font-weight: 200;
     line-height: 1.325;
   }
 }
@@ -163,12 +167,12 @@
 .#{$prefix}text--homepage {
   margin-top: 18px;
   font-size: $size-one-quarter;
-  font-weight: 300;
+  font-weight: 200;
   line-height: 1.525;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.85);
 
   @include bp($bp-sm) {
-    font-size: $size-one-half;
+    font-size: $size-one-quarter;
   }
 }
 

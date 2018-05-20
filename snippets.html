@@ -1,9 +1,59 @@
 ---
-layout: new-page
+layout: patterns
 title: Grant Staubin | Snippets
 pageclass:
 permalink: /style-guide/
-pageTitle: Style Guide
 ---
 
-style guide
+
+<style>
+
+
+/*-----------------------------*/
+
+/* Style Guide */
+
+/*-----------------------------*/
+
+.sg-section {
+  border: 1px solid #198ece;
+  padding: 2rem;
+}
+
+.sg-section + .sg-section { margin-top: 4px; }
+
+
+
+</style>
+
+
+
+
+<section class="sg-section">
+  <h4 class="overline">Overline</h4>
+  <h4 class="overline overline--has-border u-inline-block">Overline</h4>
+</section>
+
+<section class="sg-section">
+  <h2 class="headline headline--large">This headline is a good one</h2>
+  <h2 class="headline headline--medium">This headline is a good one</h2>
+  <h2 class="headline headline--small">This headline is a good one</h2>
+</section>
+
+<section class="sg-section">
+  <h2 class="headline headline--article">This headline is a good one</h2>
+</section>
+
+
+<section class="sg-section">
+  {% include new-page-header.html %}
+</section>
+
+
+<section class="sg-section">
+  <div>
+    <p class="overline u-text-align--center">Mar</p>
+    <p class="headline headline--medium u-text-align--center">24</p>
+    <p class="overline u-text-align--center">2015</p>
+  </div>
+</section>
