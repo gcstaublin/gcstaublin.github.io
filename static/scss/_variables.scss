@@ -7,8 +7,6 @@
 // --------------------------------------------
 
 
-
-
 // Prefix
 // --------------------------------------------
 $prefix: 'gcs-';
@@ -21,16 +19,30 @@ $prefix: 'gcs-';
 $sans-fallback: Helvetica, sans-serif;
 $serif-fallback: Georgia, serif;
 
-$type-main: 'omnes-pro', $sans-fallback;
-$type-accent: 'jubilat', $serif-fallback;
+// $type-main: 'omnes-pro', $sans-fallback;
+// $type-accent: 'jubilat', $serif-fallback;
+// $type-display: 'jubilat', Georgia, serif;
+// $type-code: 'droid-sans-mono', monospace, sans-serif;
+
+$type-main: 'nudista-web', $sans-fallback;
+$type-accent: 'minion-pro', $serif-fallback;
 $type-display: 'jubilat', Georgia, serif;
 $type-code: 'droid-sans-mono', monospace, sans-serif;
+
+
+
+// Font Face
+$font-face-headline: 'tablet-gothic-condensed', $sans-fallback;
+$font-face-overline: 'source-code-pro', monospace, sans-serif;
+
+$font-face-text: 'nudista-web', $sans-fallback;
+
+
 
 // Font weights
 $text-weight: 300;
 $text-bold: 600;
 $code-wt:   400;
-// $accent-lt:   200;
 $accent-med:  500;
 $accent-bold: 400;
 $display-wt: 200;
@@ -74,10 +86,11 @@ $space-quarter:          0.25rem;     // 4px
 $space-half:             0.5rem;      // 8px
 $space-three-fourths:    0.75rem;     // 12px
 $space-one:              1rem;        // 16px
+$space-one-quarter:      1.25rem;     // 20px
 $space-one-half:         1.5rem;      // 24px
 $space-two:              2rem;        // 32px
 $space-two-half:         2.5rem;      // 40px
-$space-three:            3rem;      // 48px
+$space-three:            3rem;        // 48px
 $space-four:             4rem;
 
 
@@ -87,7 +100,8 @@ $space-four:             4rem;
 // --------------------------------------------
 
 // Text
-$text-color:            #222222;
+// $text-color:            #222222;
+$text-color:            #2c3b4b;
 $tease-text:            #444444;
 $tease-text-lt:         #666666;
 
@@ -117,7 +131,10 @@ $bg-small: linear-gradient(153deg, rgba(253,29,133,0.9164040616246498) 5%, rgba(
 
 $bg: linear-gradient(45deg, #01466c, #03a9f4);
 
-$bg-fallback: #01466c;
+$bg-fallback: #12222D; // #01466c;
+
+
+// $bg-fallback: #101A24;
 
 
 
@@ -143,6 +160,9 @@ $bp-post-has-pad:     700px;
 
 // Type Breakpoings
 $bp-headline-sm:      600px;
+
+
+$one-px:              1px;
 
 
 

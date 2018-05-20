@@ -1,28 +1,76 @@
 ---
-layout: new-page
+layout: archive
 title: Grant Staubin | Writing
-pageTitle: Writing
 pageclass: page-archive
 permalink: /archive/
 ---
 
 
 
-<ul class="gcs-archive__items">
+
+
+
+<div class="archive__pinned">
+  <div class="archive__pinned-main">
     {% for post in site.posts %}
-      <li class="gcs-archive__item">
-        <article>
-          <h5 class="gcs-archive__meta">{{ post.date | date: "%m.%d.%y" }}</h5>
-          <h3 class="gcs-archive__headline">
-            <a class="gcs-archive__link--headline" href="{{ post.url }}">{{ post.title }}</a>
-          </h3> <!-- /archive__headline -->
-          <div class="gcs-archive__text">{{ post.content | truncatewords: 50 | strip_html }}
-            <a class="gcs-archive__link--text" href="{{ post.url}}">Continue reading
-              <span>&raquo;</span>
-            </a>
-          </div>
-        </article>
-      </li> <!-- /archive__item -->
+      {% if post.status == 'pinned' %}
+        {% if post.pinnedPosition == 'main' %}
+            <article class="archive__article--pinned-main">
+              <h5 class="overline archive__meta--pinned">
+                {{ post.date | date: "%b %d, %Y" }}
+              </h5>
+              <h3 class="archive__headline--pinned-main">
+                <a class="archive__link--headline" href="{{ post.url }}">
+                  {{ post.title }}
+                </a>
+              </h3>
+            </article>
+
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <div class="archive__pinned-secondary">
+    {% for post in site.posts %}
+      {% if post.status == 'pinned' %}
+        {% if post.pinnedPosition != 'main' %}
+          <article class="archive__article--pinned-secondary">
+            <h5 class="overline archive__meta--pinned">{{ post.date | date: "%Y • %b %d" }}</h5>
+            <h3 class="archive__headline--pinned-secondary">
+              <a class="archive__link--headline" href="{{ post.url }}">{{ post.title }}</a>
+            </h3>
+          </article>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+
+
+
+<ul class="archive__items">
+    {% for post in site.posts %}
+      {% if post.status != 'pinned' %}
+        <li class="archive__item">
+          <a class="archive__link--item" href="{{ post.url }}">
+            <article class="archive__article">
+              <div>
+                <h5 class="archive__meta">
+                  <span class="overline">{{ post.date | date: "%b" }}</span>
+                  <span class="headline headline--medium">{{ post.date | date: "%d" }}</span>
+                  <span class="overline">{{ post.date | date: "%Y" }}</span>
+                </h5>
+              </div>
+              <h3 class="headline headline--small archive__headline--item">
+                {{ post.title }}
+                <!-- <a class="archive__link--headline" href="{{ post.url }}">{{ post.title }}</a> -->
+              </h3>
+            </article>
+          </a>
+        </li>
+      {% endif %}
     {% endfor %}
 </ul> <!-- /archive__items -->
 
@@ -44,4 +92,8 @@ permalink: /archive/
 
 
 
-
+<!--             <div class="gcs-archive__text">{{ post.content | truncatewords: 50 | strip_html }}
+              <a class="gcs-archive__link--text" href="{{ post.url}}">Continue reading
+                <span>&raquo;</span>
+              </a>
+            </div> -->

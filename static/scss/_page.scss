@@ -11,7 +11,7 @@
 .bg-backsplash {
   background-color: $bg-fallback;
   // background-image: linear-gradient(-90deg, #C4174E, #AD84F1);
-  background-image: $bg;
+  // background-image: $bg;
   padding: 20px;
   padding-bottom: 25px;
   @include clearfix;

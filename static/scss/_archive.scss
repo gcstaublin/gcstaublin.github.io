@@ -1,76 +1,359 @@
 // --------------------------------------------
 // --------------------------------------------
 //
-// Archive
+// NEW Archive
 //
 // --------------------------------------------
 // --------------------------------------------
-.#{$prefix}archive__items {
+
+
+// Local Settings
+// --------------------------------------------
+$bp-archive: 800px;
+
+$bp-archive-layout: 800px;
+$bp-archive-main-headline: 900px;
+
+$bp-archive-image: 600px;
+
+
+// $border: 1px solid #198ece;
+// $border-4: 4px solid #2c3b4b;
+
+$border: 1px solid rgba(0, 0, 0, 0.1);
+$border-4: 4px solid rgba(0, 0, 0, 0.8);
+
+
+
+
+// Page Background
+// --------------------------------------------
+.page-archive {
+  background-color: #5BAEEC;
+}
+
+.page-work {
+  background-color: #8496A5;
+}
+
+.page-code-samples {
+  background-color: #8496A5;
+}
+
+.page-about {
+  // background-color: #8496A5;
+}
+
+
+
+
+// Page Layout
+// --------------------------------------------
+.archive__container {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+
+// Archive Items
+// --------------------------------------------
+.archive__items {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 
-.#{$prefix}archive__item {
-  margin-bottom: $space-two;
-}
-
-
-.#{$prefix}archive__meta {
-  @include text($tease-text-lt);
+.archive__item {
   margin: 0;
-  margin-bottom: $space-quarter;
-  letter-spacing: 1px;
+  overflow: hidden;
+  border-top: $border;
+  border-bottom: $border;
+
+  & + & { margin-top: 2px;}
 }
 
 
-.#{$prefix}archive__headline {
+
+
+// Archive Pinned
+// --------------------------------------------
+.archive__pinned {
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-bottom: $border-4;
+  transition: 0.3s ease;
+  padding-bottom: $space-one;
+
+  @include bp($bp-archive-layout) {
+    flex-direction: row;
+    padding-bottom: 0;
+    padding-top: 80px;
+  }
+}
+
+
+.archive__pinned-main { flex: 1; }
+
+
+.archive__pinned-secondary {
+  flex: 1;
+  @include bp($bp-archive-layout) { border-left: $border; }
+}
+
+
+.archive__article--pinned-main {
+  margin-bottom: $space-one;
+  padding-bottom: $space-one-half;
+  border-bottom: $border;
+
+  @include bp($bp-archive-layout) {
+    padding-right: 30px;
+    padding-bottom: 60px;
+    border-bottom: 0;
+  }
+
+  @include bp($bp-archive-main-headline) {
+    padding-right: 60px;
+  }
+}
+
+
+.archive__article--pinned-secondary {
+  margin-bottom: $space-one;
+
+  @include bp($bp-archive-layout) {
+    padding-left: 30px;
+    padding-bottom: $space-one;
+  }
+
+  @include bp($bp-archive-main-headline) {
+    padding-left: 60px;
+  }
+
+  & + & {
+    border-top: $border;
+    margin-top: $space-one;
+    padding-top: $space-one;
+
+    @include bp($bp-archive-main-headline) {
+      margin-top: $space-two-half;
+      padding-top: $space-two-half;
+    }
+  }
+}
+
+
+.archive__meta--pinned {
+  @extend %overline;
+  display: inline-block;
   margin: 0;
-  margin-bottom: $space-quarter;
-  font-size: $size-one-three-fourths;
-  line-height: 1.05;
+  margin-bottom: 4px;
+  // border-bottom: 1px solid #198ece;
+  // padding-bottom: 2px;
+  color: rgba(#fff, 0.75);
+  // color: yellow;
+  @include bp($bp-archive-layout) {
+    margin-bottom: 12px;
+    // border-bottom: 1px solid #198ece;
+  }
 }
 
 
-.#{$prefix}archive__link--headline {
-  @include display;
+.archive__headline--pinned-main {
+  @extend %headline;
+  @extend %headline--medium;
+  // margin-top: 12px;
+  color: #fff;
+  @include bp($bp-archive-main-headline) {
+    font-size: 3.75rem;
+    line-height: 0.95;
+  }
+}
+
+
+.archive__headline--pinned-secondary {
+  @extend %headline;
+  @extend %headline--small;
+  color: #fff;
+  @include bp($bp-archive-main-headline) {
+    font-size: 2.5rem;
+    line-height: 0.95;
+  }
+}
+
+
+
+// Archive General Styles
+// --------------------------------------------
+.archive__link--item {
+  display: block;
+  transition: 0.6s ease;
   text-decoration: none;
-  &:hover {
-    color: #C0235B;
+  // &:hover { background-color: darken(#5BAEEC, 8%); }
+  // &:hover { background-color: rgba(0, 0, 0, 0.05); }
+  &:hover { background-color: rgba(255, 255, 255, 0.08); }
+}
+
+
+.archive__meta {
+  border-right: $border;
+  padding-right: $space-one-quarter;
+  padding-left: $space-one-quarter;
+  margin-right: $space-one-quarter;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 75px;
+  padding-top: $space-one-quarter;
+  padding-bottom: $space-one-quarter;
+  text-align: center;
+}
+
+
+.archive__meta--work {
+  width: auto;
+  border-right: 0;
+  margin-right: 0;
+}
+
+.archive__article {
+  display: flex;
+  align-items: center;
+}
+
+.archive__article--work {
+  @include bp($bp-archive-image) {
+    display: flex;
   }
 }
 
 
-.gcs-archive__text {
-  @include text;
-  margin: 0;
-  font-size: $size-one-quarter;
-  line-height: 1.45;
-  color: $tease-text;
-
-  > p { margin: 0; }
-
-  > a { color: $accent-color; text-decoration: none; }
-
-  // find a method of removing this within jekyll
-  img { display: none; }
-}
-
-.#{$prefix}archive__link--text {
-  position: relative;
+.archive__link--headline {
   text-decoration: none;
-  color: #C0235B;
-  font-size: $size-one;
+  color: inherit;
+  line-height: inherit;
+  font-size: inherit;
+  transition: 0.3s ease;
 
-  &:hover {
-    // text-decoration: underline;
+  &:hover { text-decoration: underline; }
+}
+
+
+.archive__headline--item {
+  transition: 0.6s ease;
+  padding-right: 20px;
+
+  &::after {
+    display: inline-block;
+    transition: 0.6s ease;
+    opacity: 0;
+    content: '👉';
+    transform: translate(-10px, 0);
   }
 
-  span {
-    position: relative;
-    top: -1px;
-    left: 2px;
-    font-size: 0.95em;
+  // When Hovered
+  .archive__link--item:hover & {
+    // color: #c0235b;
+    &::after {
+      opacity: 1;
+      transform: translate(10px, 0);
+    }
   }
 }
+
+
+
+
+
+
+// Archive Work Styles
+// --------------------------------------------
+.archive__image--work {
+  @include bp($bp-archive-image, $bp-archive-layout) {
+    float: right;
+    margin-left: $space-one;
+    margin-bottom: $space-half;
+    width: 250px;
+  }
+}
+
+
+.archive__content--work {
+  margin-top: $space-one;
+}
+
+.archive__headline--work {
+  @extend %headline;
+  @extend %headline--small;
+  margin-bottom: $space-three-fourths;
+
+  @include bp($bp-archive-layout) {
+    font-size: 2.5rem;
+    line-height: 0.95;
+  }
+}
+
+
+
+.archive__headline--work--small {
+  @extend %headline;
+  @extend %headline--small;
+  margin-bottom: $space-half;
+}
+
+.archive__text--work {
+  margin: 0 0 .75rem;
+  font-size: 1rem;
+  line-height: 1.475;
+  font-family: $font-face-text;
+  font-weight: 300;
+}
+
+
+.archive__link--text {
+  display: block;
+  margin-top: 6px;
+  font-family: $font-face-overline;
+  font-size: 0.85em;
+  color: inherit;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &::after {
+    display: inline-block;
+    transition: 0.6s ease;
+    opacity: 0;
+    content: '👉';
+    transform: translate(-10px, 0);
+  }
+
+  &:hover {
+    &::after {
+      opacity: 1;
+      transform: translate(10px, 0);
+    }
+  }
+}
+
+
+.archive__img--work--small {
+  width: 150px;
+  float: right;
+  transition: 0.3s ease;
+  @include bp($bp-archive-layout) {
+    width: 250px;
+  }
+}
+
+.archive__content--work--small {
+  padding: 10px;
+  align-self: center;
+}
+
