@@ -19,7 +19,7 @@ body {
 // Content
 // --------------------------------------------
 .content-wrapper,
-.#{$prefix}content__wrapper {
+.content__wrapper {
   position: relative;
 
   @include bp($bp-sm) {

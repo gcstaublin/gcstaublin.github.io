@@ -309,11 +309,10 @@ $border-4: 4px solid rgba(0, 0, 0, 0.8);
 }
 
 .archive__text--work {
+  @extend %text;
   margin: 0 0 .75rem;
   font-size: 1rem;
   line-height: 1.475;
-  font-family: $font-face-text;
-  font-weight: 300;
 }
 
 

@@ -7,3 +7,49 @@
 // --------------------------------------------
 
 
+
+
+// Type
+// --------------------------------------------
+.headline--homepage {
+  @extend %headline;
+  @extend %headline--small;
+  margin-bottom: $space-one-half;
+  color: var(--color-headline-homepage);
+  letter-spacing: 2px;
+}
+
+
+.intro--homepage {
+  margin: 0;
+  font-size: $size-one-quarter;
+  font-weight: 300;
+  line-height: 1.525;
+  color: var(--color-intro-homepage);
+
+  @include bp($bp-sm) {
+    font-size: $size-one-three-fourths;
+    line-height: 1.325;
+  }
+}
+
+
+.text--homepage {
+  margin-top: 18px;
+  font-size: $size-one-quarter;
+  font-weight: 300;
+  line-height: 1.525;
+  color: var(--color-text-homepage);
+
+  @include bp($bp-sm) {
+    font-size: $size-one-quarter;
+  }
+}
+
+
+
+// Link
+// --------------------------------------------
+.link--hp {
+  @include link;
+}
