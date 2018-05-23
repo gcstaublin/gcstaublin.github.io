@@ -53,51 +53,42 @@ permalink: /work/
 
 <!-- Smaller Teases -->
 <!-- ========================== -->
-<ul class="archive__items">
+<ul class="archive__items archive__items--grid">
   {% for item in site.data.work.projects offset:2 %}
-    <li class="archive__item">
-      <article class="archive__article--work">
-        <div class="archive__meta archive__meta--work">
-          <a target="_blank" href="http://{{item.url}}">
-            <div class="archive__img--work--small">
-              <img src="/static/img/{{item.img}}">
-            </div>
-          </a>
-        </div>
-
-        <div class="archive__content--work--small">
-          <h3 class="archive__headline--item archive__headline--work--small">
-            {{item.head}}
-          </h3>
-          <p class="archive__text--work">
-            {{item.text}}
-            <a class="archive__link--text" target="_blank" href="http://{{item.url}}">See project</a>
-          </p>
-        </div>
-      </article>
+    <li class="archive__item archive__item--grid">
+      {% include /components/work-item.html
+          img=item.img
+          head=item.head
+          text=item.text
+          url=item.url
+      %}
     </li>
   {% endfor %}
 </ul>
 
 
 
-<!-- {% for item in site.data.work.projects %}
-  <div class="gcs-work__item">
 
-    <a class="gcs-work__link--img" target="_blank" href="http://{{item.url}}">
-      <div class="gcs-work__img-container">
+
+
+
+
+<!-- <article class="archive__article--work">
+  <div class="archive__meta archive__meta--work">
+    <a target="_blank" href="http://{{item.url}}">
+      <div class="archive__img--work--small">
         <img src="/static/img/{{item.img}}">
       </div>
     </a>
-
-    <div class="gcs-work__content">
-      <h5 class="gcs-work__h">
-          <a class="gcs-work__link" target="_blank" href="http://{{item.url}}">{{item.head}}</a>
-      </h5>
-      <p class="gcs-work__text grid-item__text">{{item.text}}</p>
-      <a class="gcs-work__link--highlight grid-item__link--highlight" target="_blank" href="http://{{item.url}}">See project</a>
-    </div>
   </div>
-{% endfor %} -->
 
-
+  <div class="archive__content--work--small">
+    <h3 class="archive__headline--item archive__headline--work--small">
+      {{item.head}}
+    </h3>
+    <p class="archive__text--work">
+      {{item.text}}
+      <a class="archive__link--text" target="_blank" href="http://{{item.url}}">See project</a>
+    </p>
+  </div>
+</article> -->
