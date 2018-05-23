@@ -78,6 +78,40 @@ $border-4: 4px solid rgba(0, 0, 0, 0.8);
 
 
 
+// Archive Items Grid
+// --------------------------------------------
+
+.archive__items--grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.archive__item--grid {
+  flex-basis: 100%;
+  border-top: $border;
+  transition: 0.3s ease;
+
+  @include bp($bp-archive-image) {
+    flex-basis: 50%;
+    max-width: 50%;
+    padding: $space-one;
+    border-left: $border;
+    margin-top: 2px;
+    &:nth-child(2n+1) { border-left: 0; }
+   }
+
+  @include bp($bp-archive-main-headline) {
+    flex-basis: 33.3%;
+    max-width: 33.3%;
+    &:nth-child(2n+1) { border-left: $border; }
+    &:nth-child(3n+1) { border-left: 0; }
+  }
+  // background-color: green;
+}
+
+
+
+
 
 // Archive Pinned
 // --------------------------------------------
@@ -221,6 +255,7 @@ $border-4: 4px solid rgba(0, 0, 0, 0.8);
   width: auto;
   border-right: 0;
   margin-right: 0;
+  // background-color: red;
 }
 
 .archive__article {
@@ -229,9 +264,10 @@ $border-4: 4px solid rgba(0, 0, 0, 0.8);
 }
 
 .archive__article--work {
-  @include bp($bp-archive-image) {
-    display: flex;
-  }
+  // @include bp($bp-archive-image) {
+  //   display: flex;
+  // }
+  // background-color: yellow;
 }
 
 
@@ -344,7 +380,7 @@ $border-4: 4px solid rgba(0, 0, 0, 0.8);
 
 .archive__img--work--small {
   width: 150px;
-  float: right;
+  // float: right;
   transition: 0.3s ease;
   @include bp($bp-archive-layout) {
     width: 250px;
