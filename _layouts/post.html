@@ -18,21 +18,27 @@
       <!-- Content -->
       <!-- ===================================== -->
       <article>
-        <section id="content" role="main" class="gcs-post__container">
+        <section id="content" role="main">
 
-          <div class="gcs-post__meta">
-            <h1 class="gcs-post__headline fade-in">{{ page.title }}</h1>
+          <div class="article__meta fade-in">
+            <h5 class="overline">
+                {{ page.date | date: "%b %d, %Y" }}
+              </h5>
+            <h1 class="article__headline">{{ page.title }}</h1>
             {% if page.subhead %}
-              <h3 class="gcs-post__headline--sub fade-in"> {{ page.subhead }}</h3>
+              <h3 class="article__headline--sub"> {{ page.subhead }}</h3>
             {% endif %}
           </div> <!-- /post-meta -->
 
-          <div class="gcs-article__text fade-in">
-            {{ content }}
-            <!-- Social Tools -->
-            <!-- ===================================== -->
-            {% include social.html %}
-          </div> <!-- /article-text -->
+            <div class="article__container">
+            <div class="article__text fade-in">
+              {{ content }}
+
+              <!-- Social Tools -->
+              <!-- ===================================== -->
+              {% include social.html %}
+            </div> <!-- /article-text -->
+          </div> <!-- /post__container -->
 
         </section> <!-- /content content-wrapper -->
       </article>

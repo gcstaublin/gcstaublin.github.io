@@ -8,6 +8,20 @@
 
 
 
+// Page Module Extends
+// --------------------------------------------
+%page__module {
+  @include clearfix;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $space-one;
+  padding-right: $space-one;
+  // border: 1px solid red;
+}
+
+
+
 // Page Classes
 // --------------------------------------------
 .page--homepage,
@@ -56,11 +70,28 @@
   }
 }
 
+.page__module {
+  @extend %page__module;
+}
+
+
+
 .#{$prefix}page__mod--hp-intro {
   margin-top: 40px;
   transition: margin-top 0.2s ease;
+  max-width: 720px;
 
   @include bp($bp-med) {
     margin-top: 6rem;
   }
+}
+
+
+
+.page__container {
+  position: relative;
+  margin: 0 auto;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 720px;
 }

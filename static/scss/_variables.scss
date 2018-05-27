@@ -26,7 +26,7 @@ $serif-fallback: Georgia, serif;
 
 $type-main: 'nudista-web', $sans-fallback;
 $type-accent: 'minion-pro', $serif-fallback;
-$type-display: 'jubilat', Georgia, serif;
+$type-display: 'minion-pro', $serif-fallback;
 $type-code: 'droid-sans-mono', monospace, sans-serif;
 
 
@@ -62,6 +62,8 @@ $size-one-half:           1.5rem;      // 24px
 $size-one-three-fourths:  1.75rem;     // 30px
 $size-two:                2rem;        // 36px
 $size-two-half:           2.5rem;      // 40px
+$size-three:              3rem;        // 48px
+$size-four:               4rem;
 
 
 
@@ -162,6 +164,7 @@ $bp-post-has-pad:     700px;
 
 // Type Breakpoings
 $bp-headline-sm:      600px;
+$bp-headline-med:     900px;
 
 
 $one-px:              1px;

@@ -61,7 +61,7 @@ $trans-font-size: font-size 0.2s ease;
 
 
 .#{$prefix}resume__headline--section {
-  @include accent;
+  font-family: $font-face-headline;
   margin: 0;
   margin-bottom: 8px;
   font-size: 24px;

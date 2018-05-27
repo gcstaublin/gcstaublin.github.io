@@ -32,16 +32,6 @@
 
 
 
-// --------------------------------------------
-// --------------------------------------------
-//
-// Content wrapper
-//
-// --------------------------------------------
-// --------------------------------------------
-// .#{$prefix}content__wrapper {
-//   position: relative;
-// }
 
 
 
@@ -58,7 +48,6 @@
   padding: 20px;
   padding-bottom: 6px;
   background-color: $bg-fallback;
-  // background-image: $bg;
 }
 
 
@@ -133,66 +122,6 @@
 
 
 
-// --------------------------------------------
-// --------------------------------------------
-//
-// Homepage
-//
-// --------------------------------------------
-// --------------------------------------------
-// .#{$prefix}headline--homepage {
-//   @extend %headline;
-//   @extend %headline--small;
-//   color: rgba(255, 255, 255, 0.7);
-//   letter-spacing: 2px;
-//   margin-bottom: $space-one-half;
-// }
-
-
-// .#{$prefix}intro--homepage {
-//   margin: 0;
-//   font-size: $size-one-quarter;
-//   font-weight: 200;
-//   line-height: 1.525;
-//   color: rgba(255, 255, 255, 0.9);
-
-//   @include bp($bp-sm) {
-//     font-size: $size-one-three-fourths;
-//     font-weight: 200;
-//     line-height: 1.325;
-//   }
-// }
-
-
-// .#{$prefix}text--homepage {
-//   margin-top: 18px;
-//   font-size: $size-one-quarter;
-//   font-weight: 200;
-//   line-height: 1.525;
-//   color: rgba(255, 255, 255, 0.85);
-
-//   @include bp($bp-sm) {
-//     font-size: $size-one-quarter;
-//   }
-// }
-
-
-
-
-// --------------------------------------------
-// --------------------------------------------
-//
-// Link
-//
-// --------------------------------------------
-// --------------------------------------------
-// .#{$prefix}link--hp {
-//   // @include link(#fff);
-//   @include link;
-// }
-
-
-
 
 // --------------------------------------------
 // --------------------------------------------
@@ -221,7 +150,7 @@
 //
 // --------------------------------------------
 // --------------------------------------------
-.#{$prefix}page--about {
+.page-about {
   font-size: 1.25rem;
   line-height: 1.4;
 
