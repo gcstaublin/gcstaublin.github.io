@@ -5,52 +5,102 @@
 //
 // --------------------------------------------
 // --------------------------------------------
-.#{$prefix}post-wrapper {
+.post-wrapper {
   padding-top: 0;
   padding-right: 0;
   padding-left: 0;
+  border: 2px solid red;
 }
 
 
-.#{$prefix}post__container {
-  position: relative;
+.article__container {
+  // position: relative;
   margin: 0 auto;
-  padding: $space-two-half;
   width: 100%;
   max-width: $width-med;
-  background-color: #fff;
+  padding-left: $space-one;
+  padding-right: $space-one;
+  // padding: $space-two-half;
+
+  // background-color: #fff;
+  // border: 1px solid red;
 
   @include bp($bp-post-has-pad, max) {
-    padding: $space-two-half $space-two;
+    // padding: $space-two-half $space-two;
   }
 }
 
 
 
-.#{$prefix}post__meta { }
+.article__meta {
+  // position: relative;
+  margin-top: $space-four;
+  padding-left: $space-one;
+  padding-right: $space-one;
+  width: 100%;
+  max-width: 960px;
+  // border-bottom: 10px solid black;
+  border-left: 0;
+  border-top: 0;
+  transition: 0.2s ease;
+
+  @include bp($bp-headline-med) {
+    // margin-top: $space-four;
+    padding-left: 2rem;
+    border-bottom: 4px solid black;
+  }
+
+  @include bp(1100px) {
+    padding-left: 4rem;
+  }
+
+  // &::before {
+  //   position: absolute;
+  //   content: '';
+  //   right: -5px;
+  //   top: 80%;
+  //   bottom: -8rem;
+  //   width: 5px;
+  //   background-color: black;
+  // }
+}
 
 
-.#{$prefix}post__headline {
+.article__headline {
   @include display;
   margin: 0;
-  font-size: $size-one-three-fourths;
-  line-height: 1.15;
-  font-weight: bold;
+  font-size: $size-two-half;
+  line-height: 1;
+  font-weight: 900;
+  text-transform: uppercase;
+  transition: 0.2s ease;
 
   @include bp($bp-headline-sm) {
-    font-size: $size-two-half;
-    font-weight: normal;
+    font-size: 5rem;
+    line-height: 0.85;
+  }
+
+  @include bp($bp-headline-med) {
+    font-size: 7rem;
+    line-height: 0.8;
   }
 }
 
 
 
-.#{$prefix}post__headline--sub {
-  @include display($display-color-lt);
-  margin-top: $space-half;
-  font-size: $size-one-half;
+.article__headline--sub {
+  font-family: $font-face-overline;
+  font-weight: 400;
+  letter-spacing: -1px;
+  // @include display($display-color-lt);
+  margin-top: $space-one;
+  font-size: $size-one-quarter;
   line-height: 1.25;
   // font-style: italic;
+
+  @include bp($bp-headline-med) {
+    margin-top: $space-two;
+  }
 }
 
 
@@ -59,16 +109,16 @@
 // Article text styles
 // --------------------------------------------
 .article-text,
-.#{$prefix}article__text {
+.article__text {
   @include text;
   position: relative;
   // margin-top: 45px;
-  margin-top: $space-one-half;
+  // margin-top: $space-one-half;
   font-size: 1.15em;
   // line-height: 1.45;
   line-height: 1.475;
 
-  @include bp($bp-sm) {
+  @include bp($bp-headline-med) {
     // font-size: $size-two-half;
     margin-top: $space-two-half;
   }
