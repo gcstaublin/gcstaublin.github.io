@@ -5,13 +5,13 @@
 //
 // --------------------------------------------
 // --------------------------------------------
-.#{$prefix}nav {
+.nav {
   display: flex;
   margin-left: auto;
 }
 
 
-.#{$prefix}nav__link {
+.nav__link {
   font-family: $font-face-overline;
   display: inline-block;
   padding: 1rem;

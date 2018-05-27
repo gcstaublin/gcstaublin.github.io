@@ -5,7 +5,7 @@
 //
 // --------------------------------------------
 // --------------------------------------------
-.#{$prefix}header {
+.header {
   padding-left: $space-one;
 
   .page-about &,
@@ -14,16 +14,12 @@
 }
 
 
-.#{$prefix}header--hp {
+.header--hp {
   background-color: transparent;
-
-  @include bp($bp-sm) {
-    padding-left: 0;
-  }
 }
 
 
-.#{$prefix}header__inner {
+.header__inner {
   display: flex;
   align-items: center;
 }

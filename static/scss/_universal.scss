@@ -18,23 +18,27 @@ body {
 
 // Content
 // --------------------------------------------
+
+.content-wrapper { border: 4px solid green; }
+
+
 .content-wrapper,
 .content__wrapper {
-  position: relative;
+  // position: relative;
 
-  @include bp($bp-sm) {
-    padding: $space-three-fourths;
-    padding-bottom: 0;
-  }
+  // @include bp($bp-sm) {
+  //   padding: $space-three-fourths;
+  //   padding-bottom: 0;
+  // }
 
-  @include bp($bp-med) {
-    padding-bottom: 0;
-  }
+  // @include bp($bp-med) {
+  //   padding-bottom: 0;
+  // }
 
   // Homepage
-  .#{$prefix}homepage & {
-    padding-top: 0;
-  }
+  // .#{$prefix}homepage & {
+  //   padding-top: 0;
+  // }
 }
 
 
@@ -52,8 +56,10 @@ body {
 // --------------------------------------------
 .bg-container,
 .#{$prefix}bg__container {
-  @include clearfix;
-  padding-bottom: 100px;
+  // @include clearfix;
+  // padding-bottom: 100px;
 }
 
+
+.bg-container { border: 4px solid orange; }
 

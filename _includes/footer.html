@@ -2,29 +2,20 @@
 <!-- ===================================== -->
   <footer class="{% if include.className %}{{include.className}}{% endif %}">
 
-
-    <!-- Social Links -->
-    <!-- ===================================== -->
-    <div class="gcs-footer__mod">
-      <ul class="gcs-footer__items">
+    <!-- Footer Content -->
+    <div class="footer__module">
+      <ul class="footer__items">
         {% for item in site.data.social-links %}
-          <li class="gcs-footer__item">
-            <a target="_blank" class="gcs-footer__link" href="{{item.url}}">
+          <li class="footer__item">
+            <a target="_blank" class="footer__link" href="{{item.url}}">
               {% include /icons/icon-{{item.svg}}.svg %}
             </a>
           </li>
         {% endfor %}
       </ul>
+      <p class="footer__text--copyright">Copyright ©2018. All rights reserved.</p>
     </div>
-
-
-    <div class="gcs-footer__mod">
-      <p class="gcs-footer__text--copyright">Copyright ©2018. All rights reserved.</p>
-    </div> <!-- /footer-mod -->
-
   </footer>
-
-
 
 
   <!-- Javascript -->
