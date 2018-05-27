@@ -35,9 +35,14 @@
   padding-right: $space-one;
   transition: 0.2s ease;
 
+  @include bp($bp-headline-sm) {
+    padding-bottom: $space-one;
+  }
+
   @include bp($bp-headline-med) {
     padding-left: $space-two;
-    border-bottom: 4px solid black;
+    padding-bottom: $space-two;
+    border-bottom: 1px solid black;
   }
 
   @include bp(1100px) {
@@ -54,30 +59,39 @@
   font-weight: 900;
   text-transform: uppercase;
   transition: 0.2s ease;
+  letter-spacing: 1px;
 
   @include bp($bp-headline-sm) {
     font-size: 5rem;
-    line-height: 0.85;
+    line-height: 0.9;
+
   }
 
   @include bp($bp-headline-med) {
-    font-size: 7rem;
-    line-height: 0.8;
+    font-size: 6rem;
+    // line-height: 0.9;
   }
 }
 
 
 
 .article__headline--sub {
-  font-family: $font-face-overline;
+  // font-family: $font-face-overline;
   font-weight: 400;
-  letter-spacing: -1px;
+  // letter-spacing: -1px;
   margin-top: $space-one;
-  font-size: $size-one-quarter;
+  // font-size: $size-one-quarter;
+  font-size: $size-one-half;
   line-height: 1.25;
 
-  @include bp($bp-headline-med) {
+  @include bp($bp-headline-sm) {
     margin-top: $space-two;
+  }
+
+  @include bp($bp-headline-med) {
+    // margin-top: $space-two;
+    margin-top: $space-three;
+    font-size: $size-one-three-fourths;
   }
 }
 

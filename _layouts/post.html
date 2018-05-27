@@ -20,13 +20,13 @@
       <article>
         <section id="content" role="main">
 
-          <div class="article__meta">
+          <div class="article__meta fade-in">
             <h5 class="overline">
                 {{ page.date | date: "%b %d, %Y" }}
               </h5>
-            <h1 class="article__headline fade-in">{{ page.title }}</h1>
+            <h1 class="article__headline">{{ page.title }}</h1>
             {% if page.subhead %}
-              <h3 class="article__headline--sub fade-in"> {{ page.subhead }}</h3>
+              <h3 class="article__headline--sub"> {{ page.subhead }}</h3>
             {% endif %}
           </div> <!-- /post-meta -->
 
