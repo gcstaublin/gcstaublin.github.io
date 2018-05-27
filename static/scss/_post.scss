@@ -14,16 +14,11 @@
 
 
 .article__container {
-  // position: relative;
   margin: 0 auto;
   width: 100%;
   max-width: $width-med;
   padding-left: $space-one;
   padding-right: $space-one;
-  // padding: $space-two-half;
-
-  // background-color: #fff;
-  // border: 1px solid red;
 
   @include bp($bp-post-has-pad, max) {
     // padding: $space-two-half $space-two;
@@ -33,36 +28,21 @@
 
 
 .article__meta {
-  // position: relative;
+  width: 100%;
+  max-width: 960px;
   margin-top: $space-four;
   padding-left: $space-one;
   padding-right: $space-one;
-  width: 100%;
-  max-width: 960px;
-  // border-bottom: 10px solid black;
-  border-left: 0;
-  border-top: 0;
   transition: 0.2s ease;
 
   @include bp($bp-headline-med) {
-    // margin-top: $space-four;
-    padding-left: 2rem;
+    padding-left: $space-two;
     border-bottom: 4px solid black;
   }
 
   @include bp(1100px) {
-    padding-left: 4rem;
+    padding-left: $space-four;
   }
-
-  // &::before {
-  //   position: absolute;
-  //   content: '';
-  //   right: -5px;
-  //   top: 80%;
-  //   bottom: -8rem;
-  //   width: 5px;
-  //   background-color: black;
-  // }
 }
 
 
@@ -92,11 +72,9 @@
   font-family: $font-face-overline;
   font-weight: 400;
   letter-spacing: -1px;
-  // @include display($display-color-lt);
   margin-top: $space-one;
   font-size: $size-one-quarter;
   line-height: 1.25;
-  // font-style: italic;
 
   @include bp($bp-headline-med) {
     margin-top: $space-two;
