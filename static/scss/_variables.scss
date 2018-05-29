@@ -253,5 +253,29 @@ $one-px:              1px;
 }
 
 
+
+
+// Logo Color
+// --------------------------------------------
+:root {
+  --color-logo: #fff;
+}
+
+.theme--dark-night {
+  --color-logo: #fff;
+}
+
+
+.theme--silver-fox {
+  --color-logo: #8496a5;
+}
+
+.theme--sky-blue {
+  --color-logo: #5baeec;
+}
+
+
+
+
 // Resume Color
 // --------------------------------------------
