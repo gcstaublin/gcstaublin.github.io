@@ -14,12 +14,13 @@
 :root {
   --logo-width: 51px;  // matches height of site header
   --logo-color-background: #12222d;
-  --logo-svg-width: $size-two;
-  --logo-svg-height: $size-two;
+  --logo-svg-width: $size-one-three-fourths;
+  --logo-svg-height: $size-one-three-fourths;
 }
 
 .theme--dark-night {
-  --logo-color-background: #D8B54B;
+  // --logo-color-background: #D8B54B;
+  --logo-color-background: #5BB1A1;
 }
 
 

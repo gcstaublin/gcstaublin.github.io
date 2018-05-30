@@ -72,36 +72,41 @@
 // --------------------------------------------
 .hero--homepage {
   position: relative;
-  top: -51px;
+  // top: -51px;
   width: 100%;
-  height: 120vw;
+  height: 110vw;
   background-color: black;
   background-image: url('/static/img/grant_hp_hero.jpg');
   background-size: cover;
-  background-position: 70% 75%;
+  // background-position: 70% 75%;
+  background-position: 70% 100%;
   transition: 0.2s ease;
+
+  // @include bp(450px) { top: -51px; }
 
   @include bp(600px) { height: 77vw; }
   @include bp(800px) { height: 56.25vw; }
+  @include bp(960px) { top: -51px; }
 
 }
 
 
 .hero__explainer--homepage {
-  // display: none;
-  display: flex;
+  display: none;
+  // display: flex;
   position: absolute;
-  width: 150px;
-  height: 150px;
+  // width: 150px;
+  // height: 150px;
   align-items: center;
   background-color: #fff;
   background-color: #d8b54b;
-  border-radius: 50%;
+  // border-radius: 50%;
   transition: 0.2s ease;
-  right: calc(100% - 140px);
+  // right: calc(100% - 140px);
   bottom: -75px;
+  bottom: 0;
 
-  @include bp(800px) { display: flex; }
+  @include bp(600px) { display: flex; }
 
   @include bp(960px) { right: calc(0 - 10px); }
 }
@@ -112,7 +117,7 @@
   margin: 0;
   padding: 0.5rem 1rem;
   // font-family: $font-face-overline;
-  font-weight: 300;
+  // font-weight: 300;
   font-size: 12px;
   line-height: 1.4;
   text-align: center;
@@ -121,14 +126,15 @@
 
 
 .hero__explainer-head {
-  display: block;
-  margin-bottom: 0.25rem;
+  // display: block;
+  // margin-bottom: 0.25rem;
   font-family: $font-face-overline;
-  font-weight: 300;
+  // font-weight: 300;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  line-height: 1;
-  color: #f8ff9f;
+  // letter-spacing: 1px;
+  // line-height: 1;
+  // color: #f8ff9f;
+  color: black;
 }
 
 
@@ -138,7 +144,8 @@
   width: 80vw;
   max-width: 680px;
   // top: 15vh;
-  top: 20vw;
+  // top: 20vw;
+  top: 15vw;
   left: 6.25vw;
   // border: 1px solid red;
 }
@@ -155,6 +162,7 @@
   letter-spacing: 1px;
   line-height: 1;
   color: #fff;
+  // text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.45);
   transition: 0.3s ease;
 
   @include bp(700px) {
