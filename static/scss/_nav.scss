@@ -14,16 +14,16 @@
 .nav__link {
   font-family: $font-face-overline;
   display: inline-block;
-  padding: 1rem;
-  font-size: 0.85rem;
+  padding: 1rem 0.75rem;
+  // font-size: 0.85rem;
+  font-size: 0.75rem;
   color: #fff;
   text-decoration: none;
   transition: background-color 0.2s ease;
   text-transform: uppercase;
   letter-spacing: 1px;
 
-  &:hover {
-    // background-color: rgba(255, 255, 255, 0.2);
-    text-decoration: underline;
-  }
+  @include bp(600px) { font-size: 0.85rem; }
+
+  &:hover { text-decoration: underline; }
 }

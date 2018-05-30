@@ -5,28 +5,57 @@
 //
 // --------------------------------------------
 // --------------------------------------------
-.logo__container {
-  position: relative;
+
+
+
+
+// Local Variables
+// --------------------------------------------
+:root {
+  --logo-width: 51px;  // matches height of site header
+  --logo-color-background: #12222d;
+  --logo-svg-width: $size-one-three-fourths;
+  --logo-svg-height: $size-one-three-fourths;
+}
+
+.theme--dark-night {
+  // --logo-color-background: #D8B54B;
+  --logo-color-background: #5BB1A1;
+}
+
+.theme--sky-blue {
+  --logo-color-background: #2f90da;
 }
 
 
-.logo__link--hp,
+.theme--silver-fox {
+  --logo-color-background: #667786;
+}
+
+
+
+// Styles
+// --------------------------------------------
+.logo__container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--logo-width);
+  background-color: var(--logo-color-background);
+}
+
+
 .logo__link {
   display: block;
-  color: rgba(255, 255, 255, 0.8);
-  transition: transform 0.2s ease, color 0.5s 0.1s ease;
+  color: var(--color-logo);
   transform: scale(1);
+  transform-origin: center;
+  transition: transform 0.2s ease;
 
-  &:hover {
-    transform: scale(1.1);
-    transition: transform 0.4s ease, color 0.1s 0.1s ease;
-  }
+  &:hover { transform: scale(1.1); }
 
-  &:active {
-    color: rgba(255, 255, 255, 0.9);
-    transition: transform 0.2s ease-in-out;
-    transform: scale(1);
-  }
+  &:active { transform: scale(1); }
 }
 
 
@@ -35,25 +64,8 @@
 }
 
 
-.logo__svg {
-  width: 40px;
-  height: 40px;
-}
-
-
-.svg--logo--hp {
-  width: 24px;
-  height: 24px;
-  transition: all 0.2s ease;
-
-  @include bp($bp-med) {
-    width: 32px;
-  }
-}
-
 // Standard logo
 .svg--logo {
-  width: 32px;
-  height: 32px;
-  height: auto;
+  width: var(--logo-svg-width);
+  height: var(--logo-svg-height);
 }

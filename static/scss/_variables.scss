@@ -19,10 +19,7 @@ $prefix: 'gcs-';
 $sans-fallback: Helvetica, sans-serif;
 $serif-fallback: Georgia, serif;
 
-// $type-main: 'omnes-pro', $sans-fallback;
-// $type-accent: 'jubilat', $serif-fallback;
-// $type-display: 'jubilat', Georgia, serif;
-// $type-code: 'droid-sans-mono', monospace, sans-serif;
+
 
 $type-main: 'nudista-web', $sans-fallback;
 $type-accent: 'minion-pro', $serif-fallback;
@@ -59,8 +56,8 @@ $size-three-fourths:      0.75rem;     // 12px
 $size-one:                1rem;        // 16px
 $size-one-quarter:        1.25rem;     // 20px
 $size-one-half:           1.5rem;      // 24px
-$size-one-three-fourths:  1.75rem;     // 30px
-$size-two:                2rem;        // 36px
+$size-one-three-fourths:  1.75rem;     // 28px
+$size-two:                2rem;        // 32px
 $size-two-half:           2.5rem;      // 40px
 $size-three:              3rem;        // 48px
 $size-four:               4rem;
@@ -200,21 +197,38 @@ $one-px:              1px;
 // Footer Color
 // --------------------------------------------
 :root {
-  --footer-link-bg:       rgba($bg-fallback, 0.3);
-  --footer-link-border:   rgba($bg-fallback, 0.15);
+  // --footer-link-bg:       rgba($bg-fallback, 0.3);
+  --footer-link-bg:       #12222d;
+  --footer-link-bg: #508a7f;
+  // --footer-link-border:   rgba($bg-fallback, 0.15);
   --footer-link-bg-hover: $bg-fallback;
   --footer-link-color:    rgba(255, 255, 255, 1);
-  --footer-text-color:    rgba(0, 0, 0, 0.5);
+  // --footer-text-color:    rgba(0, 0, 0, 0.5);
+  --footer-text-color: #fff;
+  --footer-background-color: #5BB1A1;
 }
 
 
 .theme--dark-night {
-  --footer-link-bg:       rgba(0, 0, 0, 0.1);
-  --footer-link-border:   rgba(0, 0, 0, 0.125);
+  // --footer-link-bg:       rgba(0, 0, 0, 0.1);
+  // --footer-link-border:   rgba(0, 0, 0, 0.125);
   --footer-link-bg-hover: $bg-fallback;
   --footer-link-color:    rgba(255, 255, 255, 0.8);
   --footer-text-color:    rgba(255, 255, 255, 0.5);
 }
+
+.theme--sky-blue {
+  --footer-background-color: #2f90da;
+  --footer-link-bg: #2f83c3;
+}
+
+
+.theme--silver-fox {
+  --footer-background-color: #667786;
+  --footer-link-bg: #4d5c69;
+}
+
+
 
 
 
@@ -251,6 +265,32 @@ $one-px:              1px;
   --color-intro-homepage: rgba(255, 255, 255, 0.95);
   --color-text-homepage: rgba(255, 255, 255, 0.95);
 }
+
+
+
+
+// Logo Color
+// --------------------------------------------
+:root {
+  --color-logo: #fff;
+}
+
+.theme--dark-night {
+  --color-logo: #fff;
+}
+
+
+.theme--silver-fox {
+  // --color-logo: #8496a5;
+  --color-logo: #fff;
+}
+
+.theme--sky-blue {
+  // --color-logo: #5baeec;
+  --color-logo: #fff;
+}
+
+
 
 
 // Resume Color
