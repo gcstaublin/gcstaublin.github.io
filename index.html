@@ -8,7 +8,32 @@ pageClass: page--homepage theme--dark-night
 
   <!-- Header -->
   <!-- ===================================== -->
-  {% include new-page-header.html headerClass="gcs-header--hp" %}
+  {% include new-page-header.html %}
+
+
+
+  <!-- Hero -->
+  <!-- ===================================== -->
+  <div class="hero--homepage">
+
+<!--     <div class="hero__image-container">
+      <img src="/static/img/grant_hp_hero.jpg" alt="" />
+      <div class="test-fade"></div>
+    </div> -->
+
+    <div class="hero__content">
+      <h2 class="headline--hero">Grant Staublin</h2>
+      <h4 class="headline--subhead--hero">An independent product designer  and front-end developer living in the mountains of Western Massachusetts.</h4>
+    </div>
+
+    <div class="hero__explainer--homepage">
+      <p class="hero__explainer-text">
+        <span class="hero__explainer-head">Important</span>
+        This photo is from Acadia National Park. <br />Not Western Mass.</p>
+    </div>
+
+
+  </div>
 
 
   <div class="content-inner fade-in">
@@ -17,11 +42,11 @@ pageClass: page--homepage theme--dark-night
       <!-- Homepage intro -->
       {% for item in site.data.hp-intro %}
         {% if item.headline %}
-          <h3 class="headline--homepage">{{ item.headline }}</h3>
+          <!-- <h3 class="headline--homepage">{{ item.headline }}</h3> -->
         {% endif %}
 
         {% if item.intro %}
-          <h4 class="intro--homepage">{{item.intro}}</h4>
+          <p class="text--homepage">{{item.intro}}</p>
         {% endif %}
 
         {% for paragraph in item.words %}
