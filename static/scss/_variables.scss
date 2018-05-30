@@ -197,21 +197,38 @@ $one-px:              1px;
 // Footer Color
 // --------------------------------------------
 :root {
-  --footer-link-bg:       rgba($bg-fallback, 0.3);
-  --footer-link-border:   rgba($bg-fallback, 0.15);
+  // --footer-link-bg:       rgba($bg-fallback, 0.3);
+  --footer-link-bg:       #12222d;
+  --footer-link-bg: #508a7f;
+  // --footer-link-border:   rgba($bg-fallback, 0.15);
   --footer-link-bg-hover: $bg-fallback;
   --footer-link-color:    rgba(255, 255, 255, 1);
-  --footer-text-color:    rgba(0, 0, 0, 0.5);
+  // --footer-text-color:    rgba(0, 0, 0, 0.5);
+  --footer-text-color: #fff;
+  --footer-background-color: #5BB1A1;
 }
 
 
 .theme--dark-night {
-  --footer-link-bg:       rgba(0, 0, 0, 0.1);
-  --footer-link-border:   rgba(0, 0, 0, 0.125);
+  // --footer-link-bg:       rgba(0, 0, 0, 0.1);
+  // --footer-link-border:   rgba(0, 0, 0, 0.125);
   --footer-link-bg-hover: $bg-fallback;
   --footer-link-color:    rgba(255, 255, 255, 0.8);
   --footer-text-color:    rgba(255, 255, 255, 0.5);
 }
+
+.theme--sky-blue {
+  --footer-background-color: #2f90da;
+  --footer-link-bg: #2f83c3;
+}
+
+
+.theme--silver-fox {
+  --footer-background-color: #667786;
+  --footer-link-bg: #4d5c69;
+}
+
+
 
 
 
@@ -264,11 +281,13 @@ $one-px:              1px;
 
 
 .theme--silver-fox {
-  --color-logo: #8496a5;
+  // --color-logo: #8496a5;
+  --color-logo: #fff;
 }
 
 .theme--sky-blue {
-  --color-logo: #5baeec;
+  // --color-logo: #5baeec;
+  --color-logo: #fff;
 }
 
 

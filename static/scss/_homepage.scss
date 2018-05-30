@@ -79,7 +79,7 @@
   background-image: url('/static/img/grant_hp_hero.jpg');
   background-size: cover;
   // background-position: 70% 75%;
-  background-position: 70% 100%;
+  background-position: 70% 98%;
   transition: 0.2s ease;
 
   // @include bp(450px) { top: -51px; }
@@ -103,12 +103,20 @@
   // border-radius: 50%;
   transition: 0.2s ease;
   // right: calc(100% - 140px);
-  bottom: -75px;
+  // bottom: -75px;
   bottom: 0;
 
   @include bp(600px) { display: flex; }
 
-  @include bp(960px) { right: calc(0 - 10px); }
+  // @include bp(960px) { right: calc(0 - 10px); }
+
+  @include bp(960px) {
+    bottom: -75px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    right: calc(0 - 10px);
+  }
 }
 
 
