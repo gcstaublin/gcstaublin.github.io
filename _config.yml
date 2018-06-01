@@ -16,6 +16,10 @@ paginate_path: "archive/page/:num"
 excerpt_separator: <!--more-->
 
 
+# Collections
+collections:
+  collection-case-study-mike:
+
 
 
 exclude: [
