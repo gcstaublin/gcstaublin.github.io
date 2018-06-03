@@ -1,19 +1,20 @@
-<!-- Section -->
-<!-- ===================================== -->
 <section class="page__module--case-study">
-  <h2 class="case-study__headline--section">Behind the Scenes</h2>
-  <div class="case-study__details page__module--1256">
-    <ul class="case-study__details-items">
-      <li class="case-study__details-item">
-        <img src="/static/img/case-study/mike-test/Mike-page_simpson.jpg">
-        <div class="case-study__details-item-content">
-          <h4>Everyone was a Simpsons Character</h4>
-          <p>Making yourself into a Simpons character has to be some sort of personality test. As we created our own likenesses, we taped them to a wall next the lunch table in the department. I remember sitting and eating lunch staring at these characters, wondering ‘really, is that how you see yourself.’ That might say a little too much about my own personality.</p>
+  <h2 class="case-study__headline--section">{{ item.headline }}</h2>
+  <div class="case-study__module--details page__module--1256">
+    <ul class="case-study__details">
+      {% for detail in item.details %}
+      <li class="case-study__detail-item">
+        <img class="case-study__detail-image" src="/static/img/case-study/{{detail.image}}">
+        <div class="case-study__detail-content">
+          <h4 class="case-study__detail-item-title">{{ detail.title }}</h4>
+          <div class="case-study__detail-item-text">
+            {% for graph in detail.text %}
+              <p>{{ graph }}</p>
+            {% endfor %}
+          </div>
         </div>
       </li>
-      <li class="case-study__details-item">Item 2</li>
-      <li class="case-study__details-item">Item 3</li>
-      <li class="case-study__details-item">Item 4</li>
-      <li class="case-study__details-item">Item 5</li>
+      {% endfor %}
     </ul>
   </div>
+</section>

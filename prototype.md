@@ -10,11 +10,8 @@ permalink: /prototype/
 
 
 
-<!-- Page Header -->
-<!-- ==================================== -->
 <!-- Collection Items -->
 <!-- ==================================== -->
-
 {% for item in site.collection-case-study-mike %}
 {% if item.component == 'hero' %}
   {% include case-study/hero.html %}
@@ -26,10 +23,4 @@ permalink: /prototype/
   {% include case-study/items.html %}
 {% endif %}
 {% endfor %}
-
-
-
-<!-- {% include case-study/collection.html collection='mike' %} -->
-
-
 
