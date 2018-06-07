@@ -9,7 +9,8 @@ url: "http://localhost:3000"
 
 # Build settings
 markdown: kramdown
-permalink: /articles/:title/
+# permalink: /articles/:title/
+# permalink: pretty
 paginate: 2
 paginate_path: "archive/page/:num"
 
@@ -19,6 +20,7 @@ excerpt_separator: <!--more-->
 # Collections
 collections:
   collection-case-study-mike:
+  collection-case-study-comeback:
 
 
 

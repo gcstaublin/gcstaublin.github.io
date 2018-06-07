@@ -5,6 +5,7 @@ subhead: "This is my new website, and I can't endorse it at all"
 tease: "It's new and shiny. Can I rip it apart and start over?"
 share: "A man rebuilds his website, using Jekyll. Stick around to see what happens next. It might surprise you."
 date:   2015-02-22
+permalink: /articles/:title/
 ---
 
 Welcome. Where shall I begin?

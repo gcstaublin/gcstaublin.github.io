@@ -1,14 +1,6 @@
 ---
 component: hero
 headline: The Goodbye Page
-reactExample:
-  - component: AvatarTeam
-    props: size="xlarge"
-  - component: AvatarTeam
-    props: sport="basketball" size="xlarge"
-  - component: AvatarTeam
-    props: sport="football" size="xlarge" primaryColor="red"
-gitLink: avatars/avatar-team
 ---
 
 

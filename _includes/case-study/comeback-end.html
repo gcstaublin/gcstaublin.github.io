@@ -1,0 +1,25 @@
+<section class="case-study__section--comeback-end page__module--case-study theme--red-sox">
+  <div class="hero--case-study hero__bg">
+
+    <div class="grid--comeback-end">
+      {% if item.headline || item.content %}
+        <div class="content--case-study--comeback">
+          {% if item.headline %}
+            <h2 class="headline--case-study--comeback">{{item.headline}}</h2>
+          {% endif %}
+
+          {% if item.content %}
+            <div class="text--case-study--comeback">{{item.content}}</div>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      <div class="case-study__img-container">
+        <img
+          class="case-study__img"
+          src="/static/img/case-study/{{item.image}}" alt="">
+      </div>
+    </div>
+
+  </div>
+</section>

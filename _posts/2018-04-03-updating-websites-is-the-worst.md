@@ -5,6 +5,7 @@ tease: "Updating a personal website is the worst"
 share: "Updating a personal website is the worst"
 date: 2018-04-03
 status: pinned
+permalink: /articles/:title/
 ---
 
 Yesterday I pushed out a small update to this site.

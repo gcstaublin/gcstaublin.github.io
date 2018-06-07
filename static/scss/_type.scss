@@ -36,7 +36,7 @@
 
 
 .overline, %overline {
-  font-family: $font-face-overline;
+  font-family: $type-face-overline;
   margin-bottom: 30px;
   padding-bottom: 2px;
   text-transform: uppercase;
@@ -57,7 +57,7 @@
 // Text
 // --------------------------------------------
 .text, %text {
-  font-family: $font-face-text;
+  font-family: $type-face-text;
   color: var(--color-text);
   font-weight: 300;
 }
@@ -67,7 +67,7 @@
 // --------------------------------------------
 .headline, %headline {
   margin: 0;
-  font-family: $font-face-headline;
+  font-family: $type-face-headline;
   font-weight: bold;
   text-transform: uppercase;
   color: var(--color-headline);

@@ -24,3 +24,18 @@ permalink: /prototype/
 {% endif %}
 {% endfor %}
 
+
+
+<!-- <script>
+  const speed = 0.1;
+  // let --paraTop;
+  const para = document.querySelector('.parallax');
+  // --paraTop = para.offsetTop;
+  window.addEventListener('scroll', function() {
+  document.body.style.setProperty("--scroll-amount", (document.body.scrollTop || document.documentElement.scrollTop) * speed );
+  console.log(`--scroll-amount`);
+});
+
+
+
+</script> -->
