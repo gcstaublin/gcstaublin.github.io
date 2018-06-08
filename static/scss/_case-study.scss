@@ -9,8 +9,7 @@
 
 // To Do
 // --------------------------------------------
-// 1. Get the selector for the adjacent section after page hero working.
-// 2.
+
 
 
 
@@ -24,12 +23,12 @@ $hero-text-color: #364d65;
 
 $case-study-section: '.module--case-study';
 
-// Comeback hero
+// Breakpoints Comeback hero
 $bp-hero-comeback-has-layout: 600px;
 $bp-hero-comeback-has-adjustment: 800px;
 
 
-// Details
+// Breakpoints Details
 $bp-details-has-layout: 600px;
 $bp-details-is-3: 1100px;
 
@@ -135,7 +134,7 @@ img { vertical-align: middle; }
 .module--case-study {
   padding-top: 3rem;
   padding-bottom: 3rem;
-  transition: 0.3s;
+  transition: 0.2s;
   border: 6px solid green;
 
   @include bp(800px) {
@@ -158,7 +157,7 @@ img { vertical-align: middle; }
   font-weight: 400;
   line-height: 1;
   color: $hero-text-color;
-  transition: 0.3s ease;
+  transition: 0.2s;
 
   @include bp(800px) {
     margin-bottom: $space-one-quarter;

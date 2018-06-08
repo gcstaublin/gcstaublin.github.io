@@ -1,6 +1,6 @@
 ---
 layout: case-study
-title: Grant Staublin | Prototype
+title: Grant Staublin | The Comebacks
 permalink: /work/comeback/
 <!-- pageclass: page-about -->
 ---
