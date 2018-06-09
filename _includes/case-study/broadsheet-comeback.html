@@ -1,10 +1,10 @@
 <section class="case-study__section--broadsheet">
-  <div class="case-study__img-container--broadsheet page__module--704">
+  <div class="case-study__container--img--broadsheet case-study__module--704 slide-up">
     <img class="case-study__img" src="/static/img/case-study/{{item.image}}" alt="">
   </div>
 
   {% if item.headline || item.content %}
-    <div class="content--case-study--comeback">
+    <div class="content--case-study--comeback slide-up">
       {% if item.headline %}
         <h2 class="headline--case-study--comeback">{{item.headline}}</h2>
       {% endif %}

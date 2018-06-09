@@ -2,12 +2,6 @@
 
   <body class="{% if page.pageclass %}{{page.pageclass}}{% endif %}">
 
-    <!-- SVG -->
-    <!-- ===================================== -->
-    <div style="height: 0; width: 0; position: absolute; visibility: hidden">
-      {% include svg.svg %}
-    </div>
-
 
     <!-- Header -->
     <!-- ===================================== -->
@@ -30,6 +24,9 @@
     <!-- Footer -->
     <!-- ===================================== -->
     {% include footer.html %}
+
+    <!-- Slide up script -->
+    <script src="/static/js/slide-in.js"></script>
 
 
   </body>

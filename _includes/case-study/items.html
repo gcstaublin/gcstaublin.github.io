@@ -1,13 +1,25 @@
-<section class="module--case-study">
-  <h2 class="case-study__headline--section">{{ item.headline }}</h2>
-  <div class="case-study__module--details page__module--1256">
-    <ul class="case-study__details">
+<section class="case-study__section {% if item.verticalPadding %} case-study__section--has-vertical-padding{% endif %}">
+
+  {% if item.headline || item.content %}
+    <div class="case-study__content content--case-study--comeback">
+      {% if item.headline %}
+        <h2 class="headline--case-study--comeback">{{item.headline}}</h2>
+      {% endif %}
+
+      {% if item.content %}
+        <div class="text--case-study--comeback">{{item.content}}</div>
+      {% endif %}
+    </div>
+  {% endif %}
+
+  <div class="case-study__module--details case-study__module--1256">
+    <ul class="case-study__items">
       {% for detail in item.details %}
-      <li class="case-study__detail-item">
-        <img class="case-study__detail-image" src="/static/img/case-study/{{detail.image}}">
-        <div class="case-study__detail-content">
-          <h4 class="case-study__detail-item-title">{{ detail.title }}</h4>
-          <div class="case-study__detail-item-text">
+      <li class="case-study__item slide-up">
+        <img class="case-study__image--item" src="/static/img/case-study/{{detail.image}}">
+        <div class="case-study__content--item">
+          <h4 class="case-study__headline--item">{{ detail.title }}</h4>
+          <div class="case-study__text--item">
             {% for graph in detail.text %}
               <p>{{ graph }}</p>
             {% endfor %}

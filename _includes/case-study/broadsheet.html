@@ -1,6 +1,17 @@
-<section class="module--case-study parallax">
-  <h2 class="case-study__headline--section">The Making of a Great Goodbye Page</h2>
-  <div class="case-study__img-container--broadsheet page__module--704">
-    <img class="case-study__img" src="/static/img/case-study/mike-test/Mike-page.jpg" alt="">
+<section class="case-study__section--broadsheet">
+  <div class="case-study__container--img--broadsheet case-study__module--704">
+    <img class="case-study__img" src="/static/img/case-study/{{item.image}}" alt="">
   </div>
+
+  {% if item.headline || item.content %}
+    <div class="content--case-study--comeback slide-up">
+      {% if item.headline %}
+        <h2 class="headline--case-study--comeback">{{item.headline}}</h2>
+      {% endif %}
+
+      {% if item.content %}
+        <div class="text--case-study--comeback">{{item.content}}</div>
+      {% endif %}
+    </div>
+  {% endif %}
 </section>
