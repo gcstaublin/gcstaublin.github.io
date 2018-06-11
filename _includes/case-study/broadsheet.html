@@ -6,11 +6,11 @@
   {% if item.headline || item.content %}
     <div class="case-study__content slide-up">
       {% if item.headline %}
-        <h2 class="headline--case-study--comeback">{{item.headline}}</h2>
+        <h2 class="case-study__headline">{{item.headline}}</h2>
       {% endif %}
 
       {% if item.content %}
-        <div class="text--case-study--comeback">{{item.content}}</div>
+        <div class="case-study__text">{{item.content}}</div>
       {% endif %}
     </div>
   {% endif %}

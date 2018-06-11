@@ -12,7 +12,7 @@
 $bp-bleed-top: 960px;
 $bleed-size: 51px; // equal to height of header
 $hero-text-color: #364d65;
-$case-study-section: '.module--case-study';
+// $case-study-section: '.module--case-study';
 
 // Breakpoints Comeback hero
 $bp-hero-comeback-has-layout: 600px;
@@ -78,26 +78,6 @@ img { vertical-align: middle; }
   margin-right: auto;
 }
 
-.page__module--704 { border: 8px solid blue; }
-.page__module--1256 { border: 8px solid orange; }
-
-
-
-
-
-
-.module--case-study {
-  // padding-top: 3rem;
-  // padding-bottom: 3rem;
-  transition: 0.2s;
-  border: 6px solid green;
-
-  @include bp(800px) {
-    // padding-top: 6rem;
-    // padding-bottom: 6rem;
-  }
-}
-
 
 
 
@@ -117,7 +97,6 @@ img { vertical-align: middle; }
 }
 
 
-
 .case-study__section--banner {
   position: relative;
   padding: 0;
@@ -127,12 +106,18 @@ img { vertical-align: middle; }
 
 
 
+.case-study__section { border: 8px solid orange; }
+.case-study__section--banner { border: 8px solid green; }
+.case-study__section--broadsheet { border: 8px solid purple; }
+
+
+
 
 .case-study__content { }
 
 
 // If content is not the first child of a section
-* + .case-study__content { border: 2px solid blue; }
+* + .case-study__content { border: 8px solid blue; }
 
 
 
@@ -153,12 +138,7 @@ img { vertical-align: middle; }
 
 // Backgrounds
 // --------------------------------------------
-.case-study__bg {
-  background-color: var(--hero-bg);
-}
-
-
-.hero__bg { border: 8px solid yellow; }
+.case-study__bg { background-color: var(--hero-bg); }
 
 
 
@@ -177,13 +157,9 @@ img { vertical-align: middle; }
 }
 
 
-.hero--case-study { border: 8px solid red; }
-
-
-
-
-
 // -webkit-repeating-linear-gradient(-45deg, #fcfcfc 0, #f7f7f7 1px, #f7f7f7 0.15em, #fcfcfc calc(.15em + 1px), #fcfcfc 0.85em)
+
+
 
 
 // Hero Typography
@@ -198,12 +174,10 @@ img { vertical-align: middle; }
   color: $hero-text-color;
   text-align: center;
   transition: 0.2s;
-
   @include bp(800px) {
     margin-bottom: $space-one-quarter;
     font-size: 64px;
   }
-
   &:after {
     content: '';
     width: $size-four;
@@ -211,7 +185,6 @@ img { vertical-align: middle; }
     display: block;
     margin: $size-one-quarter auto;
     background-color: currentColor;
-
   }
 }
 
@@ -236,57 +209,28 @@ img { vertical-align: middle; }
 
 
 
-.headline--case-study--hero { color: red; }
-.text--case-study--hero { color: red; }
-
-
-
-.page__module--hero-text {
-  width: 100%;
-  max-width: 600px;
-  margin-left: auto;
-}
-
-
-
-
-
-
-
-
-
-
-// Section
+// Typography
 // --------------------------------------------
-.case-study__headline--section {
-  width: 100%;
-  max-width: 580px;
-  margin-top: 0;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1rem;
-  padding-left: $space-half;
-  padding-right: $space-half;
-  font-family: 'coranto-2';
-  font-size: $size-one-half;
-  font-weight: 400;
+.case-study__headline {
+  margin: 0;
+  margin-bottom: $space-one;
+  font-family: $type-face-headline-sans-alt;
+  font-size: 24px;
+  font-weight: 900;
   line-height: 1;
-  color: $hero-text-color;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 1px;
-  trans: 0.3s ease;
-  @include bp(800px) {
-    font-size: $size-two-half;
-    margin-bottom: 2rem;
-  }
+  color: var(--headline-color-case-study);
 }
 
 
-
-
-
-
+.case-study__text {
+  font-family: $type-face-text;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.45;
+  color: var(--text-color-case-study);
+  p { margin: 0; }
+  p + p { margin-top: $space-one-quarter; }
+}
 
 
 
@@ -294,6 +238,7 @@ img { vertical-align: middle; }
 // Images
 // --------------------------------------------
 .case-study__container--img {
+  position: relative;
   overflow: hidden;
 }
 
@@ -312,7 +257,6 @@ img { vertical-align: middle; }
   }
 }
 
-.case-study__img-container--broadsheet { border: 4px solid yellow; }
 
 .case-study__img {
   width: 100%;
@@ -320,18 +264,12 @@ img { vertical-align: middle; }
   vertical-align: middle;
 }
 
+
 .case-study__img--banner {
   animation: banner-zoom 12s ease-in-out infinite;
   transform-origin: 50% 50%;
   object-fit: cover;
-  // transform:
 }
-
-
-
-
-
-
 
 
 .case-study__banner-mask {
@@ -343,9 +281,8 @@ img { vertical-align: middle; }
   left: 0;
   width: 100%;
   height: 100%;
-  // background-color: rgba(255, 255, 255, 0.4);
-  // background-color: rgba(115, 115, 115, 0.3);
-  // background-color: red;
+  // background-color: rgba(32, 40, 49, 0.1);
+  background-image: url(/static/img/case-study/pattern.png);
 }
 
 
@@ -362,7 +299,6 @@ img { vertical-align: middle; }
   list-style: none;
   display: flex;
   flex-direction: column;
-
   @include bp($bp-details-has-layout) {
     display: flex;
     flex-wrap: wrap;
@@ -370,7 +306,6 @@ img { vertical-align: middle; }
     justify-content: space-between;
     max-width: $bp-details-has-layout;
   }
-
   @include bp($bp-details-is-3) {
     max-width: $bp-details-is-3;
     padding-left: 2rem;
@@ -388,7 +323,6 @@ img { vertical-align: middle; }
   padding-right: 1rem;
   & + & { margin-top: 3rem; }
   @include bp($bp-details-has-layout) {
-    // max-width: 320px;
     padding: 0;
     & + & { margin-top: 0; }
     width: calc(50% - (3rem / 2));
@@ -396,7 +330,6 @@ img { vertical-align: middle; }
     &:nth-child(1n + 3) { margin-top: $space-three; }
   }
   @include bp($bp-details-is-3) {
-    // width: 32.5%;
     width: calc(33.333% - (6rem / 3));
     &:nth-child(1n + 3) { margin-top: 0; }
     &:nth-child(1n + 4) { margin-top: $space-three; }
@@ -419,7 +352,6 @@ img { vertical-align: middle; }
   @include bp($bp-details-has-layout) {
     float: none;
     margin: 0;
-    // max-width: 250px;
     max-width: 100%;
     border-radius: 0;
   }
@@ -437,19 +369,15 @@ img { vertical-align: middle; }
 .case-study__headline--item {
   margin: 0;
   margin-bottom: $space-quarter;
-  // font-family: 'coranto-2';
   font-family: 'tablet-gothic';
   font-size: $size-one-quarter;
   font-weight: 700;
   line-height: 1.25;
   color: var(--headline-color-case-study);
-  // text-transform: uppercase;
-  // letter-spacing: 1px;
 }
 
 
 .case-study__text--item {
-  // font-family: 'coranto-2';
   font-size: $size-one;
   color: var(--text-color-case-study);
   line-height: 1.45;
@@ -457,17 +385,6 @@ img { vertical-align: middle; }
   p { margin: 0; }
   p + p { margin-top: 0.8rem; }
 }
-
-
-
-.case-study__details { border: 4px solid purple; }
-.case-study__detail-item { border: 4px solid pink; }
-
-
-
-
-
-
 
 
 
@@ -483,8 +400,6 @@ img { vertical-align: middle; }
 // --------------------------------------------
 
 
-
-
 // Typography
 // --------------------------------------------
 .headline--case-study--hero--comeback {
@@ -498,9 +413,7 @@ img { vertical-align: middle; }
   text-transform: uppercase;
   transition: 0.3s ease;
   text-align: left;
-
   @include bp(600px) { font-size: calc(80px + 3vw); }
-
   @include bp(800px) {
     margin-bottom: $space-one-quarter;
     font-size: calc(105px + 3vw);
@@ -510,51 +423,24 @@ img { vertical-align: middle; }
 }
 
 
-.headline--case-study--comeback {
-  margin: 0;
-  margin-bottom: $space-one;
-  font-family: $type-face-headline-sans-alt;
-  font-size: 24px;
-  font-weight: 900;
-  line-height: 1;
-  color: var(--headline-color-case-study);
-  // letter-spacing: -1px;
-}
-
-
-.text--case-study--comeback {
-  font-family: $type-face-text;
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.45;
-  color: var(--text-color-case-study);
-
-  p { margin: 0; }
-  p + p { margin-top: $space-one-quarter; }
-}
 
 
 .text--case-study--hero--comeback {
   margin: 0;
   font-family: $type-face-headline-sans-alt;
   font-size: calc(#{$size-one} + 1vw);
-  // font-size: $size-one;
   line-height: 1.5;
   font-weight: 400;
   transition: 0.3s ease;
   text-align: left;
   color: var(--text-color-hero);
-
   @include bp(800px) {
     font-size: $size-one-half;
     line-height: 1.65;
-    // line-height: 1.82;
   }
-
   p { margin: 0; }
   p + p { margin-top: $space-one-quarter; }
 }
-
 
 
 .headline--sub--case-study--hero--comeback {
@@ -571,8 +457,6 @@ img { vertical-align: middle; }
 }
 
 
-
-
 .case-study__content,
 .case-study__content--comeback {
   position: relative;
@@ -587,20 +471,6 @@ img { vertical-align: middle; }
   text-align: center;
 }
 
-.case-study__content { border: 8px solid red; }
-.content--case-study--comeback { border: 8px solid blue; }
-
-
-
-
-// .content__cols--2 {
-//   @include bp(600px) {
-//     text-align: left;
-//     column-count: 2;
-//     column-rule: 1px solid rgba(0, 0, 0, 0.4);
-//     column-gap: $space-three;
-//   }
-// }
 
 
 
@@ -621,12 +491,8 @@ img { vertical-align: middle; }
   border-radius: 50%;
   font-family: $type-face-headline-sans-alt;
   font-size: 14px;
-  // border: 2px solid rgba(#fff, 0.75);
-  // box-shadow: 4px 4px 8px rgba(125, 125, 125, 0.3);
   box-shadow: 4px 4px 8px rgba(#900909, 0.2);
-
   @include bp(800px) { top: -$space-one-quarter; }
-
   @include bp(960px) {
     top: -$space-one-half;
     width: 65px;
@@ -641,12 +507,10 @@ img { vertical-align: middle; }
   display: flex;
   align-items: center;
   width: 100%;
-
   @include bp(800px) {
     max-width: 250px;
     top: 25px;
   }
-
   &::after {
     content: '';
     position: absolute;
@@ -658,7 +522,6 @@ img { vertical-align: middle; }
     display: none;
     @include bp(800px) { display: block; }
   }
-
   &::before {
     content: '';
     position: absolute;
@@ -678,19 +541,15 @@ img { vertical-align: middle; }
   display: block;
   font-size: $size-one;
   line-height: 1.25;
-  // color: #fff;
   color: var(--text-color-hero-accent);
   font-weight: 600;
   text-align: left;
   padding-left: 30px;
-
   @include bp(800px) {
     text-align: center;
     padding-left: 0;
   }
 }
-
-
 
 
 
@@ -702,13 +561,11 @@ img { vertical-align: middle; }
   margin-left: auto;
   margin-right: auto;
   margin-bottom: calc(#{$space-one-half} + 3vw);
-
   @include bp($bp-hero-comeback-has-layout) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 50px;
   }
-
   @include bp(800px) {
     grid-gap: calc(50px + 5vw);
   }
@@ -724,7 +581,7 @@ img { vertical-align: middle; }
 
 
 
-// Comeback End Grid
+// Comeback End
 // --------------------------------------------
 .case-study__grid--comeback-end {
   max-width: 960px;
@@ -737,10 +594,7 @@ img { vertical-align: middle; }
   }
 
   .case-study__content--comeback {
-    // background-color: var(--section-bg);
-    @include bp(800px) {
-      text-align: left;
-    }
+    @include bp(800px) { text-align: left; }
   }
 
   .case-study__img-container {
@@ -803,15 +657,12 @@ img { vertical-align: middle; }
 }
 
 
-
 .hero__media--comeback {
   transition: 0.3s;
-
   &.hero__image-container--2 {
     @include bp(800px) {
       transform: translateY(calc(-15vh + 5vw));
     }
-
     @include bp(960px) {
       transform: translateY(calc(-47.5vh + 2vw));
     }
@@ -867,7 +718,6 @@ img { vertical-align: middle; }
 
 
 
-
 // Element appear (on scroll)
 // --------------------------------------------
 .slide-up {
@@ -911,23 +761,12 @@ img { vertical-align: middle; }
 
 
 
-// banner-zoom 12s ease-in-out infinite
-
-// @keyframes banner-zoom {
-//   0% { transform: translate3d(-15px,-15px,0) scale(1.01); }
-//   25% { transform: translate3d(-15px,-15px,0) scale(1.1); }
-//   50% { transform: translate3d(-15px,-15px,0) scale(1.1); }
-//   75% { transform: translate3d(-15px,-15px,0) scale(1.01); }
-//   to { transform: translate3d(-15px,-15px,0) scale(1.01); }
-// }
-
+// Banner Zoom
+// --------------------------------------------
 @keyframes banner-zoom {
-  0% { transform: translate3d(-15px,-15px,0) scale(1.05); filter: grayscale(75%); }
+  0% { transform: translate3d(-15px,-15px,0) scale(1.05); filter: grayscale(95%); }
   25% { transform: translate3d(-15px,-15px,0) scale(1.15); filter: grayscale(0); }
   50% { transform: translate3d(-15px,-15px,0) scale(1.15); filter: grayscale(0); }
-  75% { transform: translate3d(-15px,-15px,0) scale(1.05); filter: grayscale(75%); }
-  to { transform: translate3d(-15px,-15px,0) scale(1.05); filter: grayscale(75%); }
+  75% { transform: translate3d(-15px,-15px,0) scale(1.05); filter: grayscale(95%); }
+  to { transform: translate3d(-15px,-15px,0) scale(1.05); filter: grayscale(95%); }
 }
-
-
-

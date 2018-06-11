@@ -19,7 +19,7 @@ pageclass: page--has-no-bottom-margin
 {% elsif item.component == 'banner' %}
   {% include case-study/banner.html %}
 {% elsif item.component == 'broadsheet' %}
-  {% include case-study/broadsheet-comeback.html %}
+  {% include case-study/broadsheet.html %}
 {% else %}
   {% include case-study/comeback-end.html %}
 {% endif %}
