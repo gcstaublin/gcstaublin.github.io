@@ -29,13 +29,13 @@ const elements = document.querySelectorAll('.slide-up');
 // --------------------------
 function checkElement(e) {
   elements.forEach(element => {
-    // quarter way through the element
+    // x way through the element
     const slideInAt = (window.scrollY + window.innerHeight) - element.offsetHeight / 3;
     const isHalfShown = slideInAt > element.offsetTop;
-    console.log(element.offsetHeight, window.scrollY, window.innerHeight, slideInAt, element.offsetTop);
 
     if(isHalfShown) {
       element.classList.add('active');
+      console.log('hello');
     }
   });
 }

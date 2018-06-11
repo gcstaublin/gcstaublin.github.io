@@ -1,6 +1,6 @@
 ---
 component: banner
-image: comeback/comeback_banner.jpg
+image: comeback/comeback_banner_2004-alt2.jpg
 headline: A series of improbable moments
 ---
 

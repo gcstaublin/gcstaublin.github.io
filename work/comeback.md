@@ -2,7 +2,7 @@
 layout: case-study
 title: Grant Staublin | The Comebacks
 permalink: /work/comeback/
-<!-- pageclass: page-about -->
+pageclass: page--has-no-bottom-margin
 ---
 
 
