@@ -8,10 +8,10 @@ subhead: In 2004 and 2007, the Red Sox were a game away from elimination in the 
 images:
   - image: comeback_main_2007
     year: 2007
-    text: After winning game one, The Sox fell into a 3-1 hole to Cleveland. Three straight victories later, the Sox are back to the Series.
+    text: In 2007, the Sox won Game one then fell into a 3-1 hole to Cleveland. Three straight victories later, the Sox were back to the Series.
   - image: comeback_main_2004
     year: 2004
-    text: Down to their final three outs, it looked bleak. A stolen base. A bloody sock, And whole lot of late night baseball ended the Curse of the Bambino.
+    text: In 2004, the Sox were three outs from elimination. A stolen base, a bloody sock, and a whole lot of late night baseball later, the Curse of the Bambino was reversed.
 
 theme: red-sox
 ---
