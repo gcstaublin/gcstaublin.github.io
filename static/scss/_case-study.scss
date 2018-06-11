@@ -104,20 +104,11 @@ img { vertical-align: middle; }
 }
 
 
-
-
-.case-study__section { border: 8px solid orange; }
-.case-study__section--banner { border: 8px solid green; }
-.case-study__section--broadsheet { border: 8px solid purple; }
-
-
-
-
 .case-study__content { }
 
 
 // If content is not the first child of a section
-* + .case-study__content { border: 8px solid blue; }
+// * + .case-study__content { border: 8px solid blue; }
 
 
 
@@ -476,6 +467,7 @@ img { vertical-align: middle; }
 
 // Hero Accents
 // --------------------------------------------
+.case-study__accent--circle--hero,
 .hero__accent--circle {
   position: absolute;
   top: -$space-one;
@@ -502,7 +494,7 @@ img { vertical-align: middle; }
 }
 
 
-.hero__accent--diamond {
+.case-study__accent--diamond--hero {
   position: relative;
   display: flex;
   align-items: center;
@@ -556,7 +548,7 @@ img { vertical-align: middle; }
 
 // Comeback Hero Grid
 // --------------------------------------------
-.hero__grid--comeback {
+.case-study__grid--hero--comeback {
   max-width: 960px;
   margin-left: auto;
   margin-right: auto;
@@ -610,12 +602,12 @@ img { vertical-align: middle; }
       left: initial;
       right: 0px;
       margin-left: 0;
-      width: 500px;
+      width: calc(550px + 5vw);
       height: auto;
       transition: 0.2s;
     }
     @include bp(1100px) {
-      width: 600px;
+      width: 750px;
       top: -155px;
     }
   }
@@ -770,3 +762,11 @@ img { vertical-align: middle; }
   75% { transform: translate3d(-15px,-15px,0) scale(1.05); filter: grayscale(95%); }
   to { transform: translate3d(-15px,-15px,0) scale(1.05); filter: grayscale(95%); }
 }
+
+
+
+
+
+// .case-study__section { border: 8px solid orange; }
+// .case-study__section--banner { border: 8px solid green; }
+// .case-study__section--broadsheet { border: 8px solid purple; }
