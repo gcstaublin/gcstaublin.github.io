@@ -5,6 +5,7 @@ subhead: "With CSS source maps saving your dev tool tweaking back to your code b
 tease: "Edit SCSS directly from your browser? Yes, you can!"
 share: "CSS source maps will enable you to edit and save your SCSS right from your browser"
 date: 2015-03-10
+permalink: /articles/:title/
 ---
 
 Has this ever happened to you? You're tweaking CSS with the Chrome dev tools. You're making refinements, everything is getting dialed in just so. But then you make a fatal mistake, you refresh the browser, or maybe even close the window. Either way, it's gone. It's all gone. All that beautiful work is gone, leaving you to start over, hoping you can remember every rule and value you previously tweaked.

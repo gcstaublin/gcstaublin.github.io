@@ -1,0 +1,21 @@
+<section class="case-study__section--banner">
+  <div class="case-study__container--img">
+    <img
+      class="case-study__img case-study__img--banner"
+      src="/static/img/case-study/{{item.image}}" alt="">
+    <div class="case-study__banner-mask"></div>
+  </div>
+
+
+  {% if item.headline || item.content %}
+    <div class="case-study__content slide-up">
+      {% if item.headline %}
+        <h2 class="case-study__headline">{{item.headline}}</h2>
+      {% endif %}
+
+      {% if item.content %}
+        <div class="case-study__text">{{item.content}}</div>
+      {% endif %}
+    </div>
+  {% endif %}
+</section>

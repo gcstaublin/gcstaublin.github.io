@@ -1,0 +1,36 @@
+<section class="case-study__hero hero--bleed--top {% if item.theme %} theme--{{item.theme}} {% endif %}">
+  <div class="case-study__bg">
+    <div class="hero__content--case-study hero__content--case-study--comeback element--will-appear">
+
+      <div class="headline__container--comeback">
+        <h2 class="headline--case-study--hero--comeback">
+          {% for line in item.headline %}
+            <span>{{ line }}</span>
+          {% endfor %}
+        </h2>
+        <h3 class="headline--sub--case-study--hero--comeback">{{ item.subhead}}</h3>
+      </div>
+
+      <div class="case-study__grid--hero--comeback">
+        {% for comeback in item.images %}
+          <div class="hero__media--comeback hero__image-container--{{forloop.index}}">
+            <div class="hero__image-container--comeback">
+              <img src="/static/img/case-study/comeback/{{comeback.image}}.jpg" alt="">
+            </div>
+            <h5 class="case-study__accent--circle--hero">{{comeback.year}}</h5>
+            <p class="case-study__accent--diamond--hero">
+              <span class="hero__accent--diamond-text">{{comeback.text}}</span>
+            </p>
+          </div>
+        {% endfor %}
+      </div>
+
+      <div class="module__text--hero--comeback slide-up">
+        <div class="text--case-study--hero--comeback">
+         {{ item.content }}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

@@ -42,7 +42,7 @@
   color: $color;
 }
 
-@mixin display($color: black, $font: $font-face-headline, $font-weight: $display-wt ) {
+@mixin display($color: black, $font: $type-face-headline, $font-weight: $display-wt ) {
   font-family: $font;
   font-weight: $font-weight;
   color: $color;

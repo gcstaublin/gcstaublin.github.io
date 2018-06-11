@@ -6,6 +6,7 @@ share: "What's wrong with CSS-in-JS? Nothing? Everything? Something?"
 date: 2018-05-13
 status: pinned
 pinnedPosition: main
+permalink: /articles/:title/
 ---
 
 One great aspect of the web development community is that there's always someone posing a challenging thought. That initial prompt inspires many responses, which in turn inspires more responses. It's like our very own version of the <a href="https://en.wikipedia.org/wiki/Roxanne_Wars" target="_blank">Roxanne Wars</a>, albeit with fewer rhymes and no dope beats, but maybe more example CodePens or JSFiddles.
