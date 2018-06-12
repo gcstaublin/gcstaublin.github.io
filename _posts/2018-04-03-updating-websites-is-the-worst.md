@@ -4,7 +4,7 @@ title:  "Updating a personal website is the worst"
 tease: "Updating a personal website is the worst"
 share: "Updating a personal website is the worst"
 date: 2018-04-03
-status: pinned
+<!-- status: pinned -->
 permalink: /articles/:title/
 ---
 
