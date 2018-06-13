@@ -52,14 +52,16 @@
 
 
 .article__headline {
-  @include display;
+  // @include display;
+  font-family: $type-face-headline-sans-alt;
   margin: 0;
   font-size: $size-two-half;
   line-height: 1;
   font-weight: 900;
   text-transform: uppercase;
   transition: 0.2s ease;
-  letter-spacing: 1px;
+  // letter-spacing: 1px;
+  letter-spacing: -1px;
 
   @include bp($bp-headline-sm) {
     font-size: 5rem;
