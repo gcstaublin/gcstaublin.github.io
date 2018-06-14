@@ -1,81 +1,20 @@
 ---
 layout: archive
 title: Grant Staubin | Work
-pageclass: page--work theme--silver-fox
+pageclass: page--work page--has-no-bottom-margin theme--silver-fox
 permalink: /work/
 ---
 
 
-
-<!-- Smaller Teases -->
+<!-- First Big -->
 <!-- ========================== -->
-<!-- <div class="archive__pinned">
-  <div class="archive__pinned-main">
-    {% for item in site.data.work.projects limit:1 %}
-      <article class="archive__article--pinned-main">
-        <div class="archive__image--work">
-          <img src="/static/img/{{item.img}}">
-        </div>
-        <div class="archive__content--work">
-          <h3 class="archive__headline--work">
-            {{item.head}}
-          </h3>
-          <p class="archive__text--work">
-          {{item.text}}
-          <a class="archive__link--text" target="_blank" href="http://{{item.url}}">See project</a>
-        </p>
-        </div>
-      </article>
-    {% endfor %}
-  </div>
-
-  <div class="archive__pinned-secondary">
-    {% for item in site.data.work.projects offset:1 limit:1 %}
-      <article class="archive__article--pinned-secondary">
-        <div class="archive__image--work">
-          <img src="/static/img/{{item.img}}">
-        </div>
-        <div class="archive__content--work">
-          <h3 class="archive__headline--work">
-            {{item.head}}
-          </h3>
-          <p class="archive__text--work">
-          {{item.text}}
-          <a class="archive__link--text" target="_blank" href="http://{{item.url}}">See project</a>
-        </p>
-        </div>
-      </article>
-    {% endfor %}
-  </div>
-</div> -->
-
-
-
-<!-- Smaller Teases -->
-<!-- ========================== -->
-<!-- <ul class="archive__items archive__items--grid">
-  {% for item in site.data.work.projects offset:2 %}
-    <li class="archive__item archive__item--grid">
-      {% include /components/work-item.html
-          img=item.img
-          head=item.head
-          text=item.text
-          url=item.url
-      %}
-    </li>
-  {% endfor %}
-</ul> -->
-
-
-
-
 {% for item in site.data.work.projects limit:1 %}
-<article class="work__item {% if item.theme %}theme--{{item.theme}}{% endif %}">
+<article class="work__item work__item--will-bleed hero--bleed--top {% if item.theme %}theme--{{item.theme}}{% endif %}">
   <div class="work__inner--item work__grid--item--2">
     <div class="work__media">
       <div class="work__container--img">
-        <!-- <img src="/static/img/{{item.img}}"> -->
-        <img class="work__img" src="/static/img/work_landing/grant_2018.jpg">
+        <img src="/static/img/work_landing/{{item.img}}">
+        <!-- <img class="work__img" src="/static/img/work_landing/grant_2018.jpg"> -->
       </div>
     </div>
 
@@ -85,7 +24,11 @@ permalink: /work/
       </h3>
       <div class="work__text">
         {{item.text}}
-        <a class="archive__link--text" target="_blank" href="http://{{item.url}}">See project</a>
+        {% if item.internal == true %}
+          <a class="archive__link--text" href="http://{{site.baseurl}}/{{item.url}}">Read Case Study</a>
+          {% else %}
+           <a class="archive__link--text" target="_blank" href="http://{{item.url}}">Visit Live Site</a>
+        {% endif %}
       </div>
     </div>
 
@@ -95,45 +38,100 @@ permalink: /work/
 
 
 
-<section class="work__grid--2">
-{% for item in site.data.work.projects offset:1 %}
-  <article class="work__item--small {% if item.theme %}theme--{{item.theme}}{% endif %}">
-      <div class="work__container--img--small">
-        <img class="work__img" src="/static/img/work_landing/grant_2018.jpg">
-      </div>
-
-      <div class="work__content">
-        <h3 class="work__headline">
-          {{item.head}}
-        </h3>
-        <div class="work__text">
-          {{item.text}}
-          <a class="archive__link--text" target="_blank" href="http://{{item.url}}">See project</a>
+<!-- First Smalls -->
+<!-- ========================== -->
+<section class="work__grid--wrapper">
+  <div class="work__grid--2">
+  {% for item in site.data.work.projects offset:1 limit: 2 %}
+    <article class="work__item--small {% if item.theme %}theme--{{item.theme}}{% endif %}">
+        <div class="work__media work__media--small">
+          <div class="work__container--img--small">
+            <img class="work__img" src="/static/img/work_landing/{{item.img}}">
+            <!-- <img class="work__img" src="/static/img/work_landing/grant_2018.jpg"> -->
+          </div>
         </div>
-      </div>
-  </article>
-{% endfor %}
+
+        <div class="work__content">
+          <h3 class="work__headline work__headline--small">
+            {{item.head}}
+          </h3>
+          <div class="work__text">
+            {{item.text}}
+            {% if item.internal == true %}
+              <a class="archive__link--text" href="http://{{site.baseurl}}/{{item.url}}">Read Case Study</a>
+              {% else %}
+               <a class="archive__link--text" target="_blank" href="http://{{item.url}}">Visit Live Site</a>
+            {% endif %}
+          </div>
+        </div>
+    </article>
+  {% endfor %}
+  </div>
 </section>
 
 
 
-
-<!-- <article class="archive__article--work">
-  <div class="archive__meta archive__meta--work">
-    <a target="_blank" href="http://{{item.url}}">
-      <div class="archive__img--work--small">
-        <img src="/static/img/{{item.img}}">
+<!-- Second Big -->
+<!-- ========================== -->
+{% for item in site.data.work.projects limit:1 offset: 3 %}
+<article class="work__item {% if item.theme %}theme--{{item.theme}}{% endif %}">
+  <div class="work__inner--item work__grid--item--2">
+    <div class="work__media">
+      <div class="work__container--img">
+        <img class="work__img" src="/static/img/work_landing/{{item.img}}">
+        <!-- <img class="work__img" src="/static/img/work_landing/grant_2018.jpg"> -->
       </div>
-    </a>
-  </div>
+    </div>
 
-  <div class="archive__content--work--small">
-    <h3 class="archive__headline--item archive__headline--work--small">
-      {{item.head}}
-    </h3>
-    <p class="archive__text--work">
-      {{item.text}}
-      <a class="archive__link--text" target="_blank" href="http://{{item.url}}">See project</a>
-    </p>
+    <div class="work__content slide-up">
+      <h3 class="work__headline">
+        {{item.head}}
+      </h3>
+      <div class="work__text">
+        {{item.text}}
+        {% if item.internal == true %}
+          <a class="archive__link--text" href="http://{{site.baseurl}}/{{item.url}}">Read Case Study</a>
+          {% else %}
+           <a class="archive__link--text" target="_blank" href="http://{{item.url}}">Visit Live Site</a>
+        {% endif %}
+
+      </div>
+    </div>
+
   </div>
-</article> -->
+</article>
+{% endfor %}
+
+
+
+<!-- Second Smalls -->
+<!-- ========================== -->
+<section class="work__grid--wrapper">
+  <div class="work__grid--2">
+  {% for item in site.data.work.projects offset:4 %}
+    <article class="work__item--small {% if item.theme %}theme--{{item.theme}}{% endif %}">
+        <div class="work__media work__media--small">
+          <div class="work__container--img--small">
+            <img class="work__img" src="/static/img/work_landing/{{item.img}}">
+            <!-- <img class="work__img" src="/static/img/work_landing/grant_2018.jpg"> -->
+          </div>
+        </div>
+
+        <div class="work__content slide-up">
+          <h3 class="work__headline work__headline--small slide-up">
+            {{item.head}}
+          </h3>
+          <div class="work__text">
+            {{item.text}}
+            {% if item.internal == true %}
+              <a class="archive__link--text" href="http://{{site.baseurl}}/{{item.url}}">Read Case Study</a>
+              {% else %}
+               <a class="archive__link--text" target="_blank" href="http://{{item.url}}">Visit Live Site</a>
+            {% endif %}
+
+          </div>
+        </div>
+    </article>
+  {% endfor %}
+  </div>
+</section>
