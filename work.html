@@ -97,13 +97,10 @@ permalink: /work/
 
 <section class="work__grid--2">
 {% for item in site.data.work.projects offset:1 %}
-  <article class="work__item {% if item.theme %}theme--{{item.theme}}{% endif %}">
-    <div class="work__inner--item">
-      <!-- <div class="work__media">
-        <div class="work__container--img">
-          <img class="work__img" src="/static/img/work_landing/grant_2018.jpg">
-        </div>
-      </div> -->
+  <article class="work__item--small {% if item.theme %}theme--{{item.theme}}{% endif %}">
+      <div class="work__container--img--small">
+        <img class="work__img" src="/static/img/work_landing/grant_2018.jpg">
+      </div>
 
       <div class="work__content">
         <h3 class="work__headline">
@@ -114,8 +111,6 @@ permalink: /work/
           <a class="archive__link--text" target="_blank" href="http://{{item.url}}">See project</a>
         </div>
       </div>
-
-    </div>
   </article>
 {% endfor %}
 </section>
