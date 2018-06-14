@@ -1,15 +1,18 @@
 projects:
   - head: Uniform
+    theme: poop
     url: uniform.hudl.com
     img: uniform_trans.png
     text: Uniform is the design system for Hudl, a sports video company, whose mission is to help coaches, athletes and teams win. During it's first decade, Hudl rapidly grew from an upstart focused on american football to a global company, helping users of all sports. Without a cohesive, codified design language, design debt grew as Hudl expanded into new sports and new geographies. Uniform provides a shared, unified system for designers and developers to build cohesive products. During my tenure at Hudl, I was a member of the small, collborative team, trusted to create this system for our growing and expanding suite of products. I served as the lead css developer, occasional React component wrestler and primary accesibility czar.
 
   - head: Storey Publishing
-    url: storey.com
+    theme: nerd
+    url: www.storey.com
     img: storey_trans.png
     text: Storey Publishing, a book publisher for makers, doers and growers, wanted a new home for their content and products. Storey wanted to elevate their informative, daily editorial content. They also hoped to create an extensible foundation for their book product pages, highlighting author tours and book reviews, showcasing book previews and related editorial content as well as providing easy to update color themes, giving individual title their own unique indentity. I served as a designer and front-end developer on this project, handling daily communication with the folks at Storey.
 
   - head: The Hechinger Report
+    theme: rock
     url: hechingerreport.org
     img: hechinger_trans.png
     text: Upstatement built this lovely, new home for our friends at Hechinger. I worked as a part of three person design team to find the visual voice then served as a lead front-end developer to build the site in a quick succession of sprints. In addition, I handled much of the project management, handling daily communication with the client.

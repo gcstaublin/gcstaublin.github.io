@@ -80,7 +80,6 @@ $border-4: 4px solid rgba(0, 0, 0, 0.8);
 
 // Archive Items Grid
 // --------------------------------------------
-
 .archive__items--grid {
   display: flex;
   flex-wrap: wrap;
@@ -392,3 +391,166 @@ $border-4: 4px solid rgba(0, 0, 0, 0.8);
   align-self: center;
 }
 
+
+
+
+// --------------------------------------------
+// --------------------------------------------
+//
+// Work Redesign
+//
+// --------------------------------------------
+// --------------------------------------------
+:root {
+  --archive-section-color-bg: #2F80ED;
+  // --archive-section-color-border: #2158A2;
+  --archive-section-color-border: rgba(0, 0, 0, 0.2);
+  --archive-section-color-text: #fff;
+}
+
+.theme--poop {
+  --archive-section-color-bg: #27AE60;
+  // --archive-section-color-border: #2B8150;
+  // --archive-section-color-border: rgba(0, 0, 0, 0.2);
+}
+
+.theme--nerd {
+  --archive-section-color-bg: #F2C94C;
+  // --archive-section-color-border: #CEB25A;
+  // --archive-section-color-border: rgba(0, 0, 0, 0.2);
+}
+
+.theme--rock {
+  --archive-section-color-bg: #BB6BD9;
+  // --archive-section-color-border: #9D57B8;
+  // --archive-section-color-border: rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+// Work Item
+// --------------------------------------------
+.work__item {
+  background-color: var(--archive-section-color-bg);
+  padding-top: calc(2rem + 5vw);
+  padding-bottom: calc(2rem + 10vw);
+  padding-left: calc(2rem + 1vw);
+  padding-right: calc(2rem + 1vw);
+  @include bp(1200px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.work__inner--item {
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  // border: 6px solid var(--archive-section-color-border);
+  border-width: calc(2px + 0.5vw);
+  border-style: solid;
+  border-color: var(--archive-section-color-border);
+  padding: calc(2rem + 5vw);
+}
+
+
+
+// Work Grid
+// --------------------------------------------
+.work__grid--2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0;
+}
+
+.work__grid--item--2 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: calc(50px + 3vw);
+}
+
+.work__item:nth-of-type(2n + 2) {
+  // .archive__grid--2 { background-color: green; }
+  .work__grid--item--2 {
+    grid-template-columns: 2fr 1fr;
+  }
+  .work__media {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .work__container--img {
+    left: initial;
+    right: -25vw;
+  }
+}
+
+
+.work__content { border: 1px solid red; }
+
+
+
+// Work Typography
+// --------------------------------------------
+.work__headline {
+  position: relative;
+  margin: 0;
+  font-family: $type-face-headline-sans-alt;
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1;
+  color: #fff;
+
+  &:after {
+    position: absolute;
+    left: 0;
+    bottom: -38px;
+    content: '';
+    width: 96px;
+    height: 12px;
+    background-color: var(--archive-section-color-border);
+    border-radius: 0.5rem;
+  }
+}
+
+.work__text {
+  margin-top: 62px;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.55;
+  color: var(--archive-section-color-text);
+}
+
+.archive__link--text {
+  margin-top: 24px;
+}
+
+
+
+// Work Typography
+// --------------------------------------------
+.work__media {
+  position: relative;
+}
+
+
+.work__container--img {
+  position: absolute;
+  left: -25vw;
+
+  padding: 2rem;
+  border: 2px solid var(--archive-section-color-border);
+  // border-radius: 0.8rem;
+  border-radius: 1.4rem;
+  background-color: #1a1a1a;
+  padding-top: 3.57vw;
+  padding-bottom: 3.57vw;
+  padding-left: 1.43vw;
+  padding-right: 1.43vw;
+}
+
+.work__img {
+  border: 2px solid darken(#1a1a1a, 5%);
+  border-radius: 4px;
+}

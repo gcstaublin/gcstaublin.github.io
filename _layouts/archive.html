@@ -18,8 +18,8 @@
 
       <!-- Content -->
       <!-- ===================================== -->
-        <section id="content" role="main" class="archive__container">
-          <div class="gcs-page__content fade-in">
+        <section id="content" role="main" class="{% if page.contentClass %}{{page.contentClass}}{% endif %}">
+          <div class="fade-in">
             {{ content }}
           </div> <!-- /page-content -->
         </section> <!-- /post-container -->
