@@ -10,7 +10,7 @@ permalink: /work/
 <!-- ========================== -->
 {% for item in site.data.work.projects limit:1 %}
 <article class="work__item work__item--will-bleed hero--bleed--top {% if item.theme %}theme--{{item.theme}}{% endif %}">
-  <div class="work__inner--item work__grid--item--2">
+  <div class="work__inner--item work__grid--item--2 element--will-appear">
     <div class="work__media">
       <div class="work__container--img work__device">
         <img src="/static/img/work_landing/{{item.img}}">
@@ -25,7 +25,7 @@ permalink: /work/
       <div class="work__text">
         {{item.text}}
         {% if item.internal == true %}
-          <a class="archive__link--text work__link--text" href="http://{{site.baseurl}}/{{item.url}}">Read Case Study</a>
+          <a class="archive__link--text work__link--text work__link--text--alt" href="{{site.baseurl}}/work/{{ item.url}}">Read Case Study</a>
           {% else %}
            <a class="archive__link--text work__link--text" target="_blank" href="http://{{item.url}}">Visit Live Site</a>
         {% endif %}
@@ -90,7 +90,7 @@ permalink: /work/
       <div class="work__text">
         {{item.text}}
         {% if item.internal == true %}
-          <a class="archive__link--text work__link--text" href="http://{{site.baseurl}}/{{item.url}}">Read Case Study</a>
+          <a class="archive__link--text work__link--text work__link--text--alt" href="{{site.baseurl}}/work/{{ item.url}}">Read Case Study</a>
           {% else %}
            <a class="archive__link--text work__link--text" target="_blank" href="http://{{item.url}}">Visit Live Site</a>
         {% endif %}
@@ -124,7 +124,7 @@ permalink: /work/
           <div class="work__text">
             {{item.text}}
             {% if item.internal == true %}
-              <a class="archive__link--text work__link--text work__link--text--alt" href="http://{{site.baseurl}}/{{item.url}}">Read Case Study</a>
+              <a class="archive__link--text work__link--text work__link--text--alt" href="{{site.baseurl}}/work/{{ item.url}}">Read Case Study</a>
               {% else %}
                <a class="archive__link--text work__link--text" target="_blank" href="http://{{item.url}}">Visit Live Site</a>
             {% endif %}
