@@ -1,7 +1,7 @@
 ---
 layout: archive
 title: Grant Staubin | Work
-pageclass: page--work page--has-no-bottom-margin theme--silver-fox
+pageclass: page--work page--has-no-bottom-margin
 permalink: /work/
 ---
 
@@ -12,7 +12,7 @@ permalink: /work/
 <article class="work__item work__item--will-bleed hero--bleed--top {% if item.theme %}theme--{{item.theme}}{% endif %}">
   <div class="work__inner--item work__grid--item--2">
     <div class="work__media">
-      <div class="work__container--img">
+      <div class="work__container--img work__device">
         <img src="/static/img/work_landing/{{item.img}}">
         <!-- <img class="work__img" src="/static/img/work_landing/grant_2018.jpg"> -->
       </div>
@@ -25,9 +25,9 @@ permalink: /work/
       <div class="work__text">
         {{item.text}}
         {% if item.internal == true %}
-          <a class="archive__link--text" href="http://{{site.baseurl}}/{{item.url}}">Read Case Study</a>
+          <a class="archive__link--text work__link--text" href="http://{{site.baseurl}}/{{item.url}}">Read Case Study</a>
           {% else %}
-           <a class="archive__link--text" target="_blank" href="http://{{item.url}}">Visit Live Site</a>
+           <a class="archive__link--text work__link--text" target="_blank" href="http://{{item.url}}">Visit Live Site</a>
         {% endif %}
       </div>
     </div>
@@ -45,7 +45,7 @@ permalink: /work/
   {% for item in site.data.work.projects offset:1 limit: 2 %}
     <article class="work__item--small {% if item.theme %}theme--{{item.theme}}{% endif %}">
         <div class="work__media work__media--small">
-          <div class="work__container--img--small">
+          <div class="work__container--img--small work__device--small">
             <img class="work__img" src="/static/img/work_landing/{{item.img}}">
             <!-- <img class="work__img" src="/static/img/work_landing/grant_2018.jpg"> -->
           </div>
@@ -58,9 +58,9 @@ permalink: /work/
           <div class="work__text">
             {{item.text}}
             {% if item.internal == true %}
-              <a class="archive__link--text" href="http://{{site.baseurl}}/{{item.url}}">Read Case Study</a>
+              <a class="archive__link--text work__link--text work__link--text--alt" href="{{ item.url | relative_url }}">Read Case Study</a>
               {% else %}
-               <a class="archive__link--text" target="_blank" href="http://{{item.url}}">Visit Live Site</a>
+               <a class="archive__link--text work__link--text" target="_blank" href="http://{{item.url}}">Visit Live Site</a>
             {% endif %}
           </div>
         </div>
@@ -77,7 +77,7 @@ permalink: /work/
 <article class="work__item {% if item.theme %}theme--{{item.theme}}{% endif %}">
   <div class="work__inner--item work__grid--item--2">
     <div class="work__media">
-      <div class="work__container--img">
+      <div class="work__container--img work__device">
         <img class="work__img" src="/static/img/work_landing/{{item.img}}">
         <!-- <img class="work__img" src="/static/img/work_landing/grant_2018.jpg"> -->
       </div>
@@ -90,9 +90,9 @@ permalink: /work/
       <div class="work__text">
         {{item.text}}
         {% if item.internal == true %}
-          <a class="archive__link--text" href="http://{{site.baseurl}}/{{item.url}}">Read Case Study</a>
+          <a class="archive__link--text work__link--text" href="http://{{site.baseurl}}/{{item.url}}">Read Case Study</a>
           {% else %}
-           <a class="archive__link--text" target="_blank" href="http://{{item.url}}">Visit Live Site</a>
+           <a class="archive__link--text work__link--text" target="_blank" href="http://{{item.url}}">Visit Live Site</a>
         {% endif %}
 
       </div>
@@ -111,7 +111,7 @@ permalink: /work/
   {% for item in site.data.work.projects offset:4 %}
     <article class="work__item--small {% if item.theme %}theme--{{item.theme}}{% endif %}">
         <div class="work__media work__media--small">
-          <div class="work__container--img--small">
+          <div class="work__container--img--small work__device--small">
             <img class="work__img" src="/static/img/work_landing/{{item.img}}">
             <!-- <img class="work__img" src="/static/img/work_landing/grant_2018.jpg"> -->
           </div>
@@ -124,9 +124,9 @@ permalink: /work/
           <div class="work__text">
             {{item.text}}
             {% if item.internal == true %}
-              <a class="archive__link--text" href="http://{{site.baseurl}}/{{item.url}}">Read Case Study</a>
+              <a class="archive__link--text work__link--text work__link--text--alt" href="http://{{site.baseurl}}/{{item.url}}">Read Case Study</a>
               {% else %}
-               <a class="archive__link--text" target="_blank" href="http://{{item.url}}">Visit Live Site</a>
+               <a class="archive__link--text work__link--text" target="_blank" href="http://{{item.url}}">Visit Live Site</a>
             {% endif %}
 
           </div>
