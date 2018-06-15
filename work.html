@@ -58,7 +58,7 @@ permalink: /work/
           <div class="work__text">
             {{item.text}}
             {% if item.internal == true %}
-              <a class="archive__link--text work__link--text work__link--text--alt" href="{{site.baseurl}}{{ item.url}}">Read Case Study</a>
+              <a class="archive__link--text work__link--text work__link--text--alt" href="{{site.baseurl}}/work/{{ item.url}}">Read Case Study</a>
               {% else %}
                <a class="archive__link--text work__link--text" target="_blank" href="http://{{item.url}}">Visit Live Site</a>
             {% endif %}

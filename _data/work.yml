@@ -8,14 +8,14 @@ projects:
   - head: The Grand Goodbye
     theme: mustard
     internal: true
-    url: /work/goodbye-mike/
+    url: goodbye-mike/
     img: goodbye_work_tease.jpg
     text: In my previous life as a print designer and art director, I designed my fair share of goodbye pages for departing colleagues. They're a fun way to send them off with a laugh. This is the best goodbye page. I examined this goodbye page and the <a class="link--work" href="/work/comeback/">comeback page</a> to work through and inform how I want to approach case studies.
 
   - head: The Comebacks
     theme: sky
     internal: true
-    url: /work/comeback/
+    url: comeback/
     img: comeback_work_tease.jpg
     text: If you are a designer at a newspaper, one of the best assignments you can have is working in the Sports department. The hours are long and sometimes it's a grind, but it's worth it. This case study examines the Red Sox's comeback in the 2004 and 2007 ALCS. Along with <a class="link--work" href="/work/goodbye-mike/">this page</a>, it was an exercise in thinking through an approach to case studies.
 
