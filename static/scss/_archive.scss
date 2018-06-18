@@ -415,6 +415,9 @@ $bp-work-grid-large-has-image-adjustment: 1100px;
 
 $bp-adjust-item-for-bleed: 960px;
 
+$bp-device-large-increase: 600px;
+
+
 
 
 // Theme Variables
@@ -487,7 +490,7 @@ $bp-adjust-item-for-bleed: 960px;
 }
 
 
-.work__grid--item--2 {
+.work__grid--2--item {
   @include bp($bp-work-grid-large-has-layout) {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -746,26 +749,29 @@ $bp-adjust-item-for-bleed: 960px;
 // Work Device
 // --------------------------------------------
 .work__device {
-  border-radius: 1.4rem;
-  background-color: #1a1a1a;
-  // padding-top: 3.57vw;
-  // padding-bottom: 3.57vw;
-  // padding-left: 1.43vw;
-  // padding-right: 1.43vw;
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  transition: 0.2s;
-}
-
-
-.work__device--small {
-  border-radius: 0.75rem;
-  background-color: #1a1a1a;
   padding-top: 1.15rem;
   padding-bottom: 1.15rem;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
+  border-radius: 0.75rem;
+  background-color: #1a1a1a;
+  transition: 0.2s;
+  @include bp($bp-device-large-increase) {
+    border-radius: 1.4rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+
+.work__device--small {
+  padding-top: 1.15rem;
+  padding-bottom: 1.15rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  border-radius: 0.75rem;
+  background-color: #1a1a1a;
   transition: 0.2s;
 }
