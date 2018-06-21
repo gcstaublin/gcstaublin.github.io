@@ -51,6 +51,12 @@ $bp-img-will-overlap: $bp-bleed-top;
   --section-bg: #F13B3B;
 }
 
+.theme--hudl {
+  --hero-bg: #f58238;
+  --headline-color-case-study: #fff;
+  --text-color-hero: #f7f0d5;
+}
+
 
 
 
@@ -240,7 +246,7 @@ img { vertical-align: middle; }
   // max-width: 704px;
   padding-left: $space-half;
   padding-right: $space-half;
-  background-color: #fff;
+  // background-color: #fff;
   transition: 0.2s;
   @include bp($bp-img-will-overlap) {
     top: -51px;
@@ -259,6 +265,11 @@ img { vertical-align: middle; }
 .case-study__img--banner {
   animation: banner-zoom 12s ease-in-out infinite;
   transform-origin: 50% 50%;
+  object-fit: cover;
+}
+
+
+.case-study__img--banner--no-zoom {
   object-fit: cover;
 }
 
@@ -378,8 +389,22 @@ img { vertical-align: middle; }
 }
 
 
+// Item Highlight
+// --------------------------------------------
+.case-study__item--highlight {
+  border: 1px solid red;
+  display: flex;
+}
 
 
+.case-study__container--item--image {
+  max-width: 400px;
+}
+
+
+.case-study__image--item--highlight {
+
+}
 
 
 // --------------------------------------------

@@ -1,7 +1,7 @@
 <section class="case-study__section--banner">
   <div class="case-study__container--img">
     <img
-      class="case-study__img case-study__img--banner"
+      class="case-study__img {% if item.zoom == false %}case-study__img--banner--no-zoom {% else %}case-study__img--banner {% endif %}"
       src="/static/img/case-study/{{item.image}}" alt="">
     <div class="case-study__banner-mask"></div>
   </div>

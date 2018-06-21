@@ -1,0 +1,17 @@
+<section class="case-study__section--broadsheet">
+  <div class="case-study__container--img--broadsheet case-study__module--704 element--will-appear">
+    <img class="case-study__img work__device" src="/static/img/work_landing/uniDocs_work_tease.jpg" alt="">
+  </div>
+
+  {% if item.headline || item.content %}
+    <div class="case-study__content slide-up">
+      {% if item.headline %}
+        <h2 class="case-study__headline">{{item.headline}}</h2>
+      {% endif %}
+
+      {% if item.content %}
+        <div class="case-study__text">{{item.content}}</div>
+      {% endif %}
+    </div>
+  {% endif %}
+</section>
