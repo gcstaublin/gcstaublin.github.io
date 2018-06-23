@@ -1,8 +1,8 @@
 ---
 component: device
-headline: Here’s your canvas. Go make something great.
+headline: Utilitarian
 <!-- image: comeback/comeback_blank.jpg -->
 ---
 
 
-The Sox closed out Game 7 of the ALCS on a Sunday night. When I came into work Monday morning, I knew my job would be working on World Series preview pages, but that’s all I knew. I checked in with the Sports department, and learned the next two preview covers would focus on the 2004 and 2007 comebacks, respectively. At 10 a.m., hours after a comeback no one expected, that’s all you get: a five minute conversation, outlining the rough editorial vision. There’s no story to read. You’re 12 hours away from deadline. It’s time to get your creative, story telling juices flowing.
+The first thing users saw arriving on the uniDocs homepage was short descriptions of recent releases, linking to the full release notes on GitHub. I took pride in writing very detailed release notes, making sure users had all the information they needed when deciding to upgrade. I know I don't want like when software pull the rug out from underneath me with updates, so I tried to ensure our users wouldn't get hit with time sucking surprises. Additionally, the homepage provided links to the GitHub repos for our CSS library and our React components, as well as the separate designer-specific documentation site.
