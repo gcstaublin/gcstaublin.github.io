@@ -5,6 +5,13 @@ projects:
     img: uniform_work_tease.jpg
     text: Uniform is the design system for Hudl, a sports video company, whose mission is to help coaches, athletes and teams win. During it's first decade, Hudl rapidly grew from an upstart focused on american football to a global company, helping users of all sports. Without a cohesive, codified design language, design debt grew as Hudl expanded into new sports and new geographies. Uniform provides a shared, unified system for designers and developers to build cohesive products. During my tenure at Hudl, I was a member of the small, collborative team, trusted to create this system for our growing and expanding suite of products. I served as the lead css developer, occasional React component wrestler and primary accesibility czar.
 
+  - head: Uniform UI Documentation
+    theme: hudl
+    internal: true
+    url: uniform-ui-documentation/
+    img: uniDocs_work_tease.jpg
+    text: For the first couple years of Uniform's existence, the Uniform-UI-Documentation site was the go to site for information about our CSS library, the correct HTML markup or even which React component to use. I handled the writing, development and addition of new features to the site. It was my one-man jam. I learned a lot being the maintainer of this site. Communicating how to use our site helped me be more attuned to the needs of Uniform's users. It also was a crash course in untangling legacy code, my own legacy code. Unfortunately, the site was put out to pasture when we launched <a class="link--work"  href="http://uniform.hudl.com" target="_blank">the new documentation site</a> in early 2018, but this project will always hold a special place in my heart.
+
   - head: The Grand Goodbye
     theme: mustard
     internal: true

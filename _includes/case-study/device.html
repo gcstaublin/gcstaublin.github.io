@@ -1,6 +1,6 @@
 <section class="case-study__section--broadsheet">
   <div class="case-study__container--img--broadsheet case-study__module--704 element--will-appear">
-    <img class="case-study__img" src="/static/img/case-study/{{item.image}}" alt="">
+    <img class="case-study__img work__device--small" src="/static/img/case-study/{{item.image}}" alt="">
   </div>
 
   {% if item.headline || item.content %}
@@ -14,4 +14,8 @@
       {% endif %}
     </div>
   {% endif %}
+
+<!--   {% if item.headline || item.content %}
+    {% include case-study/item-content.html headline=item.headline content=item.content %}
+  {% endif %} -->
 </section>

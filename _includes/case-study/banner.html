@@ -1,14 +1,14 @@
 <section class="case-study__section--banner">
   <div class="case-study__container--img">
     <img
-      class="case-study__img case-study__img--banner"
+      class="case-study__img {% if item.zoom == false %}case-study__img--banner--no-zoom {% else %}case-study__img--banner {% endif %}"
       src="/static/img/case-study/{{item.image}}" alt="">
     <div class="case-study__banner-mask"></div>
   </div>
 
 
   {% if item.headline || item.content %}
-    <div class="case-study__content slide-up">
+    <div class="case-study__content js--in-view element--will-slide-up">
       {% if item.headline %}
         <h2 class="case-study__headline">{{item.headline}}</h2>
       {% endif %}
