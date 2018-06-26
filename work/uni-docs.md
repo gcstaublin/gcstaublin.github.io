@@ -6,7 +6,7 @@ permalink: /work/uniform-ui-documentation/
 ---
 
 
-<style>
+<!-- <style>
 
 
 .angle-bg { background-color: #ff6500; }
@@ -58,7 +58,7 @@ permalink: /work/uniform-ui-documentation/
   fill: #FFAE3B;
   z-index: 1;
 }
-</style>
+</style> -->
 
 
 
@@ -71,8 +71,10 @@ permalink: /work/uniform-ui-documentation/
   {% include case-study/banner.html %}
 {% elsif item.component == 'device' %}
   {% include case-study/device.html %}
+{% elsif item.component == 'images' %}
+  {% include case-study/item-3-up-images.html %}
 {% else %}
-  {% include case-study/items.html %}
+  {% include case-study/item-section.html %}
 {% endif %}
 {% endfor %}
 
@@ -80,75 +82,6 @@ permalink: /work/uniform-ui-documentation/
 
 
 
-<!-- Hero -->
-<!-- ============================= -->
-<!-- <section class="case-study__hero hero--bleed--top">
-  <div class="hero__content--case-study case-study__module--704 element--will-appear">
-    <h2 class="case-study__headline--hero">Uniform-UI-Docs</h2>
-    <div class="case-study__text--hero">
-      Hello
-    </div>
-  </div>
-</section> -->
-
-
-
-<!-- Broadsheet device -->
-<!-- ============================= -->
-<!-- <section class="case-study__section--broadsheet">
-  <div class="case-study__container--img--broadsheet case-study__module--704 element--will-appear">
-    <img class="case-study__img work__device" src="/static/img/work_landing/uniDocs_work_tease.jpg" alt="">
-  </div>
-    <div class="case-study__content slide-up">
-        <h2 class="case-study__headline">Poop Headline</h2>
-        <div class="case-study__text">Poop Text</div>
-    </div>
-</section>
- -->
-
-
-
-
-
-<!-- Items -->
-<!-- ============================= -->
-<section class="case-study__section {% if item.verticalPadding %} case-study__section--has-vertical-padding{% endif %}">
-    <div class="case-study__content">
-        <h2 class="case-study__headline">Items</h2>
-        <div class="case-study__text">Items Text</div>
-    </div>
-
-  <div class="case-study__module--details case-study__module--1256">
-    <ul class="case-study__items">
-
-
-      <li class="case-study__item--highlight">
-        <div class="case-study__container--item--image">
-          <img class="case-study__image--item--highlight work__device--small" src="/static/img/work_landing/uniDocs_work_tease.jpg">
-        </div>
-
-        <div class="case-study__content--item">
-          <h4 class="case-study__headline--item">I am items</h4>
-          <div class="case-study__text--item">
-              <p>I am graph</p>
-          </div>
-        </div>
-      </li>
-
-
-      <li class="case-study__item">
-        <img class="case-study__image--item" src="/static/img/case-study/{{detail.image}}">
-        <div class="case-study__content--item">
-          <h4 class="case-study__headline--item">I am items</h4>
-          <div class="case-study__text--item">
-              <p>I am graph</p>
-          </div>
-        </div>
-      </li>
-
-    </ul>
-  </div>
-</section>
 
 
 
@@ -156,16 +89,15 @@ permalink: /work/uniform-ui-documentation/
 
 
 
-<!-- Banner -->
-<!-- ============================= -->
-<section class="case-study__section--banner">
-  <div class="case-study__container--img">
-    <img
-      class="case-study__img case-study__img--banner--no-zoom"
-      src="/static/img/case-study/uniDocs/theming.gif" alt="">
-    <div class="case-study__banner-mask"></div>
-  </div>
-</section>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -178,7 +110,7 @@ permalink: /work/uniform-ui-documentation/
 
 <!-- Angles -->
 <!-- ============================= -->
-<div class="angle angle--full">
+<!-- <div class="angle angle--full">
   <svg class="angle__bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 128">
     <polygon fill-opacity=".15" fill-rule="evenodd" points="1440 957.884 0 894.563 0 1021.205 1440 1021.205" transform="translate(0 -894)"></polygon>
   </svg>
@@ -200,7 +132,7 @@ permalink: /work/uniform-ui-documentation/
   </svg>
 </div>
 
-
+ -->
 
 
 

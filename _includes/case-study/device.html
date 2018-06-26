@@ -1,10 +1,10 @@
 <section class="case-study__section--broadsheet">
   <div class="case-study__container--img--broadsheet case-study__module--704 element--will-appear">
-    <img class="case-study__img work__device" src="/static/img/work_landing/uniDocs_work_tease.jpg" alt="">
+    <img class="case-study__img work__device--small" src="/static/img/case-study/{{item.image}}" alt="">
   </div>
 
   {% if item.headline || item.content %}
-    <div class="case-study__content slide-up">
+    <div class="case-study__content js--in-view element--will-slide-up">
       {% if item.headline %}
         <h2 class="case-study__headline">{{item.headline}}</h2>
       {% endif %}
@@ -14,4 +14,8 @@
       {% endif %}
     </div>
   {% endif %}
+
+<!--   {% if item.headline || item.content %}
+    {% include case-study/item-content.html headline=item.headline content=item.content %}
+  {% endif %} -->
 </section>

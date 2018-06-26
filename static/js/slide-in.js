@@ -18,9 +18,9 @@ function debounce(func, wait = 20, immediate = true) {
 
 
 
-// Images
+// Elements
 // --------------------------
-const elements = document.querySelectorAll('.slide-up');
+const elementsInView = document.querySelectorAll('.js--in-view');
 
 
 
@@ -28,14 +28,16 @@ const elements = document.querySelectorAll('.slide-up');
 // Functions
 // --------------------------
 function checkElement(e) {
-  elements.forEach(element => {
+  elementsInView.forEach(element => {
+
     // x way through the element
-    const slideInAt = (window.scrollY + window.innerHeight) - element.offsetHeight / 3;
-    const isHalfShown = slideInAt > element.offsetTop;
+    let elementCoords = element.getBoundingClientRect();
+    // let slideInAt = window.innerHeight - element.offsetHeight / 3;
+    let slideInAt = window.innerHeight - 20;
+    let isHalfShown = slideInAt > elementCoords.top;
 
     if(isHalfShown) {
-      element.classList.add('active');
-      console.log('hello');
+      element.classList.add('element--is-in-view');
     }
   });
 }
@@ -46,3 +48,7 @@ function checkElement(e) {
 // Event Listners
 // --------------------------
 window.addEventListener('scroll', debounce(checkElement));
+
+
+// Run on page load to get any elements in view appearing
+checkElement();
