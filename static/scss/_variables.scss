@@ -178,6 +178,21 @@ $one-px:              1px;
 
 
 
+// Header + Nav
+// --------------------------------------------
+$bp-site-nav-type-size-increase: 600px;
+
+:root {
+  --site-header-max-width: 1200px;
+  --site-header-height: 51px;
+  --site-header-color-background: #12222d;
+  --site-nav-color-link: #ffffff;
+  --site-nav-type-size-link-small: 0.75rem;
+  --site-nav-type-size-link-large: 0.85rem;
+}
+
+
+
 
 // Universal Theme Color
 // --------------------------------------------
