@@ -6,7 +6,6 @@
 // --------------------------------------------
 // --------------------------------------------
 .header {
-  // padding-left: $space-one;
   position: relative;
   z-index: 1;
   width: 100%;
@@ -31,4 +30,39 @@
 .header__inner {
   display: flex;
   // align-items: center;
+}
+
+
+
+
+
+
+// --------------------------------------------
+// --------------------------------------------
+//
+// Nav
+//
+// --------------------------------------------
+// --------------------------------------------
+.nav {
+  display: flex;
+  margin-left: auto;
+}
+
+
+.nav__link {
+  font-family: $type-face-overline;
+  display: inline-block;
+  padding: 1rem 0.75rem;
+  // font-size: 0.85rem;
+  font-size: 0.75rem;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  @include bp(600px) { font-size: 0.85rem; }
+
+  &:hover { text-decoration: underline; }
 }
