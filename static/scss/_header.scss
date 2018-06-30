@@ -9,28 +9,15 @@
   position: relative;
   z-index: 1;
   width: 100%;
-  max-width: 1200px;
-  height: 51px;
+  max-width: var(--site-header-max-width);
+  height: var(--site-header-height);
   margin-left: auto;
   margin-right: auto;
-
-  background-color: #12222d;
-
-  .page-about &,
-  .gcs-page--post &,
-  .gcs-page--archive & { background-color: #12222d; }
+  background-color: var(--site-header-color-background);
 }
 
 
-.header--hp {
-  background-color: transparent;
-}
-
-
-.header__inner {
-  display: flex;
-  // align-items: center;
-}
+.header__inner { display: flex; }
 
 
 
@@ -54,15 +41,15 @@
   font-family: $type-face-overline;
   display: inline-block;
   padding: 1rem 0.75rem;
-  // font-size: 0.85rem;
-  font-size: 0.75rem;
-  color: #fff;
+  font-size: var(--site-nav-type-size-link-small);
+  color: var(--site-nav-color-link);
   text-decoration: none;
-  transition: background-color 0.2s ease;
   text-transform: uppercase;
   letter-spacing: 1px;
-
-  @include bp(600px) { font-size: 0.85rem; }
+  transition: background-color 0.2s ease;
+  @include bp($bp-site-nav-type-size-increase) {
+    font-size: var(--site-nav-type-size-link-large);
+  }
 
   &:hover { text-decoration: underline; }
 }
