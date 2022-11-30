@@ -1,0 +1,3 @@
+<svg class="css-var" viewBox="0 0 200 30" xmlns="http://www.w3.org/2000/svg">
+  <text y="20" font-family="var(--cool-font)">I use a css variable</text>
+</svg>
