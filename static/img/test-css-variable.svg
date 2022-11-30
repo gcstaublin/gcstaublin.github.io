@@ -4,5 +4,5 @@
       --local-font: "Comics Sans MS";
     }
   </style>
-  <text y="20" font-family="var(--local-font)">I use a css variable</text>
+  <text y="20" style:fontFamily:var(--local-font) font-family="var(--local-font)">I use a css variable</text>
 </svg>
