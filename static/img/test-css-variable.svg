@@ -1,8 +1,8 @@
 <svg class="css-var" viewBox="0 0 200 30" xmlns="http://www.w3.org/2000/svg">
   <style>
     :root{
-      --sweet-font: "Comics Sans MS"
+      --local-font: "Comics Sans MS";
     }
   </style>
-  <text y="20" font-family="var(--sweet-font)">I use a css variable</text>
+  <text y="20" font-family="var(--local-font)">I use a css variable</text>
 </svg>
