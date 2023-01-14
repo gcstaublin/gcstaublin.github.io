@@ -19,7 +19,7 @@ $prefix: 'gcs-';
 $sans-fallback: Helvetica, sans-serif;
 $serif-fallback: Georgia, serif;
 
-$type-main: 'din-2014', $sans-fallback;
+$type-main: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
 
 // $type-main: 'nudista-web', $sans-fallback;
 $type-accent: 'minion-pro', $serif-fallback;
@@ -35,7 +35,8 @@ $type-face-overline: 'source-code-pro', monospace, sans-serif;
 
 // $type-face-text: 'nudista-web', $sans-fallback;
 
-$type-face-text: 'din-2014', $sans-fallback;
+// $type-face-text: 'din-2014', $sans-fallback;
+$type-face-text: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
 
 // tablet gothic weights: 600, 700, 900
