@@ -155,10 +155,12 @@ permalink: /work/
           </h3>
           <div class="work__text element--will-slide-up js--in-view">
             {{item.text}}
-            {% if item.internal == true %}
-              <a class="archive__link--text work__link--text work__link--text--alt" href="{{site.baseurl}}/work/{{ item.url}}">Read Case Study</a>
-              {% else %}
-               <a class="archive__link--text work__link--text" target="_blank" href="http://{{item.url}}">Visit Live Site</a>
+            {% if item.url %}
+              {% if item.internal == true %}
+                <a class="archive__link--text work__link--text work__link--text--alt" href="{{site.baseurl}}/work/{{ item.url}}">Read Case Study</a>
+                {% else %}
+                 <a class="archive__link--text work__link--text" target="_blank" href="http://{{item.url}}">Visit Live Site</a>
+              {% endif %}
             {% endif %}
 
           </div>
