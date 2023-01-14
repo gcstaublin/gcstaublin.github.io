@@ -52,6 +52,5 @@ projects:
 
   - head: IAPP
     theme: sky
-#     url: iapp.org
     img: iapp_work_tease.jpg
     text: The Privacy Professionals website was a unique project for us at Upstatement. The site had many more transactional interactions than your typical editorially based project. I served as the lead front-end devleoper, working with the design team to realize their vision and make it responsive
