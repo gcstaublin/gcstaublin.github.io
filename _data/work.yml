@@ -28,13 +28,13 @@ projects:
 
   - head: Storey Publishing
     theme: lush
-    url: www.storey.com
+#     url: www.storey.com
     img: storey_work_tease.jpg
     text: Storey Publishing, a book publisher for makers, doers and growers, wanted a new home for their content and products. Storey wanted to elevate their informative, daily editorial content. They also hoped to create an extensible foundation for their book product pages, highlighting author tours and book reviews, showcasing book previews and related editorial content as well as providing easy to update color themes, giving individual title their own unique indentity. I served as a designer and front-end developer on this project, handling daily communication with the folks at Storey.
 
   - head: The Hechinger Report
     theme: lavender
-    url: hechingerreport.org
+#     url: hechingerreport.org
     img: hechinger_work_tease.jpg
     text: Upstatement built this lovely, new home for our friends at Hechinger. I worked as a part of three person design team to find the visual voice then served as a lead front-end developer to build the site in a quick succession of sprints. In addition, I handled much of the project management, handling daily communication with the client.
 
@@ -46,12 +46,12 @@ projects:
 
   - head: Lewis Center For The Arts
     theme: mustard
-    url: arts.princeton.edu
+#     url: arts.princeton.edu
     img: lca_work_tease.jpg
     text: Serving as the lead front-end developer for this Upstatement project, I collaborated with the design team to help realize how the static designs could become a living breathing, responsive website. I also worked closely with a newer member of our team, offering advice, code reviews and positive vibes.
 
   - head: IAPP
     theme: sky
-    url: iapp.org
+#     url: iapp.org
     img: iapp_work_tease.jpg
     text: The Privacy Professionals website was a unique project for us at Upstatement. The site had many more transactional interactions than your typical editorially based project. I served as the lead front-end devleoper, working with the design team to realize their vision and make it responsive
