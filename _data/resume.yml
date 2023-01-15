@@ -1,7 +1,6 @@
 - name: Grant Staublin
   title:
-    - Designer
-    - Front-End Developer
+    - Product Designer
   siteUrl: null
   address:
     - null
@@ -10,7 +9,15 @@
   email: null
 
   experiences:
-    - position: Front-End Designer
+    - position: Senior Product Designer
+      company: HubSpot
+      startDate: Aug. 2019
+      endDate: Present
+    - position: Product Designer
+      company: thoughtbot
+      startDate: Sept. 2018
+      endDate: Aug. 2019
+    - position: Product Designer
       company: Hudl
       startDate: Jul. 2015
       endDate: Apr. 2018
