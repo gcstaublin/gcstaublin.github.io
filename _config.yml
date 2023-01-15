@@ -34,7 +34,7 @@ exclude: [
   .DS_Store,
   CNAME,
   static/svg,
-  static/scss,
+#   static/scss,
   .sass-cache,
   package.json,
   Gruntfile.js,
