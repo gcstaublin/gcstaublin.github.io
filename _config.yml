@@ -16,6 +16,9 @@ paginate_path: "archive/page/:num"
 
 excerpt_separator: <!--more-->
 
+sass:
+    sass_dir: /static/scss
+
 
 # Collections
 collections:
