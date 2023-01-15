@@ -5,7 +5,7 @@ tease: "What's wrong with CSS-in-JS? Nothing? Everything? Something?"
 share: "What's wrong with CSS-in-JS? Nothing? Everything? Something?"
 date: 2018-05-13
 status: pinned
-pinnedPosition: main
+# pinnedPosition: main
 permalink: /articles/:title/
 ---
 
