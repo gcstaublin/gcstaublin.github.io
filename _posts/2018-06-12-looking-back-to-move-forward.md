@@ -5,7 +5,6 @@ tease: "Looking at the past to move forward, always"
 share: "Looking at the past to move forward, always"
 date: 2018-06-12
 status: pinned
-<!-- pinnedPosition: main -->
 permalink: /articles/:title/
 ---
 
