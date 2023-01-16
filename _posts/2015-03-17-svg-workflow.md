@@ -4,7 +4,7 @@ title:  "My workflow for creating SVG sprites"
 tease: "My workflow for creating SVG sprites"
 share: "Creating SVG sprites with grunt"
 date: 2015-03-17
-status: pinned
+# status: pinned
 permalink: /articles/:title/
 ---
 
