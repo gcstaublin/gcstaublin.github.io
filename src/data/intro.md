@@ -1,0 +1,15 @@
+---
+
+words:
+- I'm a designer with over two decades of experience in product design, editorial design and art direction. Over the past 10 years my primary focus has been creating, maintaing and scaling enterprise design systems. I've done both as an in-house member of teams as well as consultant. I'm currently a Senior Product Designer, striving to evolve the HubSpot Design System.
+- I'd love to work with you.
+
+# - Currently, I'm a designer on the design systems team at HubSpot. As the first full-time design hire for the team, my focus falls in the gray area between a product owner, an advocate for team growth, a coach, an organization problem solver, a tool owner and sometimes a designer. Every day presents unique challenges related to scale, growth, tech debt and a design system's relationship to a growing orgainzation with an expanding product.
+# - Prior to HubSpot, I was at thoughtbot. In my time there, I got to collaborate with clients across a variety of diverse domains, including insurance, advertising tech, health care and product manufactoring. Whether it was facilitating design sprints, helping engineers write better CSS or developing a product direction, each project was unique. These experiences helped solidified a belief I've long held. There's no one solution or application of a solution that will work for everyone. Problem soliving is contextual to orgainzations, teams and individuals.
+# - I also had the good fortune of being a member of the small team that created and launched <a class="link--hp" href="http://uniform.hudl.com" target="_blank">Uniform</a>, a design system for <a class="link--hp" href="http://www.hudl.com" target="_blank">Hudl</a>. I lead css development, and ensured the underlying markup for our React components was semantic and adhered to accessibility standards.
+# - Prior to Hudl, I worked at <a class="link--hp" href="http://www.upstatement.com" target="_blank">Upstatment</a> where I designed responsive web sites and ran projects working with great clients like <a class="link--hp" href="http://www.hechingerreport.org" target="_blank">The Hechinger Report</a>, <a class="link--hp" href="http://www.storey.com" target="_blank">Storey Publishing</a>, and <a class="link--hp" href="http://nieman.harvard.edu" target="_blank">The Nieman Foundation</a>.
+# - Once upon a time I was an editorial designer and art director. I worked at The Boston Globe and The New Orleans Times-Picayune. My experience as a journalist influences and guides my actions on any given day.
+# - I'm occasionally friendly. I enjoy coffee, music, running and noodling around with a solidering iron, as well as my dog and my wife; not in that order, though.
+# - I've been pretty fortune to work where I've worked, and with the people I've worked with. Maybe we should work together.
+- How can I help? Let's chat.
+---

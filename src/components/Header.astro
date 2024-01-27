@@ -1,0 +1,84 @@
+---
+import "../styles/global.css";
+import Logo from "./Logo.astro";
+import ThemeToggle from "./ThemeToggle.astro";
+---
+
+<header class="header">
+  <ThemeToggle />
+  <!-- <div class="header__inner">
+    <h1 class="logo__container">
+      <Logo />
+    </h1>
+    <nav class="nav">
+      <a class="nav__link" href="/work">Work</a>
+      <a class="nav__link" href="/archive">Writing</a>
+      <a class="nav__link" href="/about">About</a>
+    </nav>
+  </div> -->
+  <div class="banner__container">
+    <h1 class="font-size--lg color-text--contrast">Grant Staublin</h1>
+    <p class="color-text--dim">
+      Design Systems / Product Design / Art Direction
+    </p>
+    <p class="color-text--dim">Boston, MA</p>
+  </div>
+</header>
+
+<!-- -------------------
+Styles
+----------------- -->
+<style>
+  .header {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: var(--width-content-max);
+    margin-left: auto;
+    margin-right: auto;
+    margin-block-end: 120px;
+  }
+
+  .header__inner {
+    display: flex;
+  }
+
+  .nav {
+    display: flex;
+    margin-left: auto;
+  }
+
+  .nav__link {
+    display: inline-block;
+    padding: 1rem 0.75rem;
+    font-size: var(--site-nav-type-size-link-small);
+    color: var(--site-nav-color-link);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .logo__container {
+    position: relative;
+    display: flex;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    width: var(--logo-width);
+    height: var(--logo-width);
+    background-color: var(--logo-color-background);
+    /* background-color: #5bb1a1; */
+  }
+
+  .banner__container {
+    margin-block-end: 48px;
+    & > * {
+      margin: 0.15em;
+    }
+  }
+</style>
