@@ -1,0 +1,28 @@
+---
+const { sectionTitle } = Astro.props;
+---
+
+<!-- -------------------
+Structure
+----------------- -->
+<section>
+  {
+    sectionTitle && (
+      <h3 class="font-size--lg color-text--contrast">{sectionTitle}</h3>
+    )
+  }
+  <slot />
+</section>
+
+<!-- -------------------
+Styles
+----------------- -->
+<style>
+  section {
+    margin-block-end: 68px;
+  }
+
+  h3 {
+    margin-block-end: 24px;
+  }
+</style>

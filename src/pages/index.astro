@@ -1,0 +1,58 @@
+---
+import HpExperience from "../components/HpExperience.astro";
+import HpSection from "../components/HpSection.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import experienceData from "../data/experiences.json";
+import contactData from "../data/contacts.json";
+import * as introMD from "../data/intro.md";
+
+const pageTitle = "Hello World";
+import "../styles/global.css";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <HpSection sectionTitle="About">
+    <p>{introMD.frontmatter.title}</p>
+    <div class="serif">
+      {
+        introMD.frontmatter.words.map((graph) => {
+          return <p set:html={graph} />;
+        })
+      }
+    </div>
+  </HpSection>
+
+  <HpSection sectionTitle="Work Experience">
+    {
+      experienceData.map((experienceData) => {
+        return (
+          <HpExperience
+            expStart={experienceData.expStart}
+            expEnd={experienceData.expEnd}
+            expTitle={experienceData.expTitle}
+            expInfo={experienceData.expInfo}
+            expDescription={experienceData.expDescription}
+          />
+        );
+      })
+    }
+  </HpSection>
+
+  <div class="contact__block">
+    <HpSection sectionTitle="Contact">
+      {
+        contactData.map((contactData) => {
+          return (
+            <HpExperience
+              expStart={contactData.expStart}
+              expEnd={contactData.expEnd}
+              expTitle={contactData.expTitle}
+              expInfo={contactData.expInfo}
+              expDescription={contactData.expDescription}
+            />
+          );
+        })
+      }
+    </HpSection>
+  </div>
+</BaseLayout>

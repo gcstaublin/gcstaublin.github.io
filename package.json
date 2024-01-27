@@ -1,26 +1,15 @@
 {
-  "name": "grant-staublin",
-  "version": "0.1.0",
-  "description": "Making a new grant staublin site",
-  "main": "index.html",
+  "name": "",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
-  "author": "Grant Staublin",
-  "devDependencies": {
-    "autoprefixer": "^6.1.0",
-    "browser-sync": "^2.26.3",
-    "cssnano": "^3.3.2",
-    "gulp": "^3.9.0",
-    "gulp-autoprefixer": "^3.0.2",
-    "gulp-clean": "^0.3.1",
-    "gulp-inject": "^3.0.0",
-    "gulp-notify": "^2.2.0",
-    "gulp-postcss": "^6.0.1",
-    "gulp-rename": "^1.4.0",
-    "gulp-sass": "^2.0.4",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-svgmin": "^1.2.0",
-    "gulp-svgstore": "^5.0.5"
+  "dependencies": {
+    "astro": "^4.1.1"
   }
 }

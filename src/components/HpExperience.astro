@@ -1,0 +1,56 @@
+---
+const { expStart, expEnd, expTitle, expInfo, expDescription } = Astro.props;
+
+// const expStart = "2000";
+// const expEnd = "2000";
+// const expTitle = "Senior Product Designer at Company";
+// const expInfo = "Cool role";
+// const expDescription = "Words about this experience role here";
+---
+
+<!-- ********************
+  HTML
+************************* -->
+<div class="cols--12 experience__item">
+  <p class="cols--12--secondary color-text--subtle experience__title">
+    <span>{expStart}</span>
+    {
+      expEnd && (
+        <>
+          <span>–</span>
+          <span>{expEnd}</span>
+        </>
+      )
+    }
+  </p>
+  <div class="cols--12--primary experience__content">
+    <p class="color-text--contrast experience__title">{expTitle}</p>
+    <p class="color-text--dim experience__info">{expInfo}</p>
+    <p class="color-text--default serif--small">
+      {expDescription}
+    </p>
+  </div>
+</div>
+
+<style>
+  .experience__item {
+    margin-block-end: var(--experience-item-margin);
+  }
+
+  .experience__title {
+    margin: 0.25em 0;
+  }
+
+  .experience__content {
+    & p {
+      margin: 0.25em 0;
+    }
+    & p:nth-of-type(2) {
+      margin: 0;
+      line-height: 1;
+    }
+    & p:last-of-type {
+      margin-block-start: 12px;
+    }
+  }
+</style>
