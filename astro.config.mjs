@@ -8,7 +8,7 @@ import { defineConfig } from 'astro/config';
 // });
 
 export default defineConfig({
-  site: 'grantstaublin.com',
+  site: 'https://grantstaublin.com',
 })
 
 {
