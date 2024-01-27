@@ -10,13 +10,13 @@
 
 @font-face {
   font-family: 'BlancoWeb';
-  src: url('astro-test/fonts/Blanco-Regular.woff2') format('woff2');
+  src: url('fonts/Blanco-Regular.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'BlancoWeb';
   font-style: italic;
-  src: url('astro-test/fonts/Blanco-Italic.woff2') format('woff2');
+  src: url('fonts/Blanco-Italic.woff2') format('woff2');
 }
 
 
