@@ -58,6 +58,8 @@
 
   --width-content-max: 628px;
 
+  --context-max: min(var(--width-content-max), 100% - 4rem);
+
 
 
   --site-header-max-width: 1200px;
@@ -337,9 +339,12 @@ h6 {
 
 
 main {
-  max-width: var(--width-content-max);
-  margin-left: auto;
-  margin-right: auto;
+  /* max-width: var(--width-content-max); */
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  /* width: min(var(--width-content-max), 100% - 4rem); */
+  /* width: var(--context-max); */
+  /* margin-inline: auto; */
 }
 
 
@@ -389,6 +394,10 @@ a {
   }
 }
 
+.hp-width {
+  width: var(--context-max);
+  margin-inline: auto;
+}
 
 
 

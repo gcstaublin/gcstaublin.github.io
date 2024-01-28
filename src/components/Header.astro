@@ -1,10 +1,9 @@
 ---
 import "../styles/global.css";
-import Logo from "./Logo.astro";
 import ThemeToggle from "./ThemeToggle.astro";
 ---
 
-<header class="header">
+<header class="header hp-width">
   <ThemeToggle />
   <!-- <div class="header__inner">
     <h1 class="logo__container">
@@ -30,12 +29,13 @@ Styles
 ----------------- -->
 <style>
   .header {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    max-width: var(--width-content-max);
-    margin-left: auto;
-    margin-right: auto;
+    /* position: relative; */
+    /* z-index: 1; */
+    /* width: 100%; */
+    /* max-width: var(--width-content-max); */
+
+    /* width: var(--content-max); */
+    /* margin-inline: auto; */
     margin-block-end: 120px;
   }
 
