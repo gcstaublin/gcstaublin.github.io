@@ -1,5 +1,5 @@
 ---
-
+import "../styles/global.css";
 ---
 
 <!-- ********************
@@ -7,25 +7,31 @@
 ************************* -->
 <div class="color-toggle__container">
   <button id="color-mode-toggle" class="color-toggle">
-    <svg
-      class="color-toggle__svg"
-      width="0.66666667em"
-      height="0.66666667em"
-      viewBox="0 0 370 370"
-      fill="currentColor"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
-        d="M185 0C287.173 0 370 82.8272 370 185C370 287.173 287.173 370 185 370C134.942 370 89.5271 350.118 56.2217 317.82C55.5381 317.157 54.8591 316.489 54.1851 315.815C53.5003 315.13 52.8205 314.439 52.1476 313.745C19.8688 280.443 0 235.042 0 185C0 135.246 19.6407 90.0794 51.5918 56.8307C52.4465 55.9412 53.3108 55.0593 54.1851 54.1851C55.0593 53.3108 55.9412 52.4465 56.8307 51.5918C90.0794 19.6407 135.246 0 185 0ZM344.915 185C344.915 273.319 273.319 344.915 185 344.915V25.0847C273.319 25.0847 344.915 96.6813 344.915 185Z"
-        fill="currentcolor"></path>
-    </svg>
+    <div class="svg__container">
+      <svg
+        class="color-toggle__svg"
+        width="100px"
+        height="100px"
+        viewBox="0 0 370 370"
+        fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M185 0C287.173 0 370 82.8272 370 185C370 287.173 287.173 370 185 370C134.942 370 89.5271 350.118 56.2217 317.82C55.5381 317.157 54.8591 316.489 54.1851 315.815C53.5003 315.13 52.8205 314.439 52.1476 313.745C19.8688 280.443 0 235.042 0 185C0 135.246 19.6407 90.0794 51.5918 56.8307C52.4465 55.9412 53.3108 55.0593 54.1851 54.1851C55.0593 53.3108 55.9412 52.4465 56.8307 51.5918C90.0794 19.6407 135.246 0 185 0ZM344.915 185C344.915 273.319 273.319 344.915 185 344.915V25.0847C273.319 25.0847 344.915 96.6813 344.915 185Z"
+          fill="currentcolor"></path>
+      </svg>
+    </div>
+    <div class="color-toggle__content">
+      <span class="color-text--subtle">Color theme:</span>
+      <span class="color-text--accent color-theme__name"></span>
+    </div>
   </button>
-  <div class="color-toggle__content">
+  <!-- <div class="color-toggle__content">
     <span class="color-text--subtle">Current theme:</span>
     <span class="color-text--accent color-theme__name"></span>
-  </div>
+  </div> -->
 </div>
 
 <!-- ********************
@@ -33,33 +39,53 @@
 ************************* -->
 <style>
   .color-toggle {
-    color: var(--color-accent);
+    color: var(--color-accent-test);
     background-color: transparent;
-    /* border: 1px solid rgba(0, 0, 0, 0.4); */
     border: 0;
-    padding: 0.45rem;
-    font-size: 36px;
-    border-radius: 50%;
-    border-radius: 12px;
+    padding: 16px;
+    padding-block: 6px;
+    border-radius: 24px;
     display: flex;
     cursor: pointer;
+    border: 1px solid;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: var(--color-accent);
+    }
 
     &:hover svg {
       /* transform: scale(1.15); */
       transform: rotate(-90deg);
     }
+    &:active {
+      transform: scale3d(0.98, 0.98, 0.98);
+    }
+  }
+
+  .svg__container {
+    width: 18px;
+    height: 18px;
+    color: var(--color-accent);
+
+    svg {
+      width: 100%;
+      height: auto;
+    }
   }
 
   .color-toggle__container {
-    display: flex;
-    align-items: center;
-    margin-block-end: 48px;
+    margin-block-end: 60px;
     gap: 10px;
   }
 
   .color-toggle__content {
     display: flex;
     gap: 0.25em;
+    font-size: 14px;
   }
 
   .color-theme__name::after {

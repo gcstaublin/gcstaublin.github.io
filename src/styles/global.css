@@ -38,13 +38,18 @@
   --color-alpha-default: 0.85;
   --color-alpha-subtle: 0.65;
   --color-alpha-dim: 0.45;
+  --color-alpha-extra-dim: 0.15;
 
-  --color-surface: #f1eded;
+  --color-surface: #e4e4df;
   --color-fg-formula: 75, 60, 85;
   --color-fg-inverse: 255, 255, 255;
   --color-accent: #EA4904;
   --color-accent-dim: rgba(var(--color-accent), 0.8);
+  /* --color-accent-extra-dim: rgba(var(--color-accent), 0.3); */
   --color-theme-name: 'newsprint';
+
+  --color-accent-test: color-mix(in srgb, var(--color-accent) 40%, transparent);
+
 
 
   --font-size-default: 1rem;
@@ -87,6 +92,7 @@
   --color-fg-formula: 215, 215, 250;
   --color-accent: #BCF5F5;
   --color-theme-name: 'kind of blue';
+  --color-accent-test: color-mix(in srgb, var(--color-accent) 40%, transparent);
 }
 
 .theme2 {
@@ -94,6 +100,7 @@
   --color-fg-formula: 220, 220, 175;
   --color-accent: #4B9898;
   --color-theme-name: 'dark side';
+  --color-accent-test: color-mix(in srgb, var(--color-accent) 40%, transparent);
 }
 
 .theme3 {
@@ -101,6 +108,7 @@
   --color-fg-formula: 64, 64, 4;
   --color-accent: #3465E1;
   --color-theme-name: 'dirty sun';
+  --color-accent-test: color-mix(in srgb, var(--color-accent) 40%, transparent);
 }
 
 
