@@ -1,5 +1,4 @@
 ---
-import HpExperience from "../components/HpExperience.astro";
 import HpSection from "../components/HpSection.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import experienceData from "../data/experiences.json";
@@ -8,6 +7,8 @@ import * as introMD from "../data/intro.md";
 
 const pageTitle = "Grant Staublin";
 import "../styles/global.css";
+import InfoItem from "../components/InfoItem.astro";
+import InfoItems from "../components/InfoItems.astro";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
@@ -23,36 +24,34 @@ import "../styles/global.css";
   </HpSection>
 
   <HpSection sectionTitle="Work Experience">
-    {
-      experienceData.map((experienceData) => {
-        return (
-          <HpExperience
-            expStart={experienceData.expStart}
-            expEnd={experienceData.expEnd}
-            expTitle={experienceData.expTitle}
-            expInfo={experienceData.expInfo}
-            expDescription={experienceData.expDescription}
-          />
-        );
-      })
-    }
-  </HpSection>
-
-  <div class="contact__block">
-    <HpSection sectionTitle="Contact">
+    <InfoItems>
       {
-        contactData.map((contactData) => {
+        experienceData.map((exp) => {
           return (
-            <HpExperience
-              expStart={contactData.expStart}
-              expEnd={contactData.expEnd}
-              expTitle={contactData.expTitle}
-              expInfo={contactData.expInfo}
-              expDescription={contactData.expDescription}
+            <InfoItem
+              dateStart={exp.dates.dateStart}
+              dateEnd={exp.dates.dateEnd}
+              title={exp.title}
+              subTitle={exp.subTitle}
+              description={exp.description}
             />
           );
         })
       }
+    </InfoItems>
+  </HpSection>
+
+  <div class="contact__block">
+    <HpSection sectionTitle="Contact">
+      <InfoItems>
+        {
+          contactData.map((contactData) => {
+            return (
+              <InfoItem label={contactData.label} title={contactData.title} />
+            );
+          })
+        }
+      </InfoItems>
     </HpSection>
   </div>
 </BaseLayout>

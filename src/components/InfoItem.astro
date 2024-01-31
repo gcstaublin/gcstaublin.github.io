@@ -1,0 +1,85 @@
+---
+const {
+  label,
+  dates,
+  dateStart,
+  dateEnd,
+  title,
+  subTitle,
+  description,
+  cssClass,
+} = Astro.props;
+---
+
+<!-- ********************
+  HTML
+************************* -->
+<div class:list={["cols--12 infoItem__item", cssClass]}>
+  <!-- If there is a label -->
+  {
+    label && (
+      <p class="cols--12--secondary color-text--subtle infoItem__label">
+        <span>{label}</span>
+      </p>
+    )
+  }
+
+  <!-- If there are dates -->
+  {
+    dateStart && (
+      <p class="cols--12--secondary color-text--subtle infoItem__label">
+        <span>{dateStart}</span>
+        {dateEnd && (
+          <>
+            <span>–</span>
+            <span>{dateEnd}</span>
+          </>
+        )}
+      </p>
+    )
+  }
+
+  <!-- Info content -->
+  <div class="cols--12--primary infoItem__content">
+    <p class="color-text--contrast infoItem__title">{title}</p>
+    <p class="color-text--dim infoItem__subTitle">{subTitle}</p>
+    <p class="color-text--default serif--small">
+      {description}
+    </p>
+  </div>
+
+  <!-- ********************
+  Style
+************************* -->
+  <style>
+    /* .experience__item {
+    margin-block-end: var(--experience-item-margin);
+  } */
+
+    p {
+      margin: 0.25em 0;
+    }
+
+    .infoItem__item {
+    }
+
+    .infoItem__title {
+    }
+
+    .infoItem__label {
+    }
+
+    .infoItem__content {
+      & p {
+        /* margin: 0.25em 0; */
+      }
+      & p:nth-of-type(2) {
+        margin: 0;
+        line-height: 1;
+      }
+      & p:last-of-type {
+        margin-block-start: 12px;
+      }
+    }
+  </style>
+</div>
