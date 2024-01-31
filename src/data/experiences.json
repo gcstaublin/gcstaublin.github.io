@@ -1,51 +1,65 @@
 [
   {
-    "expStart": "2019",
-    "expEnd": "Now",
-    "expTitle": "Senior Product Design, HubSpot Design System",
-    "expInfo": "HubSpot",
-    "expDescription": ""
+    "dates": {
+      "dateStart": "2019",
+      "dateEnd": "Now"
+    },
+    "title": "Senior Product Designer, HubSpot Design System",
+    "subTitle": "HubSpot",
+    "description": ""
   },
   {
-    "expStart": "2018",
-    "expEnd": "2019",
-    "expTitle": "Product Designer",
-    "expInfo": "thoughtbot",
-    "expDescription": "Facilitate design sprints to help clients identify areas of opportunity and prevent them from investing in solutions that don't resonate with customers"
+    "dates": {
+      "dateStart": "2018",
+      "dateEnd": "2019"
+    },
+    "title": "Product Designer",
+    "subTitle": "thoughtbot",
+    "description": "Facilitate design sprints to help clients identify areas of opportunity and prevent them from investing in solutions that don't resonate with customers"
   },
   {
-    "expStart": "2015",
-    "expEnd": "2018",
-    "expTitle": "Front-End Designer, Uniform Design System",
-    "expInfo": "Hudl",
-    "expDescription": "Architect scalable, multi-theme CSS system for design system. Create semantic HTML structure for Uniform React component library."
+    "dates": {
+      "dateStart": "2015",
+      "dateEnd": "2018"
+    },
+    "title": "Front-End Designer, Uniform Design System",
+    "subTitle": "Hudl",
+    "description": "Architect scalable, multi-theme CSS system for design system. Create semantic HTML structure for Uniform React component library."
   },
   {
-    "expStart": "2013",
-    "expEnd": "2015",
-    "expTitle": "Designer / Front-End Developer",
-    "expInfo": "Upstatement",
-    "expDescription": "Consult with clients, leading responsive web design projects."
+    "dates": {
+      "dateStart": "2013",
+      "dateEnd": "2015"
+    },
+    "title": "Designer / Front-End Developer",
+    "subTitle": "Upstatement",
+    "description": "Consult with clients, leading responsive web design projects."
   },
   {
-    "expStart": "2011",
-    "expEnd": "2013",
-    "expTitle": "Senior Designer",
-    "expInfo": "Bostonglobe.com + Boston.com",
-    "expDescription": "Collaboratively conceptualize and execute editorial projects for two different news sites in a deadline driven environment"
+    "dates": {
+      "dateStart": "2011",
+      "dateEnd": "2013"
+    },
+    "title": "Senior Designer",
+    "subTitle": "Bostonglobe.com + Boston.com",
+    "description": "Collaboratively conceptualize and execute editorial projects for two different news sites in a deadline driven environment"
   },
   {
-    "expStart": "2004",
-    "expEnd": "2011",
-    "expTitle": "Editorial Designer / Assistant Art Director",
-    "expInfo": "The Boston Globe",
-    "expDescription": "Design and art direct newspaper pages and weekly magazine issues"
+    "dates": {
+      "dateStart": "2004",
+      "dateEnd": "2011"
+    },
+    "title": "Editorial Designer / Assistant Art Director",
+    "subTitle": "The Boston Globe",
+    "description": "Design and art direct newspaper pages and weekly magazine issues"
   },
   {
-    "expStart": "1997",
-    "expEnd": "2004",
-    "expTitle": "Designer",
-    "expInfo": "The New Orleans Times-Picayune",
-    "expDescription": ""
+    "dates": {
+      "dateStart": "1997",
+      "dateEnd": "2004"
+    },
+    "title": "Designer",
+    "subTitle": "The New Orleans Times-Picayune",
+    "description": ""
   }
 ]

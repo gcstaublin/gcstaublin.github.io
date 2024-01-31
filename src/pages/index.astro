@@ -25,23 +25,25 @@ import InfoItems from "../components/InfoItems.astro";
   </HpSection>
 
   <HpSection sectionTitle="Work Experience">
-    {
-      experienceData.map((experienceData) => {
-        return (
-          <HpExperience
-            expStart={experienceData.expStart}
-            expEnd={experienceData.expEnd}
-            expTitle={experienceData.expTitle}
-            expInfo={experienceData.expInfo}
-            expDescription={experienceData.expDescription}
-          />
-        );
-      })
-    }
+    <InfoItems>
+      {
+        experienceData.map((exp) => {
+          return (
+            <InfoItem
+              dateStart={exp.dates.dateStart}
+              dateEnd={exp.dates.dateEnd}
+              title={exp.title}
+              subTitle={exp.subTitle}
+              description={exp.description}
+            />
+          );
+        })
+      }
+    </InfoItems>
   </HpSection>
 
   <div class="contact__block">
-    <HpSection sectionTitle="Contactx">
+    <HpSection sectionTitle="Contact">
       <InfoItems>
         {
           contactData.map((contactData) => {
