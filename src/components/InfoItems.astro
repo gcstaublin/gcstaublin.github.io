@@ -1,0 +1,21 @@
+---
+const { cssClass } = Astro.props;
+---
+
+<!-- ********************
+  HTML
+************************* -->
+<div class:list={["infoItems__container", cssClass]}>
+  <slot />
+</div>
+
+<!-- ********************
+  Style
+************************* -->
+<style>
+  .infoItems__container {
+    > * + * {
+      margin-block-start: var(--experience-item-margin);
+    }
+  }
+</style>

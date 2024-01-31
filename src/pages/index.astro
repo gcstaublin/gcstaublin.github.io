@@ -8,6 +8,8 @@ import * as introMD from "../data/intro.md";
 
 const pageTitle = "Grant Staublin";
 import "../styles/global.css";
+import InfoItem from "../components/InfoItem.astro";
+import InfoItems from "../components/InfoItems.astro";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
@@ -39,20 +41,16 @@ import "../styles/global.css";
   </HpSection>
 
   <div class="contact__block">
-    <HpSection sectionTitle="Contact">
-      {
-        contactData.map((contactData) => {
-          return (
-            <HpExperience
-              expStart={contactData.expStart}
-              expEnd={contactData.expEnd}
-              expTitle={contactData.expTitle}
-              expInfo={contactData.expInfo}
-              expDescription={contactData.expDescription}
-            />
-          );
-        })
-      }
+    <HpSection sectionTitle="Contactx">
+      <InfoItems>
+        {
+          contactData.map((contactData) => {
+            return (
+              <InfoItem label={contactData.label} title={contactData.title} />
+            );
+          })
+        }
+      </InfoItems>
     </HpSection>
   </div>
 </BaseLayout>
