@@ -11,6 +11,9 @@ import InfoItem from "../components/InfoItem.astro";
 import InfoItems from "../components/InfoItems.astro";
 ---
 
+{/* ================================== */}
+{/* About                              */}
+{/* ================================== */}
 <BaseLayout pageTitle={pageTitle}>
   <HpSection sectionTitle="About">
     <p>{introMD.frontmatter.title}</p>
@@ -23,6 +26,9 @@ import InfoItems from "../components/InfoItems.astro";
     </div>
   </HpSection>
 
+  {/* ================================== */}
+  {/* Experience                         */}
+  {/* ================================== */}
   <HpSection sectionTitle="Work Experience">
     <InfoItems>
       {
@@ -41,6 +47,9 @@ import InfoItems from "../components/InfoItems.astro";
     </InfoItems>
   </HpSection>
 
+  {/* ================================== */}
+  {/* Contact                            */}
+  {/* ================================== */}
   <div class="contact__block">
     <HpSection sectionTitle="Contact">
       <InfoItems>
