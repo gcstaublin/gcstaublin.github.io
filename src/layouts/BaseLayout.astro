@@ -4,6 +4,9 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
 const { pageTitle } = Astro.props;
+const isProd = import.meta.env.PROD;
+
+
 ---
 
 <html lang="en">
@@ -23,7 +26,10 @@ const { pageTitle } = Astro.props;
       <slot />
     </main>
     <Footer />
+
     <!-- Google tag (gtag.js) -->
+
+  {   isProd && (
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -33,5 +39,8 @@ const { pageTitle } = Astro.props;
 
       gtag("config", "G-WEEEEL0P81");
     </script>
+  )
+}
+
   </body>
 </html>
