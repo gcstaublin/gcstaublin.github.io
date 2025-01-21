@@ -40,7 +40,8 @@
   --color-alpha-dim: 0.45;
   --color-alpha-extra-dim: 0.15;
 
-  --color-surface: #e4e4df;
+  /* --color-surface: #e4e4df; */
+  --color-surface: #F7F5F3;
   --color-fg-formula: 75, 60, 85;
   --color-fg-inverse: 255, 255, 255;
   --color-accent: #EA4904;
@@ -57,15 +58,19 @@
   --font-size-sm: 0.875rem;
 
   --width-content-max: 628px;
+  --width-content-calc: 100% - 4rem;
 
-  --context-max: min(var(--width-content-max), 100% - 4rem);
+  /* --context-max: min(var(--width-content-max), 100% - 4rem); */
+
+  --context-max: min(var(--width-content-max), var(--width-content-calc));
 
 
 
   --site-header-max-width: 1200px;
   --site-header-height: 51px;
   --site-header-color-background: rgba(255, 255, 255, 0.2);
-  --site-nav-color-link: #ffffff;
+  /* --site-nav-color-link: #ffffff; */
+  --site-nav-color-link: var(--color-text-contrast);
   --site-nav-type-size-link-small: 0.75rem;
   --site-nav-type-size-link-large: 0.85rem;
 
@@ -221,6 +226,7 @@ a:not([class]) {
 img,
 picture {
   max-width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -338,6 +344,8 @@ h6 {
 }
 
 
+
+
 main {
   /* max-width: var(--width-content-max); */
   /* margin-left: auto; */
@@ -399,6 +407,13 @@ a {
   margin-inline: auto;
 }
 
+.work-width {
+  --width-content-max: 1194px;
+  --context-max: min(var(--width-content-max), 100% - 4rem);
+
+  width: var(--context-max);
+  margin-inline: auto;
+}
 
 
 :root {

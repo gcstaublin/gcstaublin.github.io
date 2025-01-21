@@ -1,0 +1,77 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import TextBlock from "../../components/TextBlock.astro";
+import TextBlockGraph from "../../components/TextBlockGraph.astro";
+import "../../styles/global.css";
+
+const pageTitle = "Grant Staublin";
+const mainClass = "work-width work-test";
+
+import { Image } from "astro:assets";
+import mainImage from "../../images/trellis-docs_main.jpg";
+import experiencesImage from "../../images/trellis-docs_experiences.jpg";
+import preparingImage from "../../images/trellis-docs_preparing.jpg";
+import postsImage from "../../images/trellis-docs_posts.jpg";
+---
+
+{/* ================================== */}
+{/* xxx                                */}
+{/* ================================== */}
+<BaseLayout pageTitle={pageTitle} mainClass={mainClass}>
+  <div class="work-test">
+    <div class="image__container">
+      <Image src={mainImage} alt="" />
+    </div>
+
+    <TextBlock title="Dude">
+      <TextBlockGraph text="Hello, dude" />
+      <TextBlockGraph
+        text="Redesigning Verily's digital experience was contingent on a complete redesign of its product portfolio and positioning. I worked on Project Atlas, an internal codename used to describe all the work to pivot Verily's business and create a new strategic operating model."
+      />
+    </TextBlock>
+
+    <div class="image__container two-up">
+      <div class="vertical">
+        <Image src={preparingImage} alt="" />
+        <Image src={experiencesImage} alt="" />
+      </div>
+      <div><Image src={postsImage} alt="" /></div>
+    </div>
+
+    <TextBlock title="Dude" />
+  </div>
+</BaseLayout>
+
+{/* ================================== */}
+{/* Style                              */}
+{/* ================================== */}
+<style>
+  .work-test {
+    > * + * {
+      margin-top: 64px;
+    }
+  }
+
+  .image__container {
+    margin-inline: auto;
+    /* background-color: #c4c4c3; */
+    background-color: rgba(0, 0, 0, 0.075);
+    padding: 40px;
+  }
+
+  .two-up {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+  }
+
+  .vertical {
+    display: grid;
+    grid-template-row: 1fr 1fr;
+    grid-gap: 40px;
+  }
+
+  img {
+    max-width: 100%;
+  }
+</style>

@@ -1,0 +1,63 @@
+---
+const {
+  title,
+  subTitle,
+  link,
+  linkText = "View Project",
+  imageSrc,
+  cssClass,
+} = Astro.props;
+import { Image } from "astro:assets";
+---
+
+{/* ================================== */}
+{/* HTML Structure                     */}
+{/* ================================== */}
+
+<article>
+  <div class="cardTease__image">
+    <a href={link}>
+      <Image src={imageSrc} alt="" />
+    </a>
+  </div>
+  <div class="cardTease__content">
+    <h3 class="cardTease__title color-text--contrast">{title}</h3>
+    <h4 class="cardTease__subTitle color-text--default">{subTitle}</h4>
+    <a class="cardTease__link color-text--accent" href={link}>{linkText}</a>
+  </div>
+</article>
+
+{/* ================================== */}
+{/* Style                              */}
+{/* ================================== */}
+<style>
+  article {
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .cardTease__image {
+    background-color: #e4e4df;
+    padding: 2rem;
+  }
+  .cardTease__content {
+    background-color: #fff;
+    padding: 2rem;
+    /* border-top: 4px solid green; */
+  }
+
+  .cardTease__title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.3333333333;
+    margin-block-start: 0;
+  }
+
+  .cardTease__subTitle {
+    margin-block-start: 8px;
+  }
+
+  .cardTease__link {
+    display: block;
+    margin-block-start: 12px;
+  }
+</style>

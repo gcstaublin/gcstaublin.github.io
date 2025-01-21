@@ -1,0 +1,100 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import "../../styles/global.css";
+import TextBlock from "../../components/TextBlock.astro";
+import TextBlockGraph from "../../components/TextBlockGraph.astro";
+import CardTease from "../../components/CardTease.astro";
+// import { Image } from "astro:assets";
+
+import mainImage from "../../images/trellis-docs_main.jpg";
+
+const pageTitle = "Grant Staublin";
+const mainClass = "work-width work-test";
+---
+
+{/* ================================== */}
+{/* xxx                                */}
+{/* ================================== */}
+<BaseLayout pageTitle={pageTitle} mainClass={mainClass}>
+  <div class="pageTitle__container">
+    <h2 class="page-title color-text--contrast">Selected Work</h2>
+    <h3 class="page-subTitle color-text--subtle">A subtitle</h3>
+  </div>
+  <div class="work-test">
+    <div class="tease-grid">
+      <CardTease
+        imageSrc={mainImage}
+        link="/work/trellis-docs/"
+        title="Trellis Design System Documentation"
+        subTitle="Creating a solid foundation for an evolving design system"
+        <div
+        class="image__container">image goes here</CardTease
+      >
+      <CardTease
+        imageSrc={mainImage}
+        link="#"
+        linkText="hello"
+        title="Trellis stuff"
+        <div
+        class="image__container">image goes here</CardTease
+      >
+      <CardTease
+        imageSrc={mainImage}
+        link="#"
+        linkText="View project"
+        title="Trellis stuff"
+        <div
+        class="image__container">image goes here</CardTease
+      >
+      <CardTease
+        imageSrc={mainImage}
+        link="#"
+        linkText="hello"
+        title="Trellis stuff"
+        <div
+        class="image__container">image goes here</CardTease
+      >
+    </div>
+
+    <TextBlock title="Landing Page">
+      <TextBlockGraph text="Hello, dude" />
+      <TextBlockGraph
+        text="Redesigning Verily's digital experience was contingent on a complete redesign of its product portfolio and positioning. I worked on Project Atlas, an internal codename used to describe all the work to pivot Verily's business and create a new strategic operating model."
+      />
+    </TextBlock>
+
+    <div class="image__container two-up">
+      <div class="vertical">images go here</div>
+      <div>image goes here</div>
+    </div>
+
+    <TextBlock title="Dude" />
+  </div>
+</BaseLayout>
+{/* ================================== */}
+{/* Style                              */}
+{/* ================================== */}
+<style>
+  .pageTitle__container {
+    /* border: 1px solid; */
+    margin-block-end: 64px;
+
+    h2 {
+      font-size: 64px;
+      line-height: 1.25;
+      font-weight: 600;
+      margin-block-start: 0;
+      /* color: #2e2e2b; */
+    }
+
+    h3 {
+      font-size: 24px;
+      line-height: 1.25;
+    }
+  }
+  .tease-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+  }
+</style>
