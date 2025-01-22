@@ -1,0 +1,40 @@
+---
+const { title, subTitle, cssClass } = Astro.props;
+---
+
+{/* ================================== */}
+{/* HTML                               */}
+{/* ================================== */}
+
+<div class="pageTitle__container">
+  <h2 class="pageTitle__title color-text--contrast">{title}</h2>
+  {
+    subTitle && (
+      <h3 class="pageTitle__sub-title color-text--default">{subTitle}</h3>
+    )
+  }
+</div>
+
+{/* ================================== */}
+{/* Style                              */}
+{/* ================================== */}
+<style>
+  .pageTitle__container {
+    margin-block-end: 64px;
+  }
+
+  .pageTitle__title {
+    font-size: 64px;
+    line-height: 1.25;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    margin-block-start: 0;
+  }
+
+  .pageTitle__sub-title {
+    font-size: 24px;
+    line-height: 1.25;
+    margin-block-start: 8px;
+    letter-spacing: -0.005em;
+  }
+</style>

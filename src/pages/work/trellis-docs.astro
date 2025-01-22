@@ -1,44 +1,99 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import "../../styles/global.css";
 import TextBlock from "../../components/TextBlock.astro";
 import TextBlockGraph from "../../components/TextBlockGraph.astro";
-import "../../styles/global.css";
+import PageTitle from "../../components/PageTitle.astro";
 
 const pageTitle = "Grant Staublin";
-const mainClass = "work-width work-test";
+const mainClass = "width--large work-test";
 
 import { Image } from "astro:assets";
-import mainImage from "../../images/trellis-docs_main.jpg";
+import mainImageAlt from "../../images/work/trellis-launchpad/trellis-launchpad_main.jpg";
+import uilibraryShot from "../../images/work/trellis-launchpad/ui-library-shot.jpg";
+import trellisSbShot from "../../images/work/trellis-launchpad/trellis-storybook-shot.jpg";
 import experiencesImage from "../../images/trellis-docs_experiences.jpg";
 import preparingImage from "../../images/trellis-docs_preparing.jpg";
 import postsImage from "../../images/trellis-docs_posts.jpg";
 ---
 
 {/* ================================== */}
-{/* xxx                                */}
+{/* HTML                               */}
 {/* ================================== */}
-<BaseLayout pageTitle={pageTitle} mainClass={mainClass}>
+<BaseLayout pageTitle={pageTitle} mainClass={mainClass} noFollow>
   <div class="work-test">
-    <div class="image__container">
-      <Image src={mainImage} alt="" />
+    <PageTitle
+      title="Trellis Design System Launchpad"
+      subTitle="As HubSpot’s design system evolves from it’s humble beginnings (Canvas) to a multi-themed modernized system (Trellis), documentation needed to evolved."
+    />
+
+    {/* Section =================================  */}
+    <div class="image__container image__container--accent">
+      <Image src={mainImageAlt} alt="" />
+      <TextBlockGraph text="From humble beginnings to a modernized future" />
     </div>
 
-    <TextBlock title="Dude">
-      <TextBlockGraph text="Hello, dude" />
+    <TextBlock title="From humble beginnings to a modernized future">
+      <TextBlockGraph text="From humble beginnings to a modernized future" />
+      <TextBlockGraph text="HubSpot’s design system began in 2015. " />
+    </TextBlock>
+
+    {/* Section =================================  */}
+    <div class="image__container two-up width--medium">
+      <div>
+        <Image src={uilibraryShot} alt="" />
+        <TextBlockGraph text="UI Library" />
+      </div>
+      <div>
+        <Image src={trellisSbShot} alt="" />
+        <TextBlockGraph text="Trellis Storybook" />
+      </div>
+    </div>
+
+    <TextBlock title="Documentation in 2024">
       <TextBlockGraph
-        text="Redesigning Verily's digital experience was contingent on a complete redesign of its product portfolio and positioning. I worked on Project Atlas, an internal codename used to describe all the work to pivot Verily's business and create a new strategic operating model."
+        text="From 2015 – 2022 the primary avenue for design system documentation was a hand-built site, known internally as UI Library. The site offered many of the table stakes attributes of a documentation site, including editable code snippets, visual search, easy of use and discovery. In 2022, the design system engineering team made the decision to migrate design system documentation to Storybook."
+      />
+      <TextBlockGraph
+        text="There are many advantages of a Storybook approach documentation solution, including availability for teams beyond the design system team. One complaint with UI Library was that it was so tightly coupled to the deisgn system component library, it inhibitied use by other teams, desiring a documentation solution."
+      />
+      <TextBlockGraph
+        text="Issue: While Storybook is wonderful for component development and testing, it lacks nuanced design documentation. Additionally, Storybook’s UI can adversely impact discoverability."
+      />
+      <TextBlockGraph
+        text="The challenges of Storybook left the team with a legacy documentation solution (UI Library) that was still too widely leveraged by both design and engineering to deprecate and remove."
+      />
+      <TextBlockGraph
+        text="Improving this paradigm, and reducing friction was our central focus."
       />
     </TextBlock>
 
+    {/* Section =================================  */}
     <div class="image__container two-up">
       <div class="vertical">
-        <Image src={preparingImage} alt="" />
-        <Image src={experiencesImage} alt="" />
+        <div>
+          <Image src={preparingImage} alt="" />
+          <TextBlockGraph text="Helping consumer understand the road ahead" />
+        </div>
+        <div>
+          <Image src={experiencesImage} alt="" />
+          <TextBlockGraph
+            text="Surfacing Product Group owned Experience Systems"
+          />
+        </div>
       </div>
-      <div><Image src={postsImage} alt="" /></div>
-    </div>
 
-    <TextBlock title="Dude" />
+      <div>
+        <Image src={postsImage} alt="" />
+        <TextBlockGraph text="xxx" />
+      </div>
+    </div>
+    <TextBlock title="Taming the firehouse of information">
+      <TextBlockGraph
+        text="Like most enterprise companies, information is published via multiple platforms across HubSpot. Key wiki posts are missed, Slack messages are ephemeral and Looms are never watch. We couldn’t create a platform that would immediately change content creation from the C-Suite to ICs, but we could begin control the firehouse. The Trellis Documentation Site surfaces"
+      />
+      <TextBlockGraph text="More words" />
+    </TextBlock>
   </div>
 </BaseLayout>
 
@@ -52,17 +107,33 @@ import postsImage from "../../images/trellis-docs_posts.jpg";
     }
   }
 
+  .image__container--accent {
+    background-color: hsla(0, 0%, 25%, 0.1);
+    padding: 40px;
+  }
+
   .image__container {
     margin-inline: auto;
     /* background-color: #c4c4c3; */
-    background-color: rgba(0, 0, 0, 0.075);
-    padding: 40px;
+    /* background-color: rgba(0, 0, 0, 0.075); */
+    /* background-color: hsla(0, 0%, 25%, 0.1); */
+    /* padding: 40px; */
   }
 
   .two-up {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 40px;
+    gap: 40px;
+    @media (max-width: 700px) {
+      grid-template-columns: 1fr;
+    }
+    /* grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); */
+  }
+
+  .three-up {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
   }
 
   .vertical {

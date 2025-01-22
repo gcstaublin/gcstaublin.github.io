@@ -49,7 +49,7 @@
   /* --color-accent-extra-dim: rgba(var(--color-accent), 0.3); */
   --color-theme-name: 'newsprint';
 
-  --color-accent-test: color-mix(in srgb, var(--color-accent) 40%, transparent);
+  --color-accent-test: color-mix(in srgb, var(--color-accent) 50%, transparent);
 
 
 
@@ -402,17 +402,37 @@ a {
   }
 }
 
-.hp-width {
+.hp-width,
+.width--small {
   width: var(--context-max);
   margin-inline: auto;
 }
 
-.work-width {
-  --width-content-max: 1194px;
-  --context-max: min(var(--width-content-max), 100% - 4rem);
+.width--medium {
+  --width-content-max: 946px;
+  --context-max: min(var(--width-content-max), var(--width-content-calc));
 
   width: var(--context-max);
   margin-inline: auto;
+}
+
+.work-width,
+.width--large {
+  --width-content-max: 1194px;
+  --context-max: min(var(--width-content-max), var(--width-content-calc));
+
+  width: var(--context-max);
+  margin-inline: auto;
+}
+
+
+
+.hp-width {
+  border: 1px solid blue;
+}
+
+.work-width {
+  border: 1px solid red;
 }
 
 

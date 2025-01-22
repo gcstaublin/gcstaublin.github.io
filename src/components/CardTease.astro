@@ -13,8 +13,7 @@ import { Image } from "astro:assets";
 {/* ================================== */}
 {/* HTML Structure                     */}
 {/* ================================== */}
-
-<article>
+<article class="cardTease">
   <div class="cardTease__image">
     <a href={link}>
       <Image src={imageSrc} alt="" />
@@ -22,8 +21,19 @@ import { Image } from "astro:assets";
   </div>
   <div class="cardTease__content">
     <h3 class="cardTease__title color-text--contrast">{title}</h3>
-    <h4 class="cardTease__subTitle color-text--default">{subTitle}</h4>
-    <a class="cardTease__link color-text--accent" href={link}>{linkText}</a>
+    {
+      subTitle && (
+        <h4 class="cardTease__subTitle color-text--default">{subTitle}</h4>
+      )
+    }
+
+    {
+      link && (
+        <a class="cardTease__link color-text--accent" href={link}>
+          {linkText}
+        </a>
+      )
+    }
   </div>
 </article>
 
@@ -31,24 +41,31 @@ import { Image } from "astro:assets";
 {/* Style                              */}
 {/* ================================== */}
 <style>
-  article {
+  a {
+    display: block;
+    /* border: 1px solid orange; */
+  }
+  .cardTease {
     border-radius: 12px;
-    overflow: hidden;
   }
   .cardTease__image {
-    background-color: #e4e4df;
-    padding: 2rem;
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+    /* background-color: #e4e4df; */
+    /* padding: 2rem; */
   }
   .cardTease__content {
-    background-color: #fff;
     padding: 2rem;
-    /* border-top: 4px solid green; */
+    border-block-start: 1px solid hsla(0, 0%, 0%, 0.06);
+    border-radius: 0 0 12px 12px;
+    background-color: hsla(0, 0%, 0%, 0.03);
   }
 
   .cardTease__title {
     font-weight: 600;
     font-size: 24px;
     line-height: 1.3333333333;
+    letter-spacing: -0.01em;
     margin-block-start: 0;
   }
 
@@ -59,5 +76,9 @@ import { Image } from "astro:assets";
   .cardTease__link {
     display: block;
     margin-block-start: 12px;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 </style>
