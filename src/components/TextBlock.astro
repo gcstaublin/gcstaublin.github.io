@@ -1,0 +1,47 @@
+---
+const { title, subTitle, cssClass } = Astro.props;
+---
+
+{/* ================================== */}
+{/* HTML Structure                     */}
+{/* ================================== */}
+
+<div class:list={["textBlock__container", cssClass]}>
+  <!-- Text Block content -->
+  <div class="cols--12--primary infoItem__content">
+    <h3 class="color-text--contrast textBlock__title">{title}</h3>
+    <p class="color-text--dim infoItem__subTitle">{subTitle}</p>
+    <div class="textBlock__graphs">
+      <slot />
+    </div>
+  </div>
+</div>
+
+{/* ================================== */}
+{/* Style                              */}
+{/* ================================== */}
+<style>
+  .textBlock__container {
+    max-width: 600px;
+    margin-inline: auto;
+  }
+
+  .textBlock__title {
+    margin-block-start: 0;
+    margin-block-end: 12px;
+    font-size: 24px;
+    line-height: 1.3333333333;
+    font-weight: 600;
+  }
+
+  .textBlock__graphs {
+    /* margin-block-start: 1.5em; */
+    margin-block-start: 0;
+    font-size: 16px;
+    line-height: 1.625;
+
+    p + p {
+      margin-block-start: 1.5em;
+    }
+  }
+</style>

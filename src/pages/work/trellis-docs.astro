@@ -1,0 +1,275 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import "../../styles/global.css";
+import TextBlock from "../../components/TextBlock.astro";
+import TextBlockGraph from "../../components/TextBlockGraph.astro";
+import PageTitle from "../../components/PageTitle.astro";
+import ImageBlock from "../../components/ImageBlock.astro";
+
+import { Image } from "astro:assets";
+
+import mainImageAlt from "../../images/work/trellis-launchpad/trellis-launchpad_main.jpg";
+import uilibraryShot from "../../images/work/trellis-launchpad/ui-library-shot.jpg";
+import trellisSbShot from "../../images/work/trellis-launchpad/trellis-storybook-shot.jpg";
+import experiencesImage from "../../images/trellis-docs_experiences.jpg";
+import preparingImage from "../../images/trellis-docs_preparing.jpg";
+import postsImage from "../../images/trellis-docs_posts.jpg";
+import discoverImage from "../../images/work/trellis-launchpad/research-findings-discoverability.jpg";
+import searchImage from "../../images/work/trellis-launchpad/research-findings-search.jpg";
+import snippetsImage from "../../images/work/trellis-launchpad/research-findings-snippets.jpg";
+import mainDarkModeImage from "../../images/work/trellis-launchpad/homepage-dark-mode.jpg";
+import hpWireImage from "../../images/work/trellis-launchpad/homepage-wireframe.jpg";
+import hpDesignImage from "../../images/work/trellis-launchpad/homepage-design.jpg";
+import jsonShot from "../../images/work/trellis-launchpad/tooling-component-json.jpg";
+import alertShot from "../../images/work/trellis-launchpad/tooling-component-alert.jpg";
+import componentPageShot from "../../images/work/trellis-launchpad/tooling-components-page.jpg";
+import tokensPage from "../../images/work/trellis-launchpad/pages-design-tokens.jpg";
+import elementsPage from "../../images/work/trellis-launchpad/pages-design-elements.jpg";
+import contentsPage from "../../images/work/trellis-launchpad/pages-content.jpg";
+import illoPage from "../../images/work/trellis-launchpad/pages-illustrations.jpg";
+
+// import * as testMD from "./content/test.md";
+// const testContent = await testMD.compiledContent();
+
+import * as introMD from "./content/trellis-docs-intro.md";
+const introContent = await introMD.compiledContent();
+
+import * as contextMD from "./content/trellis-docs-context.md";
+const contextContent = await contextMD.compiledContent();
+
+import * as researchMD from "./content/trellis-docs-research.md";
+const researchContent = await researchMD.compiledContent();
+
+import * as toolingMD from "./content/trellis-docs-tooling.md";
+const toolingContent = await toolingMD.compiledContent();
+
+import * as darkModeMD from "./content/trellis-docs-dark-mode.md";
+const darkModeContent = await darkModeMD.compiledContent();
+
+import * as iterationMD from "./content/trellis-docs-iteration.md";
+const iterationContent = await iterationMD.compiledContent();
+
+import * as visualMD from "./content/trellis-docs-visual.md";
+const visualContent = await visualMD.compiledContent();
+
+const pageTitle = "Grant Staublin | Work | Trellis Documentation";
+const mainClass = "width--large work-test";
+---
+
+{/* ================================== */}
+{/* HTML                               */}
+{/* ================================== */}
+<BaseLayout pageTitle={pageTitle} mainClass={mainClass} noFollow>
+  <div class="portfolioPage__container">
+    <PageTitle
+      title="Trellis Design System Launchpad"
+      subTitle="As HubSpot’s design system evolves from it’s humble beginnings (Canvas) to a multi-themed, modernized system (Trellis), design system documentation needed to evolve with it."
+    />
+
+    {/* Main Section =================================  */}
+    <ImageBlock
+      imageSrc={mainImageAlt}
+      cssClass="imageBlock__container--accent"
+    />
+
+    {/* Intro Section =================================  */}
+    <TextBlock title={introMD.frontmatter.title}>
+      <div>
+        {(<Fragment set:html={introContent} />)}
+      </div>
+    </TextBlock>
+
+    {/* Context Section =================================  */}
+    <div class="image__container two-up width--medium">
+      <ImageBlock
+        imageSrc={uilibraryShot}
+        caption="UI Library is the system's legacy documentation site"
+      />
+      <ImageBlock
+        imageSrc={trellisSbShot}
+        caption="The Trellis Storybook is built on cusomized Storybook tooling"
+      />
+    </div>
+
+    <TextBlock title={contextMD.frontmatter.title}>
+      <div>
+        {(<Fragment set:html={contextContent} />)}
+      </div>
+    </TextBlock>
+
+    {/* Learning Section =================================  */}
+    <div class="image__container three-up">
+      <ImageBlock imageSrc={discoverImage} caption="Words" />
+      <ImageBlock imageSrc={searchImage} caption="Words" />
+      <ImageBlock imageSrc={snippetsImage} caption="Words" />
+    </div>
+
+    <TextBlock title={researchMD.frontmatter.title}>
+      <div>
+        {(<Fragment set:html={researchContent} />)}
+      </div>
+    </TextBlock>
+
+    {/* Iteration Section =================================  */}
+    <div class="image__container two-up width--medium">
+      <ImageBlock imageSrc={hpWireImage} />
+      <ImageBlock imageSrc={hpDesignImage} />
+    </div>
+
+    <TextBlock title={iterationMD.frontmatter.title}>
+      <div>
+        {(<Fragment set:html={iterationContent} />)}
+      </div>
+    </TextBlock>
+
+    {/* Help Section =================================  */}
+    <div class="image__container two-up">
+      <div class="vertical">
+        <div>
+          <Image src={preparingImage} alt="" />
+          <TextBlockGraph text="Helping consumer understand the road ahead" />
+        </div>
+        <div>
+          <Image src={experiencesImage} alt="" />
+          <TextBlockGraph
+            text="Surfacing Product Group owned Experience Systems"
+          />
+        </div>
+      </div>
+
+      <div>
+        <Image src={postsImage} alt="" />
+        <TextBlockGraph text="xxx" />
+      </div>
+    </div>
+    <TextBlock title="Taming the firehouse of information">
+      <TextBlockGraph
+        text="Like most enterprise companies, information is published via multiple platforms across HubSpot. Key wiki posts are missed, Slack messages are ephemeral and Looms are never watch. We couldn’t create a platform that would immediately change content creation from the C-Suite to ICs, but we could begin control the firehouse. The Trellis Documentation Site surfaces"
+      />
+      <TextBlockGraph text="More words" />
+    </TextBlock>
+
+    {/* Pages Section =================================  */}
+    <div class="image__container two-up width--large">
+      <div class="vertical">
+        <ImageBlock imageSrc={tokensPage} />
+        <ImageBlock imageSrc={illoPage} />
+      </div>
+      <div class="vertical">
+        <ImageBlock imageSrc={contentsPage} />
+        <ImageBlock imageSrc={elementsPage} />
+      </div>
+    </div>
+
+    <TextBlock title={visualMD.frontmatter.title}>
+      <div>
+        {(<Fragment set:html={visualContent} />)}
+      </div>
+    </TextBlock>
+
+    {/* Tooling Section =================================  */}
+    <div class="image__container two-up--side-saddle width--medium">
+      <div class="vertical">
+        <ImageBlock imageSrc={jsonShot} />
+        <ImageBlock imageSrc={alertShot} />
+      </div>
+      <ImageBlock imageSrc={componentPageShot} caption="xxxxx" />
+    </div>
+
+    <TextBlock title={toolingMD.frontmatter.title}>
+      <div>
+        {(<Fragment set:html={toolingContent} />)}
+      </div>
+    </TextBlock>
+
+    {/* Dark Mode Section =================================  */}
+
+    <TextBlock title={darkModeMD.frontmatter.title}>
+      <div>
+        {(<Fragment set:html={darkModeContent} />)}
+      </div>
+    </TextBlock>
+
+    <div class="image__container image--bottom width--medium">
+      <Image src={mainDarkModeImage} alt="" />
+    </div>
+  </div>
+
+  {/* ================================== */}
+  {/* Style                              */}
+  {/* ================================== */}
+  <style>
+    /* :root {
+      --img-radius: 20px;
+    } */
+
+    .portfolioPage__container {
+      > * + * {
+        margin-top: 64px;
+      }
+    }
+
+    /* .image__container--accent {
+      background-color: hsla(0, 0%, 25%, 0.1);
+      padding: 40px;
+    } */
+
+    /* .image__container {
+      margin-inline: auto;
+      img {
+        border-radius: var(--img-radius);
+        border: 1px solid hsla(0, 0%, 0%, 0.05);
+      }
+      p.textBlock__graph {
+        margin-block-start: 8px;
+        color: rgba(var(--color-fg-formula), var(--color-alpha-dim));
+      }
+    } */
+
+    .two-up {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      @media (max-width: 700px) {
+        grid-template-columns: 1fr;
+      }
+      /* grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); */
+    }
+
+    .two-up--side-saddle {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 40px;
+      @media (max-width: 700px) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .three-up {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 40px;
+      @media (max-width: 700px) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .vertical {
+      display: grid;
+      grid-template-row: 1fr 1fr;
+      grid-gap: 40px;
+    }
+
+    .image--bottom {
+      margin-block-end: -3rem;
+      img {
+        border-radius: 12px 12px 0 0;
+        border-bottom-width: 0;
+      }
+    }
+
+    img {
+      max-width: 100%;
+    }
+  </style>
+</BaseLayout>

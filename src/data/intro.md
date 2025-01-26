@@ -1,7 +1,9 @@
 ---
-
 words:
-- I'm a designer with two decades experience in product design, editorial design and art direction. Since 2015, my primary focus has been creating, maintaing and scaling enterprise design systems. I've done this as an in-house member of a team as well as a consultant. I'm currently a Senior Product Designer, collaborating with a cross-functional team as we strive to evolve the HubSpot Design System.
+- I'm a designer with two decades experience in product design, editorial design and art direction. Since 2015, my primary focus has been creating, maintaining and scaling enterprise design systems. I've done this as an in-house member of a team as well as a consultant. I'm currently a Senior Product Designer and Design Technologist, collaborating with a cross-functional team as we strive to evolve the HubSpot Design System.
+
+# - I’ve been designing products for over two decades. For the past seven years, I’ve been building and growing enterprise design systems. I’ve done this as part of a team and as a consultant. Right now, I’m a Senior Product Designer and Design Technologist, working with a team to evolve design systems at HubSpot. Before that, I was also an award-winning editorial designer and art director.
+
 # - I'd love to work with you.
 
 # - Currently, I'm a designer on the design systems team at HubSpot. As the first full-time design hire for the team, my focus falls in the gray area between a product owner, an advocate for team growth, a coach, an organization problem solver, a tool owner and sometimes a designer. Every day presents unique challenges related to scale, growth, tech debt and a design system's relationship to a growing orgainzation with an expanding product.

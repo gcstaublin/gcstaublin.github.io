@@ -37,18 +37,24 @@
   --color-alpha-contrast: 1;
   --color-alpha-default: 0.85;
   --color-alpha-subtle: 0.65;
-  --color-alpha-dim: 0.45;
+  --color-alpha-dim: 0.575;
   --color-alpha-extra-dim: 0.15;
 
-  --color-surface: #e4e4df;
-  --color-fg-formula: 75, 60, 85;
+  /* --color-surface: #e4e4df; */
+  /* --color-surface: #F7F5F3; */
+  --color-surface: #fdfdfd;
+  /* --color-fg-formula: 75, 60, 85; */
+  --color-fg-formula: 19, 16, 19;
+  /* -color-fg-formula: 30, 27, 30; */
   --color-fg-inverse: 255, 255, 255;
-  --color-accent: #EA4904;
+  /* --color-accent: #EA4904; */
+  --color-accent: #7d7a7d;
+  --color-interactive: #0000EE;
   --color-accent-dim: rgba(var(--color-accent), 0.8);
   /* --color-accent-extra-dim: rgba(var(--color-accent), 0.3); */
   --color-theme-name: 'newsprint';
 
-  --color-accent-test: color-mix(in srgb, var(--color-accent) 40%, transparent);
+  --color-accent-test: color-mix(in srgb, var(--color-accent) 50%, transparent);
 
 
 
@@ -57,15 +63,19 @@
   --font-size-sm: 0.875rem;
 
   --width-content-max: 628px;
+  --width-content-calc: 100% - 4rem;
 
-  --context-max: min(var(--width-content-max), 100% - 4rem);
+  /* --context-max: min(var(--width-content-max), 100% - 4rem); */
+
+  --context-max: min(var(--width-content-max), var(--width-content-calc));
 
 
 
   --site-header-max-width: 1200px;
   --site-header-height: 51px;
   --site-header-color-background: rgba(255, 255, 255, 0.2);
-  --site-nav-color-link: #ffffff;
+  /* --site-nav-color-link: #ffffff; */
+  --site-nav-color-link: var(--color-text-contrast);
   --site-nav-type-size-link-small: 0.75rem;
   --site-nav-type-size-link-large: 0.85rem;
 
@@ -93,6 +103,7 @@
   --color-surface: #14284b;
   --color-fg-formula: 215, 215, 250;
   --color-accent: #BCF5F5;
+  --color-interactive: #78decc;
   --color-theme-name: 'kind of blue';
   --color-accent-test: color-mix(in srgb, var(--color-accent) 40%, transparent);
 }
@@ -101,6 +112,7 @@
   --color-surface: #242120;
   --color-fg-formula: 220, 220, 175;
   --color-accent: #4B9898;
+  --color-interactive: #78decc;
   --color-theme-name: 'dark side';
   --color-accent-test: color-mix(in srgb, var(--color-accent) 40%, transparent);
 }
@@ -109,6 +121,7 @@
   --color-surface: #ffd24c;
   --color-fg-formula: 64, 64, 4;
   --color-accent: #3465E1;
+  --color-interactive: #3465E1;
   --color-theme-name: 'dirty sun';
   --color-accent-test: color-mix(in srgb, var(--color-accent) 40%, transparent);
 }
@@ -221,6 +234,7 @@ a:not([class]) {
 img,
 picture {
   max-width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -338,6 +352,8 @@ h6 {
 }
 
 
+
+
 main {
   /* max-width: var(--width-content-max); */
   /* margin-left: auto; */
@@ -394,11 +410,38 @@ a {
   }
 }
 
-.hp-width {
+.hp-width,
+.width--small {
   width: var(--context-max);
   margin-inline: auto;
 }
 
+.width--medium {
+  --width-content-max: 946px;
+  --context-max: min(var(--width-content-max), var(--width-content-calc));
+
+  width: var(--context-max);
+  margin-inline: auto;
+}
+
+.work-width,
+.width--large {
+  --width-content-max: 1194px;
+  --context-max: min(var(--width-content-max), var(--width-content-calc));
+
+  width: var(--context-max);
+  margin-inline: auto;
+}
+
+
+
+.hp-width {
+  border: 1px solid blue;
+}
+
+.work-width {
+  border: 1px solid red;
+}
 
 
 :root {

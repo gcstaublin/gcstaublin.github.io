@@ -1,0 +1,113 @@
+---
+const {
+  title,
+  subTitle,
+  link,
+  linkText = "View Project",
+  imageSrc,
+  cssClass,
+} = Astro.props;
+import { Image } from "astro:assets";
+---
+
+{/* ================================== */}
+{/* HTML Structure                     */}
+{/* ================================== */}
+<article class="cardTease">
+  <div class="cardTease__image">
+    <a href={link}>
+      <Image src={imageSrc} alt="" />
+    </a>
+  </div>
+  <div class="cardTease__content">
+    <h3 class="cardTease__title color-text--contrast">{title}</h3>
+    {
+      subTitle && (
+        <h4 class="cardTease__subTitle color-text--default">{subTitle}</h4>
+      )
+    }
+
+    <!-- {
+      link && (
+        <a class="cardTease__link color-text--accent" href={link}>
+          {linkText}
+        </a>
+      )
+    } -->
+
+    {
+      link ? (
+        <a class="cardTease__link color-text--accent" href={link}>
+          {linkText}
+        </a>
+      ) : (
+        <p class="color-text--dim">Case study coming soon</p>
+      )
+    }
+  </div>
+</article>
+
+{/* ================================== */}
+{/* Style                              */}
+{/* ================================== */}
+<style>
+  :root {
+    --tease-bg: hsla(0, 0%, 0%, 0.015);
+
+    .theme1,
+    .theme2 {
+      --tease-bg: hsla(0, 0%, 0%, 0.15);
+      /* blue, dark */
+    }
+
+    .theme3 {
+      --tease-bg: hsla(0, 0%, 0%, 0.035);
+      /* sun */
+    }
+  }
+
+  a {
+    display: block;
+    /* border: 1px solid orange; */
+  }
+  .cardTease {
+    border-radius: 12px;
+  }
+  .cardTease__image {
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+    /* background-color: #e4e4df; */
+    /* padding: 2rem; */
+  }
+  .cardTease__content {
+    padding: 2rem;
+    border-block-start: 1px solid hsla(0, 0%, 0%, 0.06);
+    border-radius: 0 0 12px 12px;
+    background-color: var(--tease-bg);
+  }
+
+  .cardTease__title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.3333333333;
+    letter-spacing: -0.01em;
+    margin-block-start: 0;
+  }
+
+  .cardTease__subTitle {
+    margin-block-start: 8px;
+  }
+
+  .cardTease__link {
+    display: block;
+    margin-block-start: 12px;
+    text-decoration: none;
+    color: var(--color-interactive);
+    &:hover {
+      text-decoration: underline;
+    }
+    &:after {
+      content: "→";
+    }
+  }
+</style>

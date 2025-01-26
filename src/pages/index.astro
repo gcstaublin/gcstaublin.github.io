@@ -6,6 +6,7 @@ import contactData from "../data/contacts.json";
 import * as introMD from "../data/intro.md";
 
 const pageTitle = "Grant Staublin";
+const mainClass = "width--small";
 import "../styles/global.css";
 import InfoItem from "../components/InfoItem.astro";
 import InfoItems from "../components/InfoItems.astro";
@@ -14,7 +15,7 @@ import InfoItems from "../components/InfoItems.astro";
 {/* ================================== */}
 {/* About                              */}
 {/* ================================== */}
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout pageTitle={pageTitle} mainClass={mainClass}>
   <HpSection sectionTitle="About">
     <p>{introMD.frontmatter.title}</p>
     <div class="serif">

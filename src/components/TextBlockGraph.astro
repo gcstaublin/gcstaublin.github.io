@@ -1,0 +1,29 @@
+---
+const { text } = Astro.props;
+---
+
+{/* ================================== */}
+{/* HTML Structure                     */}
+{/* ================================== */}
+<!-- <p class="color-text--default textBlock__graph {cssClass}">
+  {text}
+</p> -->
+
+<p class:list={["color-text--default", "textBlock__graph"]}>
+  {text}
+</p>
+
+{/* ================================== */}
+{/* Style                              */}
+{/* ================================== */}
+<style>
+  .textBlock__graph {
+    margin-block-start: 1.5em;
+    font-size: 16px;
+    line-height: 1.625;
+
+    &:first-of-type {
+      margin-block-start: 0;
+    }
+  }
+</style>

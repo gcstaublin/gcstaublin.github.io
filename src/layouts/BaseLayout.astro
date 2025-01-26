@@ -4,6 +4,8 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
 const { pageTitle } = Astro.props;
+const { mainClass } = Astro.props;
+const { noFollow } = Astro.props;
 const isProd = import.meta.env.PROD;
 
 
@@ -13,8 +15,11 @@ const isProd = import.meta.env.PROD;
   <head>
     <meta charset="utf-8" />
     <!-- <link rel="icon" type="image/svg+xml" href="astro-test/favicon.svg" /> -->
-    <link rel="icon" type="image/svg+xml" href="src/assets/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
+    { noFollow && (
+      <meta name="robots" content="noindex, nofollow" />
+    )}
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
     <!-- Google tag (gtag.js) -->
@@ -23,7 +28,7 @@ const isProd = import.meta.env.PROD;
   </head>
   <body>
     <Header />
-    <main class="hp-width">
+    <main class={mainClass}>
       <slot />
     </main>
     <Footer />

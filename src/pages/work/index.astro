@@ -1,0 +1,86 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import "../../styles/global.css";
+import CardTease from "../../components/CardTease.astro";
+import PageTitle from "../../components/PageTitle.astro";
+// import { Image } from "astro:assets";
+
+import launchpadImage from "../../images/work/landing/launchpad_tease.jpg";
+import tokensImage from "../../images/work/landing/tokens_tease.jpg";
+import uniformImage from "../../images/work/landing/uniform_tease.jpg";
+import codeConnectImage from "../../images/work/landing/code-connect_tease.jpg";
+
+const pageTitle = "Grant Staublin | Work";
+const mainClass = "width--large";
+---
+
+{/* ================================== */}
+{/* HTML                               */}
+{/* ================================== */}
+<BaseLayout pageTitle={pageTitle} mainClass={mainClass} noFollow>
+  <PageTitle title="Selected Work" />
+  <div class="work-test">
+    <div class="tease-grid">
+      <CardTease
+        imageSrc={launchpadImage}
+        link="/work/trellis-docs/"
+        title="Trellis Design System Documentation"
+        subTitle="Improving design system discovery and access to information"
+      />
+      <CardTease
+        imageSrc={tokensImage}
+        title="Trellis Design Tokens"
+        subTitle="Establishing a new foundation to power the future of the HubSpot"
+      />
+      <CardTease
+        imageSrc={codeConnectImage}
+        title="Bridging the gap with Figma"
+        subTitle="Using design tools to connect design and engineering"
+      />
+      <CardTease
+        imageSrc={uniformImage}
+        title="Uniform Design System"
+        subTitle="Creating a solid foundation for an evolving design system"
+      />
+    </div>
+    <!-- <div class="new-section">
+      <CardTease
+        imageSrc={launchpadImage}
+        title="Responsive Web Design"
+        subTitle="Creating a solid foundation for an evolving design system"
+      />
+    </div> -->
+  </div>
+
+  {/* ================================== */}
+  {/* Style                              */}
+  {/* ================================== */}
+  <style>
+    .pageTitle__container {
+      /* border: 1px solid; */
+      margin-block-end: 64px;
+
+      h2 {
+        font-size: 64px;
+        line-height: 1.25;
+        font-weight: 600;
+        margin-block-start: 0;
+        /* color: #2e2e2b; */
+      }
+
+      h3 {
+        font-size: 24px;
+        line-height: 1.25;
+      }
+    }
+    .tease-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 40px;
+    }
+
+    .new-section {
+      margin-block-start: 40px;
+    }
+  </style>
+</BaseLayout>
