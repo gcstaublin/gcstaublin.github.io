@@ -1,10 +1,10 @@
 ---
-title: "Quick, fast and blah blah"
+title: "Evolving from Canvas to Trellis"
 ---
 
-Words go here about this section of the page.
+Design Systems at HubSpot are at an inflection point in 2025. Over the next year, the entire product will evovle to a more refined visual language.
 
-And another paragraph about this stuff.
+Our three person team, consisting of myself as a
 
 From humble beginnings to a modernized future.
 
