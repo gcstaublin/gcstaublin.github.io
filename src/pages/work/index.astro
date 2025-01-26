@@ -5,7 +5,10 @@ import CardTease from "../../components/CardTease.astro";
 import PageTitle from "../../components/PageTitle.astro";
 // import { Image } from "astro:assets";
 
-import mainImage from "../../images/work/landing/launchpad_tease.jpg";
+import launchpadImage from "../../images/work/landing/launchpad_tease.jpg";
+import tokensImage from "../../images/work/landing/tokens_tease.jpg";
+import uniformImage from "../../images/work/landing/uniform_tease.jpg";
+import codeConnectImage from "../../images/work/landing/code-connect_tease.jpg";
 
 const pageTitle = "Grant Staublin | Work";
 const mainClass = "width--large";
@@ -19,36 +22,34 @@ const mainClass = "width--large";
   <div class="work-test">
     <div class="tease-grid">
       <CardTease
-        imageSrc={mainImage}
+        imageSrc={launchpadImage}
         link="/work/trellis-docs/"
         title="Trellis Design System Documentation"
-        subTitle="Creating a solid foundation for an evolving design system"
+        subTitle="Improving design system discovery and access to information"
       />
       <CardTease
-        imageSrc={mainImage}
-        link="/work/trellis-design-tokens/"
+        imageSrc={tokensImage}
         title="Trellis Design Tokens"
-        subTitle="Creating a solid foundation for an evolving design system"
+        subTitle="Establishing a new foundation to power the future of the HubSpot"
       />
       <CardTease
-        imageSrc={mainImage}
-        link="/work/trellis-design-tokens/"
-        title="Connecting Design and Engineering"
-        subTitle="Creating a solid foundation for an evolving design system"
+        imageSrc={codeConnectImage}
+        title="Bridging the gap with Figma"
+        subTitle="Using design tools to connect design and engineering"
       />
       <CardTease
-        imageSrc={mainImage}
-        link="/work/trellis-design-tokens/"
+        imageSrc={uniformImage}
         title="Uniform Design System"
         subTitle="Creating a solid foundation for an evolving design system"
       />
     </div>
-    <CardTease
-      imageSrc={mainImage}
-      link="/work/trellis-design-tokens/"
-      title="Responsive Web Design"
-      subTitle="Creating a solid foundation for an evolving design system"
-    />
+    <!-- <div class="new-section">
+      <CardTease
+        imageSrc={launchpadImage}
+        title="Responsive Web Design"
+        subTitle="Creating a solid foundation for an evolving design system"
+      />
+    </div> -->
   </div>
 
   {/* ================================== */}
@@ -76,6 +77,10 @@ const mainClass = "width--large";
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-gap: 40px;
+    }
+
+    .new-section {
+      margin-block-start: 40px;
     }
   </style>
 </BaseLayout>

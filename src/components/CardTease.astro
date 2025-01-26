@@ -27,11 +27,21 @@ import { Image } from "astro:assets";
       )
     }
 
-    {
+    <!-- {
       link && (
         <a class="cardTease__link color-text--accent" href={link}>
           {linkText}
         </a>
+      )
+    } -->
+
+    {
+      link ? (
+        <a class="cardTease__link color-text--accent" href={link}>
+          {linkText}
+        </a>
+      ) : (
+        <p class="color-text--dim">Case study coming soon</p>
       )
     }
   </div>

@@ -5,16 +5,26 @@ import TextBlock from "../../components/TextBlock.astro";
 import TextBlockGraph from "../../components/TextBlockGraph.astro";
 import PageTitle from "../../components/PageTitle.astro";
 
-const pageTitle = "Grant Staublin";
-const mainClass = "width--large work-test";
-
 import { Image } from "astro:assets";
+
 import mainImageAlt from "../../images/work/trellis-launchpad/trellis-launchpad_main.jpg";
 import uilibraryShot from "../../images/work/trellis-launchpad/ui-library-shot.jpg";
 import trellisSbShot from "../../images/work/trellis-launchpad/trellis-storybook-shot.jpg";
 import experiencesImage from "../../images/trellis-docs_experiences.jpg";
 import preparingImage from "../../images/trellis-docs_preparing.jpg";
 import postsImage from "../../images/trellis-docs_posts.jpg";
+import discoverImage from "../../images/work/trellis-launchpad/research-findings-discoverability.jpg";
+import searchImage from "../../images/work/trellis-launchpad/research-findings-search.jpg";
+import snippetsImage from "../../images/work/trellis-launchpad/research-findings-snippets.jpg";
+import mainDarkModeImage from "../../images/work/trellis-launchpad/homepage-dark-mode.jpg";
+import hpWireImage from "../../images/work/trellis-launchpad/homepage-wireframe.jpg";
+import hpDesignImage from "../../images/work/trellis-launchpad/homepage-design.jpg";
+
+import * as testMD from "./content/test.md";
+const testContent = await testMD.compiledContent();
+
+const pageTitle = "Grant Staublin | Work | Trellis Documentation";
+const mainClass = "width--large work-test";
 ---
 
 {/* ================================== */}
@@ -27,18 +37,32 @@ import postsImage from "../../images/trellis-docs_posts.jpg";
       subTitle="As HubSpot’s design system evolves from it’s humble beginnings (Canvas) to a multi-themed modernized system (Trellis), documentation needed to evolved."
     />
 
-    {/* Section =================================  */}
+    {/* Main Section =================================  */}
     <div class="image__container image__container--accent">
       <Image src={mainImageAlt} alt="" />
       <TextBlockGraph text="From humble beginnings to a modernized future" />
     </div>
+
+    <TextBlock title={testMD.frontmatter.title}>
+      <div>
+        <p>{testContent.title}</p>
+        {
+          (
+            <Fragment set:html={testContent} />
+            // testMD.map((graph) => {
+            //   return <p set:html={graph} />;
+            // })
+          )
+        }
+      </div>
+    </TextBlock>
 
     <TextBlock title="From humble beginnings to a modernized future">
       <TextBlockGraph text="From humble beginnings to a modernized future" />
       <TextBlockGraph text="HubSpot’s design system began in 2015. " />
     </TextBlock>
 
-    {/* Section =================================  */}
+    {/* Context Section =================================  */}
     <div class="image__container two-up width--medium">
       <div>
         <Image src={uilibraryShot} alt="" />
@@ -68,7 +92,49 @@ import postsImage from "../../images/trellis-docs_posts.jpg";
       />
     </TextBlock>
 
-    {/* Section =================================  */}
+    {/* Learning Section =================================  */}
+    <div class="image__container three-up">
+      <div>
+        <Image src={discoverImage} alt="" />
+        <TextBlockGraph
+          text="<strong>Helping</strong> consumer understand the road ahead"
+        />
+      </div>
+      <div>
+        <Image src={searchImage} alt="" />
+        <TextBlockGraph
+          text="Helping <strong>consumer</strong> understand the road ahead"
+        />
+      </div>
+      <div>
+        <Image src={snippetsImage} alt="" />
+        <TextBlockGraph
+          text="Helping <strong>consumer</strong> understand the road ahead"
+        />
+      </div>
+    </div>
+    <TextBlock title="Learning">
+      <TextBlockGraph text="xxxx" />
+      <TextBlockGraph text="More words" />
+    </TextBlock>
+
+    {/* Iteration Section =================================  */}
+    <div class="image__container two-up width--medium">
+      <div>
+        <Image src={hpWireImage} alt="" />
+        <TextBlockGraph text="Rough Wireframe" />
+      </div>
+      <div>
+        <Image src={hpDesignImage} alt="" />
+        <TextBlockGraph text="Early design iteration" />
+      </div>
+    </div>
+    <TextBlock title="Tech and Design exploration and iteration">
+      <TextBlockGraph text="xxxx" />
+      <TextBlockGraph text="More words" />
+    </TextBlock>
+
+    {/* Help Section =================================  */}
     <div class="image__container two-up">
       <div class="vertical">
         <div>
@@ -94,55 +160,80 @@ import postsImage from "../../images/trellis-docs_posts.jpg";
       />
       <TextBlockGraph text="More words" />
     </TextBlock>
+
+    {/* Dark Mode Section =================================  */}
+    <div class="image__container image--bottom width--medium">
+      <Image src={mainDarkModeImage} alt="" />
+    </div>
   </div>
+
+  {/* ================================== */}
+  {/* Style                              */}
+  {/* ================================== */}
+  <style>
+    :root {
+      --img-radius: 20px;
+    }
+
+    .work-test {
+      > * + * {
+        margin-top: 64px;
+      }
+    }
+
+    .image__container--accent {
+      background-color: hsla(0, 0%, 25%, 0.1);
+      padding: 40px;
+    }
+
+    .image__container {
+      margin-inline: auto;
+      /* background-color: #c4c4c3; */
+      /* background-color: rgba(0, 0, 0, 0.075); */
+      /* background-color: hsla(0, 0%, 25%, 0.1); */
+      /* padding: 40px; */
+      img {
+        /* border-radius: 12px; */
+        border-radius: var(--img-radius);
+        border: 1px solid hsla(0, 0%, 0%, 0.05);
+      }
+    }
+
+    .two-up {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      @media (max-width: 700px) {
+        grid-template-columns: 1fr;
+      }
+      /* grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); */
+    }
+
+    .three-up {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 40px;
+      @media (max-width: 700px) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .vertical {
+      display: grid;
+      grid-template-row: 1fr 1fr;
+      grid-gap: 40px;
+    }
+
+    .image--bottom {
+      margin-block-end: -3rem;
+      img {
+        border-radius: 12px 12px 0 0;
+        border-bottom-width: 0;
+      }
+    }
+
+    img {
+      max-width: 100%;
+    }
+  </style>
 </BaseLayout>
-
-{/* ================================== */}
-{/* Style                              */}
-{/* ================================== */}
-<style>
-  .work-test {
-    > * + * {
-      margin-top: 64px;
-    }
-  }
-
-  .image__container--accent {
-    background-color: hsla(0, 0%, 25%, 0.1);
-    padding: 40px;
-  }
-
-  .image__container {
-    margin-inline: auto;
-    /* background-color: #c4c4c3; */
-    /* background-color: rgba(0, 0, 0, 0.075); */
-    /* background-color: hsla(0, 0%, 25%, 0.1); */
-    /* padding: 40px; */
-  }
-
-  .two-up {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    @media (max-width: 700px) {
-      grid-template-columns: 1fr;
-    }
-    /* grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); */
-  }
-
-  .three-up {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 40px;
-  }
-
-  .vertical {
-    display: grid;
-    grid-template-row: 1fr 1fr;
-    grid-gap: 40px;
-  }
-
-  img {
-    max-width: 100%;
-  }
-</style>
