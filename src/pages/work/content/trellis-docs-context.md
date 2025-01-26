@@ -1,5 +1,5 @@
 ---
-title: "Context"
+title: "History of design system documentation"
 ---
 
 From 2015 – 2022 the primary avenue for design system documentation was a hand-built site, known internally as UI Library. The site offered many of the table stakes attributes of a documentation site, including editable code snippets, visual search, easy of use and discovery. In 2022, the design system engineering team made the decision to migrate design system documentation to Storybook.

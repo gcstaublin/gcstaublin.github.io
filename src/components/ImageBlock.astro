@@ -1,0 +1,42 @@
+---
+const { caption, imageSrc, imageAlt = "", cssClass } = Astro.props;
+import { Image } from "astro:assets";
+import TextBlockGraph from "./TextBlockGraph.astro";
+---
+
+{/* ================================== */}
+{/* HTML Structure                     */}
+{/* ================================== */}
+<div class={`${"imageBlock__container xxx"} ${cssClass ? cssClass : ""}`}>
+  <Image src={imageSrc} alt={imageAlt} />
+  {caption && <TextBlockGraph text={caption} />}
+</div>
+
+<!-- class:list={["color-text--default", "textBlock__graph"]} -->
+<!-- <p class={`${"default-class"} ${className ? className : ""}`}>{text}</p> -->
+
+{/* ================================== */}
+{/* Style                              */}
+{/* ================================== */}
+<style>
+  :root {
+    --imageBlock-radius: 20px;
+  }
+  .imageBlock__container--accent {
+    background-color: hsla(0, 0%, 25%, 0.1);
+    padding: 40px;
+  }
+
+  .imageBlock__container {
+    margin-inline: auto;
+    img {
+      border-radius: var(--imageBlock-radius);
+      border: 1px solid hsla(0, 0%, 0%, 0.05);
+    }
+    p.textBlock__graph {
+      margin-block-start: 8px;
+      padding-inline-start: 8px;
+      color: rgba(var(--color-fg-formula), var(--color-alpha-dim));
+    }
+  }
+</style>

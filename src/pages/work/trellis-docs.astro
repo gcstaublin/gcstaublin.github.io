@@ -4,6 +4,7 @@ import "../../styles/global.css";
 import TextBlock from "../../components/TextBlock.astro";
 import TextBlockGraph from "../../components/TextBlockGraph.astro";
 import PageTitle from "../../components/PageTitle.astro";
+import ImageBlock from "../../components/ImageBlock.astro";
 
 import { Image } from "astro:assets";
 
@@ -19,9 +20,37 @@ import snippetsImage from "../../images/work/trellis-launchpad/research-findings
 import mainDarkModeImage from "../../images/work/trellis-launchpad/homepage-dark-mode.jpg";
 import hpWireImage from "../../images/work/trellis-launchpad/homepage-wireframe.jpg";
 import hpDesignImage from "../../images/work/trellis-launchpad/homepage-design.jpg";
+import jsonShot from "../../images/work/trellis-launchpad/tooling-component-json.jpg";
+import alertShot from "../../images/work/trellis-launchpad/tooling-component-alert.jpg";
+import componentPageShot from "../../images/work/trellis-launchpad/tooling-components-page.jpg";
+import tokensPage from "../../images/work/trellis-launchpad/pages-design-tokens.jpg";
+import elementsPage from "../../images/work/trellis-launchpad/pages-design-elements.jpg";
+import contentsPage from "../../images/work/trellis-launchpad/pages-content.jpg";
+import illoPage from "../../images/work/trellis-launchpad/pages-illustrations.jpg";
 
-import * as testMD from "./content/test.md";
-const testContent = await testMD.compiledContent();
+// import * as testMD from "./content/test.md";
+// const testContent = await testMD.compiledContent();
+
+import * as introMD from "./content/trellis-docs-intro.md";
+const introContent = await introMD.compiledContent();
+
+import * as contextMD from "./content/trellis-docs-context.md";
+const contextContent = await contextMD.compiledContent();
+
+import * as researchMD from "./content/trellis-docs-research.md";
+const researchContent = await researchMD.compiledContent();
+
+import * as toolingMD from "./content/trellis-docs-tooling.md";
+const toolingContent = await toolingMD.compiledContent();
+
+import * as darkModeMD from "./content/trellis-docs-dark-mode.md";
+const darkModeContent = await darkModeMD.compiledContent();
+
+import * as iterationMD from "./content/trellis-docs-iteration.md";
+const iterationContent = await iterationMD.compiledContent();
+
+import * as visualMD from "./content/trellis-docs-visual.md";
+const visualContent = await visualMD.compiledContent();
 
 const pageTitle = "Grant Staublin | Work | Trellis Documentation";
 const mainClass = "width--large work-test";
@@ -31,107 +60,66 @@ const mainClass = "width--large work-test";
 {/* HTML                               */}
 {/* ================================== */}
 <BaseLayout pageTitle={pageTitle} mainClass={mainClass} noFollow>
-  <div class="work-test">
+  <div class="portfolioPage__container">
     <PageTitle
       title="Trellis Design System Launchpad"
       subTitle="As HubSpot’s design system evolves from it’s humble beginnings (Canvas) to a multi-themed modernized system (Trellis), documentation needed to evolved."
     />
 
     {/* Main Section =================================  */}
-    <div class="image__container image__container--accent">
-      <Image src={mainImageAlt} alt="" />
-      <TextBlockGraph text="From humble beginnings to a modernized future" />
-    </div>
+    <ImageBlock
+      imageSrc={mainImageAlt}
+      cssClass="imageBlock__container--accent"
+    />
 
-    <TextBlock title={testMD.frontmatter.title}>
+    {/* Intro Section =================================  */}
+    <TextBlock title={introMD.frontmatter.title}>
       <div>
-        <p>{testContent.title}</p>
-        {
-          (
-            <Fragment set:html={testContent} />
-            // testMD.map((graph) => {
-            //   return <p set:html={graph} />;
-            // })
-          )
-        }
+        {(<Fragment set:html={introContent} />)}
       </div>
-    </TextBlock>
-
-    <TextBlock title="From humble beginnings to a modernized future">
-      <TextBlockGraph text="From humble beginnings to a modernized future" />
-      <TextBlockGraph text="HubSpot’s design system began in 2015. " />
     </TextBlock>
 
     {/* Context Section =================================  */}
     <div class="image__container two-up width--medium">
-      <div>
-        <Image src={uilibraryShot} alt="" />
-        <TextBlockGraph text="UI Library" />
-      </div>
-      <div>
-        <Image src={trellisSbShot} alt="" />
-        <TextBlockGraph text="Trellis Storybook" />
-      </div>
+      <ImageBlock
+        imageSrc={uilibraryShot}
+        caption="UI Library is the system's legacy documentation site"
+      />
+      <ImageBlock
+        imageSrc={trellisSbShot}
+        caption="The Trellis Storybook is built on cusomized Storybook tooling"
+      />
     </div>
 
-    <TextBlock title="Documentation in 2024">
-      <TextBlockGraph
-        text="From 2015 – 2022 the primary avenue for design system documentation was a hand-built site, known internally as UI Library. The site offered many of the table stakes attributes of a documentation site, including editable code snippets, visual search, easy of use and discovery. In 2022, the design system engineering team made the decision to migrate design system documentation to Storybook."
-      />
-      <TextBlockGraph
-        text="There are many advantages of a Storybook approach documentation solution, including availability for teams beyond the design system team. One complaint with UI Library was that it was so tightly coupled to the deisgn system component library, it inhibitied use by other teams, desiring a documentation solution."
-      />
-      <TextBlockGraph
-        text="Issue: While Storybook is wonderful for component development and testing, it lacks nuanced design documentation. Additionally, Storybook’s UI can adversely impact discoverability."
-      />
-      <TextBlockGraph
-        text="The challenges of Storybook left the team with a legacy documentation solution (UI Library) that was still too widely leveraged by both design and engineering to deprecate and remove."
-      />
-      <TextBlockGraph
-        text="Improving this paradigm, and reducing friction was our central focus."
-      />
+    <TextBlock title={contextMD.frontmatter.title}>
+      <div>
+        {(<Fragment set:html={contextContent} />)}
+      </div>
     </TextBlock>
 
     {/* Learning Section =================================  */}
     <div class="image__container three-up">
-      <div>
-        <Image src={discoverImage} alt="" />
-        <TextBlockGraph
-          text="<strong>Helping</strong> consumer understand the road ahead"
-        />
-      </div>
-      <div>
-        <Image src={searchImage} alt="" />
-        <TextBlockGraph
-          text="Helping <strong>consumer</strong> understand the road ahead"
-        />
-      </div>
-      <div>
-        <Image src={snippetsImage} alt="" />
-        <TextBlockGraph
-          text="Helping <strong>consumer</strong> understand the road ahead"
-        />
-      </div>
+      <ImageBlock imageSrc={discoverImage} caption="Words" />
+      <ImageBlock imageSrc={searchImage} caption="Words" />
+      <ImageBlock imageSrc={snippetsImage} caption="Words" />
     </div>
-    <TextBlock title="Learning">
-      <TextBlockGraph text="xxxx" />
-      <TextBlockGraph text="More words" />
+
+    <TextBlock title={researchMD.frontmatter.title}>
+      <div>
+        {(<Fragment set:html={researchContent} />)}
+      </div>
     </TextBlock>
 
     {/* Iteration Section =================================  */}
     <div class="image__container two-up width--medium">
-      <div>
-        <Image src={hpWireImage} alt="" />
-        <TextBlockGraph text="Rough Wireframe" />
-      </div>
-      <div>
-        <Image src={hpDesignImage} alt="" />
-        <TextBlockGraph text="Early design iteration" />
-      </div>
+      <ImageBlock imageSrc={hpWireImage} />
+      <ImageBlock imageSrc={hpDesignImage} />
     </div>
-    <TextBlock title="Tech and Design exploration and iteration">
-      <TextBlockGraph text="xxxx" />
-      <TextBlockGraph text="More words" />
+
+    <TextBlock title={iterationMD.frontmatter.title}>
+      <div>
+        {(<Fragment set:html={iterationContent} />)}
+      </div>
     </TextBlock>
 
     {/* Help Section =================================  */}
@@ -161,7 +149,47 @@ const mainClass = "width--large work-test";
       <TextBlockGraph text="More words" />
     </TextBlock>
 
+    {/* Pages Section =================================  */}
+    <div class="image__container two-up width--large">
+      <div class="vertical">
+        <ImageBlock imageSrc={tokensPage} />
+        <ImageBlock imageSrc={illoPage} />
+      </div>
+      <div class="vertical">
+        <ImageBlock imageSrc={contentsPage} />
+        <ImageBlock imageSrc={elementsPage} />
+      </div>
+    </div>
+
+    <TextBlock title={visualMD.frontmatter.title}>
+      <div>
+        {(<Fragment set:html={visualContent} />)}
+      </div>
+    </TextBlock>
+
+    {/* Tooling Section =================================  */}
+    <div class="image__container two-up--side-saddle width--medium">
+      <div class="vertical">
+        <ImageBlock imageSrc={jsonShot} />
+        <ImageBlock imageSrc={alertShot} />
+      </div>
+      <ImageBlock imageSrc={componentPageShot} caption="xxxxx" />
+    </div>
+
+    <TextBlock title={toolingMD.frontmatter.title}>
+      <div>
+        {(<Fragment set:html={toolingContent} />)}
+      </div>
+    </TextBlock>
+
     {/* Dark Mode Section =================================  */}
+
+    <TextBlock title={darkModeMD.frontmatter.title}>
+      <div>
+        {(<Fragment set:html={darkModeContent} />)}
+      </div>
+    </TextBlock>
+
     <div class="image__container image--bottom width--medium">
       <Image src={mainDarkModeImage} alt="" />
     </div>
@@ -171,33 +199,32 @@ const mainClass = "width--large work-test";
   {/* Style                              */}
   {/* ================================== */}
   <style>
-    :root {
+    /* :root {
       --img-radius: 20px;
-    }
+    } */
 
-    .work-test {
+    .portfolioPage__container {
       > * + * {
         margin-top: 64px;
       }
     }
 
-    .image__container--accent {
+    /* .image__container--accent {
       background-color: hsla(0, 0%, 25%, 0.1);
       padding: 40px;
-    }
+    } */
 
-    .image__container {
+    /* .image__container {
       margin-inline: auto;
-      /* background-color: #c4c4c3; */
-      /* background-color: rgba(0, 0, 0, 0.075); */
-      /* background-color: hsla(0, 0%, 25%, 0.1); */
-      /* padding: 40px; */
       img {
-        /* border-radius: 12px; */
         border-radius: var(--img-radius);
         border: 1px solid hsla(0, 0%, 0%, 0.05);
       }
-    }
+      p.textBlock__graph {
+        margin-block-start: 8px;
+        color: rgba(var(--color-fg-formula), var(--color-alpha-dim));
+      }
+    } */
 
     .two-up {
       display: grid;
@@ -207,6 +234,15 @@ const mainClass = "width--large work-test";
         grid-template-columns: 1fr;
       }
       /* grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); */
+    }
+
+    .two-up--side-saddle {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 40px;
+      @media (max-width: 700px) {
+        grid-template-columns: 1fr;
+      }
     }
 
     .three-up {

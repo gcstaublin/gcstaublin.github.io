@@ -5,7 +5,11 @@ const { text } = Astro.props;
 {/* ================================== */}
 {/* HTML Structure                     */}
 {/* ================================== */}
-<p class="color-text--default textBlock__graph">
+<!-- <p class="color-text--default textBlock__graph {cssClass}">
+  {text}
+</p> -->
+
+<p class:list={["color-text--default", "textBlock__graph"]}>
   {text}
 </p>
 
