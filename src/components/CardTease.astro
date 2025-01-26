@@ -51,6 +51,21 @@ import { Image } from "astro:assets";
 {/* Style                              */}
 {/* ================================== */}
 <style>
+  :root {
+    --tease-bg: hsla(0, 0%, 0%, 0.015);
+
+    .theme1,
+    .theme2 {
+      --tease-bg: hsla(0, 0%, 0%, 0.15);
+      /* blue, dark */
+    }
+
+    .theme3 {
+      --tease-bg: hsla(0, 0%, 0%, 0.035);
+      /* sun */
+    }
+  }
+
   a {
     display: block;
     /* border: 1px solid orange; */
@@ -68,7 +83,7 @@ import { Image } from "astro:assets";
     padding: 2rem;
     border-block-start: 1px solid hsla(0, 0%, 0%, 0.06);
     border-radius: 0 0 12px 12px;
-    background-color: hsla(0, 0%, 0%, 0.03);
+    background-color: var(--tease-bg);
   }
 
   .cardTease__title {
@@ -87,8 +102,12 @@ import { Image } from "astro:assets";
     display: block;
     margin-block-start: 12px;
     text-decoration: none;
+    color: var(--color-interactive);
     &:hover {
       text-decoration: underline;
+    }
+    &:after {
+      content: "→";
     }
   }
 </style>

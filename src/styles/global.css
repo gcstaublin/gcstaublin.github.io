@@ -41,10 +41,15 @@
   --color-alpha-extra-dim: 0.15;
 
   /* --color-surface: #e4e4df; */
-  --color-surface: #F7F5F3;
-  --color-fg-formula: 75, 60, 85;
+  /* --color-surface: #F7F5F3; */
+  --color-surface: #fdfdfd;
+  /* --color-fg-formula: 75, 60, 85; */
+  --color-fg-formula: 19, 16, 19;
+  /* -color-fg-formula: 30, 27, 30; */
   --color-fg-inverse: 255, 255, 255;
-  --color-accent: #EA4904;
+  /* --color-accent: #EA4904; */
+  --color-accent: #7d7a7d;
+  --color-interactive: #0000EE;
   --color-accent-dim: rgba(var(--color-accent), 0.8);
   /* --color-accent-extra-dim: rgba(var(--color-accent), 0.3); */
   --color-theme-name: 'newsprint';
@@ -98,6 +103,7 @@
   --color-surface: #14284b;
   --color-fg-formula: 215, 215, 250;
   --color-accent: #BCF5F5;
+  --color-interactive: #78decc;
   --color-theme-name: 'kind of blue';
   --color-accent-test: color-mix(in srgb, var(--color-accent) 40%, transparent);
 }
@@ -106,6 +112,7 @@
   --color-surface: #242120;
   --color-fg-formula: 220, 220, 175;
   --color-accent: #4B9898;
+  --color-interactive: #78decc;
   --color-theme-name: 'dark side';
   --color-accent-test: color-mix(in srgb, var(--color-accent) 40%, transparent);
 }
@@ -114,6 +121,7 @@
   --color-surface: #ffd24c;
   --color-fg-formula: 64, 64, 4;
   --color-accent: #3465E1;
+  --color-interactive: #3465E1;
   --color-theme-name: 'dirty sun';
   --color-accent-test: color-mix(in srgb, var(--color-accent) 40%, transparent);
 }
