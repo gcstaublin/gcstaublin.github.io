@@ -2,6 +2,6 @@
 title: "Planning for future tooling"
 ---
 
-As we built the Trellis Documentation Site, our decisions were viewed through the lens of future needs. Pages like our components page rely on a JSON API we created to support the site. This improves upon the current Storybook paradigm where component status needs to manually updated on individual Storybook stories, and in many cases across multiple Github repositories. A future improvement is to leverage this JSON data to keep status in sync across all these endpoints.
+As we built the Trellis Documentation Site, our decisions were viewed through the lens of future needs. Pages like our components page rely on a JSON API to dynamically build the page. While not a groundbreaking concept. Creating this documentation API vastly improve upon the current Storybook paradigm where component status needs to updated manually across multiple Github repositories. As someone who has done more than his fair share of component status updates. Having an API-driven approach is cool. Eventually, we hope this API can power the information within Storybook.
 
-Additionally, we talked about ways to leverage component data for Figma plugins, VS Code extensions. As Design Technologists, we’re looking for ways to meet users wherever they are.
+Additionally, our team of three discussed ways we could leverage these APIs to create useful Figma plugins for designbers, or VSCode extensions for engineers to meet them where they work. Eventually, this site could be irrelevant if they information is available across the surfaces that disciplines touch.
