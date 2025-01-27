@@ -52,6 +52,9 @@ const iterationContent = await iterationMD.compiledContent();
 import * as visualMD from "./content/trellis-docs-visual.md";
 const visualContent = await visualMD.compiledContent();
 
+import * as firehoseMD from "./content/trellis-docs-firehose.md";
+const firehoseContent = await firehoseMD.compiledContent();
+
 const pageTitle = "Grant Staublin | Work | Trellis Documentation";
 const mainClass = "width--large work-test";
 ---
@@ -63,7 +66,7 @@ const mainClass = "width--large work-test";
   <div class="portfolioPage__container">
     <PageTitle
       title="Trellis Design System Launchpad"
-      subTitle="As HubSpot’s design system evolves from it’s humble beginnings (Canvas) to a multi-themed, modernized system (Trellis), design system documentation needed to evolve with it."
+      subTitle="As HubSpot’s design system evolves from it’s humble beginnings (Canvas) to a multi-themed, modernized system (Trellis), design system documentation needed to evolve with it"
     />
 
     {/* Main Section =================================  */}
@@ -99,9 +102,18 @@ const mainClass = "width--large work-test";
 
     {/* Learning Section =================================  */}
     <div class="image__container three-up">
-      <ImageBlock imageSrc={discoverImage} caption="Words" />
-      <ImageBlock imageSrc={searchImage} caption="Words" />
-      <ImageBlock imageSrc={snippetsImage} caption="Words" />
+      <ImageBlock
+        imageSrc={discoverImage}
+        caption="Engineers found UI Library more browsable, whether they were reviwing API documentation, searching for Icons or simply reviewing what a component can accomplish."
+      />
+      <ImageBlock
+        imageSrc={searchImage}
+        caption="Search is the primary mode of navigation for engineers. UI Library's search was fast, focused and visual."
+      />
+      <ImageBlock
+        imageSrc={snippetsImage}
+        caption="The editable, in-page code snippets of UI Library helped engineers quickly mock up ideas and experiment with a component."
+      />
     </div>
 
     <TextBlock title={researchMD.frontmatter.title}>
@@ -122,31 +134,28 @@ const mainClass = "width--large work-test";
       </div>
     </TextBlock>
 
-    {/* Help Section =================================  */}
+    {/* Firehose Section =================================  */}
     <div class="image__container two-up">
       <div class="vertical">
-        <div>
-          <Image src={preparingImage} alt="" />
-          <TextBlockGraph text="Helping consumer understand the road ahead" />
-        </div>
-        <div>
-          <Image src={experiencesImage} alt="" />
-          <TextBlockGraph
-            text="Surfacing Product Group owned Experience Systems"
-          />
-        </div>
+        <ImageBlock
+          imageSrc={preparingImage}
+          caption="The Roadmap section helps consumer see where we are and where we're going"
+        />
+        <ImageBlock
+          imageSrc={experiencesImage}
+          caption="HubSpot has a number of product owned experience systems, the Experiences sections helps connect consumers to specific systems"
+        />
       </div>
 
-      <div>
-        <Image src={postsImage} alt="" />
-        <TextBlockGraph text="xxx" />
-      </div>
-    </div>
-    <TextBlock title="Taming the firehouse of information">
-      <TextBlockGraph
-        text="Like most enterprise companies, information is published via multiple platforms across HubSpot. Key wiki posts are missed, Slack messages are ephemeral and Looms are never watch. We couldn’t create a platform that would immediately change content creation from the C-Suite to ICs, but we could begin control the firehouse. The Trellis Documentation Site surfaces"
+      <ImageBlock
+        imageSrc={postsImage}
+        caption="Finding relevant information inside an organizaion is challenging"
       />
-      <TextBlockGraph text="More words" />
+    </div>
+    <TextBlock title={firehoseMD.frontmatter.title}>
+      <div>
+        {(<Fragment set:html={firehoseContent} />)}
+      </div>
     </TextBlock>
 
     {/* Pages Section =================================  */}
@@ -173,7 +182,10 @@ const mainClass = "width--large work-test";
         <ImageBlock imageSrc={jsonShot} />
         <ImageBlock imageSrc={alertShot} />
       </div>
-      <ImageBlock imageSrc={componentPageShot} caption="xxxxx" />
+      <ImageBlock
+        imageSrc={componentPageShot}
+        caption="Many pages, like the Components Page are dynamically built with JSON APIs. While this creates the upfront work of creating a JSON object, the possibilities are endless in terms of where this information could be surfaces in the future."
+      />
     </div>
 
     <TextBlock title={toolingMD.frontmatter.title}>
