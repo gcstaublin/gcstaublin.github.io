@@ -63,7 +63,7 @@ const mainClass = "width--large work-test";
   <div class="portfolioPage__container">
     <PageTitle
       title="Trellis Design System Launchpad"
-      subTitle="As HubSpot’s design system evolves from it’s humble beginnings (Canvas) to a multi-themed, modernized system (Trellis), design system documentation needed to evolve with it."
+      subTitle="As HubSpot’s design system evolves from it’s humble beginnings (Canvas) to a multi-themed, modernized system (Trellis), design system documentation needed to evolve with it"
     />
 
     {/* Main Section =================================  */}
@@ -99,9 +99,18 @@ const mainClass = "width--large work-test";
 
     {/* Learning Section =================================  */}
     <div class="image__container three-up">
-      <ImageBlock imageSrc={discoverImage} caption="Words" />
-      <ImageBlock imageSrc={searchImage} caption="Words" />
-      <ImageBlock imageSrc={snippetsImage} caption="Words" />
+      <ImageBlock
+        imageSrc={discoverImage}
+        caption="Engineers found UI Library more browsable, whether they were reviwing API documentation, searching for Icons or simply reviewing what a component can accomplish."
+      />
+      <ImageBlock
+        imageSrc={searchImage}
+        caption="Search is the primary mode of navigation for engineers. UI Library's search was fast, focused and visual."
+      />
+      <ImageBlock
+        imageSrc={snippetsImage}
+        caption="The editable, in-page code snippets of UI Library helped engineers quickly mock up ideas and experiment with a component."
+      />
     </div>
 
     <TextBlock title={researchMD.frontmatter.title}>
