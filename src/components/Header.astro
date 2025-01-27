@@ -60,13 +60,19 @@ import ThemeToggle from "./ThemeToggle.astro";
 
   .nav__link {
     display: inline-block;
-    padding: 1rem 0.75rem;
+    /* padding: 1rem 0.75rem; */
+    padding-inline: 16px;
+    padding-block: 6px;
+    margin-inline-start: 16px;
     font-size: var(--site-nav-type-size-link-small);
     color: var(--site-nav-color-link);
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: background-color 0.2s ease;
+    border: 1px solid var(--color-accent-test);
+    border-radius: 24px;
+    font-size: 14px;
 
     &:hover {
       text-decoration: underline;
