@@ -7,7 +7,7 @@ import TextBlockGraph from "./TextBlockGraph.astro";
 {/* ================================== */}
 {/* HTML Structure                     */}
 {/* ================================== */}
-<div class={`${"imageBlock__container xxx"} ${cssClass ? cssClass : ""}`}>
+<div class={`${"imageBlock__container"} ${cssClass ? cssClass : ""}`}>
   <Image src={imageSrc} alt={imageAlt} />
   {caption && <TextBlockGraph text={caption} />}
 </div>
@@ -20,11 +20,7 @@ import TextBlockGraph from "./TextBlockGraph.astro";
 {/* ================================== */}
 <style>
   :root {
-    --imageBlock-radius: 20px;
-  }
-  .imageBlock__container--accent {
-    background-color: hsla(0, 0%, 25%, 0.1);
-    padding: 40px;
+    --imageBlock-radius: 12px;
   }
 
   .imageBlock__container {
@@ -39,6 +35,30 @@ import TextBlockGraph from "./TextBlockGraph.astro";
       color: rgba(var(--color-fg-formula), var(--color-alpha-dim));
       font-size: var(--font-size-sm);
       line-height: 1.425;
+    }
+  }
+
+  .imageBlock__container--test {
+    margin-inline: -2rem;
+  }
+
+  .imageBlock__container--accent {
+    background-color: hsla(0, 0%, 25%, 0.1);
+    padding: 40px;
+  }
+
+  .imageBlock__container--image-bottom {
+    padding: 80px;
+    padding-bottom: 0;
+    overflow: hidden;
+
+    > img {
+      position: relative;
+      bottom: -6px;
+      border-radius: 12px 12px 0 0;
+      box-shadow:
+        0 -5px 5px rgba(185, 185, 185, 0.05),
+        0 -15px 20px rgba(185, 185, 185, 0.1);
     }
   }
 </style>
