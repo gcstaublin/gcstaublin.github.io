@@ -206,27 +206,29 @@ const mainClass = "width--large work-test";
       <Image src={mainDarkModeImage} alt="" />
     </div>
   </div>
+</BaseLayout>
 
-  {/* ================================== */}
-  {/* Style                              */}
-  {/* ================================== */}
-  <style>
-    /* :root {
+{/* ================================== */}
+{/* Style                              */}
+{/* ================================== */}
+<style>
+  /* :root {
       --img-radius: 20px;
     } */
 
-    .portfolioPage__container {
-      > * + * {
-        margin-top: 64px;
-      }
+  /* .portfolioPage__container {
+    > * + * {
+      margin-top: 64px;
+      border: 3px solid green;
     }
+  } */
 
-    /* .image__container--accent {
+  /* .image__container--accent {
       background-color: hsla(0, 0%, 25%, 0.1);
       padding: 40px;
     } */
 
-    /* .image__container {
+  /* .image__container {
       margin-inline: auto;
       img {
         border-radius: var(--img-radius);
@@ -238,50 +240,49 @@ const mainClass = "width--large work-test";
       }
     } */
 
-    .two-up {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      @media (max-width: 700px) {
-        grid-template-columns: 1fr;
-      }
-      /* grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); */
+  .two-up {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    @media (max-width: 700px) {
+      grid-template-columns: 1fr;
     }
+    /* grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); */
+  }
 
-    .two-up--side-saddle {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 40px;
-      @media (max-width: 700px) {
-        grid-template-columns: 1fr;
-      }
+  .two-up--side-saddle {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    @media (max-width: 700px) {
+      grid-template-columns: 1fr;
     }
+  }
 
-    .three-up {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 40px;
-      @media (max-width: 700px) {
-        grid-template-columns: 1fr;
-      }
+  .three-up {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    @media (max-width: 700px) {
+      grid-template-columns: 1fr;
     }
+  }
 
-    .vertical {
-      display: grid;
-      grid-template-row: 1fr 1fr;
-      grid-gap: 40px;
-    }
+  .vertical {
+    display: grid;
+    grid-template-row: 1fr 1fr;
+    grid-gap: 40px;
+  }
 
-    .image--bottom {
-      margin-block-end: -3rem;
-      img {
-        border-radius: 12px 12px 0 0;
-        border-bottom-width: 0;
-      }
-    }
-
+  .image--bottom {
+    margin-block-end: -3rem;
     img {
-      max-width: 100%;
+      border-radius: 12px 12px 0 0;
+      border-bottom-width: 0;
     }
-  </style>
-</BaseLayout>
+  }
+
+  /* img {
+    max-width: 100%;
+  } */
+</style>
