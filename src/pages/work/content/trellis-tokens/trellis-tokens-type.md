@@ -1,9 +1,13 @@
 ---
-title: "The great typographical migration of 2022"
+title: "The great type migration of 2022"
 ---
 
-In 2022, the product switched typefaces.
+In 2022, the product switched typefaces. The product switched from Avenir Next to Lexend Deca. This change aligned the product typography to the Marketing side of HubSpot.
 
-In a "perfect" system, changing the primary font would require updating a few lines of code and uploading new font files to the CDN. That's not exactly how the change went down. I'll spare you the details, but the change took much longer than expected and required 100s of hours of work. In the end, the change was successful. However, there were some blood, sweat and tears along the way.
+In a “perfect” world, the typography migration should have required updating a few lines of code, uploading new font files to the CDN, performing lots of testing and making visual tweaks for fit and finish. Easy, right?
 
-I finally I had the compelling narrative hook to sell design tokens to leadership and engineering. Given the challenges of the type migration,
+In reality the migration took much longer than expected and required 100s of hours of auditing, communicating with teams and identifying places where teams had opted out of the system's source of truth. Universal changes are often challenging. Within an organization that prides itself on its small autonomous teams, it can be grueling. Despite this, the migration was successful.
+
+The migration exposed the cracks within the system. Our team began asking whether we were as resilient and scalable as we should be as a “design system.”
+
+I finally I had a compelling narrative hook to sell design tokens to leadership. Over the next few weeks, I collaborated with an engineering partner to craft an updated proposal for design tokens.

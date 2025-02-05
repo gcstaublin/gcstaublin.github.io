@@ -1,19 +1,33 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import "../../styles/global.css";
-import PageTitle from "../../components/PageTitle.astro";
 
 import TextBlock from "../../components/TextBlock.astro";
-import TextBlockGraph from "../../components/TextBlockGraph.astro";
 import PageTitle from "../../components/PageTitle.astro";
 import ImageBlock from "../../components/ImageBlock.astro";
 
 const pageTitle = "Grant Staublin | Work | Trellis Documentation";
 const mainClass = "width--large work-test";
 
-import { Image } from "astro:assets";
+import mainImage from "../../images/work/trellis-tokens/variables.png";
 
-import mainImageAlt from "../../images/work/trellis-launchpad/trellis-launchpad_main.jpg";
+import TypeMigration from "../../images/work/trellis-tokens/TypeMigration.astro";
+import tokenDecisions from "../../images/work/trellis-tokens/token-architecture-decisions-2.jpg";
+import tokenLayers from "../../images/work/trellis-tokens/token-architecture-layers-2.jpg";
+import tokenProposal from "../../images/work/trellis-tokens/token-proposal-clean.jpg";
+
+import tokenLearning from "../../images/work/trellis-tokens/token-architecture_learning.jpg";
+import tokenTaxonomy from "../../images/work/trellis-tokens/token-architecture_taxonomy.jpg";
+import tokenCreate from "../../images/work/trellis-tokens/token-architecture_create.jpg";
+import tokenTransform from "../../images/work/trellis-tokens/token-architecture_transform.jpg";
+
+import playgroundControls from "../../images/work/trellis-tokens/playground_controls.jpg";
+import playgroundClassic from "../../images/work/trellis-tokens/playground_classic.jpg";
+import playgroundDark from "../../images/work/trellis-tokens/playground_dark.jpg";
+import playgroundSimple from "../../images/work/trellis-tokens/playground_simple.jpg";
+import playgroundTechnical from "../../images/work/trellis-tokens/playground_technical.jpg";
+
+import tokenStudio from "../../images/work/trellis-tokens/token-studio.png";
 
 import * as introMD from "./content/trellis-tokens/trellis-tokens-intro.md";
 const introContent = await introMD.compiledContent();
@@ -23,6 +37,22 @@ const typeContent = await typeMD.compiledContent();
 
 import * as auditsMD from "./content/trellis-tokens/trellis-tokens-audits.md";
 const auditsContent = await auditsMD.compiledContent();
+
+import * as stepsMD from "./content/trellis-tokens/trellis-tokens-steps.md";
+const stepsContent = await stepsMD.compiledContent();
+
+import * as roadShowMD from "./content/trellis-tokens/trellis-tokens-roadshow.md";
+const roadShowContent = await roadShowMD.compiledContent();
+
+import * as playgroundMD from "./content/trellis-tokens/trellis-tokens-playground.md";
+const playgroundContent = await playgroundMD.compiledContent();
+
+import * as techMD from "./content/trellis-tokens/trellis-tokens-tech.md";
+const techContent = await techMD.compiledContent();
+
+import * as reviseMD from "./content/trellis-tokens/trellis-tokens-revise.md";
+import Test from "../../components/Test.astro";
+const reviseContent = await reviseMD.compiledContent();
 ---
 
 {/* ================================== */}
@@ -36,10 +66,7 @@ const auditsContent = await auditsMD.compiledContent();
     />
 
     {/* Main Section =================================  */}
-    <ImageBlock
-      imageSrc={mainImageAlt}
-      cssClass="imageBlock__container--accent imageBlock__container--test imageBlock__container--image-bottom"
-    />
+    <ImageBlock imageSrc={mainImage} cssClass="imageBlock__container--test" />
 
     {/* Intro Section =================================  */}
     <TextBlock title={introMD.frontmatter.title}>
@@ -49,24 +76,142 @@ const auditsContent = await auditsMD.compiledContent();
     </TextBlock>
 
     {/* Type Migration Section =================================  */}
+
+    <div class="width--small align-center">
+      <TypeMigration />
+    </div>
+
     <TextBlock title={typeMD.frontmatter.title}>
       <div>
         {(<Fragment set:html={typeContent} />)}
       </div>
     </TextBlock>
+    <ImageBlock
+      imageSrc={tokenProposal}
+      cssClass="width--small"
+      caption="The proposal described the challenges of the type migration, and our org's desire to create a systems of systems approach to design systems as motivators for a meaningful investment in design tokens."
+    />
 
-    {
-      /* Audits + Education Migration Section =================================  */
-    }
+    {/* Audits + Education Migration Section ===================  */}
     <TextBlock title={auditsMD.frontmatter.title}>
       <div>
         {(<Fragment set:html={auditsContent} />)}
       </div>
     </TextBlock>
+    <ImageBlock imageSrc={tokenDecisions} cssClass="width--large" />
+
+    <ImageBlock imageSrc={tokenLayers} cssClass="width--large" />
+
+    {/* The Steps ===================  */}
+    <section class="width--large">
+      <div class="scrolling__layout">
+        <div class="scrolling__text-container">
+          <TextBlock
+            title={stepsMD.frontmatter.title}
+            cssClass="locking-scroll"
+          >
+            <div>
+              {(<Fragment set:html={stepsContent} />)}
+            </div>
+          </TextBlock>
+        </div>
+        <div class="scrolling__media-container">
+          <ImageBlock imageSrc={tokenLearning} />
+          <ImageBlock imageSrc={tokenTaxonomy} />
+          <ImageBlock imageSrc={tokenCreate} />
+          <ImageBlock imageSrc={tokenTransform} />
+        </div>
+      </div>
+    </section>
+
+    {/* Roadshow ===================  */}
+    <TextBlock title={roadShowMD.frontmatter.title}>
+      <div>
+        {(<Fragment set:html={roadShowContent} />)}
+      </div>
+    </TextBlock>
+    <ImageBlock imageSrc={playgroundControls} />
+
+    <section class="width--large">
+      <div class="scrolling__layout">
+        <div class="scrolling__text-container">
+          <TextBlock
+            title={playgroundMD.frontmatter.title}
+            cssClass="locking-scroll"
+          >
+            <div>
+              {(<Fragment set:html={playgroundContent} />)}
+            </div>
+          </TextBlock>
+        </div>
+        <div class="scrolling__media-container">
+          <ImageBlock imageSrc={playgroundClassic} />
+          <ImageBlock imageSrc={playgroundDark} />
+          <ImageBlock imageSrc={playgroundSimple} />
+          <ImageBlock imageSrc={playgroundTechnical} />
+        </div>
+      </div>
+    </section>
+
+    {/* Tech Choices Section =================================  */}
+
+    <TextBlock title={techMD.frontmatter.title}>
+      <div>
+        {(<Fragment set:html={techContent} />)}
+      </div>
+    </TextBlock>
+    <ImageBlock imageSrc={tokenStudio} cssClass="width--medium" />
+
+    {/* Revise Choices Section =================================  */}
+    <TextBlock title={reviseMD.frontmatter.title}>
+      <div>
+        {(<Fragment set:html={reviseContent} />)}
+      </div>
+    </TextBlock>
+    <ImageBlock imageSrc={tokenStudio} cssClass="width--medium" />
+
+    {/* Txxx Section =================================  */}
+    <h1>End</h1>
   </div>
+  <!-- portfolioPage -->
 </BaseLayout>
 
 {/* ================================== */}
 {/* Style                              */}
 {/* ================================== */}
-<style></style>
+<style>
+  .scrolling__layout {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    /* border: 1px solid blue; */
+  }
+
+  .scrolling__layout--reverse {
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    /* border: 1px solid red; */
+  }
+
+  [class^="tester-"] + [class^="tester-"] {
+    margin-top: 64px;
+    border: 2px solid green;
+  }
+
+  .align-center {
+    text-align: center;
+  }
+
+  .scrolling__media-container {
+    * + * {
+      margin-block-start: 40px;
+    }
+  }
+
+  .portfolioPage__container {
+    /* border: 1px solid green; */
+  }
+</style>

@@ -411,11 +411,19 @@ a {
   }
 }
 
-.hp-width,
-.width--small {
+.hp-width {
   width: var(--context-max);
   margin-inline: auto;
 }
+
+.width--small {
+  --width-content-max: 600px;
+  --context-max: min(var(--width-content-max), var(--width-content-calc));
+
+  width: var(--context-max);
+  margin-inline: auto;
+}
+
 
 .width--medium {
   --width-content-max: 946px;
