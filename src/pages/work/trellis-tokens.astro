@@ -41,8 +41,20 @@ const auditsContent = await auditsMD.compiledContent();
 import * as stepsMD from "./content/trellis-tokens/trellis-tokens-steps.md";
 const stepsContent = await stepsMD.compiledContent();
 
+import * as stepsOneMD from "./content/trellis-tokens/trellis-tokens-steps-one.md";
+const stepsOneContent = await stepsOneMD.compiledContent();
+
+import * as stepsTwoMD from "./content/trellis-tokens/trellis-tokens-steps-Two.md";
+const stepsTwoContent = await stepsTwoMD.compiledContent();
+
 import * as roadShowMD from "./content/trellis-tokens/trellis-tokens-roadshow.md";
 const roadShowContent = await roadShowMD.compiledContent();
+
+import * as stepsThreeMD from "./content/trellis-tokens/trellis-tokens-steps-Three.md";
+const stepsThreeContent = await stepsThreeMD.compiledContent();
+
+import * as stepsFourMD from "./content/trellis-tokens/trellis-tokens-steps-four.md";
+const stepsFourContent = await stepsFourMD.compiledContent();
 
 import * as playgroundMD from "./content/trellis-tokens/trellis-tokens-playground.md";
 const playgroundContent = await playgroundMD.compiledContent();
@@ -52,6 +64,7 @@ const techContent = await techMD.compiledContent();
 
 import * as reviseMD from "./content/trellis-tokens/trellis-tokens-revise.md";
 import Test from "../../components/Test.astro";
+import ScrollingItem from "../../components/ScrollingItem.astro";
 const reviseContent = await reviseMD.compiledContent();
 ---
 
@@ -98,30 +111,80 @@ const reviseContent = await reviseMD.compiledContent();
         {(<Fragment set:html={auditsContent} />)}
       </div>
     </TextBlock>
-    <ImageBlock imageSrc={tokenDecisions} cssClass="width--large" />
+    <!-- <ImageBlock
+      imageSrc={tokenDecisions}
+      cssClass="width--large"
+      caption="The topic of a weekly Design and Engineering meeting could be as simple as showing of a design decision, like a hex code, is inherited from layer to layer within the system"
+    /> -->
 
-    <ImageBlock imageSrc={tokenLayers} cssClass="width--large" />
+    <ImageBlock
+      imageSrc={tokenLayers}
+      cssClass="width--large"
+      caption="To prevent from suffering a weekly Ted Talk, I tried to make the weekly meetin sessions interactive, giving team members a voice in the decisions being made, whether it was the name of token layers, or overall taxonomy approaches."
+    />
 
     {/* The Steps ===================  */}
+
     <section class="width--large">
-      <div class="scrolling__layout">
-        <div class="scrolling__text-container">
+      <ScrollingItem>
+        <Fragment slot="content">
           <TextBlock
-            title={stepsMD.frontmatter.title}
+            title={stepsOneMD.frontmatter.title}
             cssClass="locking-scroll"
           >
             <div>
-              {(<Fragment set:html={stepsContent} />)}
+              {(<Fragment set:html={stepsOneContent} />)}
             </div>
           </TextBlock>
-        </div>
-        <div class="scrolling__media-container">
-          <ImageBlock imageSrc={tokenLearning} />
-          <ImageBlock imageSrc={tokenTaxonomy} />
-          <ImageBlock imageSrc={tokenCreate} />
-          <ImageBlock imageSrc={tokenTransform} />
-        </div>
-      </div>
+        </Fragment>
+        <Fragment slot="media"><ImageBlock imageSrc={tokenLearning} /></Fragment
+        >
+      </ScrollingItem>
+
+      <ScrollingItem>
+        <Fragment slot="content">
+          <TextBlock
+            title={stepsTwoMD.frontmatter.title}
+            cssClass="locking-scroll"
+          >
+            <div>
+              {(<Fragment set:html={stepsTwoContent} />)}
+            </div>
+          </TextBlock>
+        </Fragment>
+        <Fragment slot="media"><ImageBlock imageSrc={tokenTaxonomy} /></Fragment
+        >
+      </ScrollingItem>
+
+      <ScrollingItem>
+        <Fragment slot="content">
+          <TextBlock
+            title={stepsThreeMD.frontmatter.title}
+            cssClass="locking-scroll"
+          >
+            <div>
+              {(<Fragment set:html={stepsThreeContent} />)}
+            </div>
+          </TextBlock>
+        </Fragment>
+        <Fragment slot="media"><ImageBlock imageSrc={tokenCreate} /></Fragment>
+      </ScrollingItem>
+
+      <ScrollingItem>
+        <Fragment slot="content">
+          <TextBlock
+            title={stepsFourMD.frontmatter.title}
+            cssClass="locking-scroll"
+          >
+            <div>
+              {(<Fragment set:html={stepsFourContent} />)}
+            </div>
+          </TextBlock>
+        </Fragment>
+        <Fragment slot="media"
+          ><ImageBlock imageSrc={tokenTransform} /></Fragment
+        >
+      </ScrollingItem>
     </section>
 
     {/* Roadshow ===================  */}
@@ -171,7 +234,7 @@ const reviseContent = await reviseMD.compiledContent();
     <ImageBlock imageSrc={tokenStudio} cssClass="width--medium" />
 
     {/* Txxx Section =================================  */}
-    <h1>End</h1>
+    <h1>End22222</h1>
   </div>
   <!-- portfolioPage -->
 </BaseLayout>
@@ -186,6 +249,10 @@ const reviseContent = await reviseMD.compiledContent();
     grid-template-columns: 1fr 2fr;
     gap: 40px;
     /* border: 1px solid blue; */
+  }
+
+  .scrolling__layout + .scrolling__layout {
+    margin-top: 32px;
   }
 
   .scrolling__layout--reverse {
