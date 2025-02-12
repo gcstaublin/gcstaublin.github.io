@@ -1,0 +1,230 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import "../../styles/global.css";
+
+// =================================
+// Component imports
+import TextBlock from "../../components/TextBlock.astro";
+import PageTitle from "../../components/PageTitle.astro";
+import ImageBlock from "../../components/ImageBlock.astro";
+import GridContainer from "../../components/GridContainer.astro";
+
+const pageTitle = "Grant Staublin | Work | Trellis Documentation";
+const mainClass = "width--large work-test";
+
+// =================================
+// Image imports
+import TypeMigration from "../../images/work/trellis-tokens/TypeMigration.astro";
+import tokenProposal from "../../images/work/trellis-tokens/token-proposal-clean.jpg";
+
+import candleCover from "../../images/work/globe-magazine/mag_candlepin-cover.jpg";
+import candleSpread1 from "../../images/work/globe-magazine/mag_candlepin-spread-1.jpg";
+import candleSpread2 from "../../images/work/globe-magazine/mag_candlepin-spread-2.jpg";
+import careersCover from "../../images/work/globe-magazine/mag_careers-cover.jpg";
+import careersSpread1 from "../../images/work/globe-magazine/mag_careers-spread-1.jpg";
+import careersSpread2 from "../../images/work/globe-magazine/mag_careers-spread-2.jpg";
+import murderCover from "../../images/work/globe-magazine/mag_murder-cover.jpg";
+import murderSpread from "../../images/work/globe-magazine/mag_murder-spread.jpg";
+import fightCover from "../../images/work/globe-magazine/mag_fight-cover.jpg";
+import fightSpread from "../../images/work/globe-magazine/mag_fight-spread.jpg";
+import harvardCover from "../../images/work/globe-magazine/mag_harvard-cover.jpg";
+import harvardSpread1 from "../../images/work/globe-magazine/mag_harvard-spread-1.jpg";
+import harvardSpread2 from "../../images/work/globe-magazine/mag_harvard-spread-2.jpg";
+import harvardSpread3 from "../../images/work/globe-magazine/mag_harvard-spread-3.jpg";
+import taxCover from "../../images/work/globe-magazine/mag_taxes-cover.jpg";
+import taxSpread from "../../images/work/globe-magazine/mag_taxes-spread-1.jpg";
+import pressureSpread1 from "../../images/work/globe-magazine/mag_pressure-spread-1.jpg";
+import pressureSpread2 from "../../images/work/globe-magazine/mag_pressure-spread-2.jpg";
+import censorSpread1 from "../../images/work/globe-magazine/mag_censor-spread-1.jpg";
+import censorSpread2 from "../../images/work/globe-magazine/mag_censor-spread-2.jpg";
+import marketSpread1 from "../../images/work/globe-magazine/mag_market-spread.jpg";
+import clutterSpread1 from "../../images/work/globe-magazine/mag_clutter-spread-1.jpg";
+import bostonianCover from "../../images/work/globe-magazine/mag_bostonian-cover.jpg";
+import dateCover from "../../images/work/globe-magazine/mag_date-cover.jpg";
+import summerCover from "../../images/work/globe-magazine/mag_summer-cover.jpg";
+
+// =================================
+// Content Imports
+import * as introMD from "./content/trellis-tokens/trellis-tokens-intro.md";
+const introContent = await introMD.compiledContent();
+
+import * as auditsMD from "./content/trellis-tokens/trellis-tokens-audits.md";
+const auditsContent = await auditsMD.compiledContent();
+---
+
+{/* ================================== */}
+{/* HTML                               */}
+{/* ================================== */}
+<BaseLayout pageTitle={pageTitle} mainClass={mainClass} noFollow>
+  <div class="portfolioPage__container">
+    <PageTitle
+      title="Boston Globe Magazine"
+      subTitle="Selection of work from my time as an Art Director for The Boston Globe's Sunday Magazine"
+    />
+
+    {/* Main Section =================================  */}
+    <!-- <ImageBlock imageSrc={mainImage} cssClass="imageBlock__container--test" /> -->
+
+    {/* Intro Section =================================  */}
+    <!-- <TextBlock title={introMD.frontmatter.title}>
+      <div>
+        {(<Fragment set:html={introContent} />)}
+      </div>
+    </TextBlock> -->
+
+    {/* Covers Section =================================  */}
+    <div class="mag__group">
+      <GridContainer collapseGap>
+        <div></div>
+        <ImageBlock imageSrc={bostonianCover} />
+        <ImageBlock imageSrc={dateCover} />
+        <ImageBlock imageSrc={summerCover} />
+      </GridContainer>
+    </div>
+
+    {/* Candlepin Section =================================  */}
+    <div class="mag__group">
+      <GridContainer collapseGap>
+        <div></div>
+        <ImageBlock imageSrc={candleCover} />
+      </GridContainer>
+      <GridContainer gridLayout="one-up">
+        <ImageBlock imageSrc={candleSpread1} />
+        <ImageBlock imageSrc={candleSpread2} />
+      </GridContainer>
+    </div>
+
+    {/* Fight Section =================================  */}
+    <div class="mag__group">
+      <GridContainer collapseGap>
+        <div></div>
+        <ImageBlock imageSrc={fightCover} />
+      </GridContainer>
+      <GridContainer gridLayout="one-up">
+        <ImageBlock imageSrc={fightSpread} />
+      </GridContainer>
+    </div>
+
+    {/* Taxes Section =================================  */}
+    <div class="mag__group">
+      <GridContainer collapseGap>
+        <div></div>
+        <ImageBlock imageSrc={taxCover} />
+      </GridContainer>
+      <GridContainer gridLayout="one-up">
+        <ImageBlock imageSrc={taxSpread} />
+      </GridContainer>
+    </div>
+
+    {/* Harvard Section =================================  */}
+    <div class="mag__group">
+      <GridContainer collapseGap>
+        <div></div>
+        <ImageBlock imageSrc={harvardCover} />
+      </GridContainer>
+      <GridContainer gridLayout="one-up">
+        <ImageBlock imageSrc={harvardSpread1} />
+        <ImageBlock imageSrc={harvardSpread2} />
+        <ImageBlock imageSrc={harvardSpread3} />
+      </GridContainer>
+    </div>
+
+    {/* Careers Section =================================  */}
+    <div class="mag__group">
+      <GridContainer collapseGap>
+        <div></div>
+        <ImageBlock imageSrc={careersCover} />
+      </GridContainer>
+      <GridContainer gridLayout="one-up">
+        <ImageBlock imageSrc={careersSpread1} />
+        <ImageBlock imageSrc={careersSpread2} />
+      </GridContainer>
+    </div>
+
+    {/* Murder Section =================================  */}
+    <div class="mag__group">
+      <GridContainer collapseGap>
+        <div></div>
+        <ImageBlock imageSrc={murderCover} />
+      </GridContainer>
+      <GridContainer gridLayout="one-up">
+        <ImageBlock imageSrc={murderSpread} />
+      </GridContainer>
+    </div>
+
+    {/* Censor Section =================================  */}
+    <div class="mag__group">
+      <GridContainer gridLayout="one-up">
+        <ImageBlock imageSrc={censorSpread1} />
+        <ImageBlock imageSrc={censorSpread2} />
+      </GridContainer>
+    </div>
+
+    {/* Hoarding Section =================================  */}
+    <div class="mag__group">
+      <GridContainer gridLayout="one-up">
+        <ImageBlock imageSrc={clutterSpread1} />
+      </GridContainer>
+    </div>
+
+    {/* Market Section =================================  */}
+    <div class="mag__group">
+      <GridContainer gridLayout="one-up">
+        <ImageBlock imageSrc={marketSpread1} />
+      </GridContainer>
+    </div>
+
+    {/* Pressure Section =================================  */}
+    <div class="mag__group">
+      <GridContainer gridLayout="one-up">
+        <ImageBlock imageSrc={pressureSpread1} />
+        <ImageBlock imageSrc={pressureSpread2} />
+      </GridContainer>
+    </div>
+  </div>
+  <!-- portfolioPage -->
+</BaseLayout>
+
+{/* ================================== */}
+{/* Style                              */}
+{/* ================================== */}
+<style>
+  .scrolling__layout {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    /* border: 1px solid blue; */
+  }
+
+  .scrolling__layout + .scrolling__layout {
+    margin-top: 32px;
+  }
+
+  .scrolling__layout--reverse {
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    /* border: 1px solid red; */
+  }
+
+  [class^="tester-"] + [class^="tester-"] {
+    margin-top: 64px;
+    border: 2px solid green;
+  }
+
+  .align-center {
+    text-align: center;
+  }
+
+  .mag__group {
+    > * + * {
+      margin-block-start: 40px;
+    }
+  }
+
+  .portfolioPage__container {
+    /* border: 1px solid green; */
+  }
+</style>

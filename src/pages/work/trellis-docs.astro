@@ -31,28 +31,28 @@ import illoPage from "../../images/work/trellis-launchpad/pages-illustrations.jp
 // import * as testMD from "./content/test.md";
 // const testContent = await testMD.compiledContent();
 
-import * as introMD from "./content/trellis-docs-intro.md";
+import * as introMD from "./content/trellis-docs/trellis-docs-intro.md";
 const introContent = await introMD.compiledContent();
 
-import * as contextMD from "./content/trellis-docs-context.md";
+import * as contextMD from "./content/trellis-docs/trellis-docs-context.md";
 const contextContent = await contextMD.compiledContent();
 
-import * as researchMD from "./content/trellis-docs-research.md";
+import * as researchMD from "./content/trellis-docs/trellis-docs-research.md";
 const researchContent = await researchMD.compiledContent();
 
-import * as toolingMD from "./content/trellis-docs-tooling.md";
+import * as toolingMD from "./content/trellis-docs/trellis-docs-tooling.md";
 const toolingContent = await toolingMD.compiledContent();
 
-import * as darkModeMD from "./content/trellis-docs-dark-mode.md";
+import * as darkModeMD from "./content/trellis-docs/trellis-docs-dark-mode.md";
 const darkModeContent = await darkModeMD.compiledContent();
 
-import * as iterationMD from "./content/trellis-docs-iteration.md";
+import * as iterationMD from "./content/trellis-docs/trellis-docs-iteration.md";
 const iterationContent = await iterationMD.compiledContent();
 
-import * as visualMD from "./content/trellis-docs-visual.md";
+import * as visualMD from "./content/trellis-docs/trellis-docs-visual.md";
 const visualContent = await visualMD.compiledContent();
 
-import * as firehoseMD from "./content/trellis-docs-firehose.md";
+import * as firehoseMD from "./content/trellis-docs/trellis-docs-firehose.md";
 const firehoseContent = await firehoseMD.compiledContent();
 
 const pageTitle = "Grant Staublin | Work | Trellis Documentation";
@@ -72,7 +72,7 @@ const mainClass = "width--large work-test";
     {/* Main Section =================================  */}
     <ImageBlock
       imageSrc={mainImageAlt}
-      cssClass="imageBlock__container--accent"
+      cssClass="imageBlock__container--accent imageBlock__container--test imageBlock__container--image-bottom"
     />
 
     {/* Intro Section =================================  */}
@@ -206,27 +206,29 @@ const mainClass = "width--large work-test";
       <Image src={mainDarkModeImage} alt="" />
     </div>
   </div>
+</BaseLayout>
 
-  {/* ================================== */}
-  {/* Style                              */}
-  {/* ================================== */}
-  <style>
-    /* :root {
+{/* ================================== */}
+{/* Style                              */}
+{/* ================================== */}
+<style>
+  /* :root {
       --img-radius: 20px;
     } */
 
-    .portfolioPage__container {
-      > * + * {
-        margin-top: 64px;
-      }
+  /* .portfolioPage__container {
+    > * + * {
+      margin-top: 64px;
+      border: 3px solid green;
     }
+  } */
 
-    /* .image__container--accent {
+  /* .image__container--accent {
       background-color: hsla(0, 0%, 25%, 0.1);
       padding: 40px;
     } */
 
-    /* .image__container {
+  /* .image__container {
       margin-inline: auto;
       img {
         border-radius: var(--img-radius);
@@ -238,50 +240,53 @@ const mainClass = "width--large work-test";
       }
     } */
 
-    .two-up {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      @media (max-width: 700px) {
-        grid-template-columns: 1fr;
-      }
-      /* grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); */
+  .two-up {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    @media (max-width: 700px) {
+      grid-template-columns: 1fr;
     }
+    /* grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); */
+  }
 
-    .two-up--side-saddle {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 40px;
-      @media (max-width: 700px) {
-        grid-template-columns: 1fr;
-      }
+  .two-up--side-saddle {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    @media (max-width: 700px) {
+      grid-template-columns: 1fr;
     }
+  }
 
-    .three-up {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 40px;
-      @media (max-width: 700px) {
-        grid-template-columns: 1fr;
-      }
+  .three-up {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    @media (max-width: 700px) {
+      grid-template-columns: 1fr;
     }
+  }
 
-    .vertical {
-      display: grid;
-      grid-template-row: 1fr 1fr;
-      grid-gap: 40px;
-    }
+  .vertical {
+    display: grid;
+    grid-template-row: 1fr 1fr;
+    grid-gap: 40px;
+  }
 
-    .image--bottom {
-      margin-block-end: -3rem;
-      img {
-        border-radius: 12px 12px 0 0;
-        border-bottom-width: 0;
-      }
-    }
-
+  .image--bottom {
+    margin-block-end: -3rem;
     img {
-      max-width: 100%;
+      border-radius: 12px 12px 0 0;
+      border-bottom-width: 0;
     }
-  </style>
-</BaseLayout>
+  }
+
+  .portfolioPage__container {
+    /* border: 1px solid red; */
+  }
+
+  /* img {
+    max-width: 100%;
+  } */
+</style>

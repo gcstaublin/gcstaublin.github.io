@@ -118,7 +118,8 @@
 }
 
 .theme3 {
-  --color-surface: #ffd24c;
+  /* --color-surface: #ffd24c; */
+  --color-surface: rgb(237, 228, 90);
   --color-fg-formula: 64, 64, 4;
   --color-accent: #3465E1;
   --color-interactive: #3465E1;
@@ -410,11 +411,19 @@ a {
   }
 }
 
-.hp-width,
-.width--small {
+.hp-width {
   width: var(--context-max);
   margin-inline: auto;
 }
+
+.width--small {
+  --width-content-max: 600px;
+  --context-max: min(var(--width-content-max), var(--width-content-calc));
+
+  width: var(--context-max);
+  margin-inline: auto;
+}
+
 
 .width--medium {
   --width-content-max: 946px;
@@ -450,4 +459,22 @@ a {
 
 .contact__block {
   --experience-item-margin: 12px;
+}
+
+
+
+/*
+// --------------------------------------------
+// --------------------------------------------
+//
+// Portfolio Pages
+//
+// --------------------------------------------
+// --------------------------------------------
+*/
+
+.portfolioPage__container {
+  >*+* {
+    margin-top: 64px;
+  }
 }

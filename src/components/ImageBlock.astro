@@ -7,7 +7,7 @@ import TextBlockGraph from "./TextBlockGraph.astro";
 {/* ================================== */}
 {/* HTML Structure                     */}
 {/* ================================== */}
-<div class={`${"imageBlock__container xxx"} ${cssClass ? cssClass : ""}`}>
+<div class={`${"imageBlock__container"} ${cssClass ? cssClass : ""}`}>
   <Image src={imageSrc} alt={imageAlt} />
   {caption && <TextBlockGraph text={caption} />}
 </div>
@@ -20,18 +20,22 @@ import TextBlockGraph from "./TextBlockGraph.astro";
 {/* ================================== */}
 <style>
   :root {
-    --imageBlock-radius: 20px;
-  }
-  .imageBlock__container--accent {
-    background-color: hsla(0, 0%, 25%, 0.1);
-    padding: 40px;
+    --imageBlock-radius: 12px;
+    /* #0000000d */
+    --shadow-color: hsla(0, 0%, 0%, 0.025);
+    --border-color: hsla(0, 0%, 0%, 0.07);
   }
 
   .imageBlock__container {
     margin-inline: auto;
     img {
       border-radius: var(--imageBlock-radius);
-      border: 1px solid hsla(0, 0%, 0%, 0.05);
+      border: 1px solid var(--border-color);
+      box-shadow:
+        0 0.7961918735236395px 2.3885756205709185px -0.625px var(--shadow-color),
+        0 2.414506143104518px 7.2435184293135535px -1.25px var(--shadow-color),
+        0 6.382653521484461px 19.147960564453385px -1.875px var(--shadow-color),
+        0 20px 60px -2.5px var(--shadow-color);
     }
     p.textBlock__graph {
       margin-block-start: 8px;
@@ -39,6 +43,32 @@ import TextBlockGraph from "./TextBlockGraph.astro";
       color: rgba(var(--color-fg-formula), var(--color-alpha-dim));
       font-size: var(--font-size-sm);
       line-height: 1.425;
+    }
+  }
+
+  .imageBlock__container--test {
+    /* margin-inline: -2rem; */
+    /* background-color: green; */
+  }
+
+  .imageBlock__container--accent {
+    /* background-color: hsla(0, 0%, 25%, 0.1); */
+    /* background-color: red; */
+    /* padding: 40px; */
+  }
+
+  .imageBlock__container--image-bottom {
+    /* padding: 80px; */
+    padding-bottom: 0;
+    overflow: hidden;
+
+    > img {
+      position: relative;
+      bottom: -6px;
+      border-radius: var(--imageBlock-radius) var(--imageBlock-radius) 0 0;
+      /* box-shadow:
+        0 -5px 5px rgba(185, 185, 185, 0.05),
+        0 -15px 20px rgba(185, 185, 185, 0.1); */
     }
   }
 </style>

@@ -1,0 +1,35 @@
+---
+// Imports
+import "../styles/global.css";
+
+// Props
+const {
+  title = "I am a title",
+  subTitle = "I am a subtitle",
+  cssClass,
+} = Astro.props;
+---
+
+{/* ================================== */}
+{/* HTML                               */}
+{/* ================================== */}
+
+<div class="class">
+  <h2>{title}</h2>
+  {subTitle && <h3>{subTitle}</h3>}
+</div>
+
+{/* ================================== */}
+{/* Style                              */}
+{/* ================================== */}
+<style>
+  .class {
+    background-color: red;
+  }
+  h2 {
+    color: pink;
+  }
+  h3 {
+    color: yellow;
+  }
+</style>

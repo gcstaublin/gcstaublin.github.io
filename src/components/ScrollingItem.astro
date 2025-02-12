@@ -1,0 +1,72 @@
+---
+// Imports
+import "../styles/global.css";
+import TextBlock from "./TextBlock.astro";
+import ImageBlock from "./ImageBlock.astro";
+
+// Props
+const { isReverse } = Astro.props;
+---
+
+{/* ================================== */}
+{/* HTML                               */}
+{/* ================================== */}
+
+<!-- class={`box ${isDarkMode ? "dark" : "light"} ${isLargeText ? "text-lg" : "text-sm"}`} -->
+
+<div
+  class={`scrolling__layout ${isReverse ? "scrolling__layout--reverse" : ""}`}
+>
+  <div class="scrolling__text-container">
+    <slot name="content" />
+  </div>
+  <div class="scrolling__media-container">
+    <slot name="media" />
+  </div>
+</div>
+
+{/* ================================== */}
+{/* Style                              */}
+{/* ================================== */}
+<style>
+  .scrolling__text-container {
+    grid-area: content;
+    /* border: 1px solid red; */
+  }
+  .scrolling__media-container {
+    grid-area: media;
+    /* border: 1px solid blue; */
+  }
+
+  .scrolling__layout {
+    position: relative;
+    display: grid;
+    grid-template-areas: "content media media";
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    /* border: 4px solid blue; */
+  }
+
+  .scrolling__layout--reverse {
+    grid-template-areas: "media media content";
+  }
+
+  .scrolling__layout + .scrolling__layout {
+    margin-top: 64px;
+  }
+
+  /* [class^="tester-"] + [class^="tester-"] {
+    margin-top: 64px;
+  } */
+
+  /* .align-center {
+    text-align: center;
+  } */
+
+  .scrolling__media-container {
+    * + * {
+      margin-block-start: 40px;
+      border: 2px solid green;
+    }
+  }
+</style>

@@ -1,5 +1,5 @@
 ---
-const { title, subTitle, cssClass } = Astro.props;
+const { title, subTitle, cssClass, titleSize = "default" } = Astro.props;
 ---
 
 {/* ================================== */}
@@ -34,6 +34,11 @@ const { title, subTitle, cssClass } = Astro.props;
     font-weight: 600;
   }
 
+  .textBlock__title--small {
+    font-size: 16px;
+    color: red;
+  }
+
   .textBlock__graphs {
     /* margin-block-start: 1.5em; */
     margin-block-start: 0;
@@ -43,5 +48,12 @@ const { title, subTitle, cssClass } = Astro.props;
     p + p {
       margin-block-start: 1.5em;
     }
+  }
+
+  .locking-scroll {
+    --locking-position: 150px;
+
+    position: sticky;
+    top: var(--locking-position);
   }
 </style>
