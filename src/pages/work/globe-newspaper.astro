@@ -40,11 +40,8 @@ import pgCover from "../../images/work/globe-newspaper/biz_pg.jpg";
 
 // =================================
 // Content Imports
-import * as introMD from "./content/trellis-tokens/trellis-tokens-intro.md";
-const introContent = await introMD.compiledContent();
-
-import * as auditsMD from "./content/trellis-tokens/trellis-tokens-audits.md";
-const auditsContent = await auditsMD.compiledContent();
+import * as sportsMD from "./content/globe-newspaper/sports.md";
+const sportsContent = await sportsMD.compiledContent();
 ---
 
 {/* ================================== */}
@@ -72,9 +69,9 @@ const auditsContent = await auditsMD.compiledContent();
       <GridContainer gridLayout="one-up">
         <ImageBlock imageSrc={believeCover} cssClass="width--small" />
       </GridContainer>
-      <TextBlock title="Sports">
+      <TextBlock title={sportsMD.frontmatter.title}>
         <div>
-          <!-- {(<Fragment set:html={introContent} />)} -->
+          {(<Fragment set:html={sportsContent} />)}
         </div>
       </TextBlock>
       <GridContainer gridLayout="two-up">
