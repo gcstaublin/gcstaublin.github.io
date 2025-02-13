@@ -20,9 +20,10 @@ const mainClass = "width--large";
 {/* HTML                               */}
 {/* ================================== */}
 <BaseLayout pageTitle={pageTitle} mainClass={mainClass} noFollow>
-  <PageTitle title="Selected Work" />
-  <div class="work-test">
-    <div class="tease-grid">
+  <section>
+    <PageTitle title="Selected Work" reduceSpace />
+
+    <div class="index__grid">
       <CardTease
         imageSrc={launchpadImage}
         link="/work/trellis-docs/"
@@ -44,6 +45,11 @@ const mainClass = "width--large";
         title="Uniform Design System"
         subTitle="Creating a solid foundation for an evolving design system"
       />
+    </div>
+  </section>
+  <section>
+    <PageTitle title="Editorial Design + Art Direction" reduceSpace />
+    <div class="index__grid">
       <CardTease
         imageSrc={magImage}
         title="The Boston Globe Magazine"
@@ -57,44 +63,26 @@ const mainClass = "width--large";
         link="/work/globe-newspaper/"
       />
     </div>
-    <!-- <div class="new-section">
-      <CardTease
-        imageSrc={launchpadImage}
-        title="Responsive Web Design"
-        subTitle="Creating a solid foundation for an evolving design system"
-      />
-    </div> -->
-  </div>
-
-  {/* ================================== */}
-  {/* Style                              */}
-  {/* ================================== */}
-  <style>
-    .pageTitle__container {
-      /* border: 1px solid; */
-      margin-block-end: 64px;
-
-      h2 {
-        font-size: 64px;
-        line-height: 1.25;
-        font-weight: 600;
-        margin-block-start: 0;
-        /* color: #2e2e2b; */
-      }
-
-      h3 {
-        font-size: 24px;
-        line-height: 1.25;
-      }
-    }
-    .tease-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-gap: 40px;
-    }
-
-    .new-section {
-      margin-block-start: 40px;
-    }
-  </style>
+  </section>
 </BaseLayout>
+
+{/* ================================== */}
+{/* Style                              */}
+{/* ================================== */}
+<style>
+  .index__grid {
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 40px;
+
+    @media (min-width: 700px) {
+      grid-template-columns: 1fr 1fr;
+      max-width: 100%;
+    }
+  }
+
+  section + section {
+    margin-block-start: 84px;
+  }
+</style>

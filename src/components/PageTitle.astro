@@ -1,12 +1,14 @@
 ---
-const { title, subTitle, cssClass } = Astro.props;
+const { title, subTitle, reduceSpace } = Astro.props;
 ---
 
 {/* ================================== */}
 {/* HTML                               */}
 {/* ================================== */}
 
-<div class="pageTitle__container">
+<div
+  class={`pageTitle__container ${reduceSpace ? "pageTitle__container--reduce-space" : ""}`}
+>
   <h2 class="pageTitle__title color-text--contrast">{title}</h2>
   {
     subTitle && (
@@ -21,6 +23,10 @@ const { title, subTitle, cssClass } = Astro.props;
 <style>
   .pageTitle__container {
     margin-block-end: 64px;
+  }
+
+  .pageTitle__container--reduce-space {
+    margin-block-end: 32px;
   }
 
   .pageTitle__title {
