@@ -74,21 +74,11 @@ const auditsContent = await auditsMD.compiledContent();
       </div>
     </TextBlock> -->
 
-    {/* Covers Section =================================  */}
-    <div class="mag__group">
-      <GridContainer collapseGap>
-        <div></div>
-        <ImageBlock imageSrc={bostonianCover} />
-        <ImageBlock imageSrc={dateCover} />
-        <ImageBlock imageSrc={summerCover} />
-      </GridContainer>
-    </div>
-
     {/* Candlepin Section =================================  */}
     <div class="mag__group">
-      <GridContainer collapseGap>
+      <GridContainer gridLayout="one-up">
         <div></div>
-        <ImageBlock imageSrc={candleCover} />
+        <ImageBlock imageSrc={candleCover} cssClass="width--small" />
       </GridContainer>
       <GridContainer gridLayout="one-up">
         <ImageBlock imageSrc={candleSpread1} />
@@ -98,9 +88,8 @@ const auditsContent = await auditsMD.compiledContent();
 
     {/* Fight Section =================================  */}
     <div class="mag__group">
-      <GridContainer collapseGap>
-        <div></div>
-        <ImageBlock imageSrc={fightCover} />
+      <GridContainer gridLayout="one-up">
+        <ImageBlock imageSrc={fightCover} cssClass="width--small" />
       </GridContainer>
       <GridContainer gridLayout="one-up">
         <ImageBlock imageSrc={fightSpread} />
@@ -109,9 +98,8 @@ const auditsContent = await auditsMD.compiledContent();
 
     {/* Taxes Section =================================  */}
     <div class="mag__group">
-      <GridContainer collapseGap>
-        <div></div>
-        <ImageBlock imageSrc={taxCover} />
+      <GridContainer gridLayout="one-up">
+        <ImageBlock imageSrc={taxCover} cssClass="width--small" />
       </GridContainer>
       <GridContainer gridLayout="one-up">
         <ImageBlock imageSrc={taxSpread} />
@@ -120,9 +108,8 @@ const auditsContent = await auditsMD.compiledContent();
 
     {/* Harvard Section =================================  */}
     <div class="mag__group">
-      <GridContainer collapseGap>
-        <div></div>
-        <ImageBlock imageSrc={harvardCover} />
+      <GridContainer gridLayout="one-up">
+        <ImageBlock imageSrc={harvardCover} cssClass="width--small" />
       </GridContainer>
       <GridContainer gridLayout="one-up">
         <ImageBlock imageSrc={harvardSpread1} />
@@ -133,9 +120,8 @@ const auditsContent = await auditsMD.compiledContent();
 
     {/* Careers Section =================================  */}
     <div class="mag__group">
-      <GridContainer collapseGap>
-        <div></div>
-        <ImageBlock imageSrc={careersCover} />
+      <GridContainer gridLayout="one-up">
+        <ImageBlock imageSrc={careersCover} cssClass="width--small" />
       </GridContainer>
       <GridContainer gridLayout="one-up">
         <ImageBlock imageSrc={careersSpread1} />
@@ -145,9 +131,9 @@ const auditsContent = await auditsMD.compiledContent();
 
     {/* Murder Section =================================  */}
     <div class="mag__group">
-      <GridContainer collapseGap>
+      <GridContainer gridLayout="one-up">
         <div></div>
-        <ImageBlock imageSrc={murderCover} />
+        <ImageBlock imageSrc={murderCover} cssClass="width--small" />
       </GridContainer>
       <GridContainer gridLayout="one-up">
         <ImageBlock imageSrc={murderSpread} />
@@ -181,6 +167,15 @@ const auditsContent = await auditsMD.compiledContent();
       <GridContainer gridLayout="one-up">
         <ImageBlock imageSrc={pressureSpread1} />
         <ImageBlock imageSrc={pressureSpread2} />
+      </GridContainer>
+    </div>
+
+    {/* Covers Section =================================  */}
+    <div class="mag__group">
+      <GridContainer gridLayout="one-up">
+        <!-- <ImageBlock imageSrc={bostonianCover} cssClass="width--small" /> -->
+        <!-- <ImageBlock imageSrc={dateCover} cssClass="width--small" /> -->
+        <ImageBlock imageSrc={summerCover} cssClass="width--small" />
       </GridContainer>
     </div>
   </div>
