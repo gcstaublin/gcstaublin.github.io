@@ -42,6 +42,12 @@ import pgCover from "../../images/work/globe-newspaper/biz_pg.jpg";
 // Content Imports
 import * as sportsMD from "./content/globe-newspaper/sports.md";
 const sportsContent = await sportsMD.compiledContent();
+
+import * as businessMD from "./content/globe-newspaper/business.md";
+const businessContent = await businessMD.compiledContent();
+
+import * as weekendMD from "./content/globe-newspaper/weekend.md";
+const weekendContent = await weekendMD.compiledContent();
 ---
 
 {/* ================================== */}
@@ -67,7 +73,11 @@ const sportsContent = await sportsMD.compiledContent();
     {/* Sports Section =================================  */}
     <div class="mag__group width--medium">
       <GridContainer gridLayout="one-up">
-        <ImageBlock imageSrc={believeCover} cssClass="width--small" />
+        <ImageBlock
+          imageSrc={believeCover}
+          cssClass="width--small"
+          caption="After the Sox won the World Series, you couldn't turn on Boston sports radio without hearing the radio call from the final out. Making it permanent part of the moment was a slam dunk. This cover was so successful it made an appearance in Scorsese's The Departed."
+        />
       </GridContainer>
       <TextBlock title={sportsMD.frontmatter.title}>
         <div>
@@ -75,49 +85,90 @@ const sportsContent = await sportsMD.compiledContent();
         </div>
       </TextBlock>
       <GridContainer gridLayout="two-up">
-        <ImageBlock imageSrc={fourComeback} />
-        <ImageBlock imageSrc={sevenComeback} />
-        <ImageBlock imageSrc={rumbleCover} />
-        <ImageBlock imageSrc={gangCover} />
+        <ImageBlock
+          imageSrc={fourComeback}
+          caption="It's common to get a rough idea of the narrative hook for a special section. However, at 10 a.m. no stories exist and reporters are too busy reporting and writing to bother with a designer. The clock is ticking on you need to create back to back covers, highlighting the Red Sox storied comeback in 2004, and their in-progress 2007 comeback"
+        />
+        <ImageBlock
+          imageSrc={sevenComeback}
+          caption="Over the course of about four hours, I research photos, wrote all the copy and constructed these page. When the copy desk arrived at 3 p.m., I collaborated with them to refine the writing and tighten up the visual narrative. During my editorial career, my editors trusted (expected) me to make something our of nothing and tell a story. These covers showcase that ability, IMO."
+        />
+        <ImageBlock
+          imageSrc={rumbleCover}
+          caption="This fight happened on a humid, sweltering Saturday afternoon in July. The air was heavy, figuratively and literally. This section traced the long history of the Red Sox / Yankees rivarly."
+        />
+        <ImageBlock
+          imageSrc={gangCover}
+          caption="One of the most respected newspaper editor's in the country told me this cover was too realistic. My design director said it was great. Regardless, this was fun to pull together."
+        />
       </GridContainer>
     </div>
     <div class="mag__group width--medium">
       <GridContainer gridLayout="two-up">
-        <ImageBlock imageSrc={frozenCover} />
-        <ImageBlock imageSrc={patsCover} />
+        <ImageBlock
+          imageSrc={frozenCover}
+          caption="When I moved to Boston, I'll be honest. I knew nothing about the Frozen Four. Fast forward a few months, I'm art directing this cover. I made the team logos, spray mounted them onto hockey pucks and then we let Brookline Ice and Coal freeze them for us. The turnaround on this was tight. Clear ice needs to be frozen very slowly. They did a great job."
+        />
+        <ImageBlock
+          imageSrc={patsCover}
+          caption="Want to know a secret about the Patriots never-ending run of playoff dominance? The Globe often had a well know 'Pats hater' sitting in the sprots design chair. Who says journalist can't be impartial? Despite my distate for the Pats, I've had a lot of fun, creating ideas for special sections like this. Designing for a captivated audience is exicting and an honor, even if it for this team."
+        />
       </GridContainer>
     </div>
 
     {/* Business Section =================================  */}
     <div class="mag__group width--medium">
-      <TextBlock title="Sunday Business">
+      <GridContainer gridLayout="one-up">
+        <ImageBlock
+          imageSrc={bioCover}
+          cssClass="width--small"
+          caption="Designers and Art Directors yearn to win an SPD (Society of Publication Designers) Gold Medal. This page won one of those Gold Medals. Honestly, the credit for this one goes to illustrator, John Hersey. Sometimes as an art director, you have to negotiate the idea out of the creatives you hire. At other times, the idea lands in your inbox fully formed. You wave your hands in the air, making a few requests and you end up with a fancy gold paperweight that proves just how great you are. I always thought John deserved the paperweight for this one."
+        />
+      </GridContainer>
+      <TextBlock title={businessMD.frontmatter.title}>
         <div>
-          <!-- {(<Fragment set:html={introContent} />)} -->
+          {(<Fragment set:html={businessContent} />)}
         </div>
       </TextBlock>
-      <GridContainer gridLayout="one-up">
-        <ImageBlock imageSrc={bioCover} cssClass="width--small" />
-      </GridContainer>
+
       <GridContainer gridLayout="two-up">
-        <ImageBlock imageSrc={bonoCover} />
-        <ImageBlock imageSrc={strollerCover} />
-        <ImageBlock imageSrc={subprimeCover} />
-        <ImageBlock imageSrc={taxesCover} />
-        <ImageBlock imageSrc={towersCover} />
-        <ImageBlock imageSrc={pgCover} />
+        <ImageBlock
+          imageSrc={bonoCover}
+          caption="The cover marks a moment maturation for me as an art director. My original concept was a little more busy, with too much going on. My design director (thank you, Greg) told me the story about Coco Chanel. Before going out, she would look in the mirror and take one thing off. This lesson in simplicity made this concept better, and those words bounce around my brain on a daily basis. I might not always listen to it, but it's always there."
+        />
+        <ImageBlock
+          imageSrc={strollerCover}
+          caption="Here's a photo of stroller. Please give me an attention grabbing cover. This page relies on 'tabloid'-like design without straying too far from the Globe classic and reserved look. "
+        />
+        <ImageBlock
+          imageSrc={subprimeCover}
+          caption="There's only so many ways to illustrate the impending melt down of the subprime mortgage market."
+        />
+        <ImageBlock
+          imageSrc={taxesCover}
+          caption="Who's thinking of taxes in December? I might. But I'm also not indicative to most people. I vaguely remember this as a week where the centerpiece story was in flux throughout the week. I think I might have pulled this one together hours before deadline. That's indicative of most newspaper work, so I'm not sure why I'm mentioning it."
+        />
+        <ImageBlock
+          imageSrc={towersCover}
+          caption="In 2006, Boston hadn't hit its building boom stride. The carnival known as the Seaport was still a vast wasteland of empty parking lots, nothing of what it's become today. This was a fun story to illustrate"
+        />
+        <ImageBlock
+          imageSrc={pgCover}
+          caption="As Gilette and Proctor & Gamble considered a merger, I thought it would be fun to contextualize the two company's wildly different product lines in the context of a medicine cabinet. I ran down to the store, bought a bunch of groceries, secured a cabinet and booked some photo studio time."
+        />
       </GridContainer>
     </div>
 
     {/* Weekend Section =================================  */}
     <div class="mag__group width--medium">
-      <TextBlock title="Arts & Entertainment">
-        <div>
-          <!-- {(<Fragment set:html={introContent} />)} -->
-        </div>
-      </TextBlock>
       <GridContainer gridLayout="one-up">
         <ImageBlock imageSrc={bloodyCover} cssClass="width--small" />
       </GridContainer>
+      <TextBlock title={weekendMD.frontmatter.title}>
+        <div>
+          {(<Fragment set:html={weekendContent} />)}
+        </div>
+      </TextBlock>
       <GridContainer gridLayout="two-up">
         <ImageBlock imageSrc={flashCover} />
         <ImageBlock imageSrc={kidsCover} />
