@@ -1,14 +1,14 @@
 ---
-title: "Kicking off the work"
+title: "Kicking off. Auditing. Learning."
 ---
 
-My engineering partner departed on family leave shortly after we wrote our proposal, leaving me as the sole IC focused on tokens in the early stages of the project.
+The engineering partner I'd collaborated with on the proposal departed on family leave shortly after we received the thumbs up from our leadership. This left me as the primary IC focused on the creation of the token system during the early stages of the project.
 
-<!-- As the first design hire on the design systems hire, I was more than accustomed to being the sole IC on a project. However, I was sad to have lost my partner in crime during the early stages of the project. -->
+Thankfully, another engineer stepped in to help with the early audits of our component library. They wrote a script to find all the style values that were applied to components. The script pulled SASS declartions as well as nuanced Styled Component conditionals, leaving us with a big pile of values. I combed through the values and began contextualizing and organizing those values into categorized buckets.
 
-I knew bringing the team along on the journey would be an important aspect of these early stages.
+One unique challenge with the design system, is that there are a number of sneaky design decisions that didn't "offically" exist in our visual language or the existing token system. These bespoke visual atoms included aspects like type specs of a button, the hover state of a link or some unique disabled text colors that deviated from all other disabled text colors. As painful it was to document those examples might have been, I was super excited to be establishing a method of erradicating them in the future.
 
-During our weekly Design and Engineering meeting I would spend about 15 minutes covering a topic related to tokens, ... to level up the team and provide a weekly update on my work. As part of the leveling up, I'd make the sessions interactive. Whether iit was voting the naming of our token layers, or a free form feedback, I wanted to bring the team along as best I could.
+
 
 <!-- Words about audits. Tool to find all values, but still needed to create meaning.
 
