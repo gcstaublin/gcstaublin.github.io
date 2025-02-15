@@ -90,7 +90,11 @@ const reviseContent = await reviseMD.compiledContent();
     />
 
     {/* Main Section =================================  */}
-    <ImageBlock imageSrc={mainImage} cssClass="imageBlock__container--test" />
+    <ImageBlock
+      imageSrc={mainImage}
+      cssClass="imageBlock__container--test"
+      caption="These 2025 Figma variables showcase how the design token system I began building in mid-2023 has evolved."
+    />
 
     {/* Intro Section =================================  */}
     <TextBlock title={introMD.frontmatter.title}>
@@ -146,7 +150,7 @@ const reviseContent = await reviseMD.compiledContent();
     <ImageBlock
       imageSrc={tokenLayers}
       cssClass="width--large"
-      caption="To prevent from suffering a weekly Ted Talk, I tried to make the weekly meetin sessions interactive, giving team members a voice in the decisions being made, whether it was the name of token layers, or overall taxonomy approaches."
+      caption="To prevent from subjecting the team to a weekly Ted Talk, I tried to make the weekly Jams interactive, giving team members a voice in the decisions being made, whether it was the name of token layers, or overall taxonomy approaches."
     />
 
     <TextBlock title={learningMD.frontmatter.title}>
