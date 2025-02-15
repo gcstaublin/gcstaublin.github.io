@@ -1,34 +1,44 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
 import "../../styles/global.css";
 
+// Component imports
+import BaseLayout from "../../layouts/BaseLayout.astro";
 import TextBlock from "../../components/TextBlock.astro";
 import PageTitle from "../../components/PageTitle.astro";
 import ImageBlock from "../../components/ImageBlock.astro";
+import ScrollingItem from "../../components/ScrollingItem.astro";
+// import GridContainer from "../../components/GridContainer.astro";
 
+// Page variables
 const pageTitle = "Grant Staublin | Work | Trellis Documentation";
 const mainClass = "width--large work-test";
 
+// Image imports
 import mainImage from "../../images/work/trellis-tokens/variables.png";
-
 import TypeMigration from "../../images/work/trellis-tokens/TypeMigration.astro";
-import tokenDecisions from "../../images/work/trellis-tokens/token-architecture-decisions-2.jpg";
 import tokenLayers from "../../images/work/trellis-tokens/token-architecture-layers-2.jpg";
-import tokenProposal from "../../images/work/trellis-tokens/token-proposal-clean.jpg";
 
-import tokenLearning from "../../images/work/trellis-tokens/token-architecture_learning.jpg";
-import tokenTaxonomy from "../../images/work/trellis-tokens/token-architecture_taxonomy.jpg";
+import tokenDecisions from "../../images/work/trellis-tokens/token-architecture-decisions-2.jpg";
+import tokenLearning from "../../images/work/trellis-tokens/token-taxonomy-inspiration.png";
+import visualizeTransform from "../../images/work/trellis-tokens/visualization-transforming1.jpg";
 import tokenCreate from "../../images/work/trellis-tokens/token-architecture_create.jpg";
 import tokenTransform from "../../images/work/trellis-tokens/token-architecture_transform.jpg";
-
 import playgroundControls from "../../images/work/trellis-tokens/playground_controls.jpg";
+import tokenStudio from "../../images/work/trellis-tokens/token-studio.png";
+
+import auditTracking from "../../images/work/trellis-tokens/audit-tracking.jpg";
+import namingWorksheet from "../../images/work/trellis-tokens/naming-worksheet.jpg";
+import voteLayer from "../../images/work/trellis-tokens/voting-on-layer1.jpg";
+import tokenOutput from "../../images/work/trellis-tokens/output.png";
+
+// import tokenLearning from "../../images/work/trellis-tokens/token-architecture_learning.jpg";
+import tokenTaxonomy from "../../images/work/trellis-tokens/token-taxonomy-iterate.png";
 import playgroundClassic from "../../images/work/trellis-tokens/playground_classic.jpg";
 import playgroundDark from "../../images/work/trellis-tokens/playground_dark.jpg";
 import playgroundSimple from "../../images/work/trellis-tokens/playground_simple.jpg";
 import playgroundTechnical from "../../images/work/trellis-tokens/playground_technical.jpg";
 
-import tokenStudio from "../../images/work/trellis-tokens/token-studio.png";
-
+// Content imports
 import * as introMD from "./content/trellis-tokens/trellis-tokens-intro.md";
 const introContent = await introMD.compiledContent();
 
@@ -37,6 +47,9 @@ const typeContent = await typeMD.compiledContent();
 
 import * as auditsMD from "./content/trellis-tokens/trellis-tokens-audits.md";
 const auditsContent = await auditsMD.compiledContent();
+
+import * as learningMD from "./content/trellis-tokens/trellis-tokens-learning.md";
+const learningContent = await learningMD.compiledContent();
 
 import * as stepsMD from "./content/trellis-tokens/trellis-tokens-steps.md";
 const stepsContent = await stepsMD.compiledContent();
@@ -63,8 +76,6 @@ import * as techMD from "./content/trellis-tokens/trellis-tokens-tech.md";
 const techContent = await techMD.compiledContent();
 
 import * as reviseMD from "./content/trellis-tokens/trellis-tokens-revise.md";
-import Test from "../../components/Test.astro";
-import ScrollingItem from "../../components/ScrollingItem.astro";
 const reviseContent = await reviseMD.compiledContent();
 ---
 
@@ -75,11 +86,15 @@ const reviseContent = await reviseMD.compiledContent();
   <div class="portfolioPage__container">
     <PageTitle
       title="Trellis Design Tokens"
-      subTitle="Creating a new design token system that supports the HubSpot's classic visual language (Canvas) and readys the product for its next visual language (Trellis)"
+      subTitle="Creating a new design token system that supports the HubSpot's classic visual language (Canvas) and prepares the product for its emerging future visual language (Trellis)"
     />
 
     {/* Main Section =================================  */}
-    <ImageBlock imageSrc={mainImage} cssClass="imageBlock__container--test" />
+    <ImageBlock
+      imageSrc={mainImage}
+      cssClass="imageBlock__container--test"
+      caption="These 2025 Figma variables showcase how the design token system I began building in mid-2023 has evolved."
+    />
 
     {/* Intro Section =================================  */}
     <TextBlock title={introMD.frontmatter.title}>
@@ -89,7 +104,6 @@ const reviseContent = await reviseMD.compiledContent();
     </TextBlock>
 
     {/* Type Migration Section =================================  */}
-
     <div class="width--small align-center">
       <TypeMigration />
     </div>
@@ -99,16 +113,49 @@ const reviseContent = await reviseMD.compiledContent();
         {(<Fragment set:html={typeContent} />)}
       </div>
     </TextBlock>
-    <ImageBlock
+    <!-- <ImageBlock
       imageSrc={tokenProposal}
       cssClass="width--small"
       caption="The proposal described the challenges of the type migration, and our org's desire to create a systems of systems approach to design systems as motivators for a meaningful investment in design tokens."
+    /> -->
+
+    {/* Audits Section ===================  */}
+    <section class="width--large">
+      <ScrollingItem>
+        <Fragment slot="content">
+          <TextBlock title={auditsMD.frontmatter.title}>
+            <section>
+              {(<Fragment set:html={auditsContent} />)}
+            </section>
+          </TextBlock>
+        </Fragment>
+        <Fragment slot="media">
+          <ImageBlock imageSrc={auditTracking} />
+        </Fragment>
+      </ScrollingItem>
+    </section>
+
+    <!-- <div class="width--large">
+      <GridContainer>
+        <TextBlock title={auditsMD.frontmatter.title}>
+          <div>
+            {(<Fragment set:html={auditsContent} />)}
+          </div>
+        </TextBlock>
+        <ImageBlock imageSrc={auditTracking} />
+      </GridContainer>
+    </div> -->
+
+    {/* Learning Section ===================  */}
+    <ImageBlock
+      imageSrc={tokenLayers}
+      cssClass="width--large"
+      caption="To prevent from subjecting the team to a weekly Ted Talk, I tried to make the weekly Jams interactive, giving team members a voice in the decisions being made, whether it was the name of token layers, or overall taxonomy approaches."
     />
 
-    {/* Audits + Education Migration Section ===================  */}
-    <TextBlock title={auditsMD.frontmatter.title}>
+    <TextBlock title={learningMD.frontmatter.title}>
       <div>
-        {(<Fragment set:html={auditsContent} />)}
+        {(<Fragment set:html={learningContent} />)}
       </div>
     </TextBlock>
     <!-- <ImageBlock
@@ -117,16 +164,10 @@ const reviseContent = await reviseMD.compiledContent();
       caption="The topic of a weekly Design and Engineering meeting could be as simple as showing of a design decision, like a hex code, is inherited from layer to layer within the system"
     /> -->
 
-    <ImageBlock
-      imageSrc={tokenLayers}
-      cssClass="width--large"
-      caption="To prevent from suffering a weekly Ted Talk, I tried to make the weekly meetin sessions interactive, giving team members a voice in the decisions being made, whether it was the name of token layers, or overall taxonomy approaches."
-    />
-
     {/* The Steps ===================  */}
 
     <section class="width--large">
-      <ScrollingItem>
+      <!-- <ScrollingItem>
         <Fragment slot="content">
           <TextBlock
             title={stepsOneMD.frontmatter.title}
@@ -138,6 +179,21 @@ const reviseContent = await reviseMD.compiledContent();
           </TextBlock>
         </Fragment>
         <Fragment slot="media"><ImageBlock imageSrc={tokenLearning} /></Fragment
+        >
+      </ScrollingItem> -->
+
+      <ScrollingItem>
+        <Fragment slot="content">
+          <TextBlock
+            title={stepsOneMD.frontmatter.title}
+            cssClass="locking-scroll"
+          >
+            <div>
+              {(<Fragment set:html={stepsOneContent} />)}
+            </div>
+          </TextBlock>
+        </Fragment>
+        <Fragment slot="media"><ImageBlock imageSrc={tokenTaxonomy} /></Fragment
         >
       </ScrollingItem>
 
@@ -152,8 +208,7 @@ const reviseContent = await reviseMD.compiledContent();
             </div>
           </TextBlock>
         </Fragment>
-        <Fragment slot="media"><ImageBlock imageSrc={tokenTaxonomy} /></Fragment
-        >
+        <Fragment slot="media"><ImageBlock imageSrc={voteLayer} /></Fragment>
       </ScrollingItem>
 
       <ScrollingItem>
@@ -167,7 +222,9 @@ const reviseContent = await reviseMD.compiledContent();
             </div>
           </TextBlock>
         </Fragment>
-        <Fragment slot="media"><ImageBlock imageSrc={tokenCreate} /></Fragment>
+        <Fragment slot="media"
+          ><ImageBlock imageSrc={namingWorksheet} /></Fragment
+        >
       </ScrollingItem>
 
       <ScrollingItem>
@@ -181,9 +238,10 @@ const reviseContent = await reviseMD.compiledContent();
             </div>
           </TextBlock>
         </Fragment>
-        <Fragment slot="media"
-          ><ImageBlock imageSrc={tokenTransform} /></Fragment
-        >
+        <Fragment slot="media">
+          <!-- <ImageBlock imageSrc={visualizeTransform} /> -->
+          <ImageBlock imageSrc={tokenOutput} />
+        </Fragment>
       </ScrollingItem>
     </section>
 
@@ -193,11 +251,11 @@ const reviseContent = await reviseMD.compiledContent();
         {(<Fragment set:html={roadShowContent} />)}
       </div>
     </TextBlock>
-    <ImageBlock imageSrc={playgroundControls} />
+    <!-- <ImageBlock imageSrc={playgroundControls} /> -->
 
     <section class="width--large">
-      <div class="scrolling__layout">
-        <div class="scrolling__text-container">
+      <ScrollingItem>
+        <Fragment slot="content">
           <TextBlock
             title={playgroundMD.frontmatter.title}
             cssClass="locking-scroll"
@@ -206,35 +264,39 @@ const reviseContent = await reviseMD.compiledContent();
               {(<Fragment set:html={playgroundContent} />)}
             </div>
           </TextBlock>
-        </div>
-        <div class="scrolling__media-container">
+        </Fragment>
+        <Fragment slot="media">
           <ImageBlock imageSrc={playgroundClassic} />
           <ImageBlock imageSrc={playgroundDark} />
           <ImageBlock imageSrc={playgroundSimple} />
           <ImageBlock imageSrc={playgroundTechnical} />
-        </div>
-      </div>
+        </Fragment>
+      </ScrollingItem>
     </section>
 
     {/* Tech Choices Section =================================  */}
 
-    <TextBlock title={techMD.frontmatter.title}>
+    <!-- <TextBlock title={techMD.frontmatter.title}>
       <div>
         {(<Fragment set:html={techContent} />)}
       </div>
     </TextBlock>
-    <ImageBlock imageSrc={tokenStudio} cssClass="width--medium" />
+    <ImageBlock imageSrc={tokenStudio} cssClass="width--medium" /> -->
 
     {/* Revise Choices Section =================================  */}
+    <!-- <TextBlock title={reviseMD.frontmatter.title}>
+      <div>
+        {(<Fragment set:html={reviseContent} />)}
+      </div>
+    </TextBlock>
+    <ImageBlock imageSrc={tokenStudio} cssClass="width--medium" /> -->
+
+    {/* Break Section =================================  */}
     <TextBlock title={reviseMD.frontmatter.title}>
       <div>
         {(<Fragment set:html={reviseContent} />)}
       </div>
     </TextBlock>
-    <ImageBlock imageSrc={tokenStudio} cssClass="width--medium" />
-
-    {/* Txxx Section =================================  */}
-    <h1>End22222</h1>
   </div>
   <!-- portfolioPage -->
 </BaseLayout>
