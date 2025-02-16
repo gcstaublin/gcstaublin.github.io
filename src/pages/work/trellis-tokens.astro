@@ -18,12 +18,6 @@ import mainImage from "../../images/work/trellis-tokens/variables.png";
 import TypeMigration from "../../images/work/trellis-tokens/TypeMigration.astro";
 import tokenLayers from "../../images/work/trellis-tokens/token-architecture-layers-2.jpg";
 
-import tokenDecisions from "../../images/work/trellis-tokens/token-architecture-decisions-2.jpg";
-import tokenLearning from "../../images/work/trellis-tokens/token-taxonomy-inspiration.png";
-import visualizeTransform from "../../images/work/trellis-tokens/visualization-transforming1.jpg";
-import tokenCreate from "../../images/work/trellis-tokens/token-architecture_create.jpg";
-import tokenTransform from "../../images/work/trellis-tokens/token-architecture_transform.jpg";
-import playgroundControls from "../../images/work/trellis-tokens/playground_controls.jpg";
 import tokenStudio from "../../images/work/trellis-tokens/token-studio.png";
 
 import auditTracking from "../../images/work/trellis-tokens/audit-tracking.jpg";
@@ -113,11 +107,6 @@ const reviseContent = await reviseMD.compiledContent();
         {(<Fragment set:html={typeContent} />)}
       </div>
     </TextBlock>
-    <!-- <ImageBlock
-      imageSrc={tokenProposal}
-      cssClass="width--small"
-      caption="The proposal described the challenges of the type migration, and our org's desire to create a systems of systems approach to design systems as motivators for a meaningful investment in design tokens."
-    /> -->
 
     {/* Audits Section ===================  */}
     <section class="width--large">
@@ -135,17 +124,6 @@ const reviseContent = await reviseMD.compiledContent();
       </ScrollingItem>
     </section>
 
-    <!-- <div class="width--large">
-      <GridContainer>
-        <TextBlock title={auditsMD.frontmatter.title}>
-          <div>
-            {(<Fragment set:html={auditsContent} />)}
-          </div>
-        </TextBlock>
-        <ImageBlock imageSrc={auditTracking} />
-      </GridContainer>
-    </div> -->
-
     {/* Learning Section ===================  */}
     <ImageBlock
       imageSrc={tokenLayers}
@@ -158,30 +136,9 @@ const reviseContent = await reviseMD.compiledContent();
         {(<Fragment set:html={learningContent} />)}
       </div>
     </TextBlock>
-    <!-- <ImageBlock
-      imageSrc={tokenDecisions}
-      cssClass="width--large"
-      caption="The topic of a weekly Design and Engineering meeting could be as simple as showing of a design decision, like a hex code, is inherited from layer to layer within the system"
-    /> -->
 
     {/* The Steps ===================  */}
-
     <section class="width--large">
-      <!-- <ScrollingItem>
-        <Fragment slot="content">
-          <TextBlock
-            title={stepsOneMD.frontmatter.title}
-            cssClass="locking-scroll"
-          >
-            <div>
-              {(<Fragment set:html={stepsOneContent} />)}
-            </div>
-          </TextBlock>
-        </Fragment>
-        <Fragment slot="media"><ImageBlock imageSrc={tokenLearning} /></Fragment
-        >
-      </ScrollingItem> -->
-
       <ScrollingItem>
         <Fragment slot="content">
           <TextBlock
@@ -222,9 +179,9 @@ const reviseContent = await reviseMD.compiledContent();
             </div>
           </TextBlock>
         </Fragment>
-        <Fragment slot="media"
-          ><ImageBlock imageSrc={namingWorksheet} /></Fragment
-        >
+        <Fragment slot="media">
+          <ImageBlock imageSrc={namingWorksheet} />
+        </Fragment>
       </ScrollingItem>
 
       <ScrollingItem>
@@ -239,7 +196,6 @@ const reviseContent = await reviseMD.compiledContent();
           </TextBlock>
         </Fragment>
         <Fragment slot="media">
-          <!-- <ImageBlock imageSrc={visualizeTransform} /> -->
           <ImageBlock imageSrc={tokenOutput} />
         </Fragment>
       </ScrollingItem>
@@ -251,7 +207,6 @@ const reviseContent = await reviseMD.compiledContent();
         {(<Fragment set:html={roadShowContent} />)}
       </div>
     </TextBlock>
-    <!-- <ImageBlock imageSrc={playgroundControls} /> -->
 
     <section class="width--large">
       <ScrollingItem>
@@ -279,14 +234,6 @@ const reviseContent = await reviseMD.compiledContent();
     <!-- <TextBlock title={techMD.frontmatter.title}>
       <div>
         {(<Fragment set:html={techContent} />)}
-      </div>
-    </TextBlock>
-    <ImageBlock imageSrc={tokenStudio} cssClass="width--medium" /> -->
-
-    {/* Revise Choices Section =================================  */}
-    <!-- <TextBlock title={reviseMD.frontmatter.title}>
-      <div>
-        {(<Fragment set:html={reviseContent} />)}
       </div>
     </TextBlock>
     <ImageBlock imageSrc={tokenStudio} cssClass="width--medium" /> -->
