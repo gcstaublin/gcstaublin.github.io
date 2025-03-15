@@ -442,15 +442,22 @@ a {
   margin-inline: auto;
 }
 
+.width--full {
+  --width-content-max: 100%;
+  --context-max: min(var(--width-content-max), var(--width-content-calc));
 
-
-.hp-width {
-  border: 1px solid blue;
+  width: var(--context-max);
+  margin-inline: auto;
 }
 
-.work-width {
-  border: 1px solid red;
+.width--full--no-pad {
+  --context-max: 100%;
+
+  width: var(--context-max);
+  margin-inline: auto;
 }
+
+
 
 
 :root {
@@ -478,3 +485,5 @@ a {
     margin-top: 64px;
   }
 }
+
+

@@ -4,7 +4,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
 const { pageTitle } = Astro.props;
-const { mainClass } = Astro.props;
+const { mainClass = "width--large" } = Astro.props;
 const { noFollow } = Astro.props;
 const isProd = import.meta.env.PROD;
 
