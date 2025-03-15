@@ -448,7 +448,6 @@ a {
 
   width: var(--context-max);
   margin-inline: auto;
-  background-color: green;
 }
 
 .width--full--no-pad {
