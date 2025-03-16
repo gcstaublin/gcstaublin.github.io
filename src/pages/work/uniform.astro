@@ -20,6 +20,9 @@ import sevenComeback from "../../images/work/globe-newspaper/sports_comeback_07.
 import rumbleCover from "../../images/work/globe-newspaper/sports_rumble.jpg";
 import gangCover from "../../images/work/globe-newspaper/sports_our-gang.jpg";
 
+import uniCSS2 from "../../images/work/uniform/uniCSS2.png";
+import uniformHP2 from "../../images/work/uniform/uniform2.png";
+
 // =================================
 // Content Imports
 import * as sportsMD from "./content/globe-newspaper/sports.md";
@@ -44,11 +47,25 @@ const sportsContent = await sportsMD.compiledContent();
     </TextBlock> -->
 
     {/* Sports Section =================================  */}
-    <div class="mag__group width--medium">
+    <ImageBlock
+      imageSrc={uniformHP2}
+      caption="After the Sox won the World Series, you couldn't turn on Boston sports radio without hearing the radio call from the final out. Making it permanent part of the moment was a slam dunk. This cover was so successful it made an appearance in Scorsese's The Departed."
+    />
+    <ImageBlock
+      imageSrc={uniCSS2}
+      cssClass="imageBlock__container--accent imageBlock__container--test imageBlock__container--image-bottom"
+      caption="After the Sox won the World Series, you couldn't turn on Boston sports radio without hearing the radio call from the final out. Making it permanent part of the moment was a slam dunk. This cover was so successful it made an appearance in Scorsese's The Departed."
+    />
+    <div class="width--large">
       <GridContainer gridLayout="one-up">
         <ImageBlock
-          imageSrc={believeCover}
-          cssClass="width--small"
+          imageSrc={uniCSS2}
+          cssClass="imageBlock__container--accent imageBlock__container--test imageBlock__container--image-bottom"
+          caption="After the Sox won the World Series, you couldn't turn on Boston sports radio without hearing the radio call from the final out. Making it permanent part of the moment was a slam dunk. This cover was so successful it made an appearance in Scorsese's The Departed."
+        />
+
+        <ImageBlock
+          imageSrc={uniformHP2}
           caption="After the Sox won the World Series, you couldn't turn on Boston sports radio without hearing the radio call from the final out. Making it permanent part of the moment was a slam dunk. This cover was so successful it made an appearance in Scorsese's The Departed."
         />
       </GridContainer>
