@@ -1,0 +1,11 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+
+const mainClass = "width--full";
+---
+
+<BaseLayout mainClass={mainClass}>
+  <div class="portfolioPage__container">
+    <slot />
+  </div>
+</BaseLayout>

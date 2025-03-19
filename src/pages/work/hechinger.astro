@@ -1,0 +1,290 @@
+---
+import "../../styles/global.css";
+import Work from "../../layouts/Work.astro";
+
+// =================================
+// Component imports
+import ImageBlock from "../../components/ImageBlock.astro";
+import PageTitle from "../../components/PageTitle.astro";
+import GridContainer from "../../components/GridContainer.astro";
+import TextBlock from "../../components/TextBlock.astro";
+
+// =================================
+// Image imports
+// import launchpadImage from "../../images/work/landing/launchpad_tease.jpg";
+import imageTest from "../../images/work/upstatement/hechinger-scrollable.jpg";
+import hechingerHP from "../../images/work/upstatement/hp-photo-crop.jpg";
+import hechingerStaff from "../../images/work/upstatement/staff-crop.jpg";
+import hechingerStory from "../../images/work/upstatement/story-photo-crop.jpg";
+import hechingerSpecial from "../../images/work/upstatement/common-core-crop.jpg";
+import hechingerBeforeHead from "../../images/work/upstatement/before-headline.jpg";
+import hechingerAfterHead from "../../images/work/upstatement/after-headline.jpg";
+import hechingerPrimer from "../../images/work/upstatement/primer-crop.jpg";
+import hechingerBefore from "../../images/work/upstatement/before-crop.jpg";
+
+// =================================
+// Content imports
+import * as introMD from "./content/hechinger/hechinger-intro.md";
+const introContent = await introMD.compiledContent();
+
+import * as designMD from "./content/hechinger/hechinger-designs.md";
+const designContent = await designMD.compiledContent();
+
+import * as primerMD from "./content/hechinger/hechinger-primer.md";
+const primerContent = await primerMD.compiledContent();
+
+// =================================
+// Local Variables
+const mainClass = "width--full--no-pad";
+---
+
+<Work>
+  <div class="width--large">
+    <PageTitle
+      title="The Hechinger Report"
+      subTitle="Creating a responsive, modern brand identity and website a premier news magazine, covering innovation and inequality in education"
+      alignment="center"
+    >
+      <ul class="tags">
+        <li class="tag">Visual Design</li>
+        <li class="tag">UI / UX Design</li>
+        <li class="tag">Front-end Development</li>
+        <li class="tag">Wordpress Integration</li>
+      </ul>
+    </PageTitle>
+  </div>
+
+  {/* Scrollable HP Section =================================  */}
+  <div class="width--small">
+    <div class="scrollable">
+      <div class="interface__topper"></div>
+      <ImageBlock imageSrc={imageTest} />
+    </div>
+    <p class="scrollable__caption">
+      <span>⬍</span>
+      <strong>Scrollable:</strong>
+      Hechinger Report homepage design
+    </p>
+  </div>
+
+  {/* Intro Section =================================  */}
+  <TextBlock title={introMD.frontmatter.title}>
+    <div>
+      {(<Fragment set:html={introContent} />)}
+    </div>
+  </TextBlock>
+
+  {/* Before redesign Section =================================  */}
+  <div class="width--extra-small">
+    <div class="">
+      <div class="stage__inner">
+        <ImageBlock imageSrc={hechingerBefore} />
+      </div>
+    </div>
+    <p class="image-caption">
+      The Hechinger Report was due for more modernized brand identity to match
+      the quality of their journalism.
+    </p>
+  </div>
+
+  {/* Grid Section =================================  */}
+  <div class="width--full hechinger-grid">
+    <GridContainer>
+      <div class="stage">
+        <div class="stage__inner">
+          <div class="interface__topper"></div>
+          <ImageBlock imageSrc={hechingerHP} />
+        </div>
+      </div>
+      <div class="stage">
+        <div class="stage__inner">
+          <div class="interface__topper"></div>
+          <ImageBlock imageSrc={hechingerStory} />
+        </div>
+      </div>
+
+      <div class="stage">
+        <div class="stage__inner">
+          <div class="interface__topper"></div>
+          <ImageBlock imageSrc={hechingerSpecial} />
+        </div>
+      </div>
+
+      <div class="stage">
+        <div class="stage__inner">
+          <div class="interface__topper"></div>
+          <ImageBlock imageSrc={hechingerStaff} />
+        </div>
+      </div>
+    </GridContainer>
+  </div>
+
+  {/* Designs Section =================================  */}
+  <TextBlock title={designMD.frontmatter.title}>
+    <div>
+      {(<Fragment set:html={designContent} />)}
+    </div>
+  </TextBlock>
+
+  {/* Headlines Section =================================  */}
+  <div class="width--small hechinger-grid">
+    <GridContainer>
+      <div class="stage">
+        <div class="stage__inner">
+          <div class="interface__topper interface__topper--small"></div>
+          <ImageBlock imageSrc={hechingerBeforeHead} />
+        </div>
+      </div>
+      <div class="stage">
+        <div class="stage__inner">
+          <div class="interface__topper interface__topper--small"></div>
+          <ImageBlock imageSrc={hechingerAfterHead} />
+        </div>
+      </div>
+    </GridContainer>
+    <p class="image-caption">
+      Hechinger's headlines were descriptive. The featured homepage slot needed
+      short, impactful headlines to draw readers in. We took a number of
+      existing headlines and rewrote them to demonstrate how to make them work
+      on the new homepage
+    </p>
+  </div>
+
+  {/* Primer Section =================================  */}
+  <TextBlock title={primerMD.frontmatter.title}>
+    <div>
+      {(<Fragment set:html={primerContent} />)}
+    </div>
+  </TextBlock>
+
+  {/* Scrollable Primer Section =================================  */}
+  <div class="border width--small">
+    <div class="scrollable">
+      <div class="interface__topper"></div>
+      <ImageBlock imageSrc={hechingerPrimer} />
+    </div>
+    <p class="scrollable__caption">
+      <span>⬍</span>
+      <strong>Scrollable:</strong>
+      Primer page concept
+    </p>
+  </div>
+</Work>
+
+{/* ================================== */}
+{/* Style                              */}
+{/* ================================== */}
+<style>
+  /* Scrollable */
+  /* ============================== */
+  .scrollable,
+  .scrollable__container {
+    cursor: ns-resize;
+    border-radius: 8px;
+    margin-inline: auto;
+    aspect-ratio: 1022/880;
+    overflow-y: scroll;
+    box-shadow:
+      0 0.7961918735236395px 2.3885756205709185px -0.625px var(--shadow-color),
+      0 2.414506143104518px 7.2435184293135535px -1.25px var(--shadow-color),
+      0 6.382653521484461px 19.147960564453385px -1.875px var(--shadow-color),
+      0 20px 60px -2.5px var(--shadow-color);
+
+    img {
+      width: 100%;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+  }
+
+  .scrollable__caption {
+    margin-block-start: 0.75rem;
+    letter-spacing: -0.005em;
+    font-size: 14px;
+
+    span {
+      font-size: 2em;
+      line-height: 0;
+      position: relative;
+      top: 0.095em;
+      color: var(--color-accent);
+    }
+  }
+
+  /* Interface topper */
+  /* ============================== */
+  .interface__topper {
+    /* background-color: black; */
+    /* background-color: #242424; */
+    background-color: #313131;
+    height: 20px;
+    width: 100%;
+    margin-bottom: -1px;
+    position: relative;
+    z-index: 1;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+
+  .interface__topper--small {
+    height: 15px;
+  }
+
+  .hechinger-grid {
+    --grid-container-gap: 20px;
+  }
+
+  /* Stage */
+  /* ============================== */
+  .stage {
+    background-color: #efefef;
+    border-radius: 8px;
+
+    .stage__inner {
+      padding-block: 8%;
+      width: 80%;
+      margin-inline: auto;
+      border-radius: 8px;
+    }
+
+    img {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+
+    .topper {
+      /* background-color: #00adef; */
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      background-color: pink;
+    }
+  }
+
+  /* Tags */
+  /* ============================== */
+  .tags {
+    /* margin-block-start: 16px; */
+    margin-block-end: 0;
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .tag {
+    /* background-color: #8f8d8f; */
+    background-color: var(--color-accent);
+    color: rgba(255, 255, 255, 0.93);
+    border-radius: 12px;
+    font-size: var(--font-size-xsm);
+    line-height: 1;
+    display: inline-block;
+    padding-inline: 8px;
+    padding-block: 4px;
+  }
+
+  .image-caption {
+    margin-block-start: 8px;
+  }
+</style>

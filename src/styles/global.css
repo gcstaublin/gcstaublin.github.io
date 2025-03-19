@@ -50,7 +50,9 @@
   /* --color-accent-extra-dim: rgba(var(--color-accent), 0.3); */
 
   /* Default theme */
+  /* Palette starter: 7d7a7d */
   --color-surface: #fdfdfd;
+  --color--card: #EFEFEF;
   --color-fg-formula: 19, 16, 19;
   --color-fg-inverse: 255, 255, 255;
   --color-accent: #7d7a7d;
@@ -64,10 +66,12 @@
   --font-size-default: 1rem;
   --font-size-lg: 1.125rem;
   --font-size-sm: 0.875rem;
+  --font-size-med: var(--font-size-default);
+  --font-size-xsm: 0.775rem;
 
   /* Widths */
   --width-content-max: 628px;
-  --width-content-pad: 4rem;
+  --width-content-pad: 2.5rem;
   --width-content-full: 100%;
   --width-content-calc: var(--width-content-full) - var(--width-content-pad);
 
@@ -397,12 +401,10 @@ a {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   /* column-gap: 2.5rem; */
-  border: 1px solid blue;
 }
 
 .cols--12--secondary {
   grid-column: 1 / 13;
-  border: 1px solid red;
 
   @media (min-width: 800px) {
     grid-column: 1 / 4;
@@ -411,7 +413,6 @@ a {
 
 .cols--12--primary {
   grid-column: 1 / 13;
-  border: 1px solid pink;
 
   @media (min-width: 800px) {
     grid-column: 5 / 13;
@@ -423,6 +424,14 @@ a {
   margin-inline: auto;
 }
 
+
+.width--extra-small {
+  --width-content-max: 400px;
+  --context-max: min(var(--width-content-max), var(--width-content-calc));
+
+  width: var(--context-max);
+  margin-inline: auto;
+}
 
 
 .width--small {
@@ -503,6 +512,7 @@ a {
 .portfolioPage__container {
   >*+* {
     margin-top: 64px;
+    /* margin-top: 128px; */
   }
 }
 

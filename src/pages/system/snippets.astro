@@ -1,0 +1,192 @@
+---
+import "../../styles/global.css";
+
+// =================================
+// Component imports
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageTitle from "../../components/PageTitle.astro";
+import GridContainer from "../../components/GridContainer.astro";
+import ImageBlock from "../../components/ImageBlock.astro";
+
+// =================================
+// Image imports
+// import launchpadImage from "../../images/work/landing/launchpad_tease.jpg";
+import imageTest from "../../images/work/uniform/uniform2.png";
+
+// =================================
+// Page variables
+const pageTitle = "Grant Staublin | Snippets";
+const mainClass = "width--full";
+---
+
+{/* ================================== */}
+{/* HTML                               */}
+{/* ================================== */}
+<BaseLayout pageTitle={pageTitle} mainClass={mainClass} noFollow>
+  <div class="width--large">
+    <PageTitle title="Snippets" reduceSpace />
+  </div>
+  <section>
+    <div class="blocks width--large">
+      <div class="color-block color-block--surface">
+        Color Surface
+        <h1 class="theme-name">The theme is: <span></span></h1>
+        <h1 class="color-text--contrast">Color Text Contrast</h1>
+        <h1 class="color-text--default">Color Text Default</h1>
+        <h1 class="color-text--subtle">Color Text Subtle</h1>
+        <h1 class="color-text--dim">Color Text Dim</h1>
+        <h1 class="color-text--inverse">Color Text Inverse</h1>
+        <h1 class="color-text--accent">Color Text Accent</h1>
+      </div>
+      <div class="color-block color-block--accent">Color Accent</div>
+      <div class="color-block color-block--accent-test">Color Accent Test</div>
+    </div>
+
+    <div class="width--large">
+      <h1 class="theme-name">The theme is: <span></span></h1>
+      <h1 class="color-text--contrast">Color Text Contrast</h1>
+      <h1 class="color-text--default">Color Text Default</h1>
+      <h1 class="color-text--subtle">Color Text Subtle</h1>
+      <h1 class="color-text--dim">Color Text Dim</h1>
+      <h1 class="color-text--inverse">Color Text Inverse</h1>
+      <h1 class="color-text--accent">Color Text Accent</h1>
+    </div>
+
+    <div class="blocks">
+      <div class="color-block width--small"></div>
+      <div class="color-block width--medium"></div>
+      <div class="color-block width--large"></div>
+    </div>
+
+    <div>
+      <h1>No width class</h1>
+      <GridContainer>
+        <div class="color-block">1</div>
+        <div class="color-block">2</div>
+        <div class="color-block">3</div>
+      </GridContainer>
+    </div>
+
+    <div class="width--large">
+      <h1>Width Large</h1>
+      <GridContainer>
+        <div class="color-block">1</div>
+        <div class="color-block">2</div>
+        <div class="color-block">3</div>
+      </GridContainer>
+    </div>
+
+    <div class="width--large">
+      <h1>Width Large</h1>
+      <GridContainer>
+        <div class="color-block">1x</div>
+        <div class="color-block">2x</div>
+        <div class="color-block">3x</div>
+      </GridContainer>
+    </div>
+
+    <div class="width--medium">
+      <h1>Width Medium</h1>
+      <GridContainer>
+        <div class="color-block">1</div>
+        <div class="color-block">2</div>
+        <div class="color-block">3</div>
+      </GridContainer>
+    </div>
+
+    <div class="width--small">
+      <h1>Width Small</h1>
+      <GridContainer>
+        <div class="color-block">1</div>
+        <div class="color-block">2</div>
+        <div class="color-block">3</div>
+      </GridContainer>
+    </div>
+
+    <GridContainer gridLayout="three-up">
+      <div class="color-block">1</div>
+      <div class="color-block">2</div>
+      <div class="color-block">3</div>
+    </GridContainer>
+
+    <GridContainer gridLayout="three-up-fit">
+      <div class="color-block">1</div>
+      <div class="color-block">2</div>
+      <div class="color-block">3</div>
+      <div class="color-block">4</div>
+      <div class="color-block">5</div>
+    </GridContainer>
+
+    <GridContainer gridLayout="three-up-fill">
+      <div class="color-block">1</div>
+      <div class="color-block">2</div>
+      <div class="color-block">3</div>
+    </GridContainer>
+
+    <div class="width--xlarge">
+      <GridContainer gridLayout="three-up-fit">
+        <div class="bg">
+          <ImageBlock imageSrc={imageTest} />
+        </div>
+        <div class="bg">
+          <ImageBlock imageSrc={imageTest} />
+        </div>
+        <div class="bg">
+          <ImageBlock imageSrc={imageTest} />
+        </div>
+        <div class="bg">
+          <ImageBlock imageSrc={imageTest} />
+        </div>
+      </GridContainer>
+    </div>
+  </section>
+
+  {/* ================================== */}
+  {/* Style                              */}
+  {/* ================================== */}
+  <style>
+    section {
+      > * + * {
+        margin-block-start: 100px;
+      }
+    }
+
+    .color-block {
+      min-width: 100px;
+      min-height: 100px;
+      background-color: green;
+      border: 1px solid currentColor;
+      padding: 1rem;
+    }
+
+    .color-block--surface {
+      background-color: var(--color-surface);
+    }
+
+    .color-block--accent {
+      background-color: var(--color-accent);
+    }
+
+    .color-block--accent-test {
+      background-color: var(--color-accent-test);
+    }
+
+    .theme-name {
+      span::after {
+        content: var(--color-theme-name);
+      }
+    }
+
+    .blocks {
+      * + * {
+        margin-top: 2rem;
+      }
+    }
+    .bg {
+      background-color: blue;
+      padding-inline: 40px;
+      padding-block: 40px;
+      border-radius: 8px;
+    }
+  </style>
+</BaseLayout>
