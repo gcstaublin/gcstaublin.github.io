@@ -1,0 +1,98 @@
+---
+import "../styles/global.css";
+import ImageBlock from "./ImageBlock.astro";
+
+const { imageSrc, topper, isSmall } = Astro.props;
+---
+
+{/* ================================== */}
+{/* HTML Structure                     */}
+{/* ================================== */}
+<div class:list={["stage", { hasTopper: topper }]}>
+  <div class="stage__inner">
+    {
+      topper && (
+        <div
+          class:list={[
+            "interface__topper",
+            { interface__topperSmall: isSmall },
+          ]}
+        />
+      )
+    }
+    {imageSrc && <ImageBlock imageSrc={imageSrc} />}
+    <slot name="after-image" />
+  </div>
+</div>
+
+{/* ================================== */}
+{/* Style                              */}
+{/* ================================== */}
+<style>
+  /* Stage */
+  /* ============================== */
+
+  :root {
+    --stage-bg: #efefef;
+    --stage-radius: 28px;
+    --stage-max-width: 80%;
+    --stage-block-pad: 8%;
+    --interface-topper-bg: #313131;
+    --interface-topper-height: 20px;
+    --interface-topper-height-small: 15px;
+  }
+
+  .stage {
+    background-color: var(--stage-bg);
+    border-radius: var(--stage-radius);
+    margin-inline: auto;
+
+    .stage__inner {
+      width: fit-content;
+      max-width: 80%;
+      max-width: var(--stage-max-width);
+      margin-inline: auto;
+      padding-block: var(--stage-block-pad);
+      border-radius: var(--stage-radius);
+    }
+  }
+
+  .hasTopper {
+    img {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+  }
+</style>
+
+<style is:global>
+  /* Theme Color Vars */
+  /* ============================== */
+  .theme1 {
+    --stage-bg: #2d4a7d;
+  }
+  .theme2 {
+    --stage-bg: #565352;
+  }
+
+  .theme3 {
+    --stage-bg: #d9d378;
+  }
+
+  /* Interface topper */
+  /* ============================== */
+  .interface__topper {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: var(--interface-topper-height);
+    margin-bottom: -1px;
+    border-top-left-radius: var(--stage-radius);
+    border-top-right-radius: var(--stage-radius);
+    background-color: var(--interface-topper-bg);
+  }
+
+  .interface__topperSmall {
+    --interface-topper-height: var(--interface-topper-height-small);
+  }
+</style>

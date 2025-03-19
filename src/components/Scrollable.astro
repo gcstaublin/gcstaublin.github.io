@@ -1,0 +1,71 @@
+---
+import "../styles/global.css";
+
+const { topper, isSmall, caption } = Astro.props;
+---
+
+{/* ================================== */}
+{/* HTML Structure                     */}
+{/* ================================== */}
+<div>
+  <div class="scrollable">
+    {
+      topper && (
+        <div
+          class:list={[
+            "interface__topper",
+            { interface__topperSmall: isSmall },
+          ]}
+        />
+      )
+    }
+    <slot />
+  </div>
+  <p class="scrollable__caption">
+    <span>⬍</span>
+    <strong>Scrollable:</strong>
+    {caption}
+  </p>
+</div>
+
+{/* ================================== */}
+{/* Style                              */}
+{/* ================================== */}
+<style>
+  :root {
+  }
+
+  .scrollable,
+  .scrollable__container {
+    cursor: ns-resize;
+    border-radius: 8px;
+    margin-inline: auto;
+    aspect-ratio: 1022/880;
+    overflow-y: scroll;
+    box-shadow:
+      0 0.7961918735236395px 2.3885756205709185px -0.625px var(--shadow-color),
+      0 2.414506143104518px 7.2435184293135535px -1.25px var(--shadow-color),
+      0 6.382653521484461px 19.147960564453385px -1.875px var(--shadow-color),
+      0 20px 60px -2.5px var(--shadow-color);
+
+    img {
+      width: 100%;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+  }
+
+  .scrollable__caption {
+    margin-block-start: 0.75rem;
+    letter-spacing: -0.005em;
+    font-size: 14px;
+
+    span {
+      font-size: 2em;
+      line-height: 0;
+      position: relative;
+      top: 0.095em;
+      color: var(--color-accent);
+    }
+  }
+</style>
