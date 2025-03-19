@@ -20,6 +20,7 @@ import snippetsImage from "../../images/work/trellis-launchpad/research-findings
 import mainDarkModeImage from "../../images/work/trellis-launchpad/homepage-dark-mode.jpg";
 import hpWireImage from "../../images/work/trellis-launchpad/homepage-wireframe.jpg";
 import hpDesignImage from "../../images/work/trellis-launchpad/homepage-design.jpg";
+import hpDesignImage2 from "../../images/work/trellis-launchpad/homepage-design2.jpg";
 import jsonShot from "../../images/work/trellis-launchpad/tooling-component-json.jpg";
 import alertShot from "../../images/work/trellis-launchpad/tooling-component-alert.jpg";
 import componentPageShot from "../../images/work/trellis-launchpad/tooling-components-page.jpg";
@@ -27,6 +28,8 @@ import tokensPage from "../../images/work/trellis-launchpad/pages-design-tokens.
 import elementsPage from "../../images/work/trellis-launchpad/pages-design-elements.jpg";
 import contentsPage from "../../images/work/trellis-launchpad/pages-content.jpg";
 import illoPage from "../../images/work/trellis-launchpad/pages-illustrations.jpg";
+import trellisHPScroll from "../../images/work/trellis-launchpad/trellis-docs-hp-scroll-light.jpg";
+import trellisHPScrollDark from "../../images/work/trellis-launchpad/trellis-docs-hp-scroll-dark.jpg";
 
 // import * as testMD from "./content/test.md";
 // const testContent = await testMD.compiledContent();
@@ -53,6 +56,9 @@ import * as visualMD from "./content/trellis-docs/trellis-docs-visual.md";
 const visualContent = await visualMD.compiledContent();
 
 import * as firehoseMD from "./content/trellis-docs/trellis-docs-firehose.md";
+import Scrollable from "../../components/Scrollable.astro";
+import GridContainer from "../../components/GridContainer.astro";
+import Stage from "../../components/Stage.astro";
 const firehoseContent = await firehoseMD.compiledContent();
 
 const pageTitle = "Grant Staublin | Work | Trellis Documentation";
@@ -65,15 +71,21 @@ const mainClass = "width--large work-test";
 <BaseLayout pageTitle={pageTitle} mainClass={mainClass} noFollow>
   <div class="portfolioPage__container">
     <PageTitle
+      alignment="center"
       title="Trellis Design System Launchpad"
       subTitle="As HubSpot’s design system evolves from it’s humble beginnings (Canvas) to a multi-themed, modernized system (Trellis), design system documentation needed to evolve with it"
     />
 
     {/* Main Section =================================  */}
-    <ImageBlock
+    <!-- <ImageBlock
       imageSrc={mainImageAlt}
       cssClass="imageBlock__container--accent imageBlock__container--test imageBlock__container--image-bottom"
-    />
+    /> -->
+    <div class="width--small">
+      <Scrollable caption="Trellis Launchpad Homepage" topper>
+        <ImageBlock imageSrc={trellisHPScroll} />
+      </Scrollable>
+    </div>
 
     {/* Intro Section =================================  */}
     <TextBlock title={introMD.frontmatter.title}>
@@ -83,15 +95,14 @@ const mainClass = "width--large work-test";
     </TextBlock>
 
     {/* Context Section =================================  */}
-    <div class="image__container two-up width--medium">
-      <ImageBlock
-        imageSrc={uilibraryShot}
-        caption="UI Library is the system's legacy documentation site"
-      />
-      <ImageBlock
-        imageSrc={trellisSbShot}
-        caption="The Trellis Storybook is built on cusomized Storybook tooling"
-      />
+    <div class="width--large trellis-docs-grid">
+      <GridContainer>
+        <Stage imageSrc={uilibraryShot} />
+        <!-- UI Library is the system's legacy documentation site -->
+
+        <Stage imageSrc={trellisSbShot} />
+        <!-- The Trellis Storybook is built on cusomized Storybook tooling -->
+      </GridContainer>
     </div>
 
     <TextBlock title={contextMD.frontmatter.title}>
@@ -123,9 +134,17 @@ const mainClass = "width--large work-test";
     </TextBlock>
 
     {/* Iteration Section =================================  */}
-    <div class="image__container two-up width--medium">
+    <!-- <div class="image__container two-up width--medium">
       <ImageBlock imageSrc={hpWireImage} />
       <ImageBlock imageSrc={hpDesignImage} />
+    </div> -->
+
+    <div class="width--large trellis-docs-grid">
+      <GridContainer gridLayout="three-up">
+        <Stage imageSrc={hpWireImage} topper isSmall />
+        <Stage imageSrc={hpDesignImage} topper isSmall />
+        <Stage imageSrc={hpDesignImage2} topper isSmall />
+      </GridContainer>
     </div>
 
     <TextBlock title={iterationMD.frontmatter.title}>
@@ -159,15 +178,14 @@ const mainClass = "width--large work-test";
     </TextBlock>
 
     {/* Pages Section =================================  */}
-    <div class="image__container two-up width--large">
-      <div class="vertical">
-        <ImageBlock imageSrc={tokensPage} />
-        <ImageBlock imageSrc={illoPage} />
-      </div>
-      <div class="vertical">
-        <ImageBlock imageSrc={contentsPage} />
-        <ImageBlock imageSrc={elementsPage} />
-      </div>
+
+    <div class="trellis-docs-grid">
+      <GridContainer>
+        <Stage imageSrc={tokensPage} topper isSmall />
+        <Stage imageSrc={illoPage} topper isSmall />
+        <Stage imageSrc={contentsPage} topper isSmall />
+        <Stage imageSrc={elementsPage} topper isSmall />
+      </GridContainer>
     </div>
 
     <TextBlock title={visualMD.frontmatter.title}>
@@ -202,91 +220,66 @@ const mainClass = "width--large work-test";
       </div>
     </TextBlock>
 
-    <div class="image__container image--bottom width--medium">
+    <div class="width--medium">
+      <Scrollable caption="Trellis Launchpad Homepage" topper>
+        <ImageBlock imageSrc={trellisHPScrollDark} />
+      </Scrollable>
+    </div>
+
+    <!-- <div class="image__container image--bottom width--medium">
       <Image src={mainDarkModeImage} alt="" />
     </div>
+  </div> -->
   </div>
-</BaseLayout>
 
-{/* ================================== */}
-{/* Style                              */}
-{/* ================================== */}
-<style>
-  /* :root {
-      --img-radius: 20px;
-    } */
-
-  /* .portfolioPage__container {
-    > * + * {
-      margin-top: 64px;
-      border: 3px solid green;
+  {/* ================================== */}
+  {/* Style                              */}
+  {/* ================================== */}
+  <style>
+    .two-up {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      @media (max-width: 700px) {
+        grid-template-columns: 1fr;
+      }
+      /* grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); */
     }
-  } */
 
-  /* .image__container--accent {
-      background-color: hsla(0, 0%, 25%, 0.1);
-      padding: 40px;
-    } */
+    .two-up--side-saddle {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 40px;
+      @media (max-width: 700px) {
+        grid-template-columns: 1fr;
+      }
+    }
 
-  /* .image__container {
-      margin-inline: auto;
+    .three-up {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 40px;
+      @media (max-width: 700px) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .vertical {
+      display: grid;
+      grid-template-row: 1fr 1fr;
+      grid-gap: 40px;
+    }
+
+    .image--bottom {
+      margin-block-end: -3rem;
       img {
-        border-radius: var(--img-radius);
-        border: 1px solid hsla(0, 0%, 0%, 0.05);
+        border-radius: 12px 12px 0 0;
+        border-bottom-width: 0;
       }
-      p.textBlock__graph {
-        margin-block-start: 8px;
-        color: rgba(var(--color-fg-formula), var(--color-alpha-dim));
-      }
-    } */
-
-  .two-up {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    @media (max-width: 700px) {
-      grid-template-columns: 1fr;
     }
-    /* grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); */
-  }
 
-  .two-up--side-saddle {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 40px;
-    @media (max-width: 700px) {
-      grid-template-columns: 1fr;
+    .trellis-docs-grid {
+      --grid-container-gap: 20px;
     }
-  }
-
-  .three-up {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 40px;
-    @media (max-width: 700px) {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  .vertical {
-    display: grid;
-    grid-template-row: 1fr 1fr;
-    grid-gap: 40px;
-  }
-
-  .image--bottom {
-    margin-block-end: -3rem;
-    img {
-      border-radius: 12px 12px 0 0;
-      border-bottom-width: 0;
-    }
-  }
-
-  .portfolioPage__container {
-    /* border: 1px solid red; */
-  }
-
-  /* img {
-    max-width: 100%;
-  } */
-</style>
+  </style>
+</BaseLayout>
