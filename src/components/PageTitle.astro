@@ -1,13 +1,46 @@
 ---
-const { title, subTitle, reduceSpace } = Astro.props;
+const {
+  title = "Page Title goes here",
+  subTitle,
+  reduceSpace,
+  margin = "default",
+  alignment = "left",
+  ...attrs
+} = Astro.props;
+
+const margins = {
+  default: "margin--default",
+  reduce: "margin--reduce",
+  none: "margin--none",
+};
+
+const alignments = {
+  left: "align--left",
+  center: "align--center",
+};
+
+interface Props {
+  title: string;
+  subTitle?: string;
+  margin: keyof typeof margins;
+  alignment: keyof typeof alignments;
+  reduceSpace: boolean;
+}
 ---
 
 {/* ================================== */}
 {/* HTML                               */}
 {/* ================================== */}
-
+<!-- class={
+  `pageTitle__container ${reduceSpace ? "pageTitle__container--reduce-space" : ""}`
+} -->
 <div
-  class={`pageTitle__container ${reduceSpace ? "pageTitle__container--reduce-space" : ""}`}
+  class:list={[
+    `pageTitle__container`,
+    margins[margin],
+    alignments[alignment],
+    attrs.class,
+  ]}
 >
   <h2 class="pageTitle__title color-text--contrast">{title}</h2>
   {
@@ -15,14 +48,36 @@ const { title, subTitle, reduceSpace } = Astro.props;
       <h3 class="pageTitle__sub-title color-text--default">{subTitle}</h3>
     )
   }
+  <slot />
 </div>
 
 {/* ================================== */}
 {/* Style                              */}
 {/* ================================== */}
 <style>
+  .margin--default {
+    --margin-block-end: 64px;
+  }
+
+  .margin--reduce {
+    --margin-block-end: 32px;
+  }
+
+  .margin--none {
+    --margin-block-end: 0;
+  }
+
+  .align--center {
+    text-align: center;
+  }
+
   .pageTitle__container {
-    margin-block-end: 64px;
+    /* text-align: center; */
+    /* margin-block-end: 64px; */
+    margin-block-end: var(--margin-block-end);
+    > * + * {
+      margin-block-start: 20px;
+    }
   }
 
   .pageTitle__container--reduce-space {
@@ -40,7 +95,7 @@ const { title, subTitle, reduceSpace } = Astro.props;
   .pageTitle__sub-title {
     font-size: 24px;
     line-height: 1.25;
-    margin-block-start: 8px;
+    /* margin-block-start: 8px; */
     letter-spacing: -0.005em;
   }
 </style>

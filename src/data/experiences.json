@@ -1,8 +1,26 @@
 [
   {
     "dates": {
+      "dateStart": "2024",
+      "dateEnd": "2025"
+    },
+    "title": "Design Technologist, HubSpot Design System",
+    "subTitle": "HubSpot",
+    "description": ""
+  },
+  {
+    "dates": {
+      "dateStart": "2021",
+      "dateEnd": "2024"
+    },
+    "title": "Senior Product Designer II, HubSpot Design System",
+    "subTitle": "HubSpot",
+    "description": ""
+  },
+  {
+    "dates": {
       "dateStart": "2019",
-      "dateEnd": "Now"
+      "dateEnd": "2022"
     },
     "title": "Senior Product Designer, HubSpot Design System",
     "subTitle": "HubSpot",
