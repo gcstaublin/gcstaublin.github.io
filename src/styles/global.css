@@ -461,8 +461,9 @@ a {
 }
 
 
-.width--xlarge {
-  --width-content-max: 1440px;
+.width--xlarge,
+.width--extra-large {
+  --width-content-max: 1680px;
   --context-max: min(var(--width-content-max), var(--width-content-calc));
 
   width: var(--context-max);
