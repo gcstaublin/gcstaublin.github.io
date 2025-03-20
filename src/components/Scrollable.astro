@@ -37,6 +37,9 @@ const { topper, isSmall, caption } = Astro.props;
 
   .scrollable,
   .scrollable__container {
+    --imageBlock-radius-start: 0px;
+
+    position: relative;
     cursor: ns-resize;
     border-radius: 8px;
     margin-inline: auto;
@@ -50,8 +53,8 @@ const { topper, isSmall, caption } = Astro.props;
 
     img {
       width: 100%;
-      border-top-left-radius: 0;
-      border-top-right-radius: 0;
+      /* border-top-left-radius: 0;
+      border-top-right-radius: 0; */
     }
   }
 

@@ -58,10 +58,7 @@ const { imageSrc, topper, isSmall } = Astro.props;
   }
 
   .hasTopper {
-    img {
-      border-top-left-radius: 0;
-      border-top-right-radius: 0;
-    }
+    --imageBlock-radius-start: 0px;
   }
 </style>
 
@@ -69,20 +66,27 @@ const { imageSrc, topper, isSmall } = Astro.props;
   /* Theme Color Vars */
   /* ============================== */
   .theme1 {
-    --stage-bg: #2d4a7d;
+    /* --stage-bg: #2d4a7d; */
+    --stage-bg: rgba(45, 74, 125, 0.35);
+    --interface-topper-bg: rgba(0, 0, 0, 0.4);
   }
   .theme2 {
-    --stage-bg: #565352;
+    /* --stage-bg: #565352; */
+    --stage-bg: rgba(86, 83, 82, 0.25);
+    --interface-topper-bg: rgba(0, 0, 0, 0.4);
   }
 
   .theme3 {
-    --stage-bg: #d9d378;
+    /* --stage-bg: #d9d378; */
+    --stage-bg: rgba(217, 211, 120, 0.7);
+    --interface-topper-bg: rgba(0, 0, 0, 0.4);
   }
 
   /* Interface topper */
   /* ============================== */
   .interface__topper {
     position: relative;
+    top: 0;
     z-index: 1;
     width: 100%;
     height: var(--interface-topper-height);
