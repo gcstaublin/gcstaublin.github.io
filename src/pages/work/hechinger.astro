@@ -10,6 +10,7 @@ import GridContainer from "../../components/GridContainer.astro";
 import TextBlock from "../../components/TextBlock.astro";
 import Stage from "../../components/Stage.astro";
 import Scrollable from "../../components/Scrollable.astro";
+import Tags from "../../components/Tags.astro";
 
 // =================================
 // Image imports
@@ -49,12 +50,15 @@ const pageTitle = "Grant Staublin | Work | Hechinger";
       subTitle="Creating a responsive, modern brand identity and website a premier news magazine, covering innovation and inequality in education"
       alignment="center"
     >
-      <ul class="tags">
-        <li class="tag">Visual Design</li>
-        <li class="tag">UI / UX Design</li>
-        <li class="tag">Front-end Development</li>
-        <li class="tag">Wordpress Integration</li>
-      </ul>
+      <Tags
+        tags={[
+          "visual design",
+          "UI / UX Design",
+          "Project management",
+          "Front-end development",
+          "Wordpress Integration",
+        ]}
+      />
     </PageTitle>
   </div>
 
@@ -262,30 +266,6 @@ const pageTitle = "Grant Staublin | Work | Hechinger";
       border-top-right-radius: 8px;
       background-color: pink;
     }
-  }
-
-  /* Tags */
-  /* ============================== */
-  .tags {
-    /* margin-block-start: 16px; */
-    margin-block-end: 0;
-    display: flex;
-    gap: 10px;
-    padding: 0;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .tag {
-    /* background-color: #8f8d8f; */
-    background-color: var(--color-accent);
-    color: rgba(255, 255, 255, 0.93);
-    border-radius: 12px;
-    font-size: var(--font-size-xsm);
-    line-height: 1;
-    display: inline-block;
-    padding-inline: 8px;
-    padding-block: 4px;
   }
 
   .image-caption {
