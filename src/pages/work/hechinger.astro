@@ -96,34 +96,12 @@ const pageTitle = "Grant Staublin | Work | Hechinger";
   </div>
 
   {/* Grid Section =================================  */}
-  <div class="width--full hechinger-grid">
+  <div class="width--extra-large hechinger-grid">
     <GridContainer>
-      <div class="stage">
-        <div class="stage__inner">
-          <div class="interface__topper"></div>
-          <ImageBlock imageSrc={hechingerHP} />
-        </div>
-      </div>
-      <div class="stage">
-        <div class="stage__inner">
-          <div class="interface__topper"></div>
-          <ImageBlock imageSrc={hechingerStory} />
-        </div>
-      </div>
-
-      <div class="stage">
-        <div class="stage__inner">
-          <div class="interface__topper"></div>
-          <ImageBlock imageSrc={hechingerSpecial} />
-        </div>
-      </div>
-
-      <div class="stage">
-        <div class="stage__inner">
-          <div class="interface__topper"></div>
-          <ImageBlock imageSrc={hechingerStaff} />
-        </div>
-      </div>
+      <Stage imageSrc={hechingerHP} topper />
+      <Stage imageSrc={hechingerStory} topper />
+      <Stage imageSrc={hechingerSpecial} topper />
+      <Stage imageSrc={hechingerStaff} topper />
     </GridContainer>
   </div>
 
@@ -137,18 +115,8 @@ const pageTitle = "Grant Staublin | Work | Hechinger";
   {/* Headlines Section =================================  */}
   <div class="width--small hechinger-grid">
     <GridContainer>
-      <div class="stage">
-        <div class="stage__inner">
-          <div class="interface__topper interface__topper--small"></div>
-          <ImageBlock imageSrc={hechingerBeforeHead} />
-        </div>
-      </div>
-      <div class="stage">
-        <div class="stage__inner">
-          <div class="interface__topper interface__topper--small"></div>
-          <ImageBlock imageSrc={hechingerAfterHead} />
-        </div>
-      </div>
+      <Stage imageSrc={hechingerBeforeHead} topper isSmall />
+      <Stage imageSrc={hechingerAfterHead} topper isSmall />
     </GridContainer>
     <p class="image-caption">
       Hechinger's headlines were descriptive. The featured homepage slot needed
