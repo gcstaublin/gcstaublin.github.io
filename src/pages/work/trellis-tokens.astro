@@ -8,6 +8,8 @@ import PageTitle from "../../components/PageTitle.astro";
 import ImageBlock from "../../components/ImageBlock.astro";
 import ScrollingItem from "../../components/ScrollingItem.astro";
 // import GridContainer from "../../components/GridContainer.astro";
+import GridContainer from "../../components/GridContainer.astro";
+import Tags from "../../components/Tags.astro";
 
 // Page variables
 const pageTitle = "Grant Staublin | Work | Trellis Documentation";
@@ -70,7 +72,6 @@ import * as techMD from "./content/trellis-tokens/trellis-tokens-tech.md";
 const techContent = await techMD.compiledContent();
 
 import * as reviseMD from "./content/trellis-tokens/trellis-tokens-revise.md";
-import GridContainer from "../../components/GridContainer.astro";
 const reviseContent = await reviseMD.compiledContent();
 ---
 
@@ -81,9 +82,20 @@ const reviseContent = await reviseMD.compiledContent();
   <div class="portfolioPage__container">
     <div class="width--large">
       <PageTitle
+        alignment="center"
         title="Trellis Design Tokens"
         subTitle="Creating a new design token system that supports the HubSpot's classic visual language (Canvas) and prepares the product for its emerging future visual language (Trellis)"
-      />
+      >
+        <Tags
+          tags={[
+            "design system",
+            "design tokens",
+            "theming",
+            "product strategy",
+            "front-end development",
+          ]}
+        />
+      </PageTitle>
 
       {/* Main Section =================================  */}
       <ImageBlock

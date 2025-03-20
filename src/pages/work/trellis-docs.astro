@@ -30,6 +30,10 @@ import contentsPage from "../../images/work/trellis-launchpad/pages-content.jpg"
 import illoPage from "../../images/work/trellis-launchpad/pages-illustrations.jpg";
 import trellisHPScroll from "../../images/work/trellis-launchpad/trellis-docs-hp-scroll-light.jpg";
 import trellisHPScrollDark from "../../images/work/trellis-launchpad/trellis-docs-hp-scroll-dark.jpg";
+import Scrollable from "../../components/Scrollable.astro";
+import GridContainer from "../../components/GridContainer.astro";
+import Stage from "../../components/Stage.astro";
+import Tags from "../../components/Tags.astro";
 
 // import * as testMD from "./content/test.md";
 // const testContent = await testMD.compiledContent();
@@ -56,9 +60,6 @@ import * as visualMD from "./content/trellis-docs/trellis-docs-visual.md";
 const visualContent = await visualMD.compiledContent();
 
 import * as firehoseMD from "./content/trellis-docs/trellis-docs-firehose.md";
-import Scrollable from "../../components/Scrollable.astro";
-import GridContainer from "../../components/GridContainer.astro";
-import Stage from "../../components/Stage.astro";
 const firehoseContent = await firehoseMD.compiledContent();
 
 const pageTitle = "Grant Staublin | Work | Trellis Documentation";
@@ -74,10 +75,21 @@ const mainClass = "width--large work-test";
       alignment="center"
       title="Trellis Design System Launchpad"
       subTitle="As HubSpot’s design system evolves from it’s humble beginnings (Canvas) to a multi-themed, modernized system (Trellis), design system documentation needed to evolve with it"
-    />
+    >
+      <Tags
+        tags={[
+          "design system",
+          "product strategy",
+          "documentation",
+          "UI / UI Design",
+          "Front-end Development",
+        ]}
+      />
+    </PageTitle>
 
     {/* Main Section =================================  */}
-    <!-- <ImageBlock
+    <!--
+      <ImageBlock
       imageSrc={mainImageAlt}
       cssClass="imageBlock__container--accent imageBlock__container--test imageBlock__container--image-bottom"
     /> -->
