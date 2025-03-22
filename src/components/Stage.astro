@@ -74,29 +74,30 @@ const { imageSrc, topper, isSmall } = Astro.props;
   .theme1 {
     /* --stage-bg: #2d4a7d; */
     --stage-bg: rgba(45, 74, 125, 0.35);
-    --interface-topper-bg: rgba(0, 0, 0, 0.4);
+    /* --interface-topper-bg: rgba(0, 0, 0, 0.4); */
   }
   .theme2 {
     /* --stage-bg: #565352; */
     --stage-bg: rgba(86, 83, 82, 0.25);
-    --interface-topper-bg: rgba(0, 0, 0, 0.4);
+    /* --interface-topper-bg: rgba(0, 0, 0, 0.4); */
   }
 
   .theme3 {
     /* --stage-bg: #d9d378; */
     --stage-bg: rgba(217, 211, 120, 0.7);
-    --interface-topper-bg: rgba(0, 0, 0, 0.4);
+    /* --interface-topper-bg: rgba(0, 0, 0, 0.4); */
   }
 
   /* Interface topper */
   /* ============================== */
   .interface__topper {
-    position: relative;
+    /* position: relative; */
+    position: sticky;
     top: 0;
     z-index: 1;
     width: 100%;
     height: var(--interface-topper-height);
-    margin-bottom: -1px;
+    margin-bottom: -2px;
     border-top-left-radius: var(--stage-radius);
     border-top-right-radius: var(--stage-radius);
     background-color: var(--interface-topper-bg);
@@ -116,13 +117,13 @@ const { imageSrc, topper, isSmall } = Astro.props;
     display: inline-block;
     border-radius: 100%;
     &:nth-of-type(1) {
-      background-color: #ff5f578c;
+      background-color: #ff5f57ba;
     }
     &:nth-of-type(2) {
-      background-color: #febc2f8c;
+      background-color: #febc2fba;
     }
     &:nth-of-type(3) {
-      background-color: #28c8408c;
+      background-color: #28c840ba;
     }
   }
 </style>
