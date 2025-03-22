@@ -57,7 +57,8 @@
   --color-fg-formula: 19, 16, 19;
   --color-fg-inverse: 255, 255, 255;
   --color-accent: #7d7a7d;
-  --color-interactive: #0000EE;
+  /* --color-interactive: #0000EE; */
+  --color-interactive: #1265dc;
   --color-accent-dim: rgba(var(--color-accent), 0.8);
   --color-theme-name: 'newsprint';
   --color-accent-test: color-mix(in srgb, var(--color-accent) 50%, transparent);

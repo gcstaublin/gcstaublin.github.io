@@ -39,6 +39,21 @@ import { Image } from "astro:assets";
       link ? (
         <a class="cardTease__link color-text--accent" href={link}>
           {linkText}
+          <span class="cardTease__link-svg">
+            <svg
+              height="16"
+              stroke-linejoin="round"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M9.53033 2.21968L9 1.68935L7.93934 2.75001L8.46967 3.28034L12.4393 7.25001H1.75H1V8.75001H1.75H12.4393L8.46967 12.7197L7.93934 13.25L9 14.3107L9.53033 13.7803L14.6036 8.70711C14.9941 8.31659 14.9941 7.68342 14.6036 7.2929L9.53033 2.21968Z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
         </a>
       ) : (
         <p class="color-text--dim">Case study coming soon</p>
@@ -99,15 +114,32 @@ import { Image } from "astro:assets";
   }
 
   .cardTease__link {
-    display: block;
+    /* display: block; */
+    /* border: 1px solid var(--color-accent); */
+    /* border-radius: 45px; */
+    /* padding: 16px; */
+    display: flex;
+    gap: 8px;
     margin-block-start: 12px;
     text-decoration: none;
     color: var(--color-interactive);
+    /* color: var(--color-accent); */
     &:hover {
-      text-decoration: underline;
+      /* text-decoration: underline; */
+
+      .cardTease__link-svg {
+        transform: translate(10px);
+      }
     }
-    &:after {
+    /* &:after {
       content: "→";
-    }
+    } */
+  }
+  .cardTease__link-svg {
+    /* display: inline-blosck; */
+    display: flex;
+    align-items: center;
+    transition: all 0.2s linear;
+    /* align-self: center; */
   }
 </style>
