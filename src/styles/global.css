@@ -52,11 +52,13 @@
   /* Default theme */
   /* Palette starter: 7d7a7d */
   --color-surface: #fdfdfd;
+  --color-surface-alpha: #fdfdfdc4;
   --color--card: #EFEFEF;
   --color-fg-formula: 19, 16, 19;
   --color-fg-inverse: 255, 255, 255;
   --color-accent: #7d7a7d;
-  --color-interactive: #0000EE;
+  /* --color-interactive: #0000EE; */
+  --color-interactive: #1265dc;
   --color-accent-dim: rgba(var(--color-accent), 0.8);
   --color-theme-name: 'newsprint';
   --color-accent-test: color-mix(in srgb, var(--color-accent) 50%, transparent);
@@ -73,6 +75,11 @@
   --width-content-max: 628px;
   --width-content-pad: 2.5rem;
   --width-content-full: 100%;
+  --width-extra-small: 400px;
+  --width-small: 600px;
+  --width-medium: 946px;
+  --width-large: 1194px;
+  --width-extra-large: 1680px;
   --width-content-calc: var(--width-content-full) - var(--width-content-pad);
 
   --context-max: min(var(--width-content-max), var(--width-content-calc));
@@ -109,6 +116,7 @@
 
 .theme1 {
   --color-surface: #14284b;
+  --color-surface-alpha: #14284bcf;
   --color-fg-formula: 215, 215, 250;
   --color-accent: #BCF5F5;
   --color-interactive: #78decc;
@@ -118,6 +126,7 @@
 
 .theme2 {
   --color-surface: #242120;
+  --color-surface-alpha: #242120e3;
   --color-fg-formula: 220, 220, 175;
   --color-accent: #4B9898;
   --color-interactive: #78decc;
@@ -127,7 +136,8 @@
 
 .theme3 {
   /* --color-surface: #ffd24c; */
-  --color-surface: rgb(237, 228, 90);
+  --color-surface: #ede45a;
+  --color-surface-alpha: #ede45ae0;
   --color-fg-formula: 64, 64, 4;
   --color-accent: #3465E1;
   --color-interactive: #3465E1;

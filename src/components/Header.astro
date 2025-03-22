@@ -36,32 +36,19 @@ import ThemeToggle from "./ThemeToggle.astro";
 {/* Style                              */}
 {/* ================================== */}
 <style>
-  .header {
-    /* position: relative; */
-    /* z-index: 1; */
-    /* width: 100%; */
-    /* max-width: var(--width-content-max); */
-
-    /* width: var(--content-max); */
-    /* margin-inline: auto; */
-    /* margin-block-end: 120px; */
-    /* width: 100%; */
-    /* max-width: 1194px; */
-    /* margin-inline: auto; */
-    /* border-bottom: 1px solid var(--color-accent-test); */
-  }
-
   .nav__container {
     width: 100%;
     position: sticky;
     top: 0;
     z-index: 100;
     margin-block-end: 60px;
-    background-color: var(--color-surface);
+    background-color: var(--color-surface-alpha);
+    backdrop-filter: blur(8px);
   }
 
   .nav__inner {
-    max-width: 1194px;
+    /* max-width: 1194px; */
+    /* width: 100%; */
     margin-inline: auto;
     display: flex;
     align-items: center;
@@ -119,8 +106,8 @@ import ThemeToggle from "./ThemeToggle.astro";
   }
 
   .header__divider {
-    width: 100%;
-    max-width: 1194px;
+    /* width: 100%; */
+    /* max-width: 1194px; */
     margin-inline: auto;
     border-bottom: 1px solid var(--color-accent-test);
     position: sticky;
