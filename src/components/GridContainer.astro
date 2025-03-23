@@ -1,10 +1,14 @@
 ---
 import "../styles/global.css";
+import TextBlockGraph from "./TextBlockGraph.astro";
 
 const {
   gridLayout = "two",
   gridGap = "gap400",
   collapseGap,
+  caption,
+  captionSize = "small",
+  captionColor = "default",
   ...attrs
 } = Astro.props;
 
@@ -29,21 +33,31 @@ interface Props {
   gridGap: keyof typeof gaps;
   gridLayout: keyof typeof layouts;
   collapseGap: boolean;
+  caption?: string;
+  captionSize?: "default" | "extraSmall" | "small" | "medium" | "large";
+  captionColor?: "default" | "contrast" | "subtle" | "dim";
 }
 ---
 
 {/* ================================== */}
 {/* HTML Structure                     */}
 {/* ================================== */}
-<div
-  class:list={[
-    "grid__container",
-    gaps[gridGap],
-    layouts[gridLayout],
-    attrs.class,
-  ]}
->
-  <slot />
+<div class="grid__wrapper">
+  <div
+    class:list={[
+      "grid__container",
+      gaps[gridGap],
+      layouts[gridLayout],
+      attrs.class,
+    ]}
+  >
+    <slot />
+  </div>
+  {
+    caption && (
+      <TextBlockGraph text={caption} size={captionSize} color={captionColor} />
+    )
+  }
 </div>
 
 {/* ================================== */}
@@ -53,6 +67,13 @@ interface Props {
   :root {
     /* --grid-container-gap: 40px; */
   }
+
+  .grid__wrapper {
+    p {
+      margin-inline-start: 8px;
+    }
+  }
+
   .grid-gap--0 {
     --grid-container-gap: 0;
   }
