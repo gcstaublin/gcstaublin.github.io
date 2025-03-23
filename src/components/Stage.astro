@@ -2,14 +2,59 @@
 import "../styles/global.css";
 import ImageBlock from "./ImageBlock.astro";
 
-const { imageSrc, topper, isSmall } = Astro.props;
+const {
+  imageSrc,
+  topper,
+  isSmall,
+  innerWidth = "default",
+  // inlinePadding = "default",
+  blockPadding = "default",
+  background = "default",
+} = Astro.props;
+
+const widths = {
+  default: "stage__inner-width--default",
+  full: "stage__inner-width--full",
+  half: "stage__inner-width--half",
+};
+
+// const inlinePaddings = {
+//   default: "stage__inner-inline-pad--default",
+//   none: "stage__inner-inline-pad--none",
+// };
+
+const blockPaddings = {
+  default: "stage__inner-block-pad--default",
+  none: "stage__inner-block-pad--none",
+};
+
+const backgrounds = {
+  default: "stage-bg--default",
+  transparent: "stage-bg--transparent",
+};
+
+interface Props {
+  imageSrc?: string;
+  topper: boolean;
+  isSmall: boolean;
+  innerWidth: keyof typeof widths;
+  inlinePadding: keyof typeof inlinePaddings;
+  blockPadding: keyof typeof blockPaddings;
+  background: keyof typeof backgrounds;
+}
 ---
 
 {/* ================================== */}
 {/* HTML Structure                     */}
 {/* ================================== */}
-<div class:list={["stage", { hasTopper: topper }]}>
-  <div class="stage__inner">
+<div class:list={["stage", { hasTopper: topper }, backgrounds[background]]}>
+  <div
+    class:list={[
+      "stage__inner",
+      widths[innerWidth],
+      blockPaddings[blockPadding],
+    ]}
+  >
     {
       topper && (
         <div
@@ -25,6 +70,7 @@ const { imageSrc, topper, isSmall } = Astro.props;
       )
     }
     {imageSrc && <ImageBlock imageSrc={imageSrc} />}
+    <slot name="custom-image" />
     <slot name="after-image" />
   </div>
 </div>
@@ -33,9 +79,8 @@ const { imageSrc, topper, isSmall } = Astro.props;
 {/* Style                              */}
 {/* ================================== */}
 <style>
-  /* Stage */
+  /* Root Variables */
   /* ============================== */
-
   :root {
     --stage-bg: #efefef;
     --stage-radius: 8px;
@@ -47,6 +92,19 @@ const { imageSrc, topper, isSmall } = Astro.props;
     --interface-dot-size: calc(var(--interface-topper-height) / 2);
   }
 
+  /* Overrides */
+  /* ============================== */
+
+  .stage-bg--transparent {
+    --stage-bg: transparent;
+  }
+
+  .stage__inner-block-pad--none {
+    --stage-block-pad: 0;
+  }
+
+  /* Stage */
+  /* ============================== */
   .stage {
     width: 100%;
     margin-inline: auto;
@@ -55,9 +113,9 @@ const { imageSrc, topper, isSmall } = Astro.props;
 
     .stage__inner {
       width: fit-content;
+      margin-inline: auto;
       max-width: 80%;
       max-width: var(--stage-max-width);
-      margin-inline: auto;
       padding-block: var(--stage-block-pad);
       border-radius: var(--stage-radius);
     }
