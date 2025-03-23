@@ -90,8 +90,8 @@ const pageTitle = "Grant Staublin | Work | Hechinger";
   </div>
 
   {/* Grid Section =================================  */}
-  <div class="width--extra-large hechinger-grid">
-    <GridContainer>
+  <div class="width--extra-large">
+    <GridContainer gridGap="gap200">
       <Stage imageSrc={hechingerHP} topper />
       <Stage imageSrc={hechingerStory} topper />
       <Stage imageSrc={hechingerSpecial} topper />
@@ -107,8 +107,8 @@ const pageTitle = "Grant Staublin | Work | Hechinger";
   </TextBlock>
 
   {/* Headlines Section =================================  */}
-  <div class="width--small hechinger-grid">
-    <GridContainer>
+  <div class="width--small">
+    <GridContainer gridGap="gap200">
       <Stage imageSrc={hechingerBeforeHead} topper isSmall />
       <Stage imageSrc={hechingerAfterHead} topper isSmall />
     </GridContainer>
@@ -139,10 +139,6 @@ const pageTitle = "Grant Staublin | Work | Hechinger";
 {/* Style                              */}
 {/* ================================== */}
 <style>
-  .hechinger-grid {
-    --grid-container-gap: 20px;
-  }
-
   /* This rule is used for Hechinger before photo. And for the headline rewrites */
   .image-caption {
     margin-block-start: 8px;

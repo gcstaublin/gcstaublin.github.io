@@ -107,8 +107,8 @@ const mainClass = "width--large work-test";
     </TextBlock>
 
     {/* Context Section =================================  */}
-    <div class="width--large trellis-docs-grid">
-      <GridContainer>
+    <div class="width--large">
+      <GridContainer gridGap="gap200">
         <Stage imageSrc={uilibraryShot} />
         <!-- UI Library is the system's legacy documentation site -->
 
@@ -151,8 +151,8 @@ const mainClass = "width--large work-test";
       <ImageBlock imageSrc={hpDesignImage} />
     </div> -->
 
-    <div class="width--large trellis-docs-grid">
-      <GridContainer gridLayout="three-up">
+    <div class="width--large">
+      <GridContainer gridLayout="three" gridGap="gap200">
         <Stage imageSrc={hpWireImage} topper isSmall />
         <Stage imageSrc={hpDesignImage} topper isSmall />
         <Stage imageSrc={hpDesignImage2} topper isSmall />
@@ -191,8 +191,8 @@ const mainClass = "width--large work-test";
 
     {/* Pages Section =================================  */}
 
-    <div class="trellis-docs-grid">
-      <GridContainer>
+    <div>
+      <GridContainer gridGap="gap200">
         <Stage imageSrc={tokensPage} topper isSmall />
         <Stage imageSrc={illoPage} topper isSmall />
         <Stage imageSrc={contentsPage} topper isSmall />
