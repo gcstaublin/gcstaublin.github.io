@@ -1,14 +1,47 @@
 ---
 import "../styles/global.css";
 
-const { gridLayout = "two-up", collapseGap } = Astro.props;
+const {
+  gridLayout = "two",
+  gridGap = "gap400",
+  collapseGap,
+  ...attrs
+} = Astro.props;
+
+const gaps = {
+  gap000: "grid-gap--0",
+  gap100: "grid-gap--100",
+  gap200: "grid-gap--200",
+  gap300: "grid-gap--300",
+  gap400: "grid-gap--400",
+  gap500: "grid-gap--500",
+};
+
+const layouts = {
+  one: "grid__container--one-up",
+  two: "grid__container--two-up",
+  three: "grid__container--three-up",
+  threeFit: "grid__container--three-up-fit",
+  threeFill: "grid__container--three-up-fill",
+};
+
+interface Props {
+  gridGap: keyof typeof gaps;
+  gridLayout: keyof typeof layouts;
+  collapseGap: boolean;
+}
 ---
 
 {/* ================================== */}
 {/* HTML Structure                     */}
 {/* ================================== */}
 <div
-  class={`grid__container grid__container--${gridLayout} ${collapseGap ? "grid--collapse" : "xx"}`}
+  class:list={[
+    "grid__container",
+    gaps[gridGap],
+    layouts[gridLayout],
+    attrs.class,
+  ]}
 >
   <slot />
 </div>
@@ -18,7 +51,25 @@ const { gridLayout = "two-up", collapseGap } = Astro.props;
 {/* ================================== */}
 <style>
   :root {
+    /* --grid-container-gap: 40px; */
+  }
+  .grid-gap--0 {
+    --grid-container-gap: 0;
+  }
+  .grid-gap--100 {
+    --grid-container-gap: 10px;
+  }
+  .grid-gap--200 {
+    --grid-container-gap: 20px;
+  }
+  .grid-gap--300 {
+    --grid-container-gap: 30px;
+  }
+  .grid-gap--400 {
     --grid-container-gap: 40px;
+  }
+  .grid-gap--500 {
+    --grid-container-gap: 50px;
   }
   .grid__container {
     --gap: var(--grid-container-gap);
