@@ -6,7 +6,9 @@ const {
   gridLayout = "two",
   gridGap = "gap400",
   collapseGap,
-  caption = "Dude, poop",
+  caption,
+  captionSize = "small",
+  captionColor = "default",
   ...attrs
 } = Astro.props;
 
@@ -32,6 +34,8 @@ interface Props {
   gridLayout: keyof typeof layouts;
   collapseGap: boolean;
   caption?: string;
+  captionSize?: "default" | "extraSmall" | "small" | "medium" | "large";
+  captionColor?: "default" | "contrast" | "subtle" | "dim";
 }
 ---
 
@@ -49,7 +53,11 @@ interface Props {
   >
     <slot />
   </div>
-  {caption && <TextBlockGraph text={caption} />}
+  {
+    caption && (
+      <TextBlockGraph text={caption} size={captionSize} color={captionColor} />
+    )
+  }
 </div>
 
 {/* ================================== */}
@@ -61,13 +69,11 @@ interface Props {
   }
 
   .grid__wrapper {
-    border: 1px solid blue;
-
     p {
-      /* margin-inline-start: 8px; */
-      /* margin-block-start: 8px; */
+      margin-inline-start: 8px;
     }
   }
+
   .grid-gap--0 {
     --grid-container-gap: 0;
   }
