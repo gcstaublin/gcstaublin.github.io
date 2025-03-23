@@ -329,15 +329,30 @@ body {
 
 /* Font Size  classes */
 
-.font-size--lg,
-.font-size--large {
-  font-size: var(--font-size-lg);
+
+.font-size--extra-small {
+  font-size: var(--font-size-xsm);
 }
 
 .font-size--sm,
 .font-size--small {
   font-size: var(--font-size-sm);
 }
+
+.font-size--medium {
+  font-size: var(--font-size-med);
+}
+
+.font-size--default {
+  font-size: var(--font-size-default);
+}
+
+.font-size--lg,
+.font-size--large {
+  font-size: var(--font-size-lg);
+}
+
+
 
 
 h1,
