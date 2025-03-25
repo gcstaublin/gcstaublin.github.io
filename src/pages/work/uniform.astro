@@ -1,6 +1,31 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
 import "../../styles/global.css";
+import Work from "../../layouts/Work.astro";
+
+// =================================
+// Page Variables
+const pageTitle = "Grant Staublin | Work | Uniform";
+const mainClass = "width--large";
+
+// =================================
+// Image imports
+import uniCSS2 from "../../images/work/uniform/uniCSS2.png";
+import uniformHP2 from "../../images/work/uniform/uniform2.png";
+import uniAvatar from "../../images/work/uniform/avatar2.png";
+import uniBlog from "../../images/work/uniform/blog2.png";
+import uniDeprecate from "../../images/work/uniform/deprecate2.png";
+import uniTypography from "../../images/work/uniform/typography2.png";
+import uniVariables from "../../images/work/uniform/variables2.png";
+
+// =================================
+// Image imports
+import uniformBlog from "../../images/work/uniform/uniformBlog.mov";
+import uniTheming from "../../images/work/uniform/theming.mov";
+
+// =================================
+// Content Imports
+import * as sportsMD from "./content/globe-newspaper/sports.md";
+const sportsContent = await sportsMD.compiledContent();
 
 // =================================
 // Component imports
@@ -8,36 +33,25 @@ import TextBlock from "../../components/TextBlock.astro";
 import PageTitle from "../../components/PageTitle.astro";
 import ImageBlock from "../../components/ImageBlock.astro";
 import GridContainer from "../../components/GridContainer.astro";
-
-const pageTitle = "Grant Staublin | Work | Uniform";
-const mainClass = "width--large";
-
-// =================================
-// Image imports
-import believeCover from "../../images/work/globe-newspaper/sports_can-you-believe-it.jpg";
-import fourComeback from "../../images/work/globe-newspaper/sports_comeback_04.jpg";
-import sevenComeback from "../../images/work/globe-newspaper/sports_comeback_07.jpg";
-import rumbleCover from "../../images/work/globe-newspaper/sports_rumble.jpg";
-import gangCover from "../../images/work/globe-newspaper/sports_our-gang.jpg";
-
-import uniCSS2 from "../../images/work/uniform/uniCSS2.png";
-import uniformHP2 from "../../images/work/uniform/uniform2.png";
-
-// =================================
-// Content Imports
-import * as sportsMD from "./content/globe-newspaper/sports.md";
-const sportsContent = await sportsMD.compiledContent();
+import Stage from "../../components/Stage.astro";
 ---
 
 {/* ================================== */}
 {/* HTML                               */}
 {/* ================================== */}
-<BaseLayout pageTitle={pageTitle} mainClass={mainClass} noFollow>
+<Work pageTitle={pageTitle} noFollow>
   <div class="portfolioPage__container">
-    <PageTitle title="Uniform Design system" subTitle="xxxxxx" />
+    <PageTitle
+      title="Uniform Design system"
+      subTitle="xxxxxx"
+      alignment="center"
+    />
 
     {/* Main Section =================================  */}
-    <!-- <ImageBlock imageSrc={mainImage} cssClass="imageBlock__container--test" /> -->
+
+    <div class="width--large">
+      <Stage imageSrc={uniCSS2} topper />
+    </div>
 
     {/* Intro Section =================================  */}
     <!-- <TextBlock title={introMD.frontmatter.title}>
@@ -46,60 +60,49 @@ const sportsContent = await sportsMD.compiledContent();
       </div>
     </TextBlock> -->
 
-    {/* Sports Section =================================  */}
-    <ImageBlock
-      imageSrc={uniformHP2}
-      caption="After the Sox won the World Series, you couldn't turn on Boston sports radio without hearing the radio call from the final out. Making it permanent part of the moment was a slam dunk. This cover was so successful it made an appearance in Scorsese's The Departed."
-    />
-    <ImageBlock
-      imageSrc={uniCSS2}
-      cssClass="imageBlock__container--accent imageBlock__container--test imageBlock__container--image-bottom"
-      caption="After the Sox won the World Series, you couldn't turn on Boston sports radio without hearing the radio call from the final out. Making it permanent part of the moment was a slam dunk. This cover was so successful it made an appearance in Scorsese's The Departed."
-    />
     <div class="width--large">
-      <GridContainer gridLayout="one-up">
-        <ImageBlock
-          imageSrc={uniCSS2}
-          cssClass="imageBlock__container--accent imageBlock__container--test imageBlock__container--image-bottom"
-          caption="After the Sox won the World Series, you couldn't turn on Boston sports radio without hearing the radio call from the final out. Making it permanent part of the moment was a slam dunk. This cover was so successful it made an appearance in Scorsese's The Departed."
-        />
+      <!-- <Stage imageSrc={uniformBlog} topper /> -->
+      <Stage>
+        <Fragment slot="custom-image">
+          <video id="vid" muted playsInline transition:persist>
+            <source src={uniformBlog} type="video/mp4" />
+          </video>
+        </Fragment>
+      </Stage>
+    </div>
 
-        <ImageBlock
-          imageSrc={uniformHP2}
-          caption="After the Sox won the World Series, you couldn't turn on Boston sports radio without hearing the radio call from the final out. Making it permanent part of the moment was a slam dunk. This cover was so successful it made an appearance in Scorsese's The Departed."
-        />
-      </GridContainer>
-      <TextBlock title={sportsMD.frontmatter.title}>
-        <div>
-          {(<Fragment set:html={sportsContent} />)}
-        </div>
-      </TextBlock>
-      <GridContainer gridLayout="two-up">
-        <ImageBlock
-          imageSrc={fourComeback}
-          caption="It's common to get a rough idea of the narrative hook for a special section. However, at 10 a.m. no stories exist and reporters are too busy reporting and writing to bother with a designer. The clock is ticking on you need to create back to back covers, highlighting the Red Sox storied comeback in 2004, and their in-progress 2007 comeback"
-        />
-        <ImageBlock
-          imageSrc={sevenComeback}
-          caption="Over the course of about four hours, I research photos, wrote all the copy and constructed these page. When the copy desk arrived at 3 p.m., I collaborated with them to refine the writing and tighten up the visual narrative. During my editorial career, my editors trusted (expected) me to make something our of nothing and tell a story. These covers showcase that ability, IMO."
-        />
-        <ImageBlock
-          imageSrc={rumbleCover}
-          caption="This fight happened on a humid, sweltering Saturday afternoon in July. The air was heavy, figuratively and literally. This section traced the long history of the Red Sox / Yankees rivarly."
-        />
-        <ImageBlock
-          imageSrc={gangCover}
-          caption="One of the most respected newspaper editor's in the country told me this cover was too realistic. My design director said it was great. Regardless, this was fun to pull together."
-        />
+    {/* Site Section =================================  */}
+    <div class="width--full">
+      <GridContainer gridGap="gap200" caption="Grid Container caption">
+        <Stage imageSrc={uniVariables} />
+        <Stage imageSrc={uniTypography} />
+        <Stage imageSrc={uniAvatar} />
+        <Stage imageSrc={uniBlog} />
+        <!-- <Stage imageSrc={uniDeprecate} /> -->
       </GridContainer>
     </div>
 
-    {/* xxxxx =================================  */}
+    {/* Theming =================================  */}
+    <div class="width--large">
+      <!-- <Stage imageSrc={uniformBlog} topper /> -->
+      <Stage>
+        <Fragment slot="custom-image">
+          <video id="vid2" muted playsInline transition:persist>
+            <source src={uniTheming} type="video/mp4" />
+          </video>
+        </Fragment>
+      </Stage>
+    </div>
+
+    {/* Uniform site Section =================================  */}
+    <div class="width--large">
+      <Stage imageSrc={uniformHP2} topper />
+    </div>
 
     {/* xxxxx =================================  */}
   </div>
   <!-- portfolioPage -->
-</BaseLayout>
+</Work>
 
 {/* ================================== */}
 {/* Style                              */}
@@ -114,4 +117,32 @@ const sportsContent = await sportsMD.compiledContent();
       margin-block-start: 40px;
     }
   }
+
+  video {
+    max-width: 100%;
+  }
 </style>
+
+{/* ================================== */}
+{/* JS                              */}
+{/* ================================== */}
+<script>
+  let observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        vid.play();
+      }
+    });
+  });
+
+  let observer2 = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        vid2.play();
+      }
+    });
+  });
+
+  observer.observe(vid);
+  observer2.observe(vid2);
+</script>
