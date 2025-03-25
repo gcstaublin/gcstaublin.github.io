@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import ImageBlock from "./ImageBlock.astro";
+import TextBlockGraph from "./TextBlockGraph.astro";
 
 const {
   imageSrc,
@@ -10,6 +11,7 @@ const {
   // inlinePadding = "default",
   blockPadding = "default",
   background = "default",
+  caption,
 } = Astro.props;
 
 const widths = {
@@ -37,6 +39,7 @@ interface Props {
   imageSrc?: string;
   topper: boolean;
   isSmall: boolean;
+  caption?: string;
   innerWidth: keyof typeof widths;
   inlinePadding: keyof typeof inlinePaddings;
   blockPadding: keyof typeof blockPaddings;
@@ -69,7 +72,7 @@ interface Props {
         </div>
       )
     }
-    {imageSrc && <ImageBlock imageSrc={imageSrc} />}
+    {imageSrc && <ImageBlock imageSrc={imageSrc} caption={caption} />}
     <slot name="custom-image" />
     <slot name="after-image" />
   </div>
@@ -118,6 +121,11 @@ interface Props {
       max-width: var(--stage-max-width);
       padding-block: var(--stage-block-pad);
       border-radius: var(--stage-radius);
+    }
+
+    p {
+      margin-block-start: 8px;
+      margin-inline-start: 0;
     }
   }
 
