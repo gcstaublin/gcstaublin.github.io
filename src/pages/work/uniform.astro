@@ -5,7 +5,6 @@ import Work from "../../layouts/Work.astro";
 // =================================
 // Page Variables
 const pageTitle = "Grant Staublin | Work | Uniform";
-const mainClass = "width--large";
 
 // =================================
 // Image imports
@@ -16,16 +15,31 @@ import uniBlog from "../../images/work/uniform/blog2.png";
 import uniDeprecate from "../../images/work/uniform/deprecate2.png";
 import uniTypography from "../../images/work/uniform/typography2.png";
 import uniVariables from "../../images/work/uniform/variables2.png";
-
-// =================================
-// Image imports
 import uniformBlog from "../../images/work/uniform/uniformBlog.mov";
 import uniTheming from "../../images/work/uniform/theming.mov";
+import uniSlide1 from "../../images/work/uniform/slides-browser-reads.jpg";
+import uniSlide2 from "../../images/work/uniform/slides-overrides.jpg";
+import uniSlide3 from "../../images/work/uniform/slides-functionality.jpg";
+import uniSlide4 from "../../images/work/uniform/slides-clear-markup.jpg";
+import uniSlide5 from "../../images/work/uniform/slides-variables.jpg";
+import uniModern1 from "../../images/work/uniform/uniform-modern-landing.jpg";
+import uniModern2 from "../../images/work/uniform/uniform-button-design.jpg";
+import uniModern3 from "../../images/work/uniform/uniform-button-code.jpg";
+import uniModern4 from "../../images/work/uniform/uniform-platforms.jpg";
 
 // =================================
 // Content Imports
-import * as sportsMD from "./content/globe-newspaper/sports.md";
-const sportsContent = await sportsMD.compiledContent();
+import * as introMD from "./content/uniform/uniform-intro.md";
+const introContent = await introMD.compiledContent();
+
+import * as uniDocsMD from "./content/uniform/uniform-unidocs.md";
+const uniDocsContent = await uniDocsMD.compiledContent();
+
+import * as educateMD from "./content/uniform/uniform-education.md";
+const educateContent = await educateMD.compiledContent();
+
+import * as uniform2MD from "./content/uniform/uniform-uniform-modern.md";
+const uniform2Content = await uniform2MD.compiledContent();
 
 // =================================
 // Component imports
@@ -34,6 +48,7 @@ import PageTitle from "../../components/PageTitle.astro";
 import ImageBlock from "../../components/ImageBlock.astro";
 import GridContainer from "../../components/GridContainer.astro";
 import Stage from "../../components/Stage.astro";
+import Tags from "../../components/Tags.astro";
 ---
 
 {/* ================================== */}
@@ -41,45 +56,98 @@ import Stage from "../../components/Stage.astro";
 {/* ================================== */}
 <Work pageTitle={pageTitle} noFollow>
   <div class="portfolioPage__container">
-    <PageTitle
-      title="Uniform Design system"
-      subTitle="xxxxxx"
-      alignment="center"
-    />
+    <PageTitle title="Uniform Design system" alignment="center">
+      <Tags
+        tags={[
+          "visual design",
+          "UI / UX Design",
+          "Training",
+          "Front-end development",
+          "CSS Architecture",
+        ]}
+      />
+    </PageTitle>
 
     {/* Main Section =================================  */}
 
     <div class="width--large">
-      <Stage imageSrc={uniCSS2} topper />
+      <Stage
+        imageSrc={uniCSS2}
+        topper
+        caption="The Uniform UI CSS Documentation site was the earliest deliverable of the Uniform system."
+      />
     </div>
 
     {/* Intro Section =================================  */}
-    <!-- <TextBlock title={introMD.frontmatter.title}>
+    <TextBlock title={introMD.frontmatter.title}>
       <div>
         {(<Fragment set:html={introContent} />)}
       </div>
-    </TextBlock> -->
+    </TextBlock>
 
+    {/* Education Section =================================  */}
+    <div class="width--medium">
+      <GridContainer
+        gridGap="gap200"
+        caption="Lunch and learn sessions would cover a wide variety of front-end best practices."
+      >
+        <Stage imageSrc={uniSlide1} />
+        <Stage imageSrc={uniSlide2} />
+        <Stage imageSrc={uniSlide3} />
+        <Stage imageSrc={uniSlide5} />
+        <!-- <Stage imageSrc={uniDeprecate} /> -->
+      </GridContainer>
+    </div>
+    <TextBlock title={educateMD.frontmatter.title}>
+      <div>
+        {(<Fragment set:html={educateContent} />)}
+      </div>
+    </TextBlock>
+
+    {/* Site Section =================================  */}
+
+    <div class="width--full">
+      <GridContainer gridGap="gap200">
+        <Stage
+          imageSrc={uniVariables}
+          caption="All examples in the UniDocs clearly displayed the system status: Stable, In Development or Deprecated."
+        />
+        <Stage imageSrc={uniTypography} caption="hello" />
+        <Stage
+          imageSrc={uniAvatar}
+          caption="Before Uniform had React components, the UniDocs site offered copy/pasted examples of the markup design system consumers could use in their Apps."
+        />
+        <Stage
+          imageSrc={uniBlog}
+          caption="One of the early philosophies of the Uniform was multiple points of entry to the system. Whether React components, Uniform UI CSS class or SCSS mixin, we strived to provide multiple opportunities to connect to the system, and the guidance how."
+        />
+        <!-- <Stage imageSrc={uniDeprecate} /> -->
+      </GridContainer>
+    </div>
+
+    <TextBlock title={uniDocsMD.frontmatter.title}>
+      <div>
+        {(<Fragment set:html={uniDocsContent} />)}
+      </div>
+    </TextBlock>
+
+    {/* Uniform Blog Section =================================  */}
     <div class="width--large">
       <!-- <Stage imageSrc={uniformBlog} topper /> -->
       <Stage>
         <Fragment slot="custom-image">
-          <video id="vid" muted playsInline transition:persist>
+          <video id="vid" muted playsInline transition:persist controls>
             <source src={uniformBlog} type="video/mp4" />
           </video>
         </Fragment>
+        <Fragment slot="after-image">
+          <p>
+            The UniDocs blog often demostrated how to achieve real-life product
+            needs, using both uniform-ui-css classes or SCSS mixins from the
+            corresponsing NPM package.
+          </p>
+        </Fragment>
       </Stage>
-    </div>
-
-    {/* Site Section =================================  */}
-    <div class="width--full">
-      <GridContainer gridGap="gap200" caption="Grid Container caption">
-        <Stage imageSrc={uniVariables} />
-        <Stage imageSrc={uniTypography} />
-        <Stage imageSrc={uniAvatar} />
-        <Stage imageSrc={uniBlog} />
-        <!-- <Stage imageSrc={uniDeprecate} /> -->
-      </GridContainer>
     </div>
 
     {/* Theming =================================  */}
@@ -87,19 +155,60 @@ import Stage from "../../components/Stage.astro";
       <!-- <Stage imageSrc={uniformBlog} topper /> -->
       <Stage>
         <Fragment slot="custom-image">
-          <video id="vid2" muted playsInline transition:persist>
+          <video id="vid2" muted playsInline transition:persist controls>
             <source src={uniTheming} type="video/mp4" />
           </video>
+        </Fragment>
+        <Fragment slot="after-image">
+          <p>
+            Each React component (or HTML) example demostrated how the component
+            looked in both Light and Dark Environments, as well as the Layers
+            within each of those environments. The code for the example was
+            displayed and could be copy and pasted into App code, if needed.
+          </p>
         </Fragment>
       </Stage>
     </div>
 
     {/* Uniform site Section =================================  */}
+
+    <TextBlock title={uniform2MD.frontmatter.title}>
+      <div>
+        {(<Fragment set:html={uniform2Content} />)}
+      </div>
+    </TextBlock>
+
     <div class="width--large">
-      <Stage imageSrc={uniformHP2} topper />
+      <Stage
+        imageSrc={uniformHP2}
+        topper
+        caption="The second iteration of the Uniform Design System created a documentation platform that still exists today."
+      />
     </div>
 
-    {/* xxxxx =================================  */}
+    <div class="width--full">
+      <GridContainer
+        gridGap="gap200"
+        caption="These four examples show how the site looks in 2025 but represents the functionality created during the 2017 build of the site."
+      >
+        <Stage
+          imageSrc={uniModern2}
+          caption="Each component specification page can easily be toggled between Design and Code, giving designers and engineers easy access to both disciplines."
+        />
+        <Stage imageSrc={uniModern3} caption="" />
+        <Stage
+          imageSrc={uniModern1}
+          caption="Component groups have a distinctive landing page. These help designers or engineers identify similar options that might be more relevant to their use case"
+        />
+        <Stage
+          imageSrc={uniModern4}
+          caption="In creating Uniform we were always looking toward the future. Initially, Uniform only supported Web, but we built the framework for future Android, React Native and iOS into our initial site build"
+        />
+        <!-- <Stage imageSrc={uniDeprecate} /> -->
+      </GridContainer>
+    </div>
+
+    {/* Planning for scale =================================  */}
   </div>
   <!-- portfolioPage -->
 </Work>
@@ -108,15 +217,15 @@ import Stage from "../../components/Stage.astro";
 {/* Style                              */}
 {/* ================================== */}
 <style>
-  .align-center {
+  /* .align-center {
     text-align: center;
-  }
+  } */
 
-  .mag__group {
+  /* .mag__group {
     > * + * {
       margin-block-start: 40px;
     }
-  }
+  } */
 
   video {
     max-width: 100%;
