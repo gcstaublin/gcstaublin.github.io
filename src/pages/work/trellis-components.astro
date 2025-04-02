@@ -1,0 +1,44 @@
+---
+import "../../styles/global.css";
+import Work from "../../layouts/Work.astro";
+
+// =================================
+// Page Variables
+const pageTitle = "Grant Staublin | Work | Trellis Components";
+
+// =================================
+// Image imports
+import trellisComponents from "../../images/work/trellis-components/trellis-components-test.png";
+
+// =================================
+// Component imports
+import PageTitle from "../../components/PageTitle.astro";
+import Tags from "../../components/Tags.astro";
+import Stage from "../../components/Stage.astro";
+---
+
+{/* ================================== */}
+{/* HTML                               */}
+{/* ================================== */}
+<Work pageTitle={pageTitle} noFollow>
+  <PageTitle title="Trellis Transitional Components" alignment="center">
+    <Tags
+      tags={[
+        "Product Direction",
+        "Figma Libraries",
+        "Design / Eng Collaboration",
+        "Theming",
+        "Design Tokens",
+      ]}
+    />
+  </PageTitle>
+
+  {/* Main Section =================================  */}
+
+  <div class="width--large">
+    <Stage
+      imageSrc={trellisComponents}
+      caption="The Uniform UI CSS Documentation site was the earliest deliverable of the Uniform system."
+    />
+  </div>
+</Work>
