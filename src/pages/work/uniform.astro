@@ -55,162 +55,157 @@ import Tags from "../../components/Tags.astro";
 {/* HTML                               */}
 {/* ================================== */}
 <Work pageTitle={pageTitle} noFollow>
-  <div class="portfolioPage__container">
-    <PageTitle title="Uniform Design system" alignment="center">
-      <Tags
-        tags={[
-          "visual design",
-          "UI / UX Design",
-          "Training",
-          "Front-end development",
-          "CSS Architecture",
-        ]}
-      />
-    </PageTitle>
+  <PageTitle title="Uniform Design system" alignment="center">
+    <Tags
+      tags={[
+        "visual design",
+        "UI / UX Design",
+        "Training",
+        "Front-end development",
+        "CSS Architecture",
+      ]}
+    />
+  </PageTitle>
 
-    {/* Main Section =================================  */}
+  {/* Main Section =================================  */}
 
-    <div class="width--large">
-      <Stage
-        imageSrc={uniCSS2}
-        topper
-        caption="The Uniform UI CSS Documentation site was the earliest deliverable of the Uniform system."
-      />
-    </div>
-
-    {/* Intro Section =================================  */}
-    <TextBlock title={introMD.frontmatter.title}>
-      <div>
-        {(<Fragment set:html={introContent} />)}
-      </div>
-    </TextBlock>
-
-    {/* Education Section =================================  */}
-    <div class="width--medium">
-      <GridContainer
-        gridGap="gap200"
-        caption="Lunch and learn sessions would cover a wide variety of front-end best practices."
-      >
-        <Stage imageSrc={uniSlide1} />
-        <Stage imageSrc={uniSlide2} />
-        <Stage imageSrc={uniSlide3} />
-        <Stage imageSrc={uniSlide5} />
-        <!-- <Stage imageSrc={uniDeprecate} /> -->
-      </GridContainer>
-    </div>
-    <TextBlock title={educateMD.frontmatter.title}>
-      <div>
-        {(<Fragment set:html={educateContent} />)}
-      </div>
-    </TextBlock>
-
-    {/* Site Section =================================  */}
-
-    <div class="width--full">
-      <GridContainer gridGap="gap200">
-        <Stage
-          imageSrc={uniVariables}
-          caption="All examples in the UniDocs clearly displayed the system status: Stable, In Development or Deprecated."
-        />
-        <Stage imageSrc={uniTypography} caption="hello" />
-        <Stage
-          imageSrc={uniAvatar}
-          caption="Before Uniform had React components, the UniDocs site offered copy/pasted examples of the markup design system consumers could use in their Apps."
-        />
-        <Stage
-          imageSrc={uniBlog}
-          caption="One of the early philosophies of the Uniform was multiple points of entry to the system. Whether React components, Uniform UI CSS class or SCSS mixin, we strived to provide multiple opportunities to connect to the system, and the guidance how."
-        />
-        <!-- <Stage imageSrc={uniDeprecate} /> -->
-      </GridContainer>
-    </div>
-
-    <TextBlock title={uniDocsMD.frontmatter.title}>
-      <div>
-        {(<Fragment set:html={uniDocsContent} />)}
-      </div>
-    </TextBlock>
-
-    {/* Uniform Blog Section =================================  */}
-    <div class="width--large">
-      <!-- <Stage imageSrc={uniformBlog} topper /> -->
-      <Stage>
-        <Fragment slot="custom-image">
-          <video id="vid" muted playsInline transition:persist controls>
-            <source src={uniformBlog} type="video/mp4" />
-          </video>
-        </Fragment>
-        <Fragment slot="after-image">
-          <p>
-            The UniDocs blog often demostrated how to achieve real-life product
-            needs, using both uniform-ui-css classes or SCSS mixins from the
-            corresponsing NPM package.
-          </p>
-        </Fragment>
-      </Stage>
-    </div>
-
-    {/* Theming =================================  */}
-    <div class="width--large">
-      <!-- <Stage imageSrc={uniformBlog} topper /> -->
-      <Stage>
-        <Fragment slot="custom-image">
-          <video id="vid2" muted playsInline transition:persist controls>
-            <source src={uniTheming} type="video/mp4" />
-          </video>
-        </Fragment>
-        <Fragment slot="after-image">
-          <p>
-            Each React component (or HTML) example demostrated how the component
-            looked in both Light and Dark Environments, as well as the Layers
-            within each of those environments. The code for the example was
-            displayed and could be copy and pasted into App code, if needed.
-          </p>
-        </Fragment>
-      </Stage>
-    </div>
-
-    {/* Uniform site Section =================================  */}
-
-    <TextBlock title={uniform2MD.frontmatter.title}>
-      <div>
-        {(<Fragment set:html={uniform2Content} />)}
-      </div>
-    </TextBlock>
-
-    <div class="width--large">
-      <Stage
-        imageSrc={uniformHP2}
-        topper
-        caption="The second iteration of the Uniform Design System created a documentation platform that still exists today."
-      />
-    </div>
-
-    <div class="width--full">
-      <GridContainer
-        gridGap="gap200"
-        caption="These four examples show how the site looks in 2025 but represents the functionality created during the 2017 build of the site."
-      >
-        <Stage
-          imageSrc={uniModern2}
-          caption="Each component specification page can easily be toggled between Design and Code, giving designers and engineers easy access to both disciplines."
-        />
-        <Stage imageSrc={uniModern3} caption="" />
-        <Stage
-          imageSrc={uniModern1}
-          caption="Component groups have a distinctive landing page. These help designers or engineers identify similar options that might be more relevant to their use case"
-        />
-        <Stage
-          imageSrc={uniModern4}
-          caption="In creating Uniform we were always looking toward the future. Initially, Uniform only supported Web, but we built the framework for future Android, React Native and iOS into our initial site build"
-        />
-        <!-- <Stage imageSrc={uniDeprecate} /> -->
-      </GridContainer>
-    </div>
-
-    {/* Planning for scale =================================  */}
+  <div class="width--large">
+    <Stage
+      imageSrc={uniCSS2}
+      topper
+      caption="The Uniform UI CSS Documentation site was the earliest deliverable of the Uniform system."
+    />
   </div>
-  <!-- portfolioPage -->
+
+  {/* Intro Section =================================  */}
+  <TextBlock title={introMD.frontmatter.title}>
+    <div>
+      {(<Fragment set:html={introContent} />)}
+    </div>
+  </TextBlock>
+
+  {/* Education Section =================================  */}
+  <div class="width--medium">
+    <GridContainer
+      gridGap="gap200"
+      caption="Lunch and learn sessions would cover a wide variety of front-end best practices."
+    >
+      <Stage imageSrc={uniSlide1} />
+      <Stage imageSrc={uniSlide2} />
+      <Stage imageSrc={uniSlide3} />
+      <Stage imageSrc={uniSlide5} />
+      <!-- <Stage imageSrc={uniDeprecate} /> -->
+    </GridContainer>
+  </div>
+  <TextBlock title={educateMD.frontmatter.title}>
+    <div>
+      {(<Fragment set:html={educateContent} />)}
+    </div>
+  </TextBlock>
+
+  {/* Site Section =================================  */}
+
+  <div class="width--full">
+    <GridContainer gridGap="gap200">
+      <Stage
+        imageSrc={uniVariables}
+        caption="All examples in the UniDocs clearly displayed the system status: Stable, In Development or Deprecated."
+      />
+      <Stage imageSrc={uniTypography} caption="hello" />
+      <Stage
+        imageSrc={uniAvatar}
+        caption="Before Uniform had React components, the UniDocs site offered copy/pasted examples of the markup design system consumers could use in their Apps."
+      />
+      <Stage
+        imageSrc={uniBlog}
+        caption="One of the early philosophies of the Uniform was multiple points of entry to the system. Whether React components, Uniform UI CSS class or SCSS mixin, we strived to provide multiple opportunities to connect to the system, and the guidance how."
+      />
+      <!-- <Stage imageSrc={uniDeprecate} /> -->
+    </GridContainer>
+  </div>
+
+  <TextBlock title={uniDocsMD.frontmatter.title}>
+    <div>
+      {(<Fragment set:html={uniDocsContent} />)}
+    </div>
+  </TextBlock>
+
+  {/* Uniform Blog Section =================================  */}
+  <div class="width--large">
+    <!-- <Stage imageSrc={uniformBlog} topper /> -->
+    <Stage>
+      <Fragment slot="custom-image">
+        <video id="vid" muted playsInline transition:persist controls>
+          <source src={uniformBlog} type="video/mp4" />
+        </video>
+      </Fragment>
+      <Fragment slot="after-image">
+        <p>
+          The UniDocs blog often demostrated how to achieve real-life product
+          needs, using both uniform-ui-css classes or SCSS mixins from the
+          corresponsing NPM package.
+        </p>
+      </Fragment>
+    </Stage>
+  </div>
+
+  {/* Theming =================================  */}
+  <div class="width--large">
+    <!-- <Stage imageSrc={uniformBlog} topper /> -->
+    <Stage>
+      <Fragment slot="custom-image">
+        <video id="vid2" muted playsInline transition:persist controls>
+          <source src={uniTheming} type="video/mp4" />
+        </video>
+      </Fragment>
+      <Fragment slot="after-image">
+        <p>
+          Each React component (or HTML) example demostrated how the component
+          looked in both Light and Dark Environments, as well as the Layers
+          within each of those environments. The code for the example was
+          displayed and could be copy and pasted into App code, if needed.
+        </p>
+      </Fragment>
+    </Stage>
+  </div>
+
+  {/* Uniform site Section =================================  */}
+
+  <TextBlock title={uniform2MD.frontmatter.title}>
+    <div>
+      {(<Fragment set:html={uniform2Content} />)}
+    </div>
+  </TextBlock>
+
+  <div class="width--large">
+    <Stage
+      imageSrc={uniformHP2}
+      topper
+      caption="The second iteration of the Uniform Design System created a documentation platform that still exists today."
+    />
+  </div>
+
+  <div class="width--full">
+    <GridContainer
+      gridGap="gap200"
+      caption="These four examples show how the site looks in 2025 but represents the functionality created during the 2017 build of the site."
+    >
+      <Stage
+        imageSrc={uniModern2}
+        caption="Each component specification page can easily be toggled between Design and Code, giving designers and engineers easy access to both disciplines."
+      />
+      <Stage imageSrc={uniModern3} caption="" />
+      <Stage
+        imageSrc={uniModern1}
+        caption="Component groups have a distinctive landing page. These help designers or engineers identify similar options that might be more relevant to their use case"
+      />
+      <Stage
+        imageSrc={uniModern4}
+        caption="In creating Uniform we were always looking toward the future. Initially, Uniform only supported Web, but we built the framework for future Android, React Native and iOS into our initial site build"
+      />
+      <!-- <Stage imageSrc={uniDeprecate} /> -->
+    </GridContainer>
+  </div>
 </Work>
 
 {/* ================================== */}
