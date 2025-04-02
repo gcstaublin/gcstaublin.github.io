@@ -1,13 +1,13 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
-const { pageTitle } = Astro.props;
+const { pageTitle, ...attrs } = Astro.props;
 const { noFollow } = Astro.props;
 
 const mainClass = "width--full";
 ---
 
 <BaseLayout mainClass={mainClass} pageTitle={pageTitle} noFollow>
-  <div class="portfolioPage__container">
+  <div class:list={["portfolioPage__container", attrs.class]}>
     <slot />
   </div>
 </BaseLayout>
