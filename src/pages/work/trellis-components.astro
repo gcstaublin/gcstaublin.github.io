@@ -8,20 +8,44 @@ const pageTitle = "Grant Staublin | Work | Trellis Components";
 
 // =================================
 // Image imports
-import trellisComponents from "../../images/work/trellis-components/trellis-components-test.png";
+import trellisComponents from "../../images/work/trellis-components/components.png";
+import trellisTokens from "../../images/work/trellis-components/token-example.png";
+import trellisStates from "../../images/work/trellis-components/interaction-states.png";
+import trellisTheming from "../../images/work/trellis-components/theming.png";
+
+// =================================
+// Content imports
+import * as introMD from "./content/trellis-components/trellis-components-intro.md";
+const introContent = await introMD.compiledContent();
+
+import * as tokensMD from "./content/trellis-components/trellis-components-tokens.md";
+const tokensContent = await tokensMD.compiledContent();
+
+import * as themingMD from "./content/trellis-components/trellis-components-theming.md";
+const themingContent = await themingMD.compiledContent();
+
+import * as statesMD from "./content/trellis-components/trellis-components-states.md";
+const statesContent = await statesMD.compiledContent();
 
 // =================================
 // Component imports
 import PageTitle from "../../components/PageTitle.astro";
 import Tags from "../../components/Tags.astro";
 import Stage from "../../components/Stage.astro";
+import ImageBlock from "../../components/ImageBlock.astro";
+import TextBlock from "../../components/TextBlock.astro";
+import Image from "astro/components/Image.astro";
 ---
 
 {/* ================================== */}
 {/* HTML                               */}
 {/* ================================== */}
 <Work pageTitle={pageTitle} noFollow>
-  <PageTitle title="Trellis Transitional Components" alignment="center">
+  <PageTitle
+    title="Trellis Transitional Components"
+    alignment="center"
+    subTitle="Rebuilding HubSpot’s design system Figma library with improved designer experience, better cross functional collaboration and better equipped to handle future visual language iteration"
+  >
     <Tags
       tags={[
         "Product Direction",
@@ -35,10 +59,65 @@ import Stage from "../../components/Stage.astro";
 
   {/* Main Section =================================  */}
 
-  <div class="width--large">
+  <!-- <div class="width--full">
     <Stage
       imageSrc={trellisComponents}
       caption="The Uniform UI CSS Documentation site was the earliest deliverable of the Uniform system."
     />
+  </div> -->
+  <div class="width--full">
+    <ImageBlock imageSrc={trellisComponents} />
   </div>
+
+  {/* Intro Section =================================  */}
+  <TextBlock title={introMD.frontmatter.title}>
+    <div>
+      {(<Fragment set:html={introContent} />)}
+    </div>
+  </TextBlock>
+
+  {/* Tokens Section =================================  */}
+  <div class="width--large">
+    <Stage>
+      <Fragment slot="custom-image">
+        <Image src={trellisTokens} alt="" />
+      </Fragment>
+    </Stage>
+  </div>
+
+  <TextBlock title={tokensMD.frontmatter.title}>
+    <div>
+      {(<Fragment set:html={tokensContent} />)}
+    </div>
+  </TextBlock>
+
+  {/* Theming Section =================================  */}
+  <div class="width--large">
+    <Stage>
+      <Fragment slot="custom-image">
+        <Image src={trellisTheming} alt="" />
+      </Fragment>
+    </Stage>
+  </div>
+
+  <TextBlock title={themingMD.frontmatter.title}>
+    <div>
+      {(<Fragment set:html={themingContent} />)}
+    </div>
+  </TextBlock>
+
+  {/* Interactive Section =================================  */}
+  <div class="width--medium">
+    <Stage>
+      <Fragment slot="custom-image">
+        <Image src={trellisStates} alt="" />
+      </Fragment>
+    </Stage>
+  </div>
+
+  <TextBlock title={statesMD.frontmatter.title}>
+    <div>
+      {(<Fragment set:html={statesContent} />)}
+    </div>
+  </TextBlock>
 </Work>
