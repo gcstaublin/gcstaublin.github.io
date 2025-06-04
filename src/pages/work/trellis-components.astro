@@ -12,6 +12,10 @@ import trellisComponents from "../../images/work/trellis-components/components.p
 import trellisTokens from "../../images/work/trellis-components/token-example.png";
 import trellisStates from "../../images/work/trellis-components/interaction-states.png";
 import trellisTheming from "../../images/work/trellis-components/theming.png";
+import trellisCheckbox from "../../images/work/trellis-components/checkbox.png";
+import trellisCheckboxTokens from "../../images/work/trellis-components/checkbox-tokens.png";
+import trellisButton from "../../images/work/trellis-components/button-2.png";
+import trellisButtonTokens from "../../images/work/trellis-components/button-tokens-2.png";
 
 // =================================
 // Content imports
@@ -48,7 +52,7 @@ import Image from "astro/components/Image.astro";
   >
     <Tags
       tags={[
-        "Product Direction",
+        "Design System Evolution",
         "Figma Libraries",
         "Design / Eng Collaboration",
         "Theming",
@@ -120,4 +124,59 @@ import Image from "astro/components/Image.astro";
       {(<Fragment set:html={statesContent} />)}
     </div>
   </TextBlock>
+
+  {/* Checkbox Section =================================  */}
+  <div class="width--full">
+    <Stage>
+      <Fragment slot="custom-image">
+        <div class="fancy fancy-grid">
+          <div class="fancy-grid__main">
+            <Image src={trellisCheckbox} alt="" />
+          </div>
+          <div class="fancy-grid__aside">
+            <Image src={trellisCheckboxTokens} alt="" />
+          </div>
+        </div>
+        <div class="fancy fancy-grid--alt">
+          <div class="fancy-grid__main">
+            <Image src={trellisButton} alt="" />
+          </div>
+          <div class="fancy-grid__aside">
+            <Image src={trellisButtonTokens} alt="" />
+          </div>
+        </div>
+      </Fragment>
+    </Stage>
+  </div>
 </Work>
+
+{/* ================================== */}
+{/* Style                              */}
+{/* ================================== */}
+<style>
+  .fancy + .fancy {
+    margin-top: 40px;
+  }
+
+  .fancy-grid {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "main main main main aside aside";
+  }
+
+  .fancy-grid--alt {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "aside aside main main main main";
+  }
+
+  .fancy-grid__aside {
+    grid-area: aside;
+  }
+
+  .fancy-grid__main {
+    grid-area: main;
+  }
+</style>
