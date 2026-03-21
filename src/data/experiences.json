@@ -1,6 +1,15 @@
 [
   {
     "dates": {
+      "dateStart": "2025",
+      "dateEnd": "Present"
+    },
+    "title": "Senior Product Designer, Dice Design System",
+    "subTitle": "BetMGM",
+    "description": ""
+  },
+  {
+    "dates": {
       "dateStart": "2024",
       "dateEnd": "2025"
     },
