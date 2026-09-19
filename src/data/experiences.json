@@ -1,8 +1,17 @@
 [
   {
     "dates": {
-      "dateStart": "2025",
+      "dateStart": "2026",
       "dateEnd": "Present"
+    },
+    "title": "Senior Design Technologist",
+    "subTitle": "Hi Marley",
+    "description": ""
+  },
+  {
+    "dates": {
+      "dateStart": "2025",
+      "dateEnd": "2026"
     },
     "title": "Senior Product Designer, Dice Design System",
     "subTitle": "BetMGM",
