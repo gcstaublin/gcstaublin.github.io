@@ -1,6 +1,6 @@
 ---
 words:
-  - I'm a designer with two decades experience in product design, editorial design and art direction. Since 2015, my primary focus has been creating, maintaining and scaling enterprise design systems. I've done this as an in-house member of a team as well as a consultant. I'm currently a Senior Product Designer, collaborating with a cross-functional team as we strive to evolve the Dice Design System, serving 40 unique, worldwide gaming brands.
+  - I'm a designer with two decades experience in product design, editorial design and art direction. Since 2015, my primary focus has been creating, maintaining and scaling enterprise design systems. I've done this as an in-house member of a team as well as a consultant. I'm currently a Senior Design Technologist at Hi Marley where our mission is to be the trusted communication fabric between policyholders and their insurance carriers.
 
 # - I'm a designer with two decades experience in product design, editorial design and art direction. Since 2015, my primary focus has been creating, maintaining and scaling enterprise design systems. I've done this as an in-house member of a team as well as a consultant. I'm currently a Senior Product Designer and Design Technologist, collaborating with a cross-functional team as we strive to evolve the HubSpot Design System.
 
